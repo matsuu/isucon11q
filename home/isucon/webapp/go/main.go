@@ -7,6 +7,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
+	"io"
 	"io/ioutil"
 	"math/rand"
 	"net/http"
@@ -63,6 +64,7 @@ type Isu struct {
 	JIAIsuUUID string    `db:"jia_isu_uuid" json:"jia_isu_uuid"`
 	Name       string    `db:"name" json:"name"`
 	Image      []byte    `db:"image" json:"-"`
+	UseDefaultImage bool `db:"use_default_image" json:"-"`
 	Character  string    `db:"character" json:"character"`
 	JIAUserID  string    `db:"jia_user_id" json:"-"`
 	CreatedAt  time.Time `db:"created_at" json:"-"`
@@ -333,6 +335,47 @@ func postInitialize(c echo.Context) error {
 		return c.NoContent(http.StatusInternalServerError)
 	}
 
+	cmd = exec.Command("rm", "-f", "/home/isucon/tmp/*")
+	err = cmd.Run()
+	if err != nil {
+		c.Logger().Errorf("exec rm images error: %v", err)
+		return c.NoContent(http.StatusInternalServerError)
+	}
+
+	rows, err := db.Queryx("SELECT jia_isu_uuid, image from isu")
+	if err != nil {
+		c.Logger().Errorf("exec select isu error: %v", err)
+		return c.NoContent(http.StatusInternalServerError)
+	}
+	defer rows.Close()
+	for rows.Next() {
+		var isu Isu
+		rows.StructScan(&isu)
+		filename := fmt.Sprintf("/home/isucon/tmp/%s.jpg", isu.JIAIsuUUID)
+		out, err := os.Create(filename)
+		if err != nil {
+			c.Logger().Error(err)
+			return c.NoContent(http.StatusInternalServerError)
+		}
+		_, err = out.Write(isu.Image)
+		if err != nil {
+			c.Logger().Error(err)
+			return c.NoContent(http.StatusInternalServerError)
+		}
+		out.Close()
+
+	}
+	_, err = db.Exec("ALTER TABLE isu ADD COLUMN use_default_image BOOLEAN NOT NULL DEFAULT FALSE")
+	if err != nil {
+		c.Logger().Error(err)
+		return c.NoContent(http.StatusInternalServerError)
+	}
+	_, err = db.Exec("ALTER TABLE isu DROP COLUMN image")
+	if err != nil {
+		c.Logger().Error(err)
+		return c.NoContent(http.StatusInternalServerError)
+	}
+
 	return c.JSON(http.StatusOK, InitializeResponse{
 		Language: "go",
 	})
@@ -548,15 +591,7 @@ func postIsu(c echo.Context) error {
 		useDefaultImage = true
 	}
 
-	var image []byte
-
-	if useDefaultImage {
-		image, err = ioutil.ReadFile(defaultIconFilePath)
-		if err != nil {
-			c.Logger().Error(err)
-			return c.NoContent(http.StatusInternalServerError)
-		}
-	} else {
+	if !useDefaultImage {
 		file, err := fh.Open()
 		if err != nil {
 			c.Logger().Error(err)
@@ -564,11 +599,20 @@ func postIsu(c echo.Context) error {
 		}
 		defer file.Close()
 
-		image, err = ioutil.ReadAll(file)
+		filename := fmt.Sprintf("/home/isucon/tmp/%s.jpg", jiaIsuUUID)
+		out, err := os.Create(filename)
 		if err != nil {
 			c.Logger().Error(err)
 			return c.NoContent(http.StatusInternalServerError)
 		}
+
+		written, err := io.Copy(out, file)
+		if err != nil {
+			c.Logger().Error(err)
+			return c.NoContent(http.StatusInternalServerError)
+		}
+		c.Logger().Infof("filename=%s, written=%d", filename, written)
+		out.Close()
 	}
 
 	tx, err := db.Beginx()
@@ -579,8 +623,8 @@ func postIsu(c echo.Context) error {
 	defer tx.Rollback()
 
 	_, err = tx.Exec("INSERT INTO `isu`"+
-		"	(`jia_isu_uuid`, `name`, `image`, `jia_user_id`) VALUES (?, ?, ?, ?)",
-		jiaIsuUUID, isuName, image, jiaUserID)
+		"	(`jia_isu_uuid`, `name`, use_default_image, `jia_user_id`) VALUES (?, ?, ?, ?)",
+		jiaIsuUUID, isuName, useDefaultImage, jiaUserID)
 	if err != nil {
 		mysqlErr, ok := err.(*mysql.MySQLError)
 
@@ -702,8 +746,8 @@ func getIsuIcon(c echo.Context) error {
 
 	jiaIsuUUID := c.Param("jia_isu_uuid")
 
-	var image []byte
-	err = db.Get(&image, "SELECT `image` FROM `isu` WHERE `jia_user_id` = ? AND `jia_isu_uuid` = ?",
+	var useDefaultImage bool
+	err = db.Get(&useDefaultImage, "SELECT `use_default_image` FROM `isu` WHERE `jia_user_id` = ? AND `jia_isu_uuid` = ?",
 		jiaUserID, jiaIsuUUID)
 	if err != nil {
 		if errors.Is(err, sql.ErrNoRows) {
@@ -714,7 +758,13 @@ func getIsuIcon(c echo.Context) error {
 		return c.NoContent(http.StatusInternalServerError)
 	}
 
-	return c.Blob(http.StatusOK, "", image)
+	var filename string
+	if useDefaultImage {
+		filename = defaultIconFilePath
+	} else {
+		filename = fmt.Sprintf("/home/isucon/tmp/%s.jpg", jiaIsuUUID)
+	}
+	return c.File(filename)
 }
 
 // GET /api/isu/:jia_isu_uuid/graph

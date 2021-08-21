@@ -1,2 +1,6 @@
 /home/isucon/webapp/go/main.go
+/home/isucon/local/go/src/io/io.go
+/home/isucon/local/go/src/os/file.go
+/home/isucon/local/go/src/mime/multipart/formdata.go
+/.gitignore
 /home/isucon/local/go/src/net/http/status.go
