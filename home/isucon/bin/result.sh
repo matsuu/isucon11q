@@ -6,7 +6,8 @@ mkdir -p /result/old/${date}
 rm -f /result/*.*
 
 cat /var/log/nginx/access.log | ${HOME}/go/bin/kataribe -f ${HOME}/kataribe.toml > /result/kataribe.log
-${HOME}/go/bin/slowquery2tsv -u isucon -p isucon > /result/slowquery.tsv
+#${HOME}/go/bin/slowquery2tsv -u isucon -p isucon > /result/slowquery.tsv
+sudo cat /var/lib/mysql/mysql-slow.log | ${HOME}/bin/pt-query-digest --limit 100% > /result/slowquery.log
 sudo perl ${HOME}/bin/mysqltuner.pl > /result/mysqltuner.log
 for f in /result/*.* ; do
   ln $f /result/old/${date}/
