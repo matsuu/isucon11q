@@ -29,9 +29,9 @@ lc-messages-dir         = /usr/share/mysql
 # localhost which is more compatible and is not less secure.
 bind-address            = 0.0.0.0
 
-slow_query_log = 1
-slow_query_log_file = mysql-slow.log
-long_query_time = 0
+slow_query_log = 0
+#slow_query_log_file = mysql-slow.log
+#long_query_time = 0
 
 innodb_doublewrite = 0
 innodb_flush_log_at_trx_commit = 0

@@ -198,6 +198,9 @@ func (mc *MySQLConnectionEnv) ConnectDB() (*sqlx.DB, error) {
 }
 
 func init() {
+	// TODO 駄目なら外す
+    http.DefaultTransport.(*http.Transport).MaxIdleConnsPerHost = 256
+
 	sessionStore = sessions.NewCookieStore([]byte(getEnv("SESSION_KEY", "isucondition")))
 
 	key, err := ioutil.ReadFile(jiaJWTSigningKeyPath)
@@ -213,7 +216,7 @@ func init() {
 func main() {
 	e := echo.New()
 	e.Debug = false
-	e.Logger.SetLevel(log.DEBUG)
+	// e.Logger.SetLevel(log.DEBUG)
 
 	// e.Use(middleware.Logger())
 	e.Use(middleware.Recover())
@@ -671,19 +674,19 @@ func postIsu(c echo.Context) error {
 	}
 	defer res.Body.Close()
 
-	resBody, err := ioutil.ReadAll(res.Body)
 	if err != nil {
 		c.Logger().Error(err)
 		return c.NoContent(http.StatusInternalServerError)
 	}
 
 	if res.StatusCode != http.StatusAccepted {
-		c.Logger().Errorf("JIAService returned error: status code %v, message: %v", res.StatusCode, string(resBody))
+		c.Logger().Errorf("JIAService returned error: status code %v, message: none", res.StatusCode)
 		return c.String(res.StatusCode, "JIAService returned error")
 	}
 
 	var isuFromJIA IsuFromJIA
-	err = json.Unmarshal(resBody, &isuFromJIA)
+	err = json.NewDecoder(res.Body).Decode(&isuFromJIA)
+
 	if err != nil {
 		c.Logger().Error(err)
 		return c.NoContent(http.StatusInternalServerError)
@@ -1237,6 +1240,7 @@ func getTrend(c echo.Context) error {
 // ISUからのコンディションを受け取る
 var postIsuStmt *sqlx.Stmt
 var postIsuOnce sync.Once
+
 func postIsuCondition(c echo.Context) error {
 	// TODO: 一定割合リクエストを落としてしのぐようにしたが、本来は全量さばけるようにすべき
 	dropProbability := 0.9

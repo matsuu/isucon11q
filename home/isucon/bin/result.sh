@@ -1,5 +1,6 @@
 #!/bin/sh
-set -ex
+#set -ex
+set -x
 
 date=`date +%H%M%S`
 mkdir -p /result/old/${date}
