@@ -3,7 +3,7 @@
 ################################################################################
 
 # Top Ranking Group By Request
-ranking_count = 20
+ranking_count = 40
 
 # Top Slow Requests
 slow_count = 37
@@ -107,14 +107,14 @@ duration_index = 11
 # You can replace the part of urls which matched to your regular expressions.
 # For overview of regexp syntax: https://golang.org/pkg/regexp/syntax/
 #
-#[[replace]]
-#regexp = '/[0-9]+(/|\s)'
-#replace = '/<num>$1'
-#
-#[[replace]]
-#regexp = '=[0-9]+(&|\s)'
-#replace = '=<num>$1'
-#
+[[replace]]
+regexp = '/[0-9a-f]+-[0-9a-f]+-[0-9a-f]+-[0-9a-f]+-[0-9a-f]+(/|\?|\s)'
+replace = '/<uuid>$1'
+
+[[replace]]
+regexp = '=[^=& ]+(&|\s)'
+replace = '=*$1'
+
 #[[replace]]
 #regexp = '\s+HTTP/[0-9.]+$'
 #replace = ''

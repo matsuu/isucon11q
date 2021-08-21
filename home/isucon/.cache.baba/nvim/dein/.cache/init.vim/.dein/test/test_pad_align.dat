@@ -1,0 +1,822 @@
+# alignta's test suite
+
+#---------------------------------------
+# should_align_at_1_pattern_data_begin
+  a =  1
+   bbb = 10
+  ccccc = 100
+# should_align_at_1_pattern_data_end
+# should_align_at_1_pattern_expected_begin
+  a     = 1
+  bbb   = 10
+  ccccc = 100
+# should_align_at_1_pattern_expected_end
+
+#---------------------------------------
+# should_align_at_1_pattern_ll_data_begin
+  a =  1
+   bbb = 10
+  ccccc = 100
+# should_align_at_1_pattern_ll_data_end
+# should_align_at_1_pattern_ll_expected_begin
+  a     = 1
+  bbb   = 10
+  ccccc = 100
+# should_align_at_1_pattern_ll_expected_end
+
+#---------------------------------------
+# should_align_at_1_pattern_cc_data_begin
+  a =  1
+   bbb = 10
+  ccccc = 100
+# should_align_at_1_pattern_cc_data_end
+# should_align_at_1_pattern_cc_expected_begin
+    a   =  1
+   bbb  = 10
+  ccccc = 100
+# should_align_at_1_pattern_cc_expected_end
+
+#---------------------------------------
+# should_align_at_1_pattern_rr_data_begin
+  a =  1
+   bbb = 10
+  ccccc = 100
+# should_align_at_1_pattern_rr_data_end
+# should_align_at_1_pattern_rr_expected_begin
+      a =   1
+    bbb =  10
+  ccccc = 100
+# should_align_at_1_pattern_rr_expected_end
+
+#---------------------------------------
+# should_align_at_1_pattern_aa_data_begin
+  a =  1
+   bbb = 10
+  ccccc = 100
+# should_align_at_1_pattern_aa_data_end
+# should_align_at_1_pattern_aa_expected_begin
+  a     =  1
+   bbb  = 10
+  ccccc = 100
+# should_align_at_1_pattern_aa_expected_end
+
+#---------------------------------------
+# should_align_at_1_pattern_lcr_data_begin
+  a =  1
+   bbb = 10
+  ccccc = 100
+# should_align_at_1_pattern_lcr_data_end
+# should_align_at_1_pattern_lcr_expected_begin
+  a     =   1
+  bbb   =  10
+  ccccc = 100
+# should_align_at_1_pattern_lcr_expected_end
+
+#---------------------------------------
+# should_align_at_1_pattern_rcl_data_begin
+  a =  1
+   bbb = 10
+  ccccc = 100
+# should_align_at_1_pattern_rcl_data_end
+# should_align_at_1_pattern_rcl_expected_begin
+      a = 1
+    bbb = 10
+  ccccc = 100
+# should_align_at_1_pattern_rcl_expected_end
+
+#---------------------------------------
+# should_align_at_1_pattern_2_times_data_begin
+  a = bbbbb =  c = ddddd =  1
+   aaa = bbb = ccc =  ddd = 10
+  aaaaa =  b = ccccc = d = 100
+# should_align_at_1_pattern_2_times_data_end
+# should_align_at_1_pattern_2_times_expected_begin
+  a     = bbbbb = c = ddddd =  1
+  aaa   = bbb   = ccc =  ddd = 10
+  aaaaa = b     = ccccc = d = 100
+# should_align_at_1_pattern_2_times_expected_end
+
+#---------------------------------------
+# should_align_at_1_pattern_2_times_ll_data_begin
+  a = bbbbb =  c = ddddd =  1
+   aaa = bbb = ccc =  ddd = 10
+  aaaaa =  b = ccccc = d = 100
+# should_align_at_1_pattern_2_times_ll_data_end
+# should_align_at_1_pattern_2_times_ll_expected_begin
+  a     = bbbbb = c = ddddd =  1
+  aaa   = bbb   = ccc =  ddd = 10
+  aaaaa = b     = ccccc = d = 100
+# should_align_at_1_pattern_2_times_ll_expected_end
+
+#---------------------------------------
+# should_align_at_1_pattern_2_times_cc_data_begin
+  a = bbbbb =  c = ddddd =  1
+   aaa = bbb = ccc =  ddd = 10
+  aaaaa =  b = ccccc = d = 100
+# should_align_at_1_pattern_2_times_cc_data_end
+# should_align_at_1_pattern_2_times_cc_expected_begin
+    a   = bbbbb = c = ddddd =  1
+   aaa  =  bbb  = ccc =  ddd = 10
+  aaaaa =   b   = ccccc = d = 100
+# should_align_at_1_pattern_2_times_cc_expected_end
+
+#---------------------------------------
+# should_align_at_1_pattern_2_times_rr_data_begin
+  a = bbbbb =  c = ddddd =  1
+   aaa = bbb = ccc =  ddd = 10
+  aaaaa =  b = ccccc = d = 100
+# should_align_at_1_pattern_2_times_rr_data_end
+# should_align_at_1_pattern_2_times_rr_expected_begin
+      a = bbbbb =  c = ddddd =  1
+    aaa =   bbb = ccc =  ddd = 10
+  aaaaa =     b = ccccc = d = 100
+# should_align_at_1_pattern_2_times_rr_expected_end
+
+#---------------------------------------
+# should_align_at_1_pattern_2_times_aa_data_begin
+  a = bbbbb =  c = ddddd =  1
+   aaa = bbb = ccc =  ddd = 10
+  aaaaa =  b = ccccc = d = 100
+# should_align_at_1_pattern_2_times_aa_data_end
+# should_align_at_1_pattern_2_times_aa_expected_begin
+  a     = bbbbb =  c = ddddd =  1
+   aaa  = bbb   = ccc =  ddd = 10
+  aaaaa =  b    = ccccc = d = 100
+# should_align_at_1_pattern_2_times_aa_expected_end
+
+#---------------------------------------
+# should_align_at_1_pattern_2_times_lcr_data_begin
+  a = bbbbb =  c = ddddd =  1
+   aaa = bbb = ccc =  ddd = 10
+  aaaaa =  b = ccccc = d = 100
+# should_align_at_1_pattern_2_times_lcr_data_end
+# should_align_at_1_pattern_2_times_lcr_expected_begin
+  a     = bbbbb =  c = ddddd =  1
+  aaa   = bbb   = ccc =  ddd = 10
+  aaaaa = b     = ccccc = d = 100
+# should_align_at_1_pattern_2_times_lcr_expected_end
+
+#---------------------------------------
+# should_align_at_1_pattern_2_times_rcl_data_begin
+  a = bbbbb =  c = ddddd =  1
+   aaa = bbb = ccc =  ddd = 10
+  aaaaa =  b = ccccc = d = 100
+# should_align_at_1_pattern_2_times_rcl_data_end
+# should_align_at_1_pattern_2_times_rcl_expected_begin
+      a = bbbbb = c = ddddd =  1
+    aaa =   bbb = ccc =  ddd = 10
+  aaaaa =     b = ccccc = d = 100
+# should_align_at_1_pattern_2_times_rcl_expected_end
+
+#---------------------------------------
+# should_align_at_1_pattern_n_times_data_begin
+  a = bbbbb =  c = ddddd =  1
+   aaa = bbb = ccc =  ddd = 10
+  aaaaa =  b = ccccc = d = 100
+# should_align_at_1_pattern_n_times_data_end
+# should_align_at_1_pattern_n_times_expected_begin
+  a     = bbbbb = c     = ddddd = 1
+  aaa   = bbb   = ccc   = ddd   = 10
+  aaaaa = b     = ccccc = d     = 100
+# should_align_at_1_pattern_n_times_expected_end
+
+#---------------------------------------
+# should_align_at_1_pattern_n_times_ll_data_begin
+  a = bbbbb =  c = ddddd =  1
+   aaa = bbb = ccc =  ddd = 10
+  aaaaa =  b = ccccc = d = 100
+# should_align_at_1_pattern_n_times_ll_data_end
+# should_align_at_1_pattern_n_times_ll_expected_begin
+  a     = bbbbb = c     = ddddd = 1
+  aaa   = bbb   = ccc   = ddd   = 10
+  aaaaa = b     = ccccc = d     = 100
+# should_align_at_1_pattern_n_times_ll_expected_end
+
+#---------------------------------------
+# should_align_at_1_pattern_n_times_cc_data_begin
+  a = bbbbb =  c = ddddd =  1
+   aaa = bbb = ccc =  ddd = 10
+  aaaaa =  b = ccccc = d = 100
+# should_align_at_1_pattern_n_times_cc_data_end
+# should_align_at_1_pattern_n_times_cc_expected_begin
+    a   = bbbbb =   c   = ddddd =  1
+   aaa  =  bbb  =  ccc  =  ddd  = 10
+  aaaaa =   b   = ccccc =   d   = 100
+# should_align_at_1_pattern_n_times_cc_expected_end
+
+#---------------------------------------
+# should_align_at_1_pattern_n_times_rr_data_begin
+  a = bbbbb =  c = ddddd =  1
+   aaa = bbb = ccc =  ddd = 10
+  aaaaa =  b = ccccc = d = 100
+# should_align_at_1_pattern_n_times_rr_data_end
+# should_align_at_1_pattern_n_times_rr_expected_begin
+      a = bbbbb =     c = ddddd =   1
+    aaa =   bbb =   ccc =   ddd =  10
+  aaaaa =     b = ccccc =     d = 100
+# should_align_at_1_pattern_n_times_rr_expected_end
+
+#---------------------------------------
+# should_align_at_1_pattern_n_times_aa_data_begin
+  a = bbbbb =  c = ddddd =  1
+   aaa = bbb = ccc =  ddd = 10
+  aaaaa =  b = ccccc = d = 100
+# should_align_at_1_pattern_n_times_aa_data_end
+# should_align_at_1_pattern_n_times_aa_expected_begin
+  a     = bbbbb =  c    = ddddd =  1
+   aaa  = bbb   = ccc   =  ddd  = 10
+  aaaaa =  b    = ccccc = d     = 100
+# should_align_at_1_pattern_n_times_aa_expected_end
+
+#---------------------------------------
+# should_align_at_1_pattern_n_times_lcr_data_begin
+  a = bbbbb =  c = ddddd =  1
+   aaa = bbb = ccc =  ddd = 10
+  aaaaa =  b = ccccc = d = 100
+# should_align_at_1_pattern_n_times_lcr_data_end
+# should_align_at_1_pattern_n_times_lcr_expected_begin
+  a     = bbbbb = c     = ddddd =   1
+  aaa   = bbb   = ccc   = ddd   =  10
+  aaaaa = b     = ccccc = d     = 100
+# should_align_at_1_pattern_n_times_lcr_expected_end
+
+#---------------------------------------
+# should_align_at_1_pattern_n_times_rcl_data_begin
+  a = bbbbb =  c = ddddd =  1
+   aaa = bbb = ccc =  ddd = 10
+  aaaaa =  b = ccccc = d = 100
+# should_align_at_1_pattern_n_times_rcl_data_end
+# should_align_at_1_pattern_n_times_rcl_expected_begin
+      a = bbbbb =     c = ddddd = 1
+    aaa =   bbb =   ccc =   ddd = 10
+  aaaaa =     b = ccccc =     d = 100
+# should_align_at_1_pattern_n_times_rcl_expected_end
+
+#---------------------------------------
+# should_align_at_1_pattern_n_times_llclrle_data_begin
+  a = bbbbb =  c = ddddd =  e = fffff =  1
+   aaa = bbb = ccc =  ddd = eee = fff = 10
+  aaaaa =  b = ccccc = d = eeeee =  f = 100
+# should_align_at_1_pattern_n_times_llclrle_data_end
+# should_align_at_1_pattern_n_times_llclrle_expected_begin
+  a     = bbbbb =     c = ddddd =   e   = fffff =  1
+  aaa   =  bbb  =   ccc = ddd   =  eee  =   fff = 10
+  aaaaa =   b   = ccccc = d     = eeeee =     f = 100
+# should_align_at_1_pattern_n_times_llclrle_expected_end
+
+#---------------------------------------
+# should_align_at_1_pattern_x_times_data_begin
+  a = bbbbb =  c = ddddd = 1
+  AAA = BBB = CCC = DDD = 1000
+   aaa = bbb = ccc =  10
+  aaaaa =  b = 100
+# should_align_at_1_pattern_x_times_data_end
+# should_align_at_1_pattern_x_times_expected_begin
+  a     = bbbbb = c   = ddddd = 1
+  AAA   = BBB   = CCC = DDD   = 1000
+  aaa   = bbb   = ccc = 10
+  aaaaa = b     = 100
+# should_align_at_1_pattern_x_times_expected_end
+
+#---------------------------------------
+# should_align_at_1_pattern_x_times_ll_data_begin
+  a = bbbbb =  c = ddddd = 1
+  AAA = BBB = CCC = DDD = 1000
+   aaa = bbb = ccc =  10
+  aaaaa =  b = 100
+# should_align_at_1_pattern_x_times_ll_data_end
+# should_align_at_1_pattern_x_times_ll_expected_begin
+  a     = bbbbb = c   = ddddd = 1
+  AAA   = BBB   = CCC = DDD   = 1000
+  aaa   = bbb   = ccc = 10
+  aaaaa = b     = 100
+# should_align_at_1_pattern_x_times_ll_expected_end
+
+#---------------------------------------
+# should_align_at_1_pattern_x_times_cc_data_begin
+  a = bbbbb =  c = ddddd = 1
+  AAA = BBB = CCC = DDD = 1000
+   aaa = bbb = ccc =  10
+  aaaaa =  b = 100
+# should_align_at_1_pattern_x_times_cc_data_end
+# should_align_at_1_pattern_x_times_cc_expected_begin
+    a   = bbbbb =  c  = ddddd =  1
+   AAA  =  BBB  = CCC =  DDD  = 1000
+   aaa  =  bbb  = ccc =  10
+  aaaaa =   b   = 100
+# should_align_at_1_pattern_x_times_cc_expected_end
+
+#---------------------------------------
+# should_align_at_1_pattern_x_times_rr_data_begin
+  a = bbbbb =  c = ddddd = 1
+  AAA = BBB = CCC = DDD = 1000
+   aaa = bbb = ccc =  10
+  aaaaa =  b = 100
+# should_align_at_1_pattern_x_times_rr_data_end
+# should_align_at_1_pattern_x_times_rr_expected_begin
+      a = bbbbb =   c = ddddd =    1
+    AAA =   BBB = CCC =   DDD = 1000
+    aaa =   bbb = ccc =    10
+  aaaaa =     b = 100
+# should_align_at_1_pattern_x_times_rr_expected_end
+
+#---------------------------------------
+# should_align_at_1_pattern_x_times_aa_data_begin
+  a = bbbbb =  c = ddddd = 1
+  AAA = BBB = CCC = DDD = 1000
+   aaa = bbb = ccc =  10
+  aaaaa =  b = 100
+# should_align_at_1_pattern_x_times_aa_data_end
+# should_align_at_1_pattern_x_times_aa_expected_begin
+  a     = bbbbb =  c  = ddddd = 1
+  AAA   = BBB   = CCC = DDD   = 1000
+   aaa  = bbb   = ccc =  10
+  aaaaa =  b    = 100
+# should_align_at_1_pattern_x_times_aa_expected_end
+
+#---------------------------------------
+# should_align_at_1_pattern_x_times_lcr_data_begin
+  a = bbbbb =  c = ddddd = 1
+  AAA = BBB = CCC = DDD = 1000
+   aaa = bbb = ccc =  10
+  aaaaa =  b = 100
+# should_align_at_1_pattern_x_times_lcr_data_end
+# should_align_at_1_pattern_x_times_lcr_expected_begin
+  a     = bbbbb = c   = ddddd =    1
+  AAA   = BBB   = CCC = DDD   = 1000
+  aaa   = bbb   = ccc = 10
+  aaaaa = b     = 100
+# should_align_at_1_pattern_x_times_lcr_expected_end
+
+#---------------------------------------
+# should_align_at_1_pattern_x_times_rcl_data_begin
+  a = bbbbb =  c = ddddd = 1
+  AAA = BBB = CCC = DDD = 1000
+   aaa = bbb = ccc =  10
+  aaaaa =  b = 100
+# should_align_at_1_pattern_x_times_rcl_data_end
+# should_align_at_1_pattern_x_times_rcl_expected_begin
+      a = bbbbb =   c = ddddd = 1
+    AAA =   BBB = CCC =   DDD = 1000
+    aaa =   bbb = ccc =    10
+  aaaaa =     b = 100
+# should_align_at_1_pattern_x_times_rcl_expected_end
+
+#---------------------------------------
+# should_align_at_multi_patterns_data_begin
+  a =  1 /* AAAAA */
+   bbb = 10 /*  BBB */
+  ccccc = 100 /* C */
+# should_align_at_multi_patterns_data_end
+# should_align_at_multi_patterns_expected_begin
+  a     = 1   /* AAAAA */
+  bbb   = 10  /* BBB   */
+  ccccc = 100 /* C     */
+# should_align_at_multi_patterns_expected_end
+
+#---------------------------------------
+# should_align_at_multi_patterns_ll_data_begin
+  a =  1 /* AAAAA */
+   bbb = 10 /*  BBB */
+  ccccc = 100 /* C */
+# should_align_at_multi_patterns_ll_data_end
+# should_align_at_multi_patterns_ll_expected_begin
+  a     = 1   /* AAAAA */
+  bbb   = 10  /* BBB   */
+  ccccc = 100 /* C     */
+# should_align_at_multi_patterns_ll_expected_end
+
+#---------------------------------------
+# should_align_at_multi_patterns_cc_data_begin
+  a =  1 /* AAAAA */
+   bbb = 10 /*  BBB */
+  ccccc = 100 /* C */
+# should_align_at_multi_patterns_cc_data_end
+# should_align_at_multi_patterns_cc_expected_begin
+    a   =  1  /* AAAAA */
+   bbb  = 10  /*  BBB  */
+  ccccc = 100 /*   C   */
+# should_align_at_multi_patterns_cc_expected_end
+
+#---------------------------------------
+# should_align_at_multi_patterns_rr_data_begin
+  a =  1 /* AAAAA */
+   bbb = 10 /*  BBB */
+  ccccc = 100 /* C */
+# should_align_at_multi_patterns_rr_data_end
+# should_align_at_multi_patterns_rr_expected_begin
+      a =   1 /* AAAAA */
+    bbb =  10 /*   BBB */
+  ccccc = 100 /*     C */
+# should_align_at_multi_patterns_rr_expected_end
+
+#---------------------------------------
+# should_align_at_multi_patterns_aa_data_begin
+  a =  1 /* AAAAA */
+   bbb = 10 /*  BBB */
+  ccccc = 100 /* C */
+# should_align_at_multi_patterns_aa_data_end
+# should_align_at_multi_patterns_aa_expected_begin
+  a     =  1  /* AAAAA */
+   bbb  = 10  /*  BBB  */
+  ccccc = 100 /* C     */
+# should_align_at_multi_patterns_aa_expected_end
+
+#---------------------------------------
+# should_align_at_multi_patterns_lcr_data_begin
+  a =  1 /* AAAAA */
+   bbb = 10 /*  BBB */
+  ccccc = 100 /* C */
+# should_align_at_multi_patterns_lcr_data_end
+# should_align_at_multi_patterns_lcr_expected_begin
+  a     = 1   /* AAAAA */
+  bbb   = 10  /* BBB   */
+  ccccc = 100 /* C     */
+# should_align_at_multi_patterns_lcr_expected_end
+
+#---------------------------------------
+# should_align_at_multi_patterns_rcl_data_begin
+  a =  1 /* AAAAA */
+   bbb = 10 /*  BBB */
+  ccccc = 100 /* C */
+# should_align_at_multi_patterns_rcl_data_end
+# should_align_at_multi_patterns_rcl_expected_begin
+      a =   1 /* AAAAA */
+    bbb =  10 /*   BBB */
+  ccccc = 100 /*     C */
+# should_align_at_multi_patterns_rcl_expected_end
+
+#---------------------------------------
+# should_align_at_complex_patterns_data_begin
+  a =  1 /* AAAAA */
+   bbb = 10 {  bbb }
+  ccccc = 100 { c } /* C */
+  { ddddd }
+  {  eee } /*  EEE */
+  func() /* FUNC */
+# should_align_at_complex_patterns_data_end
+# should_align_at_complex_patterns_expected_begin
+  a     = 1              /* AAAAA */
+  bbb   = 10  { bbb   }
+  ccccc = 100 { c     }  /* C     */
+              { ddddd }
+              { eee   }  /* EEE   */
+  func()                 /* FUNC  */
+# should_align_at_complex_patterns_expected_end
+
+#---------------------------------------
+# should_align_at_complex_patterns_ll_data_begin
+  a =  1 /* AAAAA */
+   bbb = 10 {  bbb }
+  ccccc = 100 { c } /* C */
+  { ddddd }
+  {  eee } /*  EEE */
+  func() /* FUNC */
+# should_align_at_complex_patterns_ll_data_end
+# should_align_at_complex_patterns_ll_expected_begin
+  a     = 1              /* AAAAA */
+  bbb   = 10  { bbb   }
+  ccccc = 100 { c     }  /* C     */
+              { ddddd }
+              { eee   }  /* EEE   */
+  func()                 /* FUNC  */
+# should_align_at_complex_patterns_ll_expected_end
+
+#---------------------------------------
+# should_align_at_complex_patterns_cc_data_begin
+  a =  1 /* AAAAA */
+   bbb = 10 {  bbb }
+  ccccc = 100 { c } /* C */
+  { ddddd }
+  {  eee } /*  EEE */
+  func() /* FUNC */
+# should_align_at_complex_patterns_cc_data_end
+# should_align_at_complex_patterns_cc_expected_begin
+    a   =       1        /* AAAAA */
+   bbb  = 10  {  bbb  }
+  ccccc = 100 {   c   }  /*   C   */
+              { ddddd }
+              {  eee  }  /*  EEE  */
+          func()         /* FUNC  */
+# should_align_at_complex_patterns_cc_expected_end
+
+#---------------------------------------
+# should_align_at_complex_patterns_rr_data_begin
+  a =  1 /* AAAAA */
+   bbb = 10 {  bbb }
+  ccccc = 100 { c } /* C */
+  { ddddd }
+  {  eee } /*  EEE */
+  func() /* FUNC */
+# should_align_at_complex_patterns_rr_data_end
+# should_align_at_complex_patterns_rr_expected_begin
+      a =              1 /* AAAAA */
+    bbb =  10 {   bbb }
+  ccccc = 100 {     c }  /*     C */
+              { ddddd }
+              {   eee }  /*   EEE */
+                  func() /*  FUNC */
+# should_align_at_complex_patterns_rr_expected_end
+
+#---------------------------------------
+# should_align_big_data_data_begin
+  a =  1
+   bbb = 10
+  ccccc = 100
+  a =  2
+   bbb = 20
+  ccccc = 200
+  a =  3
+   bbb = 30
+  ccccc = 300
+  a =  4
+   bbb = 40
+  ccccc = 400
+# should_align_big_data_data_end
+# should_align_big_data_expected_begin
+  a     = 1
+  bbb   = 10
+  ccccc = 100
+  a     = 2
+  bbb   = 20
+  ccccc = 200
+  a     = 3
+  bbb   = 30
+  ccccc = 300
+  a     = 4
+  bbb   = 40
+  ccccc = 400
+# should_align_big_data_expected_end
+
+#---------------------------------------
+# should_freeze_aligned_parts_data_begin
+  a = 1  /* A */
+    bbb = 10
+      ccccc = 100
+# should_freeze_aligned_parts_data_end
+# should_freeze_aligned_parts_expected_begin
+  a     = 1   /* A */
+  bbb   = 10
+  ccccc = 100
+# should_freeze_aligned_parts_expected_end
+
+#-----------------------------------------------------------------------------
+# Leading
+
+#---------------------------------------
+# should_keep_mininum_leading_data_begin
+  a = 1
+
+  bbb = 10
+
+  ccccc = 100
+# should_keep_mininum_leading_data_end
+# should_keep_mininum_leading_expected_begin
+  a     = 1
+
+  bbb   = 10
+
+  ccccc = 100
+# should_keep_mininum_leading_expected_end
+
+#-----------------------------------------------------------------------------
+# Margin
+
+#---------------------------------------
+# L_margin_should_be_0_if_N_fld_is_blank_data_begin
+  a = 1
+    bbb = 10
+      ccccc = 100
+# L_margin_should_be_0_if_N_fld_is_blank_data_end
+# L_margin_should_be_0_if_N_fld_is_blank_expected_begin
+  a     = 1
+  bbb   = 10
+  ccccc = 100
+# L_margin_should_be_0_if_N_fld_is_blank_expected_end
+
+#---------------------------------------
+# margin_should_be_0_0_data_begin
+  a = 1
+  bbb = 10
+  ccccc = 100
+# margin_should_be_0_0_data_end
+# margin_should_be_0_0_expected_begin
+  a    =1
+  bbb  =10
+  ccccc=100
+# margin_should_be_0_0_expected_end
+
+#---------------------------------------
+# margin_should_be_3_3_data_begin
+  a = 1
+  bbb = 10
+  ccccc = 100
+# margin_should_be_3_3_data_end
+# margin_should_be_3_3_expected_begin
+  a       =   1
+  bbb     =   10
+  ccccc   =   100
+# margin_should_be_3_3_expected_end
+
+#---------------------------------------
+# margin_should_be_3_1_data_begin
+  a = 1
+  bbb = 10
+  ccccc = 100
+# margin_should_be_3_1_data_end
+# margin_should_be_3_1_expected_begin
+  a       = 1
+  bbb     = 10
+  ccccc   = 100
+# margin_should_be_3_1_expected_end
+
+#---------------------------------------
+# margin_should_be_1_3_data_begin
+  a = 1
+  bbb = 10
+  ccccc = 100
+# margin_should_be_1_3_data_end
+# margin_should_be_1_3_expected_begin
+  a     =   1
+  bbb   =   10
+  ccccc =   100
+# margin_should_be_1_3_expected_end
+
+#-----------------------------------------------------------------------------
+# Multi-byte
+
+#---------------------------------------
+# should_align_mb_at_1_pattern_data_begin
+  あ ＝  壱
+   あいう ＝ 壱十
+  あいうえお ＝ 壱十百
+# should_align_mb_at_1_pattern_data_end
+# should_align_mb_at_1_pattern_expected_begin
+  あ         ＝ 壱
+  あいう     ＝ 壱十
+  あいうえお ＝ 壱十百
+# should_align_mb_at_1_pattern_expected_end
+
+#---------------------------------------
+# should_align_mb_at_1_pattern_ll_data_begin
+  あ ＝  壱
+   あいう ＝ 壱十
+  あいうえお ＝ 壱十百
+# should_align_mb_at_1_pattern_ll_data_end
+# should_align_mb_at_1_pattern_ll_expected_begin
+  あ         ＝ 壱
+  あいう     ＝ 壱十
+  あいうえお ＝ 壱十百
+# should_align_mb_at_1_pattern_ll_expected_end
+
+#---------------------------------------
+# should_align_mb_at_1_pattern_cc_data_begin
+  あ ＝  壱
+   あいう ＝ 壱十
+  あいうえお ＝ 壱十百
+# should_align_mb_at_1_pattern_cc_data_end
+# should_align_mb_at_1_pattern_cc_expected_begin
+      あ     ＝   壱
+    あいう   ＝  壱十
+  あいうえお ＝ 壱十百
+# should_align_mb_at_1_pattern_cc_expected_end
+
+#---------------------------------------
+# should_align_mb_at_1_pattern_rr_data_begin
+  あ ＝  壱
+   あいう ＝ 壱十
+  あいうえお ＝ 壱十百
+# should_align_mb_at_1_pattern_rr_data_end
+# should_align_mb_at_1_pattern_rr_expected_begin
+          あ ＝     壱
+      あいう ＝   壱十
+  あいうえお ＝ 壱十百
+# should_align_mb_at_1_pattern_rr_expected_end
+
+#---------------------------------------
+# should_align_mb_at_1_pattern_aa_data_begin
+  あ ＝  壱
+   あいう ＝ 壱十
+  あいうえお ＝ 壱十百
+# should_align_mb_at_1_pattern_aa_data_end
+# should_align_mb_at_1_pattern_aa_expected_begin
+  あ         ＝  壱
+   あいう    ＝ 壱十
+  あいうえお ＝ 壱十百
+# should_align_mb_at_1_pattern_aa_expected_end
+
+#---------------------------------------
+# should_align_mb_at_1_pattern_lcr_data_begin
+  あ ＝  壱
+   あいう ＝ 壱十
+  あいうえお ＝ 壱十百
+# should_align_mb_at_1_pattern_lcr_data_end
+# should_align_mb_at_1_pattern_lcr_expected_begin
+  あ         ＝     壱
+  あいう     ＝   壱十
+  あいうえお ＝ 壱十百
+# should_align_mb_at_1_pattern_lcr_expected_end
+
+#---------------------------------------
+# should_align_mb_at_1_pattern_rcl_data_begin
+  あ ＝  壱
+   あいう ＝ 壱十
+  あいうえお ＝ 壱十百
+# should_align_mb_at_1_pattern_rcl_data_end
+# should_align_mb_at_1_pattern_rcl_expected_begin
+          あ ＝ 壱
+      あいう ＝ 壱十
+  あいうえお ＝ 壱十百
+# should_align_mb_at_1_pattern_rcl_expected_end
+
+#---------------------------------------
+# should_align_mb_when_ambw_double_data_begin
+  あ ＝ 壱
+  ΑΒΓ ＝ 壱十
+  あいうえお ＝ 壱十百
+# should_align_mb_when_ambw_double_data_end
+# should_align_mb_when_ambw_double_expected_begin
+  あ         ＝ 壱
+  ΑΒΓ     ＝ 壱十
+  あいうえお ＝ 壱十百
+# should_align_mb_when_ambw_double_expected_end
+
+#---------------------------------------
+# should_align_mb_when_ambw_single_data_begin
+  あ ＝ 壱
+  ΑΒΓ ＝ 壱十
+  あいうえお ＝ 壱十百
+# should_align_mb_when_ambw_single_data_end
+# should_align_mb_when_ambw_single_expected_begin
+  あ         ＝ 壱
+  ΑΒΓ        ＝ 壱十
+  あいうえお ＝ 壱十百
+# should_align_mb_when_ambw_single_expected_end
+
+#-----------------------------------------------------------------------------
+# Tabs
+
+#---------------------------------------
+# should_detab_indent_data_begin
+  a =  1
+	bbb = 10
+  ccccc = 100
+# should_detab_indent_data_end
+# should_detab_indent_expected_begin
+  a     = 1
+  bbb   = 10
+  ccccc = 100
+# should_detab_indent_expected_end
+
+#---------------------------------------
+# should_detab_indent_aa_data_begin
+  a =  1
+	bbb = 10
+  ccccc = 100
+# should_detab_indent_aa_data_end
+# should_detab_indent_aa_expected_begin
+  a     =  1
+	bbb = 10
+  ccccc = 100
+# should_detab_indent_aa_expected_end
+
+#---------------------------------------
+# should_entab_indent_data_begin
+	a =  1
+	bbb = 10
+	ccccc = 100
+# should_entab_indent_data_end
+# should_entab_indent_expected_begin
+	a     = 1
+	bbb   = 10
+	ccccc = 100
+# should_entab_indent_expected_end
+
+#---------------------------------------
+# should_entab_indent_rr_data_begin
+	a =  1
+	bbb = 10
+	ccccc = 100
+# should_entab_indent_rr_data_end
+# should_entab_indent_rr_expected_begin
+		a =   1
+	  bbb =  10
+	ccccc = 100
+# should_entab_indent_rr_expected_end
+
+#-----------------------------------------------------------------------------
+# Zero-width
+
+#---------------------------------------
+# should_not_raise_if_zero_width_match_data_begin
+  ,aaa,bbb,ccc
+  ,aaa,bbb,ccc
+  ,aaa,bbb,ccc
+# should_not_raise_if_zero_width_match_data_end
+# should_not_raise_if_zero_width_match_expected_begin
+  ,aaa  ,bbb  ,ccc
+  ,aaa  ,bbb  ,ccc
+  ,aaa  ,bbb  ,ccc
+# should_not_raise_if_zero_width_match_expected_end
+
+# vim:sw=4:ts=4:ft=conf:et:ai:list

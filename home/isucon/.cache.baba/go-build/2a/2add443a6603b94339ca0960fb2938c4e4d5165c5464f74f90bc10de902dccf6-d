@@ -1,0 +1,4 @@
+./analysis.go
+./doc.go
+./lint.go
+./names.go

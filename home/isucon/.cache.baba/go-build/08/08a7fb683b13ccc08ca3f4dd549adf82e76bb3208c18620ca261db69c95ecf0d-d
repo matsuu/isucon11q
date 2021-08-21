@@ -1,0 +1,9 @@
+./decode.go
+./decode_meta.go
+./doc.go
+./encode.go
+./encoding_types.go
+./lex.go
+./parse.go
+./type_check.go
+./type_fields.go

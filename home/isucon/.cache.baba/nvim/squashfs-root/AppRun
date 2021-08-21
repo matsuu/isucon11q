@@ -1,0 +1,4 @@
+#!/bin/bash
+
+unset ARGV0
+exec "$(dirname "$(readlink  -f "${0}")")/usr/bin/nvim" ${@+"$@"}

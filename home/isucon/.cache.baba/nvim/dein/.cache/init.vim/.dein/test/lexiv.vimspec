@@ -1,0 +1,59 @@
+Describe lexiv
+    Describe lexiv#paren_open
+        It should insert pairs
+            let l:tests = [
+            \ ['', 'foo<cursor>', '(', 'foo()'],
+            \ ['', 'foo(<cursor>)', '(', 'foo(())'],
+            \ ['', 'foo<cursor>)', '(', 'foo())'],
+            \ ['', '<cursor>foo', '(', '(foo'],
+            \ ['', '<cursor>', '(', '()'],
+            \ ['', '(<cursor>)', '(', '(())'],
+            \ ['', '(<cursor>)', '[', '([])'],
+            \ ['', '(<cursor>,)', '[', '([],)'],
+            \ ['', '(<cursor>=)', '[', '([]=)'],
+            \ ['', '(<cursor>:)', '[', '([]:)'],
+            \ ['', '(<cursor>a)', '[', '([a)'],
+            \ ['', '"<cursor>', '"', '""'],
+            \ ['', '"foo<cursor>"', '"', '"foo"'],
+            \ ['', '<cursor>"', '"', '"'],
+            \ ['', '<cursor>', '"', '""'],
+            \ ['', 'BAR=<cursor>', '"', 'BAR=""'],
+            \ ['', 'echo <cursor>', '"', 'echo ""'],
+            \ ['vim', '<cursor>', '"', '"'],
+            \ ['vim', 'FOO=<cursor>', '"', 'FOO="'],
+            \ ['vim', 'echo <cursor>', '"', 'echo "'],
+            \ ['vim', 'echo "foo<cursor>"', '"', 'echo "foo""'],
+            \ ['vim', "echo <cursor>", "'", "echo ''"],
+            \ ['vim', "echo 'foo<cursor>'", "'", "echo 'foo'"],
+            \ ['', '(<cursor>)', '"', '("")'],
+            \ ['', '"<cursor>"', '(', '"("'],
+            \ ['', '"<cursor>"', '{', '"{"'],
+            \ ['', '"<cursor>"', '[', '"["'],
+            \ ['', '(<cursor>)', '"', '("")'],
+            \ ['', '("<cursor>)', '"', '("")'],
+            \ ['', '("<cursor>")', '"', '("")'],
+            \ ['', '("foo<cursor>")', '"', '("foo")'],
+            \ ['', '[<cursor>]', '"', '[""]'],
+            \ ['', '<cursor>', '`', '``'],
+            \ ['', '``<cursor>', '`', '```'],
+            \ ['markdown', '``<cursor>', '`', "```\n\n```"],
+            \ ['', 'don<cursor>', "'", "don''"],
+            \]
+
+            for l:test in l:tests
+                new
+                inoremap <expr> " lexiv#quote_open('"')
+                call setline(1, l:test[1])
+                call search('<cursor>')
+                let old_filetype = &filetype
+                noau let &filetype = l:test[0]
+                exe 'normal' 'ca<' . l:test[2]
+                noau let &filetype = old_filetype
+                let l:got = join(getline(1, '$'), "\n")
+                let l:want = l:test[3]
+                Assert Equals(l:got, l:want)
+                bw!
+            endfor
+        End
+    End
+End

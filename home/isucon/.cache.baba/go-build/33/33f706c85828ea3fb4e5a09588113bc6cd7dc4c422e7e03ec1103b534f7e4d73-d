@@ -1,0 +1,5 @@
+./completion.go
+./highlight.go
+./implementations.go
+./parse.go
+./symbols.go

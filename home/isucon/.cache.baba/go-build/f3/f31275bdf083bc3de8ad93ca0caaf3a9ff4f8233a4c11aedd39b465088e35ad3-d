@@ -1,0 +1,4 @@
+./analysis.go
+./diff.go
+./hooks.go
+./licenses.go

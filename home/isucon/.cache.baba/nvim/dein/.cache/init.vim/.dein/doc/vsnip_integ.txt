@@ -1,0 +1,28 @@
+*vim-vsnip-integ* *vsnip-integ*
+
+vim-vsnip integrations.
+
+
+==============================================================================
+CONTENTS                                                *vsnip-integ-contents*
+
+INSTALL                                                  |vsnip-integ-install|
+
+
+
+==============================================================================
+INSTALL                                                  *vsnip-integ-install*
+
+You can use your favorite plugin manager.
+
+>
+  " dein.vim
+  call dein#add('hrsh7th/vim-vsnip-integ')
+
+  " vim-plug
+  Plug 'hrsh7th/vim-vsnip-integ'
+
+  " neobundle
+  NeoBundle 'hrsh7th/vim-vsnip-integ'
+<
+
