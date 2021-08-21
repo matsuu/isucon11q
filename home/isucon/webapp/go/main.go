@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"crypto/ecdsa"
 	"database/sql"
-	// "encoding/json"
+	"encoding/json"
 	"errors"
 	"fmt"
 	"io"
@@ -365,6 +365,13 @@ func postInitialize(c echo.Context) error {
 		out.Close()
 
 	}
+	cmd = exec.Command("cp", defaultIconFilePath, "/home/isucon/tmp/NoImage.jpg")
+	err = cmd.Run()
+	if err != nil {
+		c.Logger().Errorf("exec rm images error: %v", err)
+		return c.NoContent(http.StatusInternalServerError)
+	}
+
 	_, err = db.Exec("ALTER TABLE isu ADD COLUMN use_default_image BOOLEAN NOT NULL DEFAULT FALSE")
 	if err != nil {
 		c.Logger().Error(err)
@@ -759,10 +766,13 @@ func getIsuIcon(c echo.Context) error {
 
 	var filename string
 	if useDefaultImage {
-		filename = defaultIconFilePath
+		// filename = defaultIconFilePath
+		filename = "/icon/NoImage.jpg"
 	} else {
-		filename = fmt.Sprintf("/home/isucon/tmp/%s.jpg", jiaIsuUUID)
+		// filename = fmt.Sprintf("/home/isucon/tmp/%s.jpg", jiaIsuUUID)
+		filename = fmt.Sprintf("/icon/%s.jpg", jiaIsuUUID)
 	}
+	c.Response().Header().Set("X-Accel-Redirect", filename)
 	return c.File(filename)
 }
 
