@@ -9,7 +9,7 @@ cat /var/log/nginx/access.log | ${HOME}/go/bin/kataribe -f ${HOME}/kataribe.toml
 ${HOME}/go/bin/slowquery2tsv -u isucon -p isucon > /result/slowquery.tsv
 sudo perl ${HOME}/bin/mysqltuner.pl > /result/mysqltuner.log
 for f in /result/*.* ; do
-  ln $f /root/old/${date}/
+  ln $f /result/old/${date}/
 done
 
 sudo git add /

@@ -55,11 +55,11 @@ effective_digit = 3
 # H2O example: "%h %l %u %t \"%r\" %s %b \"%{Referer}i\" \"%{User-agent}i\" %{duration}x"
 # Varnishncsa example: '%h %l %u %t "%r" %s %b "%{Referer}i" "%{User-agent}i" %D'
 #
-log_format = '^([^ ]+) ([^ ]+) ([^ ]+) \[([^\]]+)\] "((?:\\"|[^"])*)" (\d+) (\d+|-) "((?:\\"|[^"])*)" "((?:\\"|[^"])*)" ([0-9.]+)$'
+log_format = '^([^ ]+) ([^ ]+) ([^ ]+) \[([^\]]+)\] "((?:\\"|[^"])*)" (\d+) (\d+|-) "((?:\\"|[^"])*)" "((?:\\"|[^"])*)" "((?:\\"|[^"])*)" ([0-9.]+)$'
 request_index = 5
 status_index = 6
 bytes_index = 7
-duration_index = 10
+duration_index = 11
 
 #
 # Envoy example: use default format
