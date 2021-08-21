@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"crypto/ecdsa"
 	"database/sql"
-	"encoding/json"
+	// "encoding/json"
 	"errors"
 	"fmt"
 	"io"
@@ -606,12 +606,11 @@ func postIsu(c echo.Context) error {
 			return c.NoContent(http.StatusInternalServerError)
 		}
 
-		written, err := io.Copy(out, file)
+		_, err = io.Copy(out, file)
 		if err != nil {
 			c.Logger().Error(err)
 			return c.NoContent(http.StatusInternalServerError)
 		}
-		c.Logger().Infof("filename=%s, written=%d", filename, written)
 		out.Close()
 	}
 
@@ -1159,7 +1158,7 @@ func getTrend(c echo.Context) error {
 				isu.JIAIsuUUID,
 			).StructScan(&isuLastCondition)
 			if err != nil {
-				c.Logger().Errorf("db error: %v", err)
+				// c.Logger().Errorf("db error: %v", err)
 				return c.NoContent(http.StatusInternalServerError)
 			}
 
@@ -1212,7 +1211,7 @@ func postIsuCondition(c echo.Context) error {
 	// TODO: 一定割合リクエストを落としてしのぐようにしたが、本来は全量さばけるようにすべき
 	dropProbability := 0.6
 	if rand.Float64() <= dropProbability {
-		c.Logger().Warnf("drop post isu condition request")
+		// c.Logger().Warnf("drop post isu condition request")
 		return c.NoContent(http.StatusAccepted)
 	}
 
@@ -1232,7 +1231,7 @@ func postIsuCondition(c echo.Context) error {
 	var count int
 	err = db.Get(&count, "SELECT 1 FROM `isu` WHERE `jia_isu_uuid` = ? LIMIT 1", jiaIsuUUID)
 	if err != nil {
-		c.Logger().Errorf("db error: %v", err)
+		// c.Logger().Errorf("db error: %v", err)
 		return c.NoContent(http.StatusInternalServerError)
 	}
 	if count == 0 {
