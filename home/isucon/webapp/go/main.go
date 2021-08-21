@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"crypto/ecdsa"
 	"database/sql"
-	"encoding/json"
+	// "encoding/json"
 	"errors"
 	"fmt"
 	"io"
@@ -19,7 +19,7 @@ import (
 	"strings"
 	"time"
 
-	// "github.com/goccy/go-json"
+	"github.com/goccy/go-json"
 	"github.com/dgrijalva/jwt-go"
 	"github.com/go-sql-driver/mysql"
 	"github.com/gorilla/sessions"
@@ -384,7 +384,9 @@ func postInitialize(c echo.Context) error {
 		return c.NoContent(http.StatusInternalServerError)
 	}
 
-	return c.JSON(http.StatusOK, InitializeResponse{
+	c.Response().Header().Set(echo.HeaderContentType, echo.MIMEApplicationJSONCharsetUTF8)
+	c.Response().WriteHeader(http.StatusOK)
+	return json.NewEncoder(c.Response()).Encode(InitializeResponse{
 		Language: "go",
 	})
 }
@@ -489,7 +491,9 @@ func getMe(c echo.Context) error {
 	}
 
 	res := GetMeResponse{JIAUserID: jiaUserID}
-	return c.JSON(http.StatusOK, res)
+	c.Response().Header().Set(echo.HeaderContentType, echo.MIMEApplicationJSONCharsetUTF8)
+	c.Response().WriteHeader(http.StatusOK)
+	return json.NewEncoder(c.Response()).Encode(res)
 }
 
 // GET /api/isu
@@ -571,7 +575,9 @@ func getIsuList(c echo.Context) error {
 		return c.NoContent(http.StatusInternalServerError)
 	}
 
-	return c.JSON(http.StatusOK, responseList)
+	c.Response().Header().Set(echo.HeaderContentType, echo.MIMEApplicationJSONCharsetUTF8)
+	c.Response().WriteHeader(http.StatusOK)
+	return json.NewEncoder(c.Response()).Encode(responseList)
 }
 
 // POST /api/isu
@@ -705,7 +711,9 @@ func postIsu(c echo.Context) error {
 		return c.NoContent(http.StatusInternalServerError)
 	}
 
-	return c.JSON(http.StatusCreated, isu)
+	c.Response().Header().Set(echo.HeaderContentType, echo.MIMEApplicationJSONCharsetUTF8)
+	c.Response().WriteHeader(http.StatusCreated)
+	return json.NewEncoder(c.Response()).Encode(isu)
 }
 
 // GET /api/isu/:jia_isu_uuid
@@ -735,7 +743,9 @@ func getIsuID(c echo.Context) error {
 		return c.NoContent(http.StatusInternalServerError)
 	}
 
-	return c.JSON(http.StatusOK, res)
+	c.Response().Header().Set(echo.HeaderContentType, echo.MIMEApplicationJSONCharsetUTF8)
+	c.Response().WriteHeader(http.StatusOK)
+	return json.NewEncoder(c.Response()).Encode(res)
 }
 
 // GET /api/isu/:jia_isu_uuid/icon
@@ -831,7 +841,9 @@ func getIsuGraph(c echo.Context) error {
 		return c.NoContent(http.StatusInternalServerError)
 	}
 
-	return c.JSON(http.StatusOK, res)
+	c.Response().Header().Set(echo.HeaderContentType, echo.MIMEApplicationJSONCharsetUTF8)
+	c.Response().WriteHeader(http.StatusOK)
+	return json.NewEncoder(c.Response()).Encode(res)
 }
 
 // グラフのデータ点を一日分生成
@@ -1059,7 +1071,9 @@ func getIsuConditions(c echo.Context) error {
 		c.Logger().Errorf("db error: %v", err)
 		return c.NoContent(http.StatusInternalServerError)
 	}
-	return c.JSON(http.StatusOK, conditionsResponse)
+	c.Response().Header().Set(echo.HeaderContentType, echo.MIMEApplicationJSONCharsetUTF8)
+	c.Response().WriteHeader(http.StatusOK)
+	return json.NewEncoder(c.Response()).Encode(conditionsResponse)
 }
 
 // ISUのコンディションをDBから取得
@@ -1211,7 +1225,9 @@ func getTrend(c echo.Context) error {
 			})
 	}
 
-	return c.JSON(http.StatusOK, res)
+	c.Response().Header().Set(echo.HeaderContentType, echo.MIMEApplicationJSONCharsetUTF8)
+	c.Response().WriteHeader(http.StatusOK)
+	return json.NewEncoder(c.Response()).Encode(res)
 }
 
 // POST /api/condition/:jia_isu_uuid
