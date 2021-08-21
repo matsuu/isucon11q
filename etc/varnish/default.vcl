@@ -31,6 +31,7 @@ sub vcl_recv {
 sub vcl_backend_response {
     set beresp.ttl = 0.8s;
     set beresp.grace = 0.2s;
+    set beresp.do_gzip = true;
     # Happens after we have read the response headers from the backend.
     #
     # Here you clean the response headers, removing silly Set-Cookie headers
