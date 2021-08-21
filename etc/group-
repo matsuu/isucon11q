@@ -59,3 +59,4 @@ systemd-coredump:x:999:
 ubuntu:x:1000:
 isucon:x:1100:
 isucon-admin:x:1200:
+mysql:x:119:

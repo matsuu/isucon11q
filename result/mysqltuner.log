@@ -48,7 +48,7 @@
 [--] Skipped due to --cvefile option undefined
  
 -------- Performance Metrics -----------------------------------------------------------------------
-[--] Up for: 1h 7m 28s (756K q [186.934 qps], 293 conn, TX: 7G, RX: 148M)
+[--] Up for: 1h 8m 54s (756K q [183.060 qps], 323 conn, TX: 7G, RX: 148M)
 [--] Reads / Writes: 51% / 49%
 [--] Binary logging is disabled
 [--] Physical Memory     : 3.6G
@@ -62,19 +62,19 @@
 [OK] Overall possible memory usage with other process is compatible with memory available
 [!!] Slow queries: 123% (932K/756K)
 [OK] Highest usage of available connections: 7% (11/151)
-[OK] Aborted connections: 0.00%  (0/293)
+[OK] Aborted connections: 0.00%  (0/323)
 [!!] name resolution is active : a reverse name resolution is made for each new connection and can reduce performance
 [!!] Query cache may be disabled by default due to mutex contention.
 [OK] Query cache efficiency: 37.8% (202K cached / 535K selects)
-[!!] Query cache prunes per day: 15196
+[!!] Query cache prunes per day: 14880
 [OK] Sorts requiring temporary tables: 0% (0 temp sorts / 123K sorts)
 [OK] No joins without indexes
-[OK] Temporary tables created on disk: 7% (15 on disk / 192 total)
-[OK] Thread cache hit rate: 89% (31 created / 293 connections)
-[OK] Table cache hit rate: 99% (532K hits / 532K requests)
+[OK] Temporary tables created on disk: 8% (18 on disk / 212 total)
+[OK] Thread cache hit rate: 90% (31 created / 323 connections)
+[OK] Table cache hit rate: 99% (533K hits / 533K requests)
 [OK] table_definition_cache(400) is upper than number of tables(165)
 [OK] Open file limit used: 0% (60/32K)
-[OK] Table locks acquired immediately: 100% (160 immediate / 160 locks)
+[OK] Table locks acquired immediately: 100% (164 immediate / 164 locks)
  
 -------- Performance schema ------------------------------------------------------------------------
 [--] Performance schema is disabled.
@@ -89,7 +89,7 @@
 -------- MyISAM Metrics ----------------------------------------------------------------------------
 [!!] Key buffer used: 18.2% (24M used / 134M cache)
 [OK] Key buffer size / total MyISAM indexes: 128.0M/118.0K
-[OK] Read Key buffer hit rate: 96.0% (50 cached / 2 reads)
+[OK] Read Key buffer hit rate: 96.7% (60 cached / 2 reads)
  
 -------- InnoDB Metrics ----------------------------------------------------------------------------
 [--] InnoDB is enabled.
@@ -107,7 +107,7 @@
 -------- Aria Metrics ------------------------------------------------------------------------------
 [--] Aria Storage Engine is enabled.
 [OK] Aria pagecache size / total Aria indexes: 128.0M/0B
-[OK] Aria pagecache hit rate: 98.1% (770 cached / 15 reads)
+[OK] Aria pagecache hit rate: 98.1% (924 cached / 18 reads)
  
 -------- TokuDB Metrics ----------------------------------------------------------------------------
 [--] TokuDB is disabled.

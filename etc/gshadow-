@@ -59,3 +59,4 @@ systemd-coredump:!!::
 ubuntu:!::
 isucon:!::
 isucon-admin:!::
+mysql:!::
