@@ -11,12 +11,12 @@
  
 -------- Log file Recommendations ------------------------------------------------------------------
 [OK] Log file /var/log/mysql/error.log exists
-[--] Log file: /var/log/mysql/error.log(19K)
+[--] Log file: /var/log/mysql/error.log(20K)
 [OK] Log file /var/log/mysql/error.log is not empty
 [OK] Log file /var/log/mysql/error.log is smaller than 32 Mb
 [OK] Log file /var/log/mysql/error.log is readable.
-[!!] /var/log/mysql/error.log contains 48 warning(s).
-[!!] /var/log/mysql/error.log contains 47 error(s).
+[!!] /var/log/mysql/error.log contains 58 warning(s).
+[!!] /var/log/mysql/error.log contains 57 error(s).
 [--] 5 start(s) detected in /var/log/mysql/error.log
 [--] 1) 2021-08-21 10:38:21 0 [Note] /usr/sbin/mysqld: ready for connections.
 [--] 2) 2021-08-21 10:28:23 0 [Note] /usr/sbin/mysqld: ready for connections.
@@ -31,7 +31,7 @@
  
 -------- Storage Engine Statistics -----------------------------------------------------------------
 [--] Status: +Aria +CSV +InnoDB +MEMORY +MRG_MyISAM +MyISAM +PERFORMANCE_SCHEMA +SEQUENCE 
-[--] Data in InnoDB tables: 25.7M (Tables: 4)
+[--] Data in InnoDB tables: 22.7M (Tables: 4)
 [OK] Total fragmented tables: 0
  
 -------- Analysis Performance Metrics --------------------------------------------------------------
@@ -48,8 +48,8 @@
 [--] Skipped due to --cvefile option undefined
  
 -------- Performance Metrics -----------------------------------------------------------------------
-[--] Up for: 1h 8m 54s (756K q [183.060 qps], 323 conn, TX: 7G, RX: 148M)
-[--] Reads / Writes: 51% / 49%
+[--] Up for: 1h 13m 41s (979K q [221.489 qps], 366 conn, TX: 9G, RX: 182M)
+[--] Reads / Writes: 61% / 39%
 [--] Binary logging is disabled
 [--] Physical Memory     : 3.6G
 [--] Max MySQL memory    : 3.2G
@@ -60,21 +60,21 @@
 [OK] Maximum reached memory usage: 640.0M (17.19% of installed RAM)
 [!!] Maximum possible memory usage: 3.2G (88.29% of installed RAM)
 [OK] Overall possible memory usage with other process is compatible with memory available
-[!!] Slow queries: 123% (932K/756K)
+[!!] Slow queries: 117% (1M/979K)
 [OK] Highest usage of available connections: 7% (11/151)
-[OK] Aborted connections: 0.00%  (0/323)
+[OK] Aborted connections: 0.00%  (0/366)
 [!!] name resolution is active : a reverse name resolution is made for each new connection and can reduce performance
 [!!] Query cache may be disabled by default due to mutex contention.
-[OK] Query cache efficiency: 37.8% (202K cached / 535K selects)
-[!!] Query cache prunes per day: 14880
+[OK] Query cache efficiency: 37.6% (313K cached / 833K selects)
+[!!] Query cache prunes per day: 13914
 [OK] Sorts requiring temporary tables: 0% (0 temp sorts / 123K sorts)
 [OK] No joins without indexes
-[OK] Temporary tables created on disk: 8% (18 on disk / 212 total)
-[OK] Thread cache hit rate: 90% (31 created / 323 connections)
-[OK] Table cache hit rate: 99% (533K hits / 533K requests)
+[OK] Temporary tables created on disk: 8% (21 on disk / 253 total)
+[OK] Thread cache hit rate: 91% (31 created / 366 connections)
+[OK] Table cache hit rate: 99% (617K hits / 617K requests)
 [OK] table_definition_cache(400) is upper than number of tables(165)
 [OK] Open file limit used: 0% (60/32K)
-[OK] Table locks acquired immediately: 100% (164 immediate / 164 locks)
+[OK] Table locks acquired immediately: 100% (180 immediate / 180 locks)
  
 -------- Performance schema ------------------------------------------------------------------------
 [--] Performance schema is disabled.
@@ -89,25 +89,25 @@
 -------- MyISAM Metrics ----------------------------------------------------------------------------
 [!!] Key buffer used: 18.2% (24M used / 134M cache)
 [OK] Key buffer size / total MyISAM indexes: 128.0M/118.0K
-[OK] Read Key buffer hit rate: 96.7% (60 cached / 2 reads)
+[OK] Read Key buffer hit rate: 97.1% (70 cached / 2 reads)
  
 -------- InnoDB Metrics ----------------------------------------------------------------------------
 [--] InnoDB is enabled.
 [--] InnoDB Thread Concurrency: 0
 [OK] InnoDB File per table is activated
-[OK] InnoDB buffer pool / data size: 128.0M/25.7M
+[OK] InnoDB buffer pool / data size: 128.0M/22.7M
 [!!] Ratio InnoDB log file size / InnoDB Buffer pool size (75 %): 48.0M * 2/128.0M should be equal to 25%
 [OK] InnoDB buffer pool instances: 1
 [--] Number of InnoDB Buffer Pool Chunk : 1 for 1 Buffer Pool Instance(s)
 [OK] Innodb_buffer_pool_size aligned with Innodb_buffer_pool_chunk_size & Innodb_buffer_pool_instances
-[OK] InnoDB Read buffer efficiency: 100.00% (206009040 hits/ 206010376 total)
-[!!] InnoDB Write Log efficiency: 86.61% (250710 hits/ 289459 total)
-[OK] InnoDB log waits: 0.00% (0 waits / 38749 writes)
+[OK] InnoDB Read buffer efficiency: 100.00% (222543144 hits/ 222544480 total)
+[!!] InnoDB Write Log efficiency: 86.48% (290933 hits/ 336434 total)
+[OK] InnoDB log waits: 0.00% (0 waits / 45501 writes)
  
 -------- Aria Metrics ------------------------------------------------------------------------------
 [--] Aria Storage Engine is enabled.
 [OK] Aria pagecache size / total Aria indexes: 128.0M/0B
-[OK] Aria pagecache hit rate: 98.1% (924 cached / 18 reads)
+[OK] Aria pagecache hit rate: 98.1% (1K cached / 21 reads)
  
 -------- TokuDB Metrics ----------------------------------------------------------------------------
 [--] TokuDB is disabled.
