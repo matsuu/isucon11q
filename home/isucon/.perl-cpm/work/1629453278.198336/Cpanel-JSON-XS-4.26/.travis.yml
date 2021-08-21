@@ -1,0 +1,90 @@
+language: "perl"
+sudo: false
+perl:
+  - "5.6.2"
+  - "5.8.5"
+  - "5.8"
+  - "5.10"
+  - "5.12"
+  - "5.14"
+  - "5.16"
+  - "5.18"
+  - "5.20"
+  - "5.22"
+  - "5.24"
+  - "5.26"
+  - "5.28"
+  - "5.30"
+  - "5.32"
+  #- "cperl-5.28.2"
+  #- "5.26-thr"
+  #- "5.26-dbg"
+  #- "5.26-thr-dbg"
+  #- "5.26-mb"
+  #- "dev"
+  #- "blead"
+
+# slows down already cached versions by 3 (33s => 1m45s)
+# (i.e. cache download: 9s, setup: 45s-130s)
+# but speeds up building the non-cached versions (5.24-*) by 2 (3m50s => 1m45s)
+# overall: 25min => 35min, so disable the perl cache
+#cache:
+#  directories:
+#    - /home/travis/perl5/perlbrew/
+
+addons:
+  apt:
+    packages:
+    - aspell
+
+# blead and 5.6 stumble over YAML and more missing dependencies
+# for Devel::Cover::Report::Coveralls
+# cpanm does not do 5.6
+before_install:
+  - mkdir /home/travis/bin || true
+  - ln -s `which true` /home/travis/bin/cpansign
+  - eval $(curl https://travis-perl.github.io/init) --auto
+  - if [ X$cperl != X ]; then
+      perlbrew --notest install $cperl ;
+      perlbrew use $cperl ;
+    fi
+install:
+  - export AUTOMATED_TESTING=1 HARNESS_TIMER=1
+  - if [ X$cperl != X ]; then
+      alias perl=~/perl5/perlbrew/perls/$cperl/bin/cperl ;
+      alias cpan=~/perl5/perlbrew/perls/$cperl/bin/cpan ;
+      cpan App::cpanminus ;
+    fi
+  - cpan-install --deps       # installs prereqs, including recommends
+  - cpan-install JSON JSON::PP JSON::XS Mojo::JSON Test::LeakTrace Time::Piece
+  - test x$AUTHOR_TESTING = x1 && cpan-install Test::CPAN::Meta Test::MinimumVersion
+        Pod::Spell::CommonMistakes Class::XSAccessor Test::Kwalitee Test::Spelling
+        Text::CSV_XS Test::Pod Test::Pod::Coverage
+  - cpan-install --coverage   # installs coverage prereqs, if enabled
+
+before_script:
+  - coverage-setup
+
+notifications:
+  email:
+    on_success: change
+    on_failure: always
+
+matrix:
+  fast_finish: true
+  include:
+    - perl: "5.28"
+      env: cperl=cperl-5.28.2
+    - perl: "5.18"
+      env: COVERAGE=1 AUTHOR_TESTING=1  # enables coverage+coveralls reporting
+  allow_failures:
+    - env: COVERAGE=1 AUTHOR_TESTING=1
+    - perl: "blead"
+    - perl: "5.6.2" # cp5.6.2an.barnyard.co.uk sometimes down
+    - perl: "5.28"
+      env: cperl=cperl-5.28.2
+
+# Hack to not run on tag pushes:
+branches:
+  except:
+  - /^v?[0-9]+\.[0-9]+/

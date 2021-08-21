@@ -1,0 +1,126 @@
+Revision history for Perl extension File-ShareDir
+
+1.118	2020-10-21
+    - Releasing 1.117_001 without further changes
+
+1.117_001	2020-09-25
+    - fix failing test of dependencies after in 1.116 (from 1.112),
+      thanks to Dirk Stöcker for reporting via RT#127376 and
+      Mohammad S Anwar (@manwar) for providing the fix via Github
+      PR#14
+    - Fix RT#133368 (PR#15): Fix running tests in parallel submitted
+      by Kent Fredric (KENTNL) and fix provided by Tom Hukins (@tomhukins)
+    - Fix RT#125907: spelling error in manpage - thanks to Lucas Kanashiro
+      for reporting and Graham Knop (@haarg) for kicking me by submitting
+      PR#17
+
+1.116	2018-06-24
+    - fix fail-test which incorrectly read without permission
+      ==> introduce new CI test proving this (Thanks to Ville
+          Skyttä <ville.skytta@iki.fi>)
+    - spelling fixes (Thanks to Ville Skyttä <ville.skytta@iki.fi>)
+    - fix author tests when run without recommended dependencies
+      (reported by Mohammed Anwar & Wesley Schwengle)
+    - add a test proving and reporting dependencies
+
+1.114	2018-06-21
+    - be more expressive regarding to prerequisites
+    - improve detection for situations where no permission test
+      can be done
+    - fix edge case for 5.8
+
+1.112	2018-06-18
+    - Fix tests that fail when running as root (RT#125602,
+      thanks Wesley Schwengle <wesley@schwengle.net>)
+    - Fix tests fail on MSWin32 for similar reason as the
+      root failures from RT#125602
+    - clarify support rules
+    - improve POD
+
+1.110	2018-06-16
+    - remove unused/incomplete _dist_packfile
+    - increase test coverage
+    - refactor _search_inc_path
+    - add badges to POD
+
+1.108	2018-06-15
+    - Fix RT#125582: Undefined subroutine &File::ShareDir::croak
+      called reported by yseto and Andreas Koenig (via RT#125575)
+    - Improve tests a little (a higher test coverage would be great)
+    - Update README.md
+
+1.106	2018-06-10
+    - Add support for overriding the resolved path for a given
+      Module or Dist (Thanks to Kent Fredric <kentnl@cpan.org>)
+    - Fix RT#84914: _dist_file_new lacks return check (Thanks to
+      Alex Peters <lxp@cpan.org>) -- fixes RT#40158, too.
+    - Fix RT#60431: common @INC traversal code
+      Phillip Moore <w.phillip.moore@gmail.com> requested for
+      easier overriding in controlled environments an extraction
+      of @INC traversal in one subroutine.
+      The provided patch has been applied with minor modifications,
+      thanks Phillip!
+    - Fix RT#63548: State explicit how developers can use
+      File::ShareDir even in development phase out-of-the-box
+    - Fix RT#18042: Windows style path errors (Thanks to Barbie
+      <barbie@missbarbell.co.uk>)
+    - Improve infrastructure of distribution (toolchain, perltidy,
+      perlcritic, Devel::Cover, ...)
+    - deploy with most recent File::ShareDir::Install (v0.12-6-g29a6ff7
+      aka 0.13)
+
+1.104	2017-06-29
+    - Fix RT#120833: Fails tests when no "." in @INC reported by Kent
+      Fredric <kentnlATcpan.org>.
+    - avoid tracking bundled prereqs - use inc::latest tooling from
+      List::MoreUtils...
+    - bundle reasonable LICENSE file and README.md
+
+1.102	2014-05-12
+    - Fix RT#95572 "necessary test files not copied into blib"
+      Thanks to Graham Knop for fixing and Zefram for reporting
+    - Explicitly require warnings as runtime prerequisite
+      Thanks to Graham Knop for reporting
+
+1.101	2014-05-10
+    - Reformat Changes according to CPAN::Changes::Spec
+    - Switch to EU::MM
+    - fix RT#95401 (Thanks, Dolmen)
+    - Taking Maintainership (Jens Rehsack, thanks to David Golden)
+
+1.03	2010-02-01
+    - Upgraded to Module::Install 1.00
+
+1.02	2010-05-18
+    - Upgraded to Module::Install 0.95
+    - Removed Params::Util dep (MIYAGAWA)
+
+1.01	2009-11-24
+    - Updating Module::Install to 0.91
+    - Fix typo in documentation (Thanks, ribasushi)
+
+1.00	2009-07-17
+    - Everything appears ok, release prod
+
+0.99_01	2009-07-10
+    - Updating tests a little
+    - Adding the class_file function
+    - Allow *_file to find any kind of path, not just files (hdp)
+    - Localising $@ during evals
+    - Implementing the new sharedir model
+
+0.05	2006-09-04
+    - Upgrading to Module::Install 0.64
+
+0.04	2006-05-09
+    - Made module_dir work properly under MSWin32 (ishigaki)
+
+0.03	2006-12-27
+    - Upgraded to Module::Install 0.55
+    - Added an additional test case for a bug(sort of) in 0.54
+
+0.02	2005-12-11
+    - Made dist_file work properly with Module::Install::Share
+
+0.01	2005-12-10
+    - First implementation

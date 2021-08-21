@@ -1,0 +1,4 @@
+#!/home/isucon/local/perl/bin/perl
+
+use Module::Build::Tiny;
+Build();

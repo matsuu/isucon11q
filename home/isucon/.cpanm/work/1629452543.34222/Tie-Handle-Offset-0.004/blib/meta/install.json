@@ -1,0 +1,1 @@
+{"name":"Tie::Handle::Offset","target":"Tie::Handle::SkipHeader","dist":"Tie-Handle-Offset-0.004","provides":{"Tie::Handle::Offset":{"file":"lib/Tie/Handle/Offset.pm","version":"0.004"},"Tie::Handle::SkipHeader":{"file":"lib/Tie/Handle/SkipHeader.pm","version":"0.004"}},"version":"0.004","pathname":"D/DA/DAGOLDEN/Tie-Handle-Offset-0.004.tar.gz"}

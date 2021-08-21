@@ -1,0 +1,1 @@
+{"pathname":"K/KA/KAZEBURO/Kossy-Validator-0.01.tar.gz","dist":"Kossy-Validator-0.01","target":"Kossy::Validator","name":"Kossy::Validator","version":"0.01","provides":{"Kossy::Validator::Result":{"file":"lib/Kossy/Validator.pm"},"Kossy::Validator":{"version":"0.01","file":"lib/Kossy/Validator.pm"}}}

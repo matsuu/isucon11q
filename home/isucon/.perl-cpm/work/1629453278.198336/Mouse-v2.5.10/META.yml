@@ -1,0 +1,164 @@
+---
+abstract: 'Moose minus the antlers'
+author:
+  - 'Shawn M Moore <sartak at gmail.com>'
+build_requires:
+  Test::Exception: '0'
+  Test::Fatal: '0'
+  Test::LeakTrace: '0'
+  Test::More: '0.88'
+  Test::Output: '0'
+  Test::Requires: '0'
+  Try::Tiny: '0'
+configure_requires:
+  Devel::PPPort: '3.42'
+  ExtUtils::ParseXS: '3.22'
+  Module::Build: '0.4005'
+  Module::Build::XSUtil: '0.19'
+  version: '0.9913'
+conflicts:
+  Any::Moose: '< 0.10'
+  MouseX::AttributeHelpers: '< 0.06'
+  MouseX::NativeTraits: '< 1.00'
+dynamic_config: 0
+generated_by: 'Minilla/v3.1.9, CPAN::Meta::Converter version 2.150010'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: '1.4'
+name: Mouse
+no_index:
+  directory:
+    - t
+    - xt
+    - tool
+    - author
+    - example
+    - benchmarks
+    - builder
+provides:
+  Mouse:
+    file: lib/Mouse.pm
+    version: v2.5.10
+  Mouse::Exporter:
+    file: lib/Mouse/Exporter.pm
+  Mouse::Meta::Attribute:
+    file: lib/Mouse/Meta/Attribute.pm
+  Mouse::Meta::Class:
+    file: lib/Mouse/Meta/Class.pm
+  Mouse::Meta::Method:
+    file: lib/Mouse/Meta/Method.pm
+  Mouse::Meta::Method::Accessor:
+    file: lib/Mouse/Meta/Method/Accessor.pm
+  Mouse::Meta::Method::Constructor:
+    file: lib/Mouse/Meta/Method/Constructor.pm
+  Mouse::Meta::Method::Delegation:
+    file: lib/Mouse/Meta/Method/Delegation.pm
+  Mouse::Meta::Method::Destructor:
+    file: lib/Mouse/Meta/Method/Destructor.pm
+  Mouse::Meta::Module:
+    file: lib/Mouse/Meta/Module.pm
+  Mouse::Meta::Role:
+    file: lib/Mouse/Meta/Role.pm
+  Mouse::Meta::Role::Application:
+    file: lib/Mouse/Meta/Role/Application.pm
+  Mouse::Meta::Role::Application::RoleSummation:
+    file: lib/Mouse/Meta/Role/Composite.pm
+  Mouse::Meta::Role::Composite:
+    file: lib/Mouse/Meta/Role/Composite.pm
+  Mouse::Meta::Role::Method:
+    file: lib/Mouse/Meta/Role/Method.pm
+  Mouse::Meta::TypeConstraint:
+    file: lib/Mouse/Meta/TypeConstraint.pm
+  Mouse::Object:
+    file: lib/Mouse/Object.pm
+  Mouse::PurePerl:
+    file: lib/Mouse/PurePerl.pm
+  Mouse::Role:
+    file: lib/Mouse/Role.pm
+    version: v2.5.10
+  Mouse::Spec:
+    file: lib/Mouse/Spec.pm
+    version: v2.5.10
+  Mouse::TypeRegistry:
+    file: lib/Mouse/TypeRegistry.pm
+  Mouse::Util:
+    file: lib/Mouse/Util.pm
+    version: v2.5.10
+  Mouse::Util::MetaRole:
+    file: lib/Mouse/Util/MetaRole.pm
+  Mouse::Util::TypeConstraints:
+    file: lib/Mouse/Util/TypeConstraints.pm
+  Squirrel:
+    file: lib/Squirrel.pm
+  Squirrel::Role:
+    file: lib/Squirrel/Role.pm
+  Test::Mouse:
+    file: lib/Test/Mouse.pm
+  ouse:
+    file: lib/ouse.pm
+requires:
+  Scalar::Util: '1.14'
+  XSLoader: '0.02'
+  perl: '5.008005'
+resources:
+  bugtracker: https://github.com/xslate/p5-Mouse/issues
+  homepage: https://github.com/xslate/p5-Mouse
+  repository: git://github.com/xslate/p5-Mouse.git
+version: v2.5.10
+x_contributors:
+  - 'Aleksandr Matveev <a.matveev@corp.mail.ru>'
+  - 'Alex Solovey <a.solovey@gmail.com>'
+  - 'Bernhard M. Wiedemann <bwiedemann@suse.de>'
+  - 'Boutros Lab User <blabuser@oicr.on.ca>'
+  - 'Brett <orderthruchaos@gmail.com>'
+  - 'Chris Prather <chris@prather.org>'
+  - 'Chris Prather <cprather@hdpublishing.com>'
+  - 'Daisuke Maki (lestrrat) <daisuke@endeworks.jp>'
+  - 'Daisuke Maki <dmaki@cpan.org>'
+  - 'Dann <techmemo@gmail.com>'
+  - 'David Steinbrunner <dsteinbrunner@pobox.com>'
+  - 'Eiichi Tsukata <devel@etsukata.com>'
+  - 'FUJI Goro (gfx) <gfuji@cpan.org>'
+  - 'Fuji, Goro <fuji.goro@dena.jp>'
+  - 'Fuji, Goro <g.psy.va@gmail.com>'
+  - 'Fuji, Goro <goro-fuji@cookpad.com>'
+  - 'Ingy dot Net <ingy@ingy.net>'
+  - 'Jesse Vincent <jesse@bestpractical.com>'
+  - 'Joel Bernstein <joel.bernstein@vidicom.co.uk>'
+  - 'John SJ Anderson <genehack@genehack.org>'
+  - 'Kensaku Araga <ken39arg@gmail.com>'
+  - 'Kent Fredric <kentfredric@gmail.com>'
+  - 'Luca Ferrari <fluca1978@gmail.com>'
+  - 'Masahiro Honma <hiratara@cpan.org>'
+  - 'Matt S Trout <matthewt@hercule.scsys.co.uk>'
+  - 'Michael G. Schwern <schwern@pobox.com>'
+  - 'NAKAGAWA Masaki <masaki.nakagawa@gmail.com>'
+  - 'Nick Woolley <nick@noodlefactory.co.uk>'
+  - 'Piotr Roszatycki <piotr.roszatycki@gmail.com>'
+  - 'Reini Urban <rurban@cpan.org>'
+  - 'Reini Urban <rurban@cpanel.net>'
+  - 'Ricardo SIGNES <rjbs@cpan.org>'
+  - 'Sergey Kolychev <sergeykolychev.github@gmail.com>'
+  - 'Sergiy Zuban <s.zuban@trackingsoft.com>'
+  - 'Shawn M Moore <sartak@bestpractical.com>'
+  - 'Shawn M Moore <sartak@gmail.com>'
+  - 'Shoichi Kaji <skaji@cpan.org>'
+  - 'Shoichi Kaji <skaji@outlook.com>'
+  - 'Stanislaw Pusep <creaktive@gmail.com>'
+  - 'Syohei YOSHIDA <syohex@gmail.com>'
+  - 'Todd Rinaldo <toddr@cpan.org>'
+  - 'Todd Rinaldo <toddr@cpanel.net>'
+  - 'Tokuhiro Matsuno <tokuhirom@gmail.com>'
+  - 'Tokuhiro Matsuno <tokuhirom@gp.ath.cx>'
+  - 'Tomas Doran (t0m) <t0m@state51.co.uk>'
+  - 'Vincent Pit <perl@profvince.com>'
+  - 'Yuval Kogman <nothingmuch@woobling.org>'
+  - 'markstos <mark@stosberg.com>'
+  - 'mp0liiu <raian@reeshome.org>'
+  - 'sunnavy <sunnavy@bestpractical.com>'
+  - 'wu-lee <mouse.git.wu-lee@noodlefactory.co.uk>'
+  - 'Ævar Arnfjörð Bjarmason <avarab@gmail.com>'
+  - '大沢 和宏 <yappo@shibuya.pl>'
+x_serialization_backend: 'CPAN::Meta::YAML version 0.018'
+x_static_install: 0

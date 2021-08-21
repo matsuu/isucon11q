@@ -1,0 +1,46 @@
+---
+abstract: 'Simple and dumb file system watcher'
+author:
+  - 'Tatsuhiko Miyagawa <miyagawa@bulknews.net>'
+build_requires:
+  File::Temp: '0'
+  Test::More: '0'
+  Test::SharedFork: '0'
+configure_requires:
+  ExtUtils::MakeMaker: '0'
+dynamic_config: 0
+generated_by: 'Dist::Milla version v1.0.20, Dist::Zilla version 6.012, CPAN::Meta::Converter version 2.143240'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: '1.4'
+name: Filesys-Notify-Simple
+no_index:
+  directory:
+    - eg
+    - examples
+    - inc
+    - share
+    - t
+    - xt
+requires:
+  perl: '5.008001'
+resources:
+  bugtracker: https://github.com/miyagawa/Filesys-Notify-Simple/issues
+  homepage: https://github.com/miyagawa/Filesys-Notify-Simple
+  repository: https://github.com/miyagawa/Filesys-Notify-Simple.git
+version: '0.14'
+x_contributors:
+  - 'Chia-liang Kao <clkao@clkao.org>'
+  - 'Christiaan Kras <c.kras@pcc-online.net>'
+  - 'Ilya <i.pavlov@primetech.ru>'
+  - 'Kenta Sato <karupa@cpan.org>'
+  - 'Kent Fredric <kentfredric@gmail.com>'
+  - 'Masahiro Chiba <chiba@everqueue.com>'
+  - 'Matthew Somerville <matthew-github@dracos.co.uk>'
+  - 'mono <mono@mono0x.net>'
+  - 'Tatsuhiko Miyagawa <miyagawa@gmail.com>'
+  - 'Yasutaka ATARASHI <yakex@cpan.org>'
+x_generated_by_perl: v5.20.1
+x_serialization_backend: 'YAML::Tiny version 1.73'
+x_static_install: 1

@@ -1,0 +1,12 @@
+BEGIN { -e 'Distar' or system qw(git clone https://github.com/p5sagit/Distar.git) }
+use lib 'Distar/lib';
+use Distar;
+use ExtUtils::MakeMaker;
+ExtUtils::MakeMaker->VERSION(6.68)
+  unless $ENV{CONTINUOUS_INTEGRATION};
+
+author 'mst - Matt S. Trout (cpan:MSTROUT) <mst@shadowcat.co.uk>';
+
+manifest_include 'xt/dependents', '.patch';
+
+1;

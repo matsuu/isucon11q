@@ -1,0 +1,15 @@
+do{ my $x = {
+       'blib' => 1,
+       'blib/arch/auto/Mouse/Mouse.bs' => 1,
+       'blib/arch/auto/Mouse/Mouse.so' => 1,
+       'lib/Mouse.c' => 1,
+       'lib/Mouse.o' => 1,
+       'lib/Mouse.xs' => 1,
+       'xs-src/MouseAccessor.o' => 1,
+       'xs-src/MouseAttribute.o' => 1,
+       'xs-src/MouseTypeConstraints.o' => 1,
+       'xs-src/MouseUtil.o' => 1,
+       'xs-src/ppport.h' => 1,
+       'xs-src/xshelper.h' => 1
+     };
+$x; }

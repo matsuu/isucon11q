@@ -1,0 +1,1 @@
+{"pathname":"K/KA/KAZUHO/HTTP-Parser-XS-0.17.tar.gz","dist":"HTTP-Parser-XS-0.17","target":"HTTP::Parser::XS","version":"0.17","name":"HTTP::Parser::XS","provides":{"HTTP::Parser::XS":{"file":"lib/HTTP/Parser/XS.pm","version":"0.17"},"HTTP::Parser::XS::PP":{"file":"lib/HTTP/Parser/XS/PP.pm"}}}

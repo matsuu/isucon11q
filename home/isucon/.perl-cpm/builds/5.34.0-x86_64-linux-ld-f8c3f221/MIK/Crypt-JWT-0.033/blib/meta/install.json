@@ -1,0 +1,1 @@
+{"version":"0.033","name":"Crypt::JWT","provides":{"Crypt::KeyWrap":{"file":"lib/Crypt/KeyWrap.pm","version":"0.033"},"Crypt::JWT":{"version":"0.033","file":"lib/Crypt/JWT.pm"}},"target":"Crypt::JWT","pathname":"M/MI/MIK/Crypt-JWT-0.033.tar.gz","dist":"Crypt-JWT-0.033"}

@@ -1,0 +1,2 @@
+badges = ['travis']
+module_maker="ModuleBuild"

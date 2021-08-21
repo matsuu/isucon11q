@@ -1,0 +1,1 @@
+{"pathname":"M/MI/MIYAGAWA/Test-TCP-2.22.tar.gz","target":"Test::TCP","dist":"Test-TCP-2.22","name":"Test::TCP","version":"2.22","provides":{"Test::TCP::CheckPort":{"file":"lib/Test/TCP/CheckPort.pm"},"Net::EmptyPort":{"file":"lib/Net/EmptyPort.pm"},"Test::TCP":{"version":"2.22","file":"lib/Test/TCP.pm"}}}

@@ -1,0 +1,9 @@
+do{ my $x = {
+       'config' => {
+                     'installman1dir' => '',
+                     'installman3dir' => '',
+                     'installsiteman1dir' => '',
+                     'installsiteman3dir' => ''
+                   }
+     };
+$x; }

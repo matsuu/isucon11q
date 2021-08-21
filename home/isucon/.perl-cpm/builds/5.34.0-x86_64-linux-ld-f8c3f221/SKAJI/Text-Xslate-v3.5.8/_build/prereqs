@@ -1,0 +1,23 @@
+do{ my $x = {
+       'build_requires' => {
+                             'ExtUtils::CBuilder' => 0
+                           },
+       'conflicts' => {},
+       'recommends' => {},
+       'requires' => {
+                       'Data::MessagePack' => '0.38',
+                       'Encode' => '2.26',
+                       'Mouse' => 'v2.5.0',
+                       'Scalar::Util' => '1.14',
+                       'Storable' => '2.15',
+                       'parent' => '0.221',
+                       'perl' => '5.008001'
+                     },
+       'test_requires' => {
+                            'File::Copy::Recursive' => '0',
+                            'File::Path' => '2.07',
+                            'Test::More' => '0.98',
+                            'Test::Requires' => '0'
+                          }
+     };
+$x; }

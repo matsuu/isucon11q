@@ -1,0 +1,206 @@
+Checking whether pureperl is required ...no
+Checking for cc ...cc
+Checking for cc ...(cached) cc
+Checking whether perlapi is accessible ...yes
+Checking for stdlib.h ...yes
+Checking for stdarg.h ...yes
+Checking for string.h ...yes
+Checking for float.h ...yes
+Checking for assert.h ...yes
+Checking for ctype.h ...yes
+Checking for errno.h ...yes
+Checking for limits.h ...yes
+Checking for locale.h ...yes
+Checking for math.h ...yes
+Checking for setjmp.h ...yes
+Checking for signal.h ...yes
+Checking for stddef.h ...yes
+Checking for stdio.h ...yes
+Checking for time.h ...yes
+Checking for sys/types.h ...yes
+Checking for sys/stat.h ...yes
+Checking for memory.h ...yes
+Checking for strings.h ...yes
+Checking for inttypes.h ...yes
+Checking for stdint.h ...yes
+Checking for unistd.h ...yes
+Checking for time.h ...(cached) yes
+Checking for sys/time.h ...yes
+Checking for time ...yes
+Checking for size_t ...yes
+Checking for ssize_t ...yes
+Checking for builtin expect ...compile stage failed - error building testN5rVJj.o from 'testN5rVJj.c' at /home/isucon/local/perl/lib/5.34.0/ExtUtils/CBuilder/Base.pm line 185.
+
+testN5rVJj.c: In function ‘main’:
+testN5rVJj.c:73:8: error: ‘f’ undeclared (first use in this function)
+   73 | return f != expect;
+      |        ^
+testN5rVJj.c:73:8: note: each undeclared identifier is reported only once for each function it appears in
+
+failing program is:
+/* defined when limits.h is available */
+#define HAVE_LIMITS_H 1
+/* defined when stdio.h is available */
+#define HAVE_STDIO_H 1
+/* defined when unistd.h is available */
+#define HAVE_UNISTD_H 1
+/* defined when sys/types.h is available */
+#define HAVE_SYS_TYPES_H 1
+/* Defined when time is available */
+#define HAVE_TIME 1
+/* defined when errno.h is available */
+#define HAVE_ERRNO_H 1
+/* defined when setjmp.h is available */
+#define HAVE_SETJMP_H 1
+/* defined when size_t is available */
+#define HAVE_SIZE_T 1
+/* Define to 1 if you have the ANSI C header files. */
+#define STDC_HEADERS 1
+/* defined when assert.h is available */
+#define HAVE_ASSERT_H 1
+/* defined when strings.h is available */
+#define HAVE_STRINGS_H 1
+/* defined when ssize_t is available */
+#define HAVE_SSIZE_T 1
+/* defined when inttypes.h is available */
+#define HAVE_INTTYPES_H 1
+/* defined when stdarg.h is available */
+#define HAVE_STDARG_H 1
+/* defined when memory.h is available */
+#define HAVE_MEMORY_H 1
+/* defined when ctype.h is available */
+#define HAVE_CTYPE_H 1
+/* defined when stdint.h is available */
+#define HAVE_STDINT_H 1
+/* defined when string.h is available */
+#define HAVE_STRING_H 1
+/* defined when sys/time.h is available */
+#define HAVE_SYS_TIME_H 1
+/* defined when sys/stat.h is available */
+#define HAVE_SYS_STAT_H 1
+/* defined when locale.h is available */
+#define HAVE_LOCALE_H 1
+/* defined when time.h is available */
+#define HAVE_TIME_H 1
+/* defined when signal.h is available */
+#define HAVE_SIGNAL_H 1
+/* defined when float.h is available */
+#define HAVE_FLOAT_H 1
+/* defined when stdlib.h is available */
+#define HAVE_STDLIB_H 1
+/* defined when math.h is available */
+#define HAVE_MATH_H 1
+/* defined when stddef.h is available */
+#define HAVE_STDDEF_H 1
+/* end of conftest.h */
+
+/* Override any GCC internal prototype to avoid an error.
+   Use char because int might match the return type of a GCC
+   builtin and then its argument prototype would still apply.  */
+#ifdef __cplusplus
+extern "C" {
+#endif
+char expect ();
+#ifdef __cplusplus
+}
+#endif
+
+
+  int
+  main ()
+  {
+    #if !defined(__has_builtin)
+return f != expect;
+#else
+return __has_builtin(expect);
+#endif
+;
+    return 0;
+  }
+
+
+stdout was :
+cc -I/home/isucon/local/perl/lib/5.34.0/x86_64-linux-ld/CORE -fPIC -c -fwrapv -fno-strict-aliasing -pipe -fstack-protector-strong -I/usr/local/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -O2 -g -o testN5rVJj.o testN5rVJj.c
+
+no
+Checking for statement expression feature ...compile stage failed - error building test_6TSfK.o from 'test_6TSfK.c' at /home/isucon/local/perl/lib/5.34.0/ExtUtils/CBuilder/Base.pm line 185.
+
+test_6TSfK.c: In function ‘main’:
+test_6TSfK.c:63:14: error: storage size of ‘test_array’ isn’t constant
+   63 |   static int test_array [(STMT_EXPR) ? 1 : -1 ];
+      |              ^~~~~~~~~~
+
+failing program is:
+/* defined when unistd.h is available */
+#define HAVE_UNISTD_H 1
+/* defined when stdio.h is available */
+#define HAVE_STDIO_H 1
+/* Defined when time is available */
+#define HAVE_TIME 1
+/* defined when sys/types.h is available */
+#define HAVE_SYS_TYPES_H 1
+/* defined when limits.h is available */
+#define HAVE_LIMITS_H 1
+/* defined when strings.h is available */
+#define HAVE_STRINGS_H 1
+/* defined when assert.h is available */
+#define HAVE_ASSERT_H 1
+/* defined when errno.h is available */
+#define HAVE_ERRNO_H 1
+/* Define to 1 if you have the ANSI C header files. */
+#define STDC_HEADERS 1
+/* defined when size_t is available */
+#define HAVE_SIZE_T 1
+/* defined when setjmp.h is available */
+#define HAVE_SETJMP_H 1
+/* defined when ctype.h is available */
+#define HAVE_CTYPE_H 1
+/* defined when locale.h is available */
+#define HAVE_LOCALE_H 1
+/* defined when sys/stat.h is available */
+#define HAVE_SYS_STAT_H 1
+/* defined when sys/time.h is available */
+#define HAVE_SYS_TIME_H 1
+/* defined when stdint.h is available */
+#define HAVE_STDINT_H 1
+/* defined when string.h is available */
+#define HAVE_STRING_H 1
+/* defined when ssize_t is available */
+#define HAVE_SSIZE_T 1
+/* defined when memory.h is available */
+#define HAVE_MEMORY_H 1
+/* defined when inttypes.h is available */
+#define HAVE_INTTYPES_H 1
+/* defined when stdarg.h is available */
+#define HAVE_STDARG_H 1
+/* defined when math.h is available */
+#define HAVE_MATH_H 1
+/* defined when stddef.h is available */
+#define HAVE_STDDEF_H 1
+/* defined when float.h is available */
+#define HAVE_FLOAT_H 1
+/* defined when time.h is available */
+#define HAVE_TIME_H 1
+/* defined when signal.h is available */
+#define HAVE_SIGNAL_H 1
+/* defined when stdlib.h is available */
+#define HAVE_STDLIB_H 1
+/* end of conftest.h */
+
+
+
+  int
+  main ()
+  {
+    #define STMT_EXPR ({ 1; })
+  static int test_array [(STMT_EXPR) ? 1 : -1 ];
+  test_array [0] = 0
+;
+    return 0;
+  }
+
+
+stdout was :
+cc -I/home/isucon/local/perl/lib/5.34.0/x86_64-linux-ld/CORE -fPIC -c -fwrapv -fno-strict-aliasing -pipe -fstack-protector-strong -I/usr/local/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -O2 -g -o test_6TSfK.o test_6TSfK.c
+
+no

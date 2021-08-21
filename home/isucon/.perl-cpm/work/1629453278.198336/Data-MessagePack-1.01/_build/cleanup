@@ -1,0 +1,13 @@
+do{ my $x = {
+       'blib' => 1,
+       'blib/arch/auto/Data/MessagePack/MessagePack.bs' => 1,
+       'blib/arch/auto/Data/MessagePack/MessagePack.so' => 1,
+       'lib/Data/MessagePack.c' => 1,
+       'lib/Data/MessagePack.o' => 1,
+       'lib/Data/MessagePack.xs' => 1,
+       'xs-src/pack.o' => 1,
+       'xs-src/ppport.h' => 1,
+       'xs-src/unpack.o' => 1,
+       'xs-src/xshelper.h' => 1
+     };
+$x; }

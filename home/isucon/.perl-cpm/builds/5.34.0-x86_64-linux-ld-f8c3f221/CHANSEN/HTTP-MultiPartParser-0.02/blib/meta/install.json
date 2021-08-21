@@ -1,0 +1,1 @@
+{"pathname":"C/CH/CHANSEN/HTTP-MultiPartParser-0.02.tar.gz","dist":"HTTP-MultiPartParser-0.02","target":"HTTP::MultiPartParser","version":"0.02","name":"HTTP::MultiPartParser","provides":{"HTTP::MultiPartParser":{"version":"0.02","file":"lib/HTTP/MultiPartParser.pm"}}}

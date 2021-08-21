@@ -1,0 +1,174 @@
+do{ my $x = [
+       {
+         'ARGV' => []
+       },
+       {},
+       {
+         'PL_files' => undef,
+         '_added_to_INC' => [
+                              't/lib',
+                              't/bundled',
+                              'lib'
+                            ],
+         'allow_mb_mismatch' => 0,
+         'allow_pureperl' => 0,
+         'auto_configure_requires' => 1,
+         'autosplit' => undef,
+         'base_dir' => '/home/isucon/.cpanm/work/1629452543.34222/Module-Build-0.4231',
+         'bindoc_dirs' => [
+                            'blib/script'
+                          ],
+         'blib' => 'blib',
+         'build_bat' => 0,
+         'build_class' => 'Module::Build',
+         'build_elements' => [
+                               'PL',
+                               'support',
+                               'pm',
+                               'xs',
+                               'share_dir',
+                               'pod',
+                               'script'
+                             ],
+         'build_requires' => {},
+         'build_script' => 'Build',
+         'bundle_inc' => [],
+         'bundle_inc_preload' => [],
+         'c_source' => undef,
+         'config' => undef,
+         'config_dir' => '_build',
+         'configure_requires' => {
+                                   'CPAN::Meta' => '2.142060',
+                                   'File::Basename' => 0,
+                                   'File::Copy' => 0,
+                                   'File::Path' => 0,
+                                   'File::Spec' => '0.82',
+                                   'Module::Metadata' => '1.000002',
+                                   'Perl::OSType' => 1,
+                                   'version' => '0.87'
+                                 },
+         'conflicts' => {},
+         'cover' => undef,
+         'cpan_client' => 'cpan',
+         'create_license' => 1,
+         'create_makefile_pl' => undef,
+         'create_packlist' => 1,
+         'create_readme' => 1,
+         'debug' => undef,
+         'debugger' => undef,
+         'destdir' => undef,
+         'dist_abstract' => undef,
+         'dist_author' => undef,
+         'dist_name' => 'Module-Build',
+         'dist_suffix' => undef,
+         'dist_version' => '0.4231',
+         'dist_version_from' => 'lib/Module/Build.pm',
+         'dynamic_config' => 1,
+         'extra_compiler_flags' => [],
+         'extra_linker_flags' => [],
+         'extra_manify_args' => undef,
+         'get_options' => {},
+         'has_config_data' => undef,
+         'html_css' => '',
+         'include_dirs' => [],
+         'install_base' => undef,
+         'install_base_relpaths' => {},
+         'install_path' => {},
+         'install_sets' => {},
+         'installdirs' => 'site',
+         'libdoc_dirs' => [
+                            'blib/lib',
+                            'blib/arch'
+                          ],
+         'license' => 'perl',
+         'magic_number' => undef,
+         'mb_version' => '0.4231',
+         'meta_add' => {},
+         'meta_merge' => {
+                           'resources' => {
+                                            'IRC' => 'irc://irc.perl.org/#toolchain',
+                                            'MailingList' => 'mailto:module-build@perl.org',
+                                            'repository' => 'https://github.com/Perl-Toolchain-Gang/Module-Build'
+                                          }
+                         },
+         'metafile' => 'META.yml',
+         'metafile2' => 'META.json',
+         'module_name' => 'Module::Build',
+         'mymetafile' => 'MYMETA.yml',
+         'mymetafile2' => 'MYMETA.json',
+         'needs_compiler' => '',
+         'orig_dir' => '/home/isucon/.cpanm/work/1629452543.34222/Module-Build-0.4231',
+         'original_prefix' => {},
+         'perl' => '/home/isucon/local/perl/bin/perl',
+         'pm_files' => undef,
+         'pod_files' => undef,
+         'pollute' => undef,
+         'prefix' => undef,
+         'prefix_relpaths' => {},
+         'prereq_action_types' => [
+                                    'requires',
+                                    'build_requires',
+                                    'test_requires',
+                                    'conflicts',
+                                    'recommends'
+                                  ],
+         'program_name' => undef,
+         'pureperl_only' => 0,
+         'quiet' => undef,
+         'recommends' => {
+                           'ExtUtils::Install' => '0.3',
+                           'ExtUtils::Manifest' => '1.54'
+                         },
+         'recurse_into' => [],
+         'recursive_test_files' => 1,
+         'release_status' => 'stable',
+         'requires' => {
+                         'CPAN::Meta' => '2.142060',
+                         'Cwd' => 0,
+                         'Data::Dumper' => 0,
+                         'ExtUtils::CBuilder' => '0.27',
+                         'ExtUtils::Install' => 0,
+                         'ExtUtils::Manifest' => 0,
+                         'ExtUtils::Mkbootstrap' => 0,
+                         'ExtUtils::ParseXS' => '2.21',
+                         'File::Basename' => 0,
+                         'File::Compare' => 0,
+                         'File::Copy' => 0,
+                         'File::Find' => 0,
+                         'File::Path' => 0,
+                         'File::Spec' => '0.82',
+                         'Getopt::Long' => 0,
+                         'Module::Metadata' => '1.000002',
+                         'Perl::OSType' => 1,
+                         'Pod::Man' => '2.17',
+                         'TAP::Harness' => '3.29',
+                         'Text::Abbrev' => 0,
+                         'Text::ParseWords' => 0,
+                         'perl' => '5.006001',
+                         'version' => '0.87'
+                       },
+         'script_files' => [
+                             'bin/config_data'
+                           ],
+         'scripts' => undef,
+         'share_dir' => undef,
+         'sign' => 0,
+         'tap_harness_args' => {},
+         'test_file_exts' => [
+                               '.t'
+                             ],
+         'test_files' => undef,
+         'test_requires' => {
+                              'CPAN::Meta::YAML' => '0.003',
+                              'File::Temp' => '0.15',
+                              'Parse::CPAN::Meta' => '1.4401',
+                              'TAP::Harness' => '3.29',
+                              'Test::More' => '0.49'
+                            },
+         'use_rcfile' => 1,
+         'use_tap_harness' => 0,
+         'verbose' => undef,
+         'xs_files' => undef
+       }
+     ];
+$x; }

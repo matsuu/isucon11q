@@ -1,0 +1,33 @@
+---
+abstract: 'check that a library is available'
+author:
+  - 'David Cantrell'
+  - 'David Golden'
+  - 'Yasuhiro Matsumoto'
+build_requires:
+  Capture::Tiny: '0'
+  ExtUtils::MakeMaker: '0'
+  Mock::Config: '0.02'
+  Test::More: '0.88'
+configure_requires:
+  ExtUtils::MakeMaker: '0'
+dynamic_config: 0
+generated_by: 'ExtUtils::MakeMaker version 7.24, CPAN::Meta::Converter version 2.150010'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: '1.4'
+name: Devel-CheckLib
+no_index:
+  directory:
+    - t
+    - inc
+requires:
+  Exporter: '0'
+  File::Spec: '0'
+  File::Temp: '0.16'
+  perl: '5.004050'
+resources:
+  repository: http://github.com/mattn/p5-Devel-CheckLib
+version: '1.14'
+x_serialization_backend: 'CPAN::Meta::YAML version 0.018'

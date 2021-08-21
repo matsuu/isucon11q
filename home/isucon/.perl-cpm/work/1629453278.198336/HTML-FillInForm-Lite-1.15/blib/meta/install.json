@@ -1,0 +1,1 @@
+{"dist":"HTML-FillInForm-Lite-1.15","pathname":"G/GF/GFUJI/HTML-FillInForm-Lite-1.15.tar.gz","target":"HTML::FillInForm::Lite","version":"1.15","name":"HTML::FillInForm::Lite","provides":{"HTML::FillInForm::Lite::Compat":{"file":"lib/HTML/FillInForm/Lite/Compat.pm","version":"1.15"},"HTML::FillInForm::Lite":{"file":"lib/HTML/FillInForm/Lite.pm","version":"1.15"}}}

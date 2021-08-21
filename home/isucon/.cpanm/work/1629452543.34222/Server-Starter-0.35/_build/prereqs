@@ -1,0 +1,16 @@
+do{ my $x = {
+       'build_requires' => {},
+       'conflicts' => {},
+       'recommends' => {},
+       'requires' => {
+                       'perl' => '5.008'
+                     },
+       'test_requires' => {
+                            'IO::Socket::IP' => '0',
+                            'Net::EmptyPort' => '0',
+                            'Test::Requires' => '0',
+                            'Test::SharedFork' => '0',
+                            'Test::TCP' => '2.08'
+                          }
+     };
+$x; }

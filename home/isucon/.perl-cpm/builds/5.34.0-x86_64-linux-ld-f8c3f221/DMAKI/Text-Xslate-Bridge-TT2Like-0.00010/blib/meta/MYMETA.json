@@ -1,0 +1,51 @@
+{
+   "abstract" : "TT2 Variable Method Clone For Text::Xslate",
+   "author" : [
+      "Copyright (c) 2010 Daisuke Maki C<< <daisuke@endeworks.jp> >>"
+   ],
+   "dynamic_config" : 0,
+   "generated_by" : "Module::Install version 1.01, CPAN::Meta::Converter version 2.150010",
+   "license" : [
+      "perl_5"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : 2
+   },
+   "name" : "Text-Xslate-Bridge-TT2Like",
+   "no_index" : {
+      "directory" : [
+         "inc",
+         "src",
+         "t",
+         "xt"
+      ]
+   },
+   "prereqs" : {
+      "build" : {
+         "requires" : {
+            "ExtUtils::MakeMaker" : "6.42"
+         }
+      },
+      "configure" : {
+         "requires" : {
+            "ExtUtils::MakeMaker" : "0"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "Scalar::Util" : "0",
+            "Text::Xslate" : "1.3000",
+            "perl" : "5.008001"
+         }
+      }
+   },
+   "release_status" : "stable",
+   "resources" : {
+      "license" : [
+         "http://dev.perl.org/licenses/"
+      ]
+   },
+   "version" : "0.00010",
+   "x_serialization_backend" : "JSON::PP version 4.06"
+}

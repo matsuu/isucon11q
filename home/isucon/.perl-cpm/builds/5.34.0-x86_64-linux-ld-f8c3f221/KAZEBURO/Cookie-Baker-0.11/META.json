@@ -1,0 +1,87 @@
+{
+   "abstract" : "Cookie string generator / parser",
+   "author" : [
+      "Masahiro Nagano <kazeburo@gmail.com>"
+   ],
+   "dynamic_config" : 0,
+   "generated_by" : "Minilla/v3.1.1",
+   "license" : [
+      "perl_5"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
+   },
+   "name" : "Cookie-Baker",
+   "no_index" : {
+      "directory" : [
+         "t",
+         "xt",
+         "inc",
+         "share",
+         "eg",
+         "examples",
+         "author",
+         "builder"
+      ]
+   },
+   "prereqs" : {
+      "configure" : {
+         "requires" : {
+            "Module::Build::Tiny" : "0.035"
+         }
+      },
+      "develop" : {
+         "requires" : {
+            "Test::CPAN::Meta" : "0",
+            "Test::MinimumVersion::Fast" : "0.04",
+            "Test::PAUSE::Permissions" : "0.04",
+            "Test::Pod" : "1.41",
+            "Test::Spellunker" : "v0.2.7"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "Exporter" : "0",
+            "URI::Escape" : "0",
+            "perl" : "5.008001"
+         },
+         "suggests" : {
+            "Cookie::Baker::XS" : "0"
+         }
+      },
+      "test" : {
+         "requires" : {
+            "Test::More" : "0.98",
+            "Test::Time" : "0"
+         }
+      }
+   },
+   "provides" : {
+      "Cookie::Baker" : {
+         "file" : "lib/Cookie/Baker.pm",
+         "version" : "0.11"
+      }
+   },
+   "release_status" : "stable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/kazeburo/Cookie-Baker/issues"
+      },
+      "homepage" : "https://github.com/kazeburo/Cookie-Baker",
+      "repository" : {
+         "url" : "git://github.com/kazeburo/Cookie-Baker.git",
+         "web" : "https://github.com/kazeburo/Cookie-Baker"
+      }
+   },
+   "version" : "0.11",
+   "x_contributors" : [
+      "David Romano <unobe@cpan.org>",
+      "Ichinose Shogo <shogo82148@gmail.com>",
+      "Olaf Alders <olaf@wundersolutions.com>",
+      "Shoichi Kaji <skaji@cpan.org>",
+      "kwry <kwrkwrr@gmail.com>"
+   ],
+   "x_serialization_backend" : "JSON::PP version 2.27300_01",
+   "x_static_install" : 1
+}

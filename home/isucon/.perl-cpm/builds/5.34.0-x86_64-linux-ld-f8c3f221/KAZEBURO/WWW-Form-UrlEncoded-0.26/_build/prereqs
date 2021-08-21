@@ -1,0 +1,14 @@
+do{ my $x = {
+       'build_requires' => {},
+       'conflicts' => {},
+       'recommends' => {},
+       'requires' => {
+                       'Exporter' => '0',
+                       'perl' => '5.008001'
+                     },
+       'test_requires' => {
+                            'JSON::PP' => '2',
+                            'Test::More' => '0.98'
+                          }
+     };
+$x; }

@@ -1,0 +1,69 @@
+---
+abstract: 'Perl module dependency manager (aka Bundler for Perl)'
+author:
+  - 'Tatsuhiko Miyagawa'
+build_requires:
+  ExtUtils::MakeMaker: '0'
+configure_requires:
+  ExtUtils::MakeMaker: '0'
+  version: '0.77'
+dynamic_config: 0
+generated_by: 'Dist::Milla version v1.0.20, Dist::Zilla version 6.012, CPAN::Meta::Converter version 2.150010'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: '1.4'
+name: Carton
+no_index:
+  directory:
+    - eg
+    - examples
+    - inc
+    - share
+    - t
+    - xt
+recommends:
+  App::FatPacker: '0.009018'
+  File::pushd: '0'
+requires:
+  CPAN::Meta: '2.120921'
+  CPAN::Meta::Requirements: '2.121'
+  Class::Tiny: '1.001'
+  Getopt::Long: '2.39'
+  JSON::PP: '2.27300'
+  Menlo::CLI::Compat: '1.9018'
+  Module::CPANfile: '0.9031'
+  Module::CoreList: '0'
+  Path::Tiny: '0.033'
+  Try::Tiny: '0.09'
+  parent: '0.223'
+  perl: '5.008005'
+resources:
+  bugtracker: https://github.com/perl-carton/carton/issues
+  homepage: https://github.com/perl-carton/carton
+  repository: https://github.com/perl-carton/carton.git
+version: v1.0.34
+x_contributors:
+  - 'Christian Walde <walde.christian@googlemail.com>'
+  - 'Dan Book <grinnz@gmail.com>'
+  - 'David Golden <dagolden@cpan.org>'
+  - 'David Steinbrunner <dsteinbrunner@pobox.com>'
+  - 'Jonathan Steinert <hachi@fastly.com>'
+  - 'Jose Luis Martinez <jlmartinez@capside.com>'
+  - 'Kan Fushihara <kan.fushihara@gmail.com>'
+  - 'Karen Etheridge <ether@cpan.org>'
+  - 'Masahiro Chiba <chiba@everqueue.com>'
+  - 'Michael Schout <mschout@gkg.net>'
+  - 'NAKAGAWA Masaki <masaki.nakagawa@gmail.com>'
+  - 'Olaf Alders <olaf@wundersolutions.com>'
+  - 'Pedro Figueiredo <me@pedrofigueiredo.org>'
+  - 'Pedro Melo <melo@simplicidade.org>'
+  - 'Peter Oliver <git@mavit.org.uk>'
+  - 'shiba_yu36 <shibayu36@gmail.com>'
+  - 'Tatsuhiko Miyagawa <miyagawa@bulknews.net>'
+  - 'Tatsuhiko Miyagawa <miyagawa@gmail.com>'
+  - 'WATANABE Hiroaki <hwat@mac.com>'
+  - 'Yanick Champoux <yanick@babyl.dyndns.org>'
+x_generated_by_perl: v5.20.1
+x_serialization_backend: 'CPAN::Meta::YAML version 0.018'
+x_static_install: 0

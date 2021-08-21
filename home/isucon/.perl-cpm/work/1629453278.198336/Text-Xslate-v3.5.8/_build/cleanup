@@ -1,0 +1,12 @@
+do{ my $x = {
+       'blib' => 1,
+       'blib/arch/auto/Text/Xslate/Xslate.bs' => 1,
+       'blib/arch/auto/Text/Xslate/Xslate.so' => 1,
+       'lib/Text/Xslate.c' => 1,
+       'lib/Text/Xslate.o' => 1,
+       'lib/Text/Xslate.xs' => 1,
+       'src/ppport.h' => 1,
+       'src/xshelper.h' => 1,
+       'src/xslate_methods.o' => 1
+     };
+$x; }
