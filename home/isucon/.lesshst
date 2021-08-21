@@ -2,8 +2,12 @@
 .search
 "initia
 "postIni
-.search
 "GET
 "getIndex
 "get
 "getIndex
+.search
+"trend
+"getTrend
+"conditions
+"isuLastCondition
