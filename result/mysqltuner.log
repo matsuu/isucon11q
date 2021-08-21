@@ -11,29 +11,31 @@
  
 -------- Log file Recommendations ------------------------------------------------------------------
 [OK] Log file /var/log/mysql/error.log exists
-[--] Log file: /var/log/mysql/error.log(265K)
+[--] Log file: /var/log/mysql/error.log(278K)
 [OK] Log file /var/log/mysql/error.log is not empty
 [OK] Log file /var/log/mysql/error.log is smaller than 32 Mb
 [OK] Log file /var/log/mysql/error.log is readable.
-[!!] /var/log/mysql/error.log contains 1430 warning(s).
-[!!] /var/log/mysql/error.log contains 1430 error(s).
-[--] 8 start(s) detected in /var/log/mysql/error.log
-[--] 1) 2021-08-21 17:21:00 0 [Note] /usr/sbin/mysqld: ready for connections.
-[--] 2) 2021-08-21 17:18:30 0 [Note] /usr/sbin/mysqld: ready for connections.
-[--] 3) 2021-08-21 17:14:59 0 [Note] /usr/sbin/mysqld: ready for connections.
-[--] 4) 2021-08-21 17:08:18 0 [Note] /usr/sbin/mysqld: ready for connections.
-[--] 5) 2021-08-21 14:40:23 0 [Note] /usr/sbin/mysqld: ready for connections.
-[--] 6) 2021-08-21 10:06:37 0 [Note] /usr/sbin/mysqld: ready for connections.
-[--] 7) 2021-08-20 18:54:27 0 [Note] /usr/sbin/mysqld: ready for connections.
-[--] 8) 2021-08-20 18:54:21 0 [Note] /usr/sbin/mysqld: ready for connections.
-[--] 7 shutdown(s) detected in /var/log/mysql/error.log
-[--] 1) 2021-08-21 17:21:00 0 [Note] /usr/sbin/mysqld: Shutdown complete
-[--] 2) 2021-08-21 17:18:30 0 [Note] /usr/sbin/mysqld: Shutdown complete
-[--] 3) 2021-08-21 17:14:35 0 [Note] /usr/sbin/mysqld: Shutdown complete
-[--] 4) 2021-08-21 17:08:18 0 [Note] /usr/sbin/mysqld: Shutdown complete
-[--] 5) 2021-08-21 14:40:22 0 [Note] /usr/sbin/mysqld: Shutdown complete
-[--] 6) 2021-08-20 19:00:40 0 [Note] /usr/sbin/mysqld: Shutdown complete
-[--] 7) 2021-08-20 18:54:27 0 [Note] /usr/sbin/mysqld: Shutdown complete
+[!!] /var/log/mysql/error.log contains 1492 warning(s).
+[!!] /var/log/mysql/error.log contains 1492 error(s).
+[--] 9 start(s) detected in /var/log/mysql/error.log
+[--] 1) 2021-08-21 18:18:14 0 [Note] /usr/sbin/mysqld: ready for connections.
+[--] 2) 2021-08-21 17:21:00 0 [Note] /usr/sbin/mysqld: ready for connections.
+[--] 3) 2021-08-21 17:18:30 0 [Note] /usr/sbin/mysqld: ready for connections.
+[--] 4) 2021-08-21 17:14:59 0 [Note] /usr/sbin/mysqld: ready for connections.
+[--] 5) 2021-08-21 17:08:18 0 [Note] /usr/sbin/mysqld: ready for connections.
+[--] 6) 2021-08-21 14:40:23 0 [Note] /usr/sbin/mysqld: ready for connections.
+[--] 7) 2021-08-21 10:06:37 0 [Note] /usr/sbin/mysqld: ready for connections.
+[--] 8) 2021-08-20 18:54:27 0 [Note] /usr/sbin/mysqld: ready for connections.
+[--] 9) 2021-08-20 18:54:21 0 [Note] /usr/sbin/mysqld: ready for connections.
+[--] 8 shutdown(s) detected in /var/log/mysql/error.log
+[--] 1) 2021-08-21 18:17:51 0 [Note] /usr/sbin/mysqld: Shutdown complete
+[--] 2) 2021-08-21 17:21:00 0 [Note] /usr/sbin/mysqld: Shutdown complete
+[--] 3) 2021-08-21 17:18:30 0 [Note] /usr/sbin/mysqld: Shutdown complete
+[--] 4) 2021-08-21 17:14:35 0 [Note] /usr/sbin/mysqld: Shutdown complete
+[--] 5) 2021-08-21 17:08:18 0 [Note] /usr/sbin/mysqld: Shutdown complete
+[--] 6) 2021-08-21 14:40:22 0 [Note] /usr/sbin/mysqld: Shutdown complete
+[--] 7) 2021-08-20 19:00:40 0 [Note] /usr/sbin/mysqld: Shutdown complete
+[--] 8) 2021-08-20 18:54:27 0 [Note] /usr/sbin/mysqld: Shutdown complete
  
 -------- Storage Engine Statistics -----------------------------------------------------------------
 [--] Status: +Aria +CSV +InnoDB +MEMORY +MRG_MyISAM +MyISAM +PERFORMANCE_SCHEMA +SEQUENCE 
@@ -56,7 +58,7 @@
 [--] Skipped due to --cvefile option undefined
  
 -------- Performance Metrics -----------------------------------------------------------------------
-[--] Up for: 56m 1s (1M q [373.681 qps], 135 conn, TX: 1G, RX: 114M)
+[--] Up for: 14m 6s (2M q [2K qps], 106 conn, TX: 3G, RX: 222M)
 [--] Reads / Writes: 97% / 3%
 [--] Binary logging is disabled
 [--] Physical Memory     : 3.6G
@@ -65,21 +67,21 @@
 [--] Total buffers: 432.0M global + 18.9M per thread (151 max threads)
 [--] P_S Max memory usage: 0B
 [--] Galera GCache Max memory usage: 0B
-[OK] Maximum reached memory usage: 1.0G (27.85% of installed RAM)
+[OK] Maximum reached memory usage: 1.0G (28.36% of installed RAM)
 [!!] Maximum possible memory usage: 3.2G (88.29% of installed RAM)
 [OK] Overall possible memory usage with other process is compatible with memory available
-[OK] Slow queries: 0% (0/1M)
-[OK] Highest usage of available connections: 21% (32/151)
-[OK] Aborted connections: 0.00%  (0/135)
+[OK] Slow queries: 0% (0/2M)
+[OK] Highest usage of available connections: 21% (33/151)
+[OK] Aborted connections: 0.00%  (0/106)
 [!!] name resolution is active : a reverse name resolution is made for each new connection and can reduce performance
 [!!] Query cache may be disabled by default due to mutex contention.
-[OK] Query cache efficiency: 39.2% (624K cached / 1M selects)
+[OK] Query cache efficiency: 39.0% (1M cached / 3M selects)
 [OK] Query cache prunes per day: 0
-[OK] Sorts requiring temporary tables: 0% (0 temp sorts / 172 sorts)
+[OK] Sorts requiring temporary tables: 0% (0 temp sorts / 339 sorts)
 [OK] No joins without indexes
-[OK] Temporary tables created on disk: 0% (0 on disk / 24 total)
-[OK] Thread cache hit rate: 74% (35 created / 135 connections)
-[OK] Table cache hit rate: 99% (365K hits / 365K requests)
+[OK] Temporary tables created on disk: 0% (0 on disk / 14 total)
+[OK] Thread cache hit rate: 67% (34 created / 106 connections)
+[OK] Table cache hit rate: 99% (736K hits / 736K requests)
 [OK] table_definition_cache(400) is upper than number of tables(165)
 [OK] Open file limit used: 0% (55/32K)
 [OK] Table locks acquired immediately: 100% (96 immediate / 96 locks)
@@ -107,9 +109,9 @@
 [OK] InnoDB buffer pool instances: 1
 [--] Number of InnoDB Buffer Pool Chunk : 1 for 1 Buffer Pool Instance(s)
 [OK] Innodb_buffer_pool_size aligned with Innodb_buffer_pool_chunk_size & Innodb_buffer_pool_instances
-[OK] InnoDB Read buffer efficiency: 100.00% (16310546 hits/ 16311124 total)
-[OK] InnoDB Write log efficiency: 98.68% (24454 hits/ 24781 total)
-[OK] InnoDB log waits: 0.00% (0 waits / 327 writes)
+[OK] InnoDB Read buffer efficiency: 100.00% (32217747 hits/ 32218338 total)
+[OK] InnoDB Write log efficiency: 98.72% (39062 hits/ 39569 total)
+[OK] InnoDB log waits: 0.00% (0 waits / 507 writes)
  
 -------- Aria Metrics ------------------------------------------------------------------------------
 [--] Aria Storage Engine is enabled.
