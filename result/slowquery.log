@@ -1,118 +1,118 @@
 Reading from STDIN ...
 
-# 12.8s user time, 70ms system time, 33.21M rss, 40.65M vsz
-# Current date: Sat Aug 21 11:05:12 2021
+# 12.7s user time, 120ms system time, 33.17M rss, 40.53M vsz
+# Current date: Sat Aug 21 11:11:03 2021
 # Hostname: ip-192-168-0-11
 # Files: STDIN
-# Overall: 153.50k total, 65 unique, 1.90k QPS, 4.29x concurrency ________
-# Time range: 2021-08-21 11:03:24 to 11:04:45
+# Overall: 156.41k total, 65 unique, 1.82k QPS, 3.81x concurrency ________
+# Time range: 2021-08-21 11:09:10 to 11:10:36
 # Attribute          total     min     max     avg     95%  stddev  median
 # ============     ======= ======= ======= ======= ======= ======= =======
-# Exec time           348s       0   174ms     2ms    12ms     8ms    63us
-# Lock time             8s       0    40ms    50us    84us   417us    18us
-# Rows sent          5.37M       0   1.67k   36.65  192.76  160.73       0
-# Rows examine      12.72M       0   3.34k   86.92  621.67  333.82       0
-# Rows affecte      73.94k       0     618    0.49    0.99    1.59       0
-# Bytes sent         1.41G       0 301.62k   9.61k  65.68k  31.46k   12.54
-# Query size        25.95M       6 790.36k  177.27  258.32   1.99k  151.03
+# Exec time           328s       0   121ms     2ms    11ms     7ms    63us
+# Lock time             8s       0    46ms    49us    89us   379us    18us
+# Rows sent          5.79M       0   1.72k   38.85  223.14  167.32       0
+# Rows examine      13.83M       0   3.44k   92.73  652.75  350.62       0
+# Rows affecte      74.42k       0     618    0.49    0.99    1.58       0
+# Bytes sent         1.52G       0 646.78k  10.16k  68.96k  32.84k   12.54
+# Query size        26.49M       6 790.36k  177.57  271.23   1.97k  151.03
 # Boolean:
 # QC hit        23% yes,  76% no
 
 # Profile
 # Rank Query ID                            Response time  Calls R/Call V/M
 # ==== =================================== ============== ===== ====== ===
-#    1 0x931A992E852C61FC6D46141A39DEF4FE  129.9428 37.4% 13864 0.0094  0.02 SELECT isu_condition
-#    2 0x9C6C682008AE0D08F3E2A0049B030C70   73.0282 21.0%  2895 0.0252  0.02 SELECT isu_condition
-#    3 0x8155B89FFD74A9D523D19AC409FD97AF   53.3653 15.3%  4899 0.0109  0.02 SELECT isu_condition
-#    4 0xFFFCA4D67EA0A788813031B8BBC3B329   38.1143 11.0%  9189 0.0041  0.01 COMMIT
-#    5 0xB8B32624C3268C0925657C305C0ED778   26.8266  7.7% 74952 0.0004  0.00 INSERT isu_condition
-#    6 0x5F580A12ADA1633C9634298BE5BD9422   17.6289  5.1%   794 0.0222  0.02 SELECT isu_condition
-#    7 0x677D4DCDF729CC334DE038E9477B32B3    2.4217  0.7%   254 0.0095  0.01 SELECT isu_condition
-#    8 0xADCA4F127A769A45A2D1B74705103105    1.3128  0.4% 12539 0.0001  0.01 SELECT user
-#    9 0x8C2BC651CBBBF3DB41D1CAD61AA0BD68    1.1509  0.3%  4550 0.0003  0.00 SELECT isu
-#   10 0x1E561CE87F050ED58A7E1A7FBB6C2285    1.0876  0.3%  7524 0.0001  0.01 SELECT isu
-#   11 0xB5F4855605637317357023AD70B91455    0.9440  0.3%  5818 0.0002  0.00 SELECT isu
-#   12 0x262764FE7CE586B417A1206082D32E11    0.4385  0.1%  3283 0.0001  0.00 SELECT isu
-#   13 0x20183D6FD015A9A0A6C4FB46B2683CF0    0.2908  0.1%   823 0.0004  0.00 SELECT isu
-#   14 0x5DD9DA3A1D662958C76AB4AC0352B9E7    0.2244  0.1%   356 0.0006  0.00 INSERT user
-#   15 0xC1B01223FBAA0D3FFA4AECBA98E246CC    0.1686  0.0%   980 0.0002  0.00 SELECT isu
-#   16 0x9E2DA589A20EC24C34E11DDE0FBF5564    0.1684  0.0%  9329 0.0000  0.00 START
-#   17 0x655E93F30F576321245A814D06B07CEB    0.1528  0.0%     1 0.1528  0.00 INSERT isu
-#   18 0x323419B48CA5913A1217E6F5BA713101    0.1292  0.0%   928 0.0001  0.00 SELECT isu
-#   19 0x1842E6B631B4CA92D1232CE63CC6017F    0.0958  0.0%    54 0.0018  0.01 INSERT isu
-#   20 0xFFF66E9B3D962FA319C8068B5C1997CD    0.0455  0.0%   140 0.0003  0.01 ROLLBACK
-#   21 0xB5B9D2CFE100A1D0ACDFA234C0D2004A    0.0384  0.0%   182 0.0002  0.00 SELECT isu
-#   22 0x63ADC6E0E7D3641922313DA6B4D40EE9    0.0370  0.0%     1 0.0370  0.00 CREATE TABLE isu_association_config `isu_association_config`
-#   23 0xB3099B1F54923403DEE3EF20F3B5B682    0.0204  0.0%     1 0.0204  0.00 INSERT isu_condition
-#   24 0x4BE060F988E69CE753173420E7096F5D    0.0141  0.0%    51 0.0003  0.00 UPDATE isu
-#   25 0x0B2C7574276F62137C2BC6622D8DA33E    0.0122  0.0%     1 0.0122  0.00 CREATE TABLE isu `isu`
-#   26 0xA9779B63FC3747EFB3817E90D314B215    0.0121  0.0%     1 0.0121  0.00 CREATE TABLE isu_condition `isu_condition`
-#   27 0xE568444375ADEFFF1EDCD938F3FE2419    0.0107  0.0%     1 0.0107  0.00 CREATE TABLE user `user`
-#   28 0x3ED09FC12F64EE299789CDE51B895144    0.0076  0.0%     1 0.0076  0.00 DROP TABLE isu `isu`
-#   29 0x8C8EE8F0B87888473675710D3B4B2E82    0.0074  0.0%     1 0.0074  0.00 DROP TABLE isu_association_config `isu_association_config`
-#   30 0xF4F636EF33D0E74805151F71FF8A9A38    0.0073  0.0%    52 0.0001  0.00 SELECT isu_association_config
-#   31 0x04FE10A077C05EAF9CD71E643C48AD51    0.0044  0.0%     1 0.0044  0.00 DROP TABLE user `user`
-#   32 0xDDF8867787468413CD4D464358663984    0.0042  0.0%     1 0.0042  0.00 DROP TABLE isu_condition `isu_condition`
-#   33 0xC501DDF8F78DE21723E3E3AAC552EBC7    0.0028  0.0%     4 0.0007  0.00 UNLOCK
-#   34 0x46D8711AFE54E410D62DCB9623488C60    0.0022  0.0%     1 0.0022  0.00 INSERT UPDATE isu_association_config
-#   35 0xC16BFB122FC5E6F8A4CA23B1D689D52C    0.0018  0.0%     1 0.0018  0.00 INSERT user
-#   36 0x23B3B41AE69594E3C7CD60AA1B336E72    0.0002  0.0%     1 0.0002  0.00 FLUSH
-#   37 0x8C36362580246C7408A9940F62DD30A6    0.0002  0.0%     1 0.0002  0.00 LOCK isu
-#   38 0xD1ED593C9B7BD370F8A8872A9FD41911    0.0002  0.0%     1 0.0002  0.00 LOCK isu_association_config
-#   39 0xC2E62D5F1075F64A0DB6EB15010BD794    0.0002  0.0%     1 0.0002  0.00 LOCK isu_condition
-#   40 0xA71BFB156C3C00A2D4F0F36D72F73BD8    0.0001  0.0%     1 0.0001  0.00 LOCK user
-#   41 0x6C2EC1E5F745A854E3C9683C148B8F34    0.0001  0.0%     1 0.0001  0.00 
-#   42 0x0B3768862E869E94B1893CE30CDC0C51    0.0001  0.0%     1 0.0001  0.00 
-#   43 0x5DA5148A17397865E2523B01877E348E    0.0001  0.0%     1 0.0001  0.00 
-#   44 0xFCAE7CE2A6EAC2DA59A10975A2CCFF68    0.0001  0.0%     1 0.0001  0.00 
+#    1 0x931A992E852C61FC6D46141A39DEF4FE  136.5367 41.6% 14694 0.0093  0.02 SELECT isu_condition
+#    2 0x9C6C682008AE0D08F3E2A0049B030C70   58.7351 17.9%  2839 0.0207  0.02 SELECT isu_condition
+#    3 0x8155B89FFD74A9D523D19AC409FD97AF   47.6867 14.5%  5200 0.0092  0.01 SELECT isu_condition
+#    4 0xFFFCA4D67EA0A788813031B8BBC3B329   35.9115 10.9%  9297 0.0039  0.00 COMMIT
+#    5 0xB8B32624C3268C0925657C305C0ED778   25.1701  7.7% 75447 0.0003  0.01 INSERT isu_condition
+#    6 0x5F580A12ADA1633C9634298BE5BD9422   15.6394  4.8%   800 0.0195  0.02 SELECT isu_condition
+#    7 0x677D4DCDF729CC334DE038E9477B32B3    2.2003  0.7%   279 0.0079  0.02 SELECT isu_condition
+#    8 0xADCA4F127A769A45A2D1B74705103105    1.3988  0.4% 12931 0.0001  0.01 SELECT user
+#    9 0x8C2BC651CBBBF3DB41D1CAD61AA0BD68    1.1586  0.4%  4800 0.0002  0.00 SELECT isu
+#   10 0xB5F4855605637317357023AD70B91455    0.9006  0.3%  6153 0.0001  0.00 SELECT isu
+#   11 0x1E561CE87F050ED58A7E1A7FBB6C2285    0.8910  0.3%  7583 0.0001  0.01 SELECT isu
+#   12 0x262764FE7CE586B417A1206082D32E11    0.3768  0.1%  3246 0.0001  0.00 SELECT isu
+#   13 0x20183D6FD015A9A0A6C4FB46B2683CF0    0.2837  0.1%   866 0.0003  0.00 SELECT isu
+#   14 0x5DD9DA3A1D662958C76AB4AC0352B9E7    0.2481  0.1%   359 0.0007  0.00 INSERT user
+#   15 0x323419B48CA5913A1217E6F5BA713101    0.1758  0.1%   928 0.0002  0.01 SELECT isu
+#   16 0xC1B01223FBAA0D3FFA4AECBA98E246CC    0.1633  0.0%  1025 0.0002  0.00 SELECT isu
+#   17 0x9E2DA589A20EC24C34E11DDE0FBF5564    0.1274  0.0%  9431 0.0000  0.00 START
+#   18 0x1842E6B631B4CA92D1232CE63CC6017F    0.1016  0.0%    54 0.0019  0.01 INSERT isu
+#   19 0xFFF66E9B3D962FA319C8068B5C1997CD    0.0776  0.0%   134 0.0006  0.01 ROLLBACK
+#   20 0x655E93F30F576321245A814D06B07CEB    0.0682  0.0%     1 0.0682  0.00 INSERT isu
+#   21 0xB5B9D2CFE100A1D0ACDFA234C0D2004A    0.0278  0.0%   192 0.0001  0.00 SELECT isu
+#   22 0x4BE060F988E69CE753173420E7096F5D    0.0206  0.0%    51 0.0004  0.00 UPDATE isu
+#   23 0xB3099B1F54923403DEE3EF20F3B5B682    0.0173  0.0%     1 0.0173  0.00 INSERT isu_condition
+#   24 0x0B2C7574276F62137C2BC6622D8DA33E    0.0132  0.0%     1 0.0132  0.00 CREATE TABLE isu `isu`
+#   25 0xDDF8867787468413CD4D464358663984    0.0113  0.0%     1 0.0113  0.00 DROP TABLE isu_condition `isu_condition`
+#   26 0xA9779B63FC3747EFB3817E90D314B215    0.0108  0.0%     1 0.0108  0.00 CREATE TABLE isu_condition `isu_condition`
+#   27 0x63ADC6E0E7D3641922313DA6B4D40EE9    0.0108  0.0%     1 0.0108  0.00 CREATE TABLE isu_association_config `isu_association_config`
+#   28 0xE568444375ADEFFF1EDCD938F3FE2419    0.0084  0.0%     1 0.0084  0.00 CREATE TABLE user `user`
+#   29 0x23B3B41AE69594E3C7CD60AA1B336E72    0.0071  0.0%     1 0.0071  0.00 FLUSH
+#   30 0x04FE10A077C05EAF9CD71E643C48AD51    0.0067  0.0%     1 0.0067  0.00 DROP TABLE user `user`
+#   31 0x8C8EE8F0B87888473675710D3B4B2E82    0.0066  0.0%     1 0.0066  0.00 DROP TABLE isu_association_config `isu_association_config`
+#   32 0x3ED09FC12F64EE299789CDE51B895144    0.0054  0.0%     1 0.0054  0.00 DROP TABLE isu `isu`
+#   33 0xC501DDF8F78DE21723E3E3AAC552EBC7    0.0023  0.0%     4 0.0006  0.00 UNLOCK
+#   34 0xF4F636EF33D0E74805151F71FF8A9A38    0.0022  0.0%    52 0.0000  0.00 SELECT isu_association_config
+#   35 0x46D8711AFE54E410D62DCB9623488C60    0.0015  0.0%     1 0.0015  0.00 INSERT UPDATE isu_association_config
+#   36 0xC16BFB122FC5E6F8A4CA23B1D689D52C    0.0009  0.0%     1 0.0009  0.00 INSERT user
+#   37 0xD1ED593C9B7BD370F8A8872A9FD41911    0.0002  0.0%     1 0.0002  0.00 LOCK isu_association_config
+#   38 0x8C36362580246C7408A9940F62DD30A6    0.0002  0.0%     1 0.0002  0.00 LOCK isu
+#   39 0xA71BFB156C3C00A2D4F0F36D72F73BD8    0.0001  0.0%     1 0.0001  0.00 LOCK user
+#   40 0xC2E62D5F1075F64A0DB6EB15010BD794    0.0001  0.0%     1 0.0001  0.00 LOCK isu_condition
+#   41 0x5F6CDADE369D56CC108C40676724E2B8    0.0001  0.0%     1 0.0001  0.00 
+#   42 0x5DA5148A17397865E2523B01877E348E    0.0001  0.0%     1 0.0001  0.00 
+#   43 0x3CF21F1CBA5CE7CE63BD18F17FB8B000    0.0000  0.0%     1 0.0000  0.00 
+#   44 0xFCAE7CE2A6EAC2DA59A10975A2CCFF68    0.0000  0.0%     1 0.0000  0.00 
 #   45 0x5766C19745B5366CA4D4427C4304DD4A    0.0000  0.0%     1 0.0000  0.00 
-#   46 0x3CF21F1CBA5CE7CE63BD18F17FB8B000    0.0000  0.0%     1 0.0000  0.00 
-#   47 0x5F6CDADE369D56CC108C40676724E2B8    0.0000  0.0%     1 0.0000  0.00 
-#   48 0x72CF112D46E83BCC7FED72CFC7278B33    0.0000  0.0%     1 0.0000  0.00 
-#   49 0x8EE30A8CCD1B00BD602268D23FBC8687    0.0000  0.0%     1 0.0000  0.00 
-#   50 0xEFB479A2B160435A336C0323EB0C5AD6    0.0000  0.0%     1 0.0000  0.00 
-#   51 0x20F25CBDA48A2D0CE99B119BD6E3CA7D    0.0000  0.0%     1 0.0000  0.00 
-#   52 0x27BE0213CD3E5EC57485E1B752392A87    0.0000  0.0%     1 0.0000  0.00 
-#   53 0x518F43A0D71C43A38940C300D44B4752    0.0000  0.0%     1 0.0000  0.00 
-#   54 0x5929CCF3A5674E8906278E23572F899A    0.0000  0.0%     1 0.0000  0.00 
-#   55 0x4DE6CB1852630C845CD4C563682DFAC0    0.0000  0.0%     1 0.0000  0.00 
-#   56 0x8141D18EAF0BE3E1F12838CF67C743C8    0.0000  0.0%     1 0.0000  0.00 
-#   57 0xE3FEF7A1401EB86587886CD19A4A4066    0.0000  0.0%     1 0.0000  0.00 
-#   58 0xB6DC063A74EDC86AFDCE342E5A3A3561    0.0000  0.0%     1 0.0000  0.00 
-#   59 0x9DE5931F062D2F5BEF0CA583D4BFA5B8    0.0000  0.0%     1 0.0000  0.00 
-#   60 0xFD0EB48DC1C2F45E2271C89B4D3326F8    0.0000  0.0%     1 0.0000  0.00 
-#   61 0x19B5F1DD811E9E8873D13F0D55D6D90F    0.0000  0.0%     1 0.0000  0.00 
-#   62 0x8C4DA8ABB42ED7D30051C0B21CE68D50    0.0000  0.0%     1 0.0000  0.00 
-#   63 0x71736836AB087459522E0AA6BDAC7F73    0.0000  0.0%     1 0.0000  0.00 
-#   64 0x3A8C4615943B0B7D945BF31310DD9583    0.0000  0.0%     1 0.0000  0.00 
+#   46 0x72CF112D46E83BCC7FED72CFC7278B33    0.0000  0.0%     1 0.0000  0.00 
+#   47 0x6C2EC1E5F745A854E3C9683C148B8F34    0.0000  0.0%     1 0.0000  0.00 
+#   48 0x8EE30A8CCD1B00BD602268D23FBC8687    0.0000  0.0%     1 0.0000  0.00 
+#   49 0xEFB479A2B160435A336C0323EB0C5AD6    0.0000  0.0%     1 0.0000  0.00 
+#   50 0x20F25CBDA48A2D0CE99B119BD6E3CA7D    0.0000  0.0%     1 0.0000  0.00 
+#   51 0x518F43A0D71C43A38940C300D44B4752    0.0000  0.0%     1 0.0000  0.00 
+#   52 0x5929CCF3A5674E8906278E23572F899A    0.0000  0.0%     1 0.0000  0.00 
+#   53 0x27BE0213CD3E5EC57485E1B752392A87    0.0000  0.0%     1 0.0000  0.00 
+#   54 0x0B3768862E869E94B1893CE30CDC0C51    0.0000  0.0%     1 0.0000  0.00 
+#   55 0x8141D18EAF0BE3E1F12838CF67C743C8    0.0000  0.0%     1 0.0000  0.00 
+#   56 0xE3FEF7A1401EB86587886CD19A4A4066    0.0000  0.0%     1 0.0000  0.00 
+#   57 0xB6DC063A74EDC86AFDCE342E5A3A3561    0.0000  0.0%     1 0.0000  0.00 
+#   58 0x19B5F1DD811E9E8873D13F0D55D6D90F    0.0000  0.0%     1 0.0000  0.00 
+#   59 0x71736836AB087459522E0AA6BDAC7F73    0.0000  0.0%     1 0.0000  0.00 
+#   60 0x4DE6CB1852630C845CD4C563682DFAC0    0.0000  0.0%     1 0.0000  0.00 
+#   61 0x9DE5931F062D2F5BEF0CA583D4BFA5B8    0.0000  0.0%     1 0.0000  0.00 
+#   62 0xFD0EB48DC1C2F45E2271C89B4D3326F8    0.0000  0.0%     1 0.0000  0.00 
+#   63 0x3A8C4615943B0B7D945BF31310DD9583    0.0000  0.0%     1 0.0000  0.00 
+#   64 0x8C4DA8ABB42ED7D30051C0B21CE68D50    0.0000  0.0%     1 0.0000  0.00 
 #   65 0xEDBC971AEC392917AA353644DE4C4CB4    0.0000  0.0%     2 0.0000  0.00 ADMIN QUIT
 
-# Query 1: 223.61 QPS, 2.10x concurrency, ID 0x931A992E852C61FC6D46141A39DEF4FE at byte 62640513
+# Query 1: 240.89 QPS, 2.24x concurrency, ID 0x931A992E852C61FC6D46141A39DEF4FE at byte 53359537
 # This item is included in the report because it matches --limit.
 # Scores: V/M = 0.02
-# Time range: 2021-08-21 11:03:43 to 11:04:45
+# Time range: 2021-08-21 11:09:35 to 11:10:36
 # Attribute    pct   total     min     max     avg     95%  stddev  median
 # ============ === ======= ======= ======= ======= ======= ======= =======
-# Count          9   13864
-# Exec time     37    130s     7us   122ms     9ms    42ms    15ms     3ms
-# Lock time     20      2s       0    30ms   115us   287us   673us    26us
-# Rows sent     62   3.34M       0   1.67k  252.48   1.04k  349.30   69.19
-# Rows examine  48   6.16M       0   3.34k  465.76   1.96k  648.27  143.84
+# Count          9   14694
+# Exec time     41    137s     8us   121ms     9ms    42ms    14ms     3ms
+# Lock time     19      1s       0    37ms   101us   273us   587us    25us
+# Rows sent     66   3.85M       0   1.72k  274.67   1.09k  370.15   69.19
+# Rows examine  53   7.44M       0   3.44k  531.18   2.16k  720.80  143.84
 # Rows affecte   0       0       0       0       0       0       0       0
-# Bytes sent    40 587.47M     589 301.62k  43.39k 182.98k  59.70k  12.50k
-# Query size     5   1.52M     115     115     115     115       0     115
+# Bytes sent    44 684.69M     589 318.32k  47.71k 192.13k  64.12k  12.50k
+# Query size     6   1.61M     115     115     115     115       0     115
 # Boolean:
-# QC hit         4% yes,  95% no
+# QC hit         3% yes,  96% no
 # String:
 # Databases    isucondition
 # Hosts        localhost
 # Users        isucon
 # Query_time distribution
 #   1us  #
-#  10us  ######
-# 100us  ###################################################
+#  10us  #####
+# 100us  #######################################################
 #   1ms  ################################################################
-#  10ms  ###############################################
+#  10ms  ################################################
 # 100ms  #
 #    1s
 #  10s+
@@ -120,22 +120,22 @@ Reading from STDIN ...
 #    SHOW TABLE STATUS FROM `isucondition` LIKE 'isu_condition'\G
 #    SHOW CREATE TABLE `isucondition`.`isu_condition`\G
 # EXPLAIN /*!50100 PARTITIONS*/
-SELECT * FROM `isu_condition` WHERE `jia_isu_uuid` = '4b1dd676-7a64-41fc-b20c-d575e010eb98' ORDER BY timestamp DESC\G
+SELECT * FROM `isu_condition` WHERE `jia_isu_uuid` = '51a13d94-51ae-4a3e-9fe0-0a5a3728c8f0' ORDER BY timestamp DESC\G
 
-# Query 2: 47.46 QPS, 1.20x concurrency, ID 0x9C6C682008AE0D08F3E2A0049B030C70 at byte 56237089
+# Query 2: 47.32 QPS, 0.98x concurrency, ID 0x9C6C682008AE0D08F3E2A0049B030C70 at byte 58044391
 # This item is included in the report because it matches --limit.
 # Scores: V/M = 0.02
-# Time range: 2021-08-21 11:03:43 to 11:04:44
+# Time range: 2021-08-21 11:09:35 to 11:10:35
 # Attribute    pct   total     min     max     avg     95%  stddev  median
 # ============ === ======= ======= ======= ======= ======= ======= =======
-# Count          1    2895
-# Exec time     21     73s   126us   114ms    25ms    68ms    21ms    19ms
-# Lock time      4   348ms    13us    19ms   120us   316us   656us    28us
-# Rows sent     27   1.47M       0   1.53k  532.54   1.14k  356.37  487.09
-# Rows examine  26   3.41M       0   3.06k   1.21k   2.50k  772.45   1.09k
+# Count          1    2839
+# Exec time     17     59s   132us   113ms    21ms    56ms    18ms    15ms
+# Lock time      4   389ms    15us    28ms   137us   332us   857us    28us
+# Rows sent     23   1.39M       0   1.67k  512.43   1.14k  345.43  463.90
+# Rows examine  23   3.19M       0   3.33k   1.15k   2.38k  748.55 1012.63
 # Rows affecte   0       0       0       0       0       0       0       0
-# Bytes sent    17 257.63M     589 270.74k  91.13k 201.74k  61.05k  79.83k
-# Query size     1 443.86k     157     157     157     157       0     157
+# Bytes sent    15 244.43M     589 298.59k  88.16k 201.74k  59.64k  76.03k
+# Query size     1 435.28k     157     157     157     157       0     157
 # String:
 # Databases    isucondition
 # Hosts        localhost
@@ -143,138 +143,7 @@ SELECT * FROM `isu_condition` WHERE `jia_isu_uuid` = '4b1dd676-7a64-41fc-b20c-d5
 # Query_time distribution
 #   1us
 #  10us
-# 100us  ####
-#   1ms  #######################
-#  10ms  ################################################################
-# 100ms  #
-#    1s
-#  10s+
-# Tables
-#    SHOW TABLE STATUS FROM `isucondition` LIKE 'isu_condition'\G
-#    SHOW CREATE TABLE `isucondition`.`isu_condition`\G
-# EXPLAIN /*!50100 PARTITIONS*/
-SELECT * FROM `isu_condition` WHERE `jia_isu_uuid` = '2c194e21-2368-4354-b091-bae9ffd26295'	AND `timestamp` < '2021-08-25 02:52:15'	ORDER BY `timestamp` DESC\G
-
-# Query 3: 80.31 QPS, 0.87x concurrency, ID 0x8155B89FFD74A9D523D19AC409FD97AF at byte 47943946
-# This item is included in the report because it matches --limit.
-# Scores: V/M = 0.02
-# Time range: 2021-08-21 11:03:43 to 11:04:44
-# Attribute    pct   total     min     max     avg     95%  stddev  median
-# ============ === ======= ======= ======= ======= ======= ======= =======
-# Count          3    4899
-# Exec time     15     53s     9us    92ms    11ms    40ms    13ms     5ms
-# Lock time      8   664ms       0    26ms   135us   273us   802us    26us
-# Rows sent      0   4.71k       0       1    0.98    0.99    0.13    0.99
-# Rows examine  16   2.04M       0   1.62k  436.58   1.20k  382.43  299.03
-# Rows affecte   0       0       0       0       0       0       0       0
-# Bytes sent     0   3.55M     589     812  759.91  755.64   28.43  755.64
-# Query size     2 598.02k     125     125     125     125       0     125
-# Boolean:
-# QC hit         0% yes,  99% no
-# String:
-# Databases    isucondition
-# Hosts        localhost
-# Users        isucon
-# Query_time distribution
-#   1us  #
-#  10us  #
-# 100us  ################################
-#   1ms  ################################################################
-#  10ms  #######################################################
-# 100ms
-#    1s
-#  10s+
-# Tables
-#    SHOW TABLE STATUS FROM `isucondition` LIKE 'isu_condition'\G
-#    SHOW CREATE TABLE `isucondition`.`isu_condition`\G
-# EXPLAIN /*!50100 PARTITIONS*/
-SELECT * FROM `isu_condition` WHERE `jia_isu_uuid` = '0a96a264-73f6-4b64-a13a-38386bba023c' ORDER BY `timestamp` DESC LIMIT 1\G
-
-# Query 4: 150.64 QPS, 0.62x concurrency, ID 0xFFFCA4D67EA0A788813031B8BBC3B329 at byte 22003534
-# This item is included in the report because it matches --limit.
-# Scores: V/M = 0.01
-# Time range: 2021-08-21 11:03:43 to 11:04:44
-# Attribute    pct   total     min     max     avg     95%  stddev  median
-# ============ === ======= ======= ======= ======= ======= ======= =======
-# Count          5    9189
-# Exec time     10     38s     3us   174ms     4ms    11ms     5ms     3ms
-# Lock time      0       0       0       0       0       0       0       0
-# Rows sent      0       0       0       0       0       0       0       0
-# Rows examine   0       0       0       0       0       0       0       0
-# Rows affecte   0       0       0       0       0       0       0       0
-# Bytes sent     0  98.71k      11      11      11      11       0      11
-# Query size     0  53.84k       6       6       6       6       0       6
-# String:
-# Databases    isucondition
-# Hosts        localhost
-# Users        isucon
-# Query_time distribution
-#   1us  ###
-#  10us  #####
-# 100us  ####
-#   1ms  ################################################################
-#  10ms  #####
-# 100ms  #
-#    1s
-#  10s+
-COMMIT\G
-
-# Query 5: 1.25k QPS, 0.45x concurrency, ID 0xB8B32624C3268C0925657C305C0ED778 at byte 44637918
-# This item is included in the report because it matches --limit.
-# Scores: V/M = 0.00
-# Time range: 2021-08-21 11:03:44 to 11:04:44
-# Attribute    pct   total     min     max     avg     95%  stddev  median
-# ============ === ======= ======= ======= ======= ======= ======= =======
-# Count         48   74952
-# Exec time      7     27s    22us    45ms   357us     1ms     1ms    63us
-# Lock time     61      5s     8us    40ms    64us   138us   446us    23us
-# Rows sent      0       0       0       0       0       0       0       0
-# Rows examine   0       0       0       0       0       0       0       0
-# Rows affecte  98  73.20k       1       1       1       1       0       1
-# Bytes sent     0 961.34k      13      14   13.13   13.83    0.44   12.54
-# Query size    70  18.19M     238     302  254.44  271.23   11.66  246.02
-# String:
-# Databases    isucondition
-# Hosts        localhost
-# Users        isucon
-# Query_time distribution
-#   1us
-#  10us  ################################################################
-# 100us  ##################
-#   1ms  #####
-#  10ms  #
-# 100ms
-#    1s
-#  10s+
-# Tables
-#    SHOW TABLE STATUS FROM `isucondition` LIKE 'isu_condition'\G
-#    SHOW CREATE TABLE `isucondition`.`isu_condition`\G
-INSERT INTO `isu_condition`	(`jia_isu_uuid`, `timestamp`, `is_sitting`, `condition`, `message`)	VALUES ('891d5c7e-4b54-4794-9e2d-e618f78a169a', '2021-08-22 21:41:22', 1, 'is_dirty=true,is_overweight=true,is_broken=true', 'å…¨éƒ¨ãƒ€ãƒ¡ã ã­ã€œ')\G
-
-# Query 6: 13.02 QPS, 0.29x concurrency, ID 0x5F580A12ADA1633C9634298BE5BD9422 at byte 63388143
-# This item is included in the report because it matches --limit.
-# Scores: V/M = 0.02
-# Time range: 2021-08-21 11:03:43 to 11:04:44
-# Attribute    pct   total     min     max     avg     95%  stddev  median
-# ============ === ======= ======= ======= ======= ======= ======= =======
-# Count          0     794
-# Exec time      5     18s    13us   126ms    22ms    65ms    21ms    15ms
-# Lock time      0    59ms       0     4ms    74us   194us   268us    25us
-# Rows sent      9 507.49k       6   1.52k  654.50   1.39k  441.39  592.07
-# Rows examine   7 1013.66k       0   3.05k   1.28k   2.76k  880.60   1.20k
-# Rows affecte   0       0       0       0       0       0       0       0
-# Bytes sent     6  87.24M   1.64k 272.54k 112.51k 245.21k  76.45k 101.89k
-# Query size     0  89.95k     116     116     116     116       0     116
-# Boolean:
-# QC hit         1% yes,  98% no
-# String:
-# Databases    isucondition
-# Hosts        localhost
-# Users        isucon
-# Query_time distribution
-#   1us
-#  10us  #
-# 100us  ########
+# 100us  #####
 #   1ms  ################################
 #  10ms  ################################################################
 # 100ms  #
@@ -284,22 +153,151 @@ INSERT INTO `isu_condition`	(`jia_isu_uuid`, `timestamp`, `is_sitting`, `conditi
 #    SHOW TABLE STATUS FROM `isucondition` LIKE 'isu_condition'\G
 #    SHOW CREATE TABLE `isucondition`.`isu_condition`\G
 # EXPLAIN /*!50100 PARTITIONS*/
-SELECT * FROM `isu_condition` WHERE `jia_isu_uuid` = 'aaf3cde3-5ca6-4b09-a41e-1ba4fa7d15ab' ORDER BY `timestamp` ASC\G
+SELECT * FROM `isu_condition` WHERE `jia_isu_uuid` = '9d3bfa04-f9dc-489c-9851-59aabe36935f'	AND `timestamp` < '2021-08-26 00:34:50'	ORDER BY `timestamp` DESC\G
 
-# Query 7: 4.23 QPS, 0.04x concurrency, ID 0x677D4DCDF729CC334DE038E9477B32B3 at byte 47665567
+# Query 3: 86.67 QPS, 0.79x concurrency, ID 0x8155B89FFD74A9D523D19AC409FD97AF at byte 61458881
 # This item is included in the report because it matches --limit.
 # Scores: V/M = 0.01
-# Time range: 2021-08-21 11:03:43 to 11:04:43
+# Time range: 2021-08-21 11:09:35 to 11:10:35
 # Attribute    pct   total     min     max     avg     95%  stddev  median
 # ============ === ======= ======= ======= ======= ======= ======= =======
-# Count          0     254
-# Exec time      0      2s   146us    58ms    10ms    30ms    11ms     5ms
-# Lock time      0    21ms    19us     1ms    83us   348us   181us    30us
-# Rows sent      0     460       0      20    1.81    9.83    3.92       0
-# Rows examine   0 108.41k      10   1.52k  437.06   1.20k  384.02  299.03
+# Count          3    5200
+# Exec time     14     48s    76us   104ms     9ms    34ms    12ms     4ms
+# Lock time     10   806ms    12us    46ms   155us   301us     1ms    25us
+# Rows sent      0   5.00k       0       1    0.98    0.99    0.12    0.99
+# Rows examine  15   2.08M       0   1.72k  420.32   1.20k  366.83  271.23
 # Rows affecte   0       0       0       0       0       0       0       0
-# Bytes sent     0 225.22k     589   4.93k  907.96   2.27k  694.74  563.87
-# Query size     0  48.23k     189     198  194.46  192.76    4.48  192.76
+# Bytes sent     0   3.78M     589     812  761.77  755.64   27.53  755.64
+# Query size     2 634.77k     125     125     125     125       0     125
+# String:
+# Databases    isucondition
+# Hosts        localhost
+# Users        isucon
+# Query_time distribution
+#   1us
+#  10us  #
+# 100us  ###############################
+#   1ms  ################################################################
+#  10ms  ###########################################
+# 100ms  #
+#    1s
+#  10s+
+# Tables
+#    SHOW TABLE STATUS FROM `isucondition` LIKE 'isu_condition'\G
+#    SHOW CREATE TABLE `isucondition`.`isu_condition`\G
+# EXPLAIN /*!50100 PARTITIONS*/
+SELECT * FROM `isu_condition` WHERE `jia_isu_uuid` = 'cf44bfaa-60d0-427d-a9ab-62efb1c7849b' ORDER BY `timestamp` DESC LIMIT 1\G
+
+# Query 4: 154.95 QPS, 0.60x concurrency, ID 0xFFFCA4D67EA0A788813031B8BBC3B329 at byte 49145276
+# This item is included in the report because it matches --limit.
+# Scores: V/M = 0.00
+# Time range: 2021-08-21 11:09:35 to 11:10:35
+# Attribute    pct   total     min     max     avg     95%  stddev  median
+# ============ === ======= ======= ======= ======= ======= ======= =======
+# Count          5    9297
+# Exec time     10     36s     2us    57ms     4ms    11ms     4ms     3ms
+# Lock time      0       0       0       0       0       0       0       0
+# Rows sent      0       0       0       0       0       0       0       0
+# Rows examine   0       0       0       0       0       0       0       0
+# Rows affecte   0       0       0       0       0       0       0       0
+# Bytes sent     0  99.87k      11      11      11      11       0      11
+# Query size     0  54.47k       6       6       6       6       0       6
+# String:
+# Databases    isucondition
+# Hosts        localhost
+# Users        isucon
+# Query_time distribution
+#   1us  ####
+#  10us  #####
+# 100us  ####
+#   1ms  ################################################################
+#  10ms  #####
+# 100ms
+#    1s
+#  10s+
+COMMIT\G
+
+# Query 5: 1.26k QPS, 0.42x concurrency, ID 0xB8B32624C3268C0925657C305C0ED778 at byte 21518626
+# This item is included in the report because it matches --limit.
+# Scores: V/M = 0.01
+# Time range: 2021-08-21 11:09:35 to 11:10:35
+# Attribute    pct   total     min     max     avg     95%  stddev  median
+# ============ === ======= ======= ======= ======= ======= ======= =======
+# Count         48   75447
+# Exec time      7     25s    23us    72ms   333us     1ms     1ms    63us
+# Lock time     61      5s     8us    20ms    63us   144us   326us    23us
+# Rows sent      0       0       0       0       0       0       0       0
+# Rows examine   0       0       0       0       0       0       0       0
+# Rows affecte  98  73.68k       1       1       1       1       0       1
+# Bytes sent     0 968.11k      13      14   13.14   13.83    0.45   12.54
+# Query size    69  18.50M     225     302  257.10  271.23   12.66  246.02
+# String:
+# Databases    isucondition
+# Hosts        localhost
+# Users        isucon
+# Query_time distribution
+#   1us
+#  10us  ################################################################
+# 100us  #################
+#   1ms  #####
+#  10ms  #
+# 100ms
+#    1s
+#  10s+
+# Tables
+#    SHOW TABLE STATUS FROM `isucondition` LIKE 'isu_condition'\G
+#    SHOW CREATE TABLE `isucondition`.`isu_condition`\G
+INSERT INTO `isu_condition`	(`jia_isu_uuid`, `timestamp`, `is_sitting`, `condition`, `message`)	VALUES ('35f32b3b-aa3a-4c52-a24d-ed97bb765910', '2021-08-14 15:30:41', 0, 'is_dirty=true,is_overweight=false,is_broken=false', 'æŽƒé™¤ã—ã¦æ¬²ã—ã„æ°—åˆ†ï¼')\G
+
+# Query 6: 13.33 QPS, 0.26x concurrency, ID 0x5F580A12ADA1633C9634298BE5BD9422 at byte 60547951
+# This item is included in the report because it matches --limit.
+# Scores: V/M = 0.02
+# Time range: 2021-08-21 11:09:35 to 11:10:35
+# Attribute    pct   total     min     max     avg     95%  stddev  median
+# ============ === ======= ======= ======= ======= ======= ======= =======
+# Count          0     800
+# Exec time      4     16s    11us   105ms    20ms    59ms    19ms    12ms
+# Lock time      0    74ms       0     8ms    91us   224us   407us    26us
+# Rows sent      8 507.57k      10   1.67k  649.69   1.33k  453.17  563.87
+# Rows examine   7 1014.30k       0   3.33k   1.27k   2.62k  902.52   1.09k
+# Rows affecte   0       0       0       0       0       0       0       0
+# Bytes sent     5  87.98M   2.12k 298.59k 112.61k 233.54k  78.74k  97.04k
+# Query size     0  90.62k     116     116     116     116       0     116
+# Boolean:
+# QC hit         1% yes,  98% no
+# String:
+# Databases    isucondition
+# Hosts        localhost
+# Users        isucon
+# Query_time distribution
+#   1us
+#  10us  #
+# 100us  ##########
+#   1ms  #################################
+#  10ms  ################################################################
+# 100ms  #
+#    1s
+#  10s+
+# Tables
+#    SHOW TABLE STATUS FROM `isucondition` LIKE 'isu_condition'\G
+#    SHOW CREATE TABLE `isucondition`.`isu_condition`\G
+# EXPLAIN /*!50100 PARTITIONS*/
+SELECT * FROM `isu_condition` WHERE `jia_isu_uuid` = '36ca7865-0b25-4b7c-a07a-e0a427f49492' ORDER BY `timestamp` ASC\G
+
+# Query 7: 4.65 QPS, 0.04x concurrency, ID 0x677D4DCDF729CC334DE038E9477B32B3 at byte 61115537
+# This item is included in the report because it matches --limit.
+# Scores: V/M = 0.02
+# Time range: 2021-08-21 11:09:35 to 11:10:35
+# Attribute    pct   total     min     max     avg     95%  stddev  median
+# ============ === ======= ======= ======= ======= ======= ======= =======
+# Count          0     279
+# Exec time      0      2s   144us    59ms     8ms    33ms    11ms     3ms
+# Lock time      0    43ms    15us     8ms   154us   541us   616us    30us
+# Rows sent      0     525       0      20    1.88    9.83    3.96       0
+# Rows examine   0 112.48k      10   1.67k  412.82   1.20k  371.80  258.32
+# Rows affecte   0       0       0       0       0       0       0       0
+# Bytes sent     0 251.98k     589   4.42k  924.84   2.38k  706.12  563.87
+# Query size     0  53.08k     189     198  194.81  192.76    4.39  192.76
 # String:
 # Databases    isucondition
 # Hosts        localhost
@@ -307,9 +305,9 @@ SELECT * FROM `isu_condition` WHERE `jia_isu_uuid` = 'aaf3cde3-5ca6-4b09-a41e-1b
 # Query_time distribution
 #   1us
 #  10us
-# 100us  ###############################
+# 100us  ############################
 #   1ms  ################################################################
-#  10ms  ################################################
+#  10ms  #############################
 # 100ms
 #    1s
 #  10s+
@@ -317,22 +315,22 @@ SELECT * FROM `isu_condition` WHERE `jia_isu_uuid` = 'aaf3cde3-5ca6-4b09-a41e-1b
 #    SHOW TABLE STATUS FROM `isucondition` LIKE 'isu_condition'\G
 #    SHOW CREATE TABLE `isucondition`.`isu_condition`\G
 # EXPLAIN /*!50100 PARTITIONS*/
-SELECT * FROM `isu_condition` WHERE `jia_isu_uuid` = '9f6a01e7-c377-402b-b2ef-6078b80b157e'	AND `timestamp` < '2021-08-21 05:00:00'	AND '2021-08-21 04:00:00' <= `timestamp`	ORDER BY `timestamp` DESC\G
+SELECT * FROM `isu_condition` WHERE `jia_isu_uuid` = '9d3bfa04-f9dc-489c-9851-59aabe36935f'	AND `timestamp` < '2021-08-20 03:00:00'	AND '2021-08-20 02:00:00' <= `timestamp`	ORDER BY `timestamp` DESC\G
 
-# Query 8: 205.56 QPS, 0.02x concurrency, ID 0xADCA4F127A769A45A2D1B74705103105 at byte 39970843
+# Query 8: 215.52 QPS, 0.02x concurrency, ID 0xADCA4F127A769A45A2D1B74705103105 at byte 22135432
 # This item is included in the report because it matches --limit.
 # Scores: V/M = 0.01
-# Time range: 2021-08-21 11:03:43 to 11:04:44
+# Time range: 2021-08-21 11:09:35 to 11:10:35
 # Attribute    pct   total     min     max     avg     95%  stddev  median
 # ============ === ======= ======= ======= ======= ======= ======= =======
-# Count          8   12539
-# Exec time      0      1s     5us    30ms   104us   204us   744us    13us
-# Lock time      0   804us       0   176us       0       0     2us       0
-# Rows sent      0  12.25k       1       1       1       1       0       1
-# Rows examine   0      20       0       1    0.00       0    0.04       0
+# Count          8   12931
+# Exec time      0      1s     5us    35ms   108us   204us   839us    13us
+# Lock time      0   454us       0    42us       0       0       0       0
+# Rows sent      0  12.63k       1       1       1       1       0       1
+# Rows examine   0      17       0       1    0.00       0    0.04       0
 # Rows affecte   0       0       0       0       0       0       0       0
-# Bytes sent     0 771.44k      63      63      63      63       0      63
-# Query size     2 796.18k      58      70   65.02   65.89    3.30   65.89
+# Bytes sent     0 795.56k      63      63      63      63       0      63
+# Query size     3 827.62k      58      75   65.54   72.65    5.21   62.76
 # Boolean:
 # QC hit        99% yes,   0% no
 # String:
@@ -340,9 +338,9 @@ SELECT * FROM `isu_condition` WHERE `jia_isu_uuid` = '9f6a01e7-c377-402b-b2ef-60
 # Hosts        localhost
 # Users        isucon
 # Query_time distribution
-#   1us  #####
+#   1us  ######
 #  10us  ################################################################
-# 100us  #####
+# 100us  ####
 #   1ms  #
 #  10ms  #
 # 100ms
@@ -352,24 +350,24 @@ SELECT * FROM `isu_condition` WHERE `jia_isu_uuid` = '9f6a01e7-c377-402b-b2ef-60
 #    SHOW TABLE STATUS FROM `isucondition` LIKE 'user'\G
 #    SHOW CREATE TABLE `isucondition`.`user`\G
 # EXPLAIN /*!50100 PARTITIONS*/
-SELECT COUNT(*) FROM `user` WHERE `jia_user_id` = 'zen_bardeen'\G
+SELECT COUNT(*) FROM `user` WHERE `jia_user_id` = 'cool_kare'\G
 
-# Query 9: 73.39 QPS, 0.02x concurrency, ID 0x8C2BC651CBBBF3DB41D1CAD61AA0BD68 at byte 2937386
+# Query 9: 78.69 QPS, 0.02x concurrency, ID 0x8C2BC651CBBBF3DB41D1CAD61AA0BD68 at byte 44888561
 # This item is included in the report because it matches --limit.
 # Scores: V/M = 0.00
-# Time range: 2021-08-21 11:03:43 to 11:04:45
+# Time range: 2021-08-21 11:09:35 to 11:10:36
 # Attribute    pct   total     min     max     avg     95%  stddev  median
 # ============ === ======= ======= ======= ======= ======= ======= =======
-# Count          2    4550
-# Exec time      0      1s     7us    12ms   252us   972us   827us    38us
-# Lock time      0    39ms       0     5ms     8us    20us   131us       0
-# Rows sent      0  13.54k       1       7    3.05    5.75    1.62    2.90
-# Rows examine   0  18.99k       0      79    4.27   30.19   15.33       0
+# Count          3    4800
+# Exec time      0      1s     9us    36ms   241us   799us     1ms    36us
+# Lock time      0    14ms       0     2ms     2us    18us    36us       0
+# Rows sent      0  14.35k       1       7    3.06    5.75    1.47    2.90
+# Rows examine   0  13.78k       0      79    2.94   30.19   12.52       0
 # Rows affecte   0       0       0       0       0       0       0       0
-# Bytes sent    20 293.85M   5.47k 160.79k  66.13k 150.54k  43.03k  51.46k
-# Query size     0 241.54k      51      57   54.36   56.92    2.95   51.63
+# Bytes sent    20 311.33M   5.47k 162.32k  66.42k 143.37k  40.21k  56.74k
+# Query size     0 254.81k      51      57   54.36   56.92    2.95   51.63
 # Boolean:
-# QC hit        92% yes,   7% no
+# QC hit        94% yes,   5% no
 # String:
 # Databases    isucondition
 # Hosts        localhost
@@ -377,8 +375,8 @@ SELECT COUNT(*) FROM `user` WHERE `jia_user_id` = 'zen_bardeen'\G
 # Query_time distribution
 #   1us  #
 #  10us  ################################################################
-# 100us  #################
-#   1ms  ####
+# 100us  ################
+#   1ms  ###
 #  10ms  #
 # 100ms
 #    1s
@@ -387,22 +385,57 @@ SELECT COUNT(*) FROM `user` WHERE `jia_user_id` = 'zen_bardeen'\G
 #    SHOW TABLE STATUS FROM `isucondition` LIKE 'isu'\G
 #    SHOW CREATE TABLE `isucondition`.`isu`\G
 # EXPLAIN /*!50100 PARTITIONS*/
-SELECT * FROM `isu` WHERE `character` = 'ã›ã£ã‹ã¡'\G
+SELECT * FROM `isu` WHERE `character` = 'ã¦ã‚Œã‚„'\G
 
-# Query 10: 125.40 QPS, 0.02x concurrency, ID 0x1E561CE87F050ED58A7E1A7FBB6C2285 at byte 39970512
+# Query 10: 102.55 QPS, 0.02x concurrency, ID 0xB5F4855605637317357023AD70B91455 at byte 41505011
 # This item is included in the report because it matches --limit.
-# Scores: V/M = 0.01
-# Time range: 2021-08-21 11:03:44 to 11:04:44
+# Scores: V/M = 0.00
+# Time range: 2021-08-21 11:09:35 to 11:10:35
 # Attribute    pct   total     min     max     avg     95%  stddev  median
 # ============ === ======= ======= ======= ======= ======= ======= =======
-# Count          4    7524
-# Exec time      0      1s     8us    29ms   144us   273us   928us    20us
-# Lock time      0    33ms       0    10ms     4us       0   129us       0
-# Rows sent      0   7.35k       1       1       1       1       0       1
-# Rows examine   0     144       0       1    0.02       0    0.14       0
+# Count          3    6153
+# Exec time      0   901ms     7us    20ms   146us   467us   692us    18us
+# Lock time      0    29ms       0     3ms     4us       0    81us       0
+# Rows sent      0   5.88k       0       1    0.98    0.99    0.14    0.99
+# Rows examine   0     230       0       1    0.04       0    0.19       0
 # Rows affecte   0       0       0       0       0       0       0       0
-# Bytes sent     0 462.90k      63      63      63      63       0      63
-# Query size     2 646.59k      88      88      88      88       0      88
+# Bytes sent     6 107.28M      77 132.17k  17.85k  40.32k  14.42k  14.47k
+# Query size     2 741.69k     116     133  123.43  130.47    5.29  118.34
+# Boolean:
+# QC hit        95% yes,   4% no
+# String:
+# Databases    isucondition
+# Hosts        localhost
+# Users        isucon
+# Query_time distribution
+#   1us  #
+#  10us  ################################################################
+# 100us  ############
+#   1ms  ##
+#  10ms  #
+# 100ms
+#    1s
+#  10s+
+# Tables
+#    SHOW TABLE STATUS FROM `isucondition` LIKE 'isu'\G
+#    SHOW CREATE TABLE `isucondition`.`isu`\G
+# EXPLAIN /*!50100 PARTITIONS*/
+SELECT `image` FROM `isu` WHERE `jia_user_id` = 'intelligent_villani' AND `jia_isu_uuid` = 'a60721d2-3424-4abd-af55-1bd1e94e6976'\G
+
+# Query 11: 126.38 QPS, 0.01x concurrency, ID 0x1E561CE87F050ED58A7E1A7FBB6C2285 at byte 58981772
+# This item is included in the report because it matches --limit.
+# Scores: V/M = 0.01
+# Time range: 2021-08-21 11:09:35 to 11:10:35
+# Attribute    pct   total     min     max     avg     95%  stddev  median
+# ============ === ======= ======= ======= ======= ======= ======= =======
+# Count          4    7583
+# Exec time      0   891ms     9us    31ms   117us   224us   779us    19us
+# Lock time      0     8ms       0     2ms     1us       0    32us       0
+# Rows sent      0   7.41k       1       1       1       1       0       1
+# Rows examine   0     108       0       1    0.01       0    0.12       0
+# Rows affecte   0       0       0       0       0       0       0       0
+# Bytes sent     0 466.53k      63      63      63      63       0      63
+# Query size     2 651.66k      88      88      88      88       0      88
 # Boolean:
 # QC hit        98% yes,   1% no
 # String:
@@ -412,7 +445,7 @@ SELECT * FROM `isu` WHERE `character` = 'ã›ã£ã‹ã¡'\G
 # Query_time distribution
 #   1us  #
 #  10us  ################################################################
-# 100us  ######
+# 100us  #####
 #   1ms  #
 #  10ms  #
 # 100ms
@@ -422,32 +455,134 @@ SELECT * FROM `isu` WHERE `character` = 'ã›ã£ã‹ã¡'\G
 #    SHOW TABLE STATUS FROM `isucondition` LIKE 'isu'\G
 #    SHOW CREATE TABLE `isucondition`.`isu`\G
 # EXPLAIN /*!50100 PARTITIONS*/
-SELECT COUNT(*) FROM `isu` WHERE `jia_isu_uuid` = 'aaf3cde3-5ca6-4b09-a41e-1ba4fa7d15ab'\G
+SELECT COUNT(*) FROM `isu` WHERE `jia_isu_uuid` = '247a193d-bf40-481e-ba4e-3bba524b9598'\G
 
-# Query 11: 95.38 QPS, 0.02x concurrency, ID 0xB5F4855605637317357023AD70B91455 at byte 43983749
+# Query 12: 54.10 QPS, 0.01x concurrency, ID 0x262764FE7CE586B417A1206082D32E11 at byte 61198746
 # This item is included in the report because it matches --limit.
 # Scores: V/M = 0.00
-# Time range: 2021-08-21 11:03:43 to 11:04:44
+# Time range: 2021-08-21 11:09:35 to 11:10:35
 # Attribute    pct   total     min     max     avg     95%  stddev  median
 # ============ === ======= ======= ======= ======= ======= ======= =======
-# Count          3    5818
-# Exec time      0   944ms     7us    19ms   162us   596us   689us    18us
-# Lock time      0    34ms       0     4ms     5us    14us    91us       0
-# Rows sent      0   5.55k       0       1    0.98    0.99    0.15    0.99
-# Rows examine   0     246       0       1    0.04       0    0.20       0
+# Count          2    3246
+# Exec time      0   377ms     6us    23ms   116us   247us   734us    14us
+# Lock time      0    12ms       0     2ms     3us       0    61us       0
+# Rows sent      0   3.04k       0       1    0.96    0.99    0.19    0.99
+# Rows examine   0      72       0       1    0.02       0    0.15       0
 # Rows affecte   0       0       0       0       0       0       0       0
-# Bytes sent     7 102.95M      77  96.79k  18.12k  40.32k  14.55k  14.47k
-# Query size     2 698.71k     116     128  122.98  124.25    4.16  118.34
+# Bytes sent     0 312.14k      75     116   98.47  102.22    6.83   97.36
+# Query size     1 381.77k     113     130  120.44  124.25    4.68  118.34
 # Boolean:
-# QC hit        94% yes,   5% no
+# QC hit        96% yes,   3% no
 # String:
 # Databases    isucondition
 # Hosts        localhost
 # Users        isucon
 # Query_time distribution
-#   1us  #
+#   1us  ###
 #  10us  ################################################################
-# 100us  #############
+# 100us  #####
+#   1ms  #
+#  10ms  #
+# 100ms
+#    1s
+#  10s+
+# Tables
+#    SHOW TABLE STATUS FROM `isucondition` LIKE 'isu'\G
+#    SHOW CREATE TABLE `isucondition`.`isu`\G
+# EXPLAIN /*!50100 PARTITIONS*/
+SELECT name FROM `isu` WHERE `jia_isu_uuid` = '9b68b73f-ed53-4695-b7c2-cadf99b7e496' AND `jia_user_id` = 'relaxed_leavitt'\G
+
+# Query 13: 14.43 QPS, 0.00x concurrency, ID 0x20183D6FD015A9A0A6C4FB46B2683CF0 at byte 59359909
+# This item is included in the report because it matches --limit.
+# Scores: V/M = 0.00
+# Time range: 2021-08-21 11:09:35 to 11:10:35
+# Attribute    pct   total     min     max     avg     95%  stddev  median
+# ============ === ======= ======= ======= ======= ======= ======= =======
+# Count          0     866
+# Exec time      0   284ms    12us    15ms   327us     1ms     1ms    63us
+# Lock time      0     5ms       0     3ms     5us       0   112us       0
+# Rows sent      0   5.08k       0      20    6.00    8.91    2.44    5.75
+# Rows examine   0   2.58k       0      79    3.05       0   13.79       0
+# Rows affecte   0       0       0       0       0       0       0       0
+# Bytes sent     6  93.85M     501 646.78k 110.97k 222.42k  69.02k  79.83k
+# Query size     0  65.29k      69      86   77.20   84.10    6.06   76.28
+# Boolean:
+# QC hit        95% yes,   4% no
+# String:
+# Databases    isucondition
+# Hosts        localhost
+# Users        isucon
+# Query_time distribution
+#   1us
+#  10us  ################################################################
+# 100us  ########################
+#   1ms  #####
+#  10ms  #
+# 100ms
+#    1s
+#  10s+
+# Tables
+#    SHOW TABLE STATUS FROM `isucondition` LIKE 'isu'\G
+#    SHOW CREATE TABLE `isucondition`.`isu`\G
+# EXPLAIN /*!50100 PARTITIONS*/
+SELECT * FROM `isu` WHERE `jia_user_id` = 'goofy_cori' ORDER BY `id` DESC\G
+
+# Query 14: 5.98 QPS, 0.00x concurrency, ID 0x5DD9DA3A1D662958C76AB4AC0352B9E7 at byte 43906733
+# This item is included in the report because it matches --limit.
+# Scores: V/M = 0.00
+# Time range: 2021-08-21 11:09:35 to 11:10:35
+# Attribute    pct   total     min     max     avg     95%  stddev  median
+# ============ === ======= ======= ======= ======= ======= ======= =======
+# Count          0     359
+# Exec time      0   248ms    42us    16ms   690us     4ms     2ms    76us
+# Lock time      0    25ms    11us     4ms    69us   125us   320us    23us
+# Rows sent      0       0       0       0       0       0       0       0
+# Rows examine   0       0       0       0       0       0       0       0
+# Rows affecte   0       8       0       1    0.02       0    0.15       0
+# Bytes sent     0   3.86k      11      11      11      11       0      11
+# Query size     0  22.65k      57      74   64.60   72.65    5.27   65.89
+# String:
+# Databases    isucondition
+# Hosts        localhost
+# Users        isucon
+# Query_time distribution
+#   1us
+#  10us  ################################################################
+# 100us  ##################################
+#   1ms  ################
+#  10ms  #
+# 100ms
+#    1s
+#  10s+
+# Tables
+#    SHOW TABLE STATUS FROM `isucondition` LIKE 'user'\G
+#    SHOW CREATE TABLE `isucondition`.`user`\G
+INSERT IGNORE INTO user (`jia_user_id`) VALUES ('cool_kare')\G
+
+# Query 15: 15.47 QPS, 0.00x concurrency, ID 0x323419B48CA5913A1217E6F5BA713101 at byte 28402363
+# This item is included in the report because it matches --limit.
+# Scores: V/M = 0.01
+# Time range: 2021-08-21 11:09:35 to 11:10:35
+# Attribute    pct   total     min     max     avg     95%  stddev  median
+# ============ === ======= ======= ======= ======= ======= ======= =======
+# Count          0     928
+# Exec time      0   176ms    10us    27ms   189us   384us     1ms    20us
+# Lock time      0    19ms       0     7ms    20us    31us   278us       0
+# Rows sent      0   4.29k       1     330    4.73    0.99   26.03    0.99
+# Rows examine   0      64       0       1    0.07    0.99    0.25       0
+# Rows affecte   0       0       0       0       0       0       0       0
+# Bytes sent     0  57.09k      63      63      63      63       0      63
+# Query size     0 112.82k     117     134  124.49  130.47    5.25  118.34
+# Boolean:
+# QC hit        87% yes,  12% no
+# String:
+# Databases    isucondition
+# Hosts        localhost
+# Users        isucon
+# Query_time distribution
+#   1us
+#  10us  ################################################################
+# 100us  ########
 #   1ms  ##
 #  10ms  #
 # 100ms
@@ -457,124 +592,22 @@ SELECT COUNT(*) FROM `isu` WHERE `jia_isu_uuid` = 'aaf3cde3-5ca6-4b09-a41e-1ba4f
 #    SHOW TABLE STATUS FROM `isucondition` LIKE 'isu'\G
 #    SHOW CREATE TABLE `isucondition`.`isu`\G
 # EXPLAIN /*!50100 PARTITIONS*/
-SELECT `image` FROM `isu` WHERE `jia_user_id` = 'isucon' AND `jia_isu_uuid` = '602742d5-32f8-41bf-b9ae-42fd5bfaf33b'\G
+SELECT COUNT(*) FROM `isu` WHERE `jia_user_id` = 'goofy_cori' AND `jia_isu_uuid` = '1734bd33-d636-4fe6-b567-44c254aa7ce1'\G
 
-# Query 12: 53.82 QPS, 0.01x concurrency, ID 0x262764FE7CE586B417A1206082D32E11 at byte 57101225
+# Query 16: 17.08 QPS, 0.00x concurrency, ID 0xC1B01223FBAA0D3FFA4AECBA98E246CC at byte 2889793
 # This item is included in the report because it matches --limit.
 # Scores: V/M = 0.00
-# Time range: 2021-08-21 11:03:43 to 11:04:44
+# Time range: 2021-08-21 11:09:35 to 11:10:35
 # Attribute    pct   total     min     max     avg     95%  stddev  median
 # ============ === ======= ======= ======= ======= ======= ======= =======
-# Count          2    3283
-# Exec time      0   439ms     6us    29ms   133us   301us   809us    14us
-# Lock time      0    21ms       0     5ms     6us       0   113us       0
-# Rows sent      0   3.08k       0       1    0.96    0.99    0.20    0.99
-# Rows examine   0      72       0       1    0.02       0    0.15       0
+# Count          0    1025
+# Exec time      0   163ms     9us    15ms   159us   657us   636us    19us
+# Lock time      0    17ms       0     2ms    16us    35us   120us       0
+# Rows sent      0     897       0       1    0.88    0.99    0.33    0.99
+# Rows examine   0     170       0       1    0.17    0.99    0.37       0
 # Rows affecte   0       0       0       0       0       0       0       0
-# Bytes sent     0 315.16k      75     119   98.30  112.70    7.99   97.36
-# Query size     1 384.67k     113     125  119.98  118.34    3.02  118.34
-# Boolean:
-# QC hit        96% yes,   3% no
-# String:
-# Databases    isucondition
-# Hosts        localhost
-# Users        isucon
-# Query_time distribution
-#   1us  ##
-#  10us  ################################################################
-# 100us  ######
-#   1ms  #
-#  10ms  #
-# 100ms
-#    1s
-#  10s+
-# Tables
-#    SHOW TABLE STATUS FROM `isucondition` LIKE 'isu'\G
-#    SHOW CREATE TABLE `isucondition`.`isu`\G
-# EXPLAIN /*!50100 PARTITIONS*/
-SELECT name FROM `isu` WHERE `jia_isu_uuid` = '4b1dd676-7a64-41fc-b20c-d575e010eb98' AND `jia_user_id` = 'zen_bardeen'\G
-
-# Query 13: 13.72 QPS, 0.00x concurrency, ID 0x20183D6FD015A9A0A6C4FB46B2683CF0 at byte 38863081
-# This item is included in the report because it matches --limit.
-# Scores: V/M = 0.00
-# Time range: 2021-08-21 11:03:43 to 11:04:43
-# Attribute    pct   total     min     max     avg     95%  stddev  median
-# ============ === ======= ======= ======= ======= ======= ======= =======
-# Count          0     823
-# Exec time      0   291ms    11us    12ms   353us     2ms   988us    69us
-# Lock time      0     5ms       0     4ms     6us    14us   133us       0
-# Rows sent      0   4.78k       0       9    5.95    8.91    2.47    5.75
-# Rows examine   0   2.71k       0      79    3.37   27.38   14.28       0
-# Rows affecte   0       0       0       0       0       0       0       0
-# Bytes sent     6  89.64M     501 196.51k 111.53k 192.13k  55.00k 106.99k
-# Query size     0  61.64k      69      81   76.69   80.10    3.61   76.28
-# Boolean:
-# QC hit        94% yes,   5% no
-# String:
-# Databases    isucondition
-# Hosts        localhost
-# Users        isucon
-# Query_time distribution
-#   1us
-#  10us  ################################################################
-# 100us  #############################
-#   1ms  #######
-#  10ms  #
-# 100ms
-#    1s
-#  10s+
-# Tables
-#    SHOW TABLE STATUS FROM `isucondition` LIKE 'isu'\G
-#    SHOW CREATE TABLE `isucondition`.`isu`\G
-# EXPLAIN /*!50100 PARTITIONS*/
-SELECT * FROM `isu` WHERE `jia_user_id` = 'dazzling_satoshi' ORDER BY `id` DESC\G
-
-# Query 14: 5.93 QPS, 0.00x concurrency, ID 0x5DD9DA3A1D662958C76AB4AC0352B9E7 at byte 33332610
-# This item is included in the report because it matches --limit.
-# Scores: V/M = 0.00
-# Time range: 2021-08-21 11:03:43 to 11:04:43
-# Attribute    pct   total     min     max     avg     95%  stddev  median
-# ============ === ======= ======= ======= ======= ======= ======= =======
-# Count          0     356
-# Exec time      0   224ms    35us    10ms   630us     4ms     1ms    93us
-# Lock time      0    34ms    14us     7ms    95us   194us   528us    23us
-# Rows sent      0       0       0       0       0       0       0       0
-# Rows examine   0       0       0       0       0       0       0       0
-# Rows affecte   0       8       0       1    0.02       0    0.15       0
-# Bytes sent     0   3.82k      11      11      11      11       0      11
-# Query size     0  21.96k      57      69   63.18   65.89    3.54   59.77
-# String:
-# Databases    isucondition
-# Hosts        localhost
-# Users        isucon
-# Query_time distribution
-#   1us
-#  10us  ################################################################
-# 100us  ##########################################
-#   1ms  #################
-#  10ms  #
-# 100ms
-#    1s
-#  10s+
-# Tables
-#    SHOW TABLE STATUS FROM `isucondition` LIKE 'user'\G
-#    SHOW CREATE TABLE `isucondition`.`user`\G
-INSERT IGNORE INTO user (`jia_user_id`) VALUES ('zen_bardeen')\G
-
-# Query 15: 16.07 QPS, 0.00x concurrency, ID 0xC1B01223FBAA0D3FFA4AECBA98E246CC at byte 8347713
-# This item is included in the report because it matches --limit.
-# Scores: V/M = 0.00
-# Time range: 2021-08-21 11:03:43 to 11:04:44
-# Attribute    pct   total     min     max     avg     95%  stddev  median
-# ============ === ======= ======= ======= ======= ======= ======= =======
-# Count          0     980
-# Exec time      0   169ms     8us    10ms   172us   626us   674us    20us
-# Lock time      0    26ms       0     5ms    26us    33us   230us       0
-# Rows sent      0     846       0       1    0.86    0.99    0.34    0.99
-# Rows examine   0     169       0       1    0.17    0.99    0.37       0
-# Rows affecte   0       0       0       0       0       0       0       0
-# Bytes sent     1  15.57M     501  97.34k  16.27k  40.32k  15.07k  12.50k
-# Query size     0 112.29k     110     122  117.33  118.34    3.91  112.70
+# Bytes sent     1  16.12M     501 132.72k  16.10k  40.32k  14.77k  13.13k
+# Query size     0 118.07k     110     127  117.95  124.25    5.37  112.70
 # Boolean:
 # QC hit        77% yes,  22% no
 # String:
@@ -584,8 +617,8 @@ INSERT IGNORE INTO user (`jia_user_id`) VALUES ('zen_bardeen')\G
 # Query_time distribution
 #   1us  #
 #  10us  ################################################################
-# 100us  ######################
-#   1ms  ##
+# 100us  #####################
+#   1ms  ###
 #  10ms  #
 # 100ms
 #    1s
@@ -594,22 +627,22 @@ INSERT IGNORE INTO user (`jia_user_id`) VALUES ('zen_bardeen')\G
 #    SHOW TABLE STATUS FROM `isucondition` LIKE 'isu'\G
 #    SHOW CREATE TABLE `isucondition`.`isu`\G
 # EXPLAIN /*!50100 PARTITIONS*/
-SELECT * FROM `isu` WHERE `jia_user_id` = 'elated_feistel' AND `jia_isu_uuid` = '795aa54a-11b6-4dcf-a9c5-d4b39d0a9ee0'\G
+SELECT * FROM `isu` WHERE `jia_user_id` = 'relaxed_leavitt' AND `jia_isu_uuid` = '637d1082-9998-487d-b8f7-8cf56a2d4aed'\G
 
-# Query 16: 152.93 QPS, 0.00x concurrency, ID 0x9E2DA589A20EC24C34E11DDE0FBF5564 at byte 41209854
+# Query 17: 157.18 QPS, 0.00x concurrency, ID 0x9E2DA589A20EC24C34E11DDE0FBF5564 at byte 4894427
 # This item is included in the report because it matches --limit.
 # Scores: V/M = 0.00
-# Time range: 2021-08-21 11:03:43 to 11:04:44
+# Time range: 2021-08-21 11:09:35 to 11:10:35
 # Attribute    pct   total     min     max     avg     95%  stddev  median
 # ============ === ======= ======= ======= ======= ======= ======= =======
-# Count          6    9329
-# Exec time      0   168ms     2us    12ms    18us    14us   200us     5us
+# Count          6    9431
+# Exec time      0   127ms     1us     6ms    13us    13us   110us     5us
 # Lock time      0       0       0       0       0       0       0       0
 # Rows sent      0       0       0       0       0       0       0       0
 # Rows examine   0       0       0       0       0       0       0       0
 # Rows affecte   0       0       0       0       0       0       0       0
-# Bytes sent     0 100.21k      11      11      11      11       0      11
-# Query size     0 154.88k      17      17      17      17       0      17
+# Bytes sent     0 101.31k      11      11      11      11       0      11
+# Query size     0 156.57k      17      17      17      17       0      17
 # String:
 # Databases    isucondition
 # Hosts        localhost
@@ -619,20 +652,81 @@ SELECT * FROM `isu` WHERE `jia_user_id` = 'elated_feistel' AND `jia_isu_uuid` = 
 #  10us  ####
 # 100us  #
 #   1ms  #
-#  10ms  #
+#  10ms
 # 100ms
 #    1s
 #  10s+
 START TRANSACTION\G
 
-# Query 17: 0 QPS, 0x concurrency, ID 0x655E93F30F576321245A814D06B07CEB at byte 7195
+# Query 18: 54 QPS, 0.10x concurrency, ID 0x1842E6B631B4CA92D1232CE63CC6017F at byte 2741444
+# This item is included in the report because it matches --limit.
+# Scores: V/M = 0.01
+# Time range: 2021-08-21 11:09:35 to 11:09:36
+# Attribute    pct   total     min     max     avg     95%  stddev  median
+# ============ === ======= ======= ======= ======= ======= ======= =======
+# Count          0      54
+# Exec time      0   102ms   213us    37ms     2ms     5ms     5ms   626us
+# Lock time      1    85ms   161us    32ms     2ms     3ms     4ms   490us
+# Rows sent      0       0       0       0       0       0       0       0
+# Rows examine   0       0       0       0       0       0       0       0
+# Rows affecte   0      52       0       1    0.96    0.99    0.19    0.99
+# Bytes sent     0     752      11      90   13.93   10.84   14.63   10.84
+# Query size     3 1005.00k   6.48k 100.28k  18.61k  40.32k  14.66k  13.78k
+# String:
+# Databases    isucondition
+# Hosts        localhost
+# Users        isucon
+# Query_time distribution
+#   1us
+#  10us
+# 100us  ################################################################
+#   1ms  ######################################
+#  10ms  #
+# 100ms
+#    1s
+#  10s+
+# Tables
+#    SHOW TABLE STATUS FROM `isucondition` LIKE 'isu'\G
+#    SHOW CREATE TABLE `isucondition`.`isu`\G
+INSERT INTO `isu`	(`jia_isu_uuid`, `name`, `image`, `jia_user_id`) VALUES ('f3202768-9584-4f44-813c-d7af863e9f8a', 'ã‚¹ãƒ¼ãƒ‘ãƒ¼ãƒãƒ', _binary'ÿØÿÛ\0„\0		\n\n	\r\r\"##!  %*5-%\'2(  .?/279<<<$-BFA:F5;<9\n\n\n9& &99999999999999999999999999999999999999999999999999ÿÀ\0ôô\"\0ÿÄ¢\0\0\0\0\0\0\0\0\0\0	\n\0\0\0}\0!1AQa\"q2‘¡#B±ÁRÑð$3br‚	\n\Z%&\'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyzƒ„…†‡ˆ‰Š’“”•–—˜™š¢£¤¥¦§¨©ª²³´µ¶·¸¹ºÂÃÄÅÆÇÈÉÊÒÓÔÕÖ×ØÙÚáâãäåæçèéêñòóôõö÷øùú\0\0\0\0\0\0\0	\n\0\0w\0!1AQaq\"2B‘¡±Á	#3RðbrÑ\n$4á%ñ\Z&\'()*56789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz‚ƒ„…†‡ˆ‰Š’“”•–—˜™š¢£¤¥¦§¨©ª²³´µ¶·¸¹ºÂÃÄÅÆÇÈÉÊÒÓÔÕÖ×ØÙÚâãäåæçèéêòóôõö÷øùúÿÚ\0\0\0?\0èuB~ÍcÔþèVqm£\'=)óÜ›˜b]êÆ!·å* 3Á95ÓUZLÆŸÂ3Ï€H±îÚÏÐ\Z{¼hFö5“º:¤Ï=™ ÂÉ‘­G5üe’\"Ò°à\"ó\\³©(»EÅ]›Qº:“´ËÂE«þOFfû?0<{¹ù¸ý*íáÕúö®˜]ZæuU¯ckÂƒý/÷ó®¤³®KÃ.cÒ•ÇÌT±ÇãZG^;ãÒOûèWD©Êrv9%%j3ó>¼iõ‰¶¹bÐJ2MNºäóÊaÿ\0©t&ºªDÔü¨C×ü÷¬Ñ­[v_ûâ–-ZÕ¹gýñSì§Ø¥8÷5â¼Çâ‘ÿ\0‰¸#øWù× ¦©j‰¿ï“^qñ2â+NÝ£l®V5 Õ®©4ä`xˆâÖÐg0éU-ÎàNU¹>ÕkÄ_ñígÏñ\n­lÙRr­É®¬Ì+· ù¿Õ¢Æµt-0¿7AÈ¬©°b?*õ­]‹#”nè¼ŠìSªÔ¿q“m(à’‡Ž™ã¥t_3†#PÞGï÷xßÆ¹Ë®mfæùã<t®‡áÌVþ†&-˜;~íŽì~5oáËä8îv>o¤éøÆiD¹ÿ\0–ÑþTÁut¼ˆþœ\'RãâËÿ\0¯^}Ÿc[¤s>4;ÒÛÇžSŒUßº|C1yük?Ç$8·#Œóo­høTŸìÈ9‹îŸ½×ñ®†¿r%ñ~/µoâû«÷:WY§(òW1Àx^•ÇøÁ¶ëÆ2ît®ÃO\\ÂÈ¿?Ê¢ÃE$qm†×\0ÿ\0Ö”ôüý+µ†0-$&Ç¡ö®oª†oõ§ånŸwq R\n”žµ^ˆihqšï5•\0»ðÇkp+¼Ž!´~àtþõp¾ùõ`70	Úx®í\n?qø¥Yìaæ1ÿ\0<OýõI°Ï&ÿ\0¾¿úômÿ\0¦Mÿ\0}Q°Ï\'ÿ\0¾¿úõ‰A°Ï7ÿ\0¾¨*1÷$ÿ\0¾øÑ´r_ÎŒI3@\r\n2~Y¿:vÑÿ\0M¿:A˜þúƒŒ}é‡ç@ ÀÏYé8þôâŒŒÿ\0¬—ò Ÿúm(ú¯ÿ\0Z€35Rëg÷_þµc«ñ,Ÿ÷ÍkjÒ(¤¿Ð¨ÿ\0\nÊÎsöƒÿ\0|ûW£Cà9\'¹4.0Ù•È®ÞEqZÈÝ¨NÛòzç®â61óºÞ•ÂêÃuìäÇ»,y­*…RÜ§|ª< ¼ö5Ó@Ç`ù×§¥sPÇŸ»aÓ¿JébÎÞ\nÓ§nR¦7Obº”Ä2¯»t5¶®Ùx{V&˜Û§8ÿ\0k¡úVÜaˆÈHOJÓtf÷,Tÿ\0ª?½ck 	`FsÌu°TíÇ—>‡Þ±µÃµ¢˜Ï?wœóYÏbà®îkxyIÑò#W<·©x‹ä·‹9‹æê¼çŠ½¡®teo/x$üÙÁëéYþ m±Bò²O^sÅaÑš=ÑgÂKæZ]¦`ºíM×¿wd-dëÖ¤ð Í…ËÒ|ãæNJ‹_8³]¿)/ÿ\0-:Rz\\§«Aá¾K’XÊŽWŒVž¨Bé·H¿(å¹›áƒrÍÇý_ãZ\Z±_ìÙ°îI\0aºRêÉðéÝ«.æÈ\n~çZìÔ®õæþ#ÏÓé\\æb‘\\‹ÛNÎ«ï]\"¸Þ?~z7Qô¨«;]õDèG‘ÿ\0*r°ÿ\0žÿ\0|Ó²Gï×¯ ô©½CÓµ`ÍÐ¡¿é§¯j\\œýñùQ“Ÿ¼´¿7û4†?Þdÿ\0yhÁôZ8û«Hýš\\öhý‘F?Øî•Z7ÎüãšX7¬³§ilƒž(†6A¼Œ<\Z~	Ln úâº«ülÊ’÷I`ô<t¨â·‚ùPÆ„òv¨¤ ÿ\0–¹Ú”‡,\n°éY]£KrMAxvÚ94“‰ZÚP¤ØqZÅÓ¢˜i÷*é.ÌƒµÇ#Ö”dÜ¹JtïNR¹×è,N‚@êCb²Ò¹*[¶O£V‡† C£)+Î[¹õ«q|«¸Aí^¥¯&yX‰ZÆ3«[¨í¥‚D’Qòåé²Ï-¼‰r§\rZš«¿Òæq–Ãñš£©\r××_5ºWµÌTŠ‡PØ¤™gúÔ¶×ÌÜ¬ÒŒóŒÕ…>KõRéëûµúVŠ)‡34¾Ý1M&+›ñ\\¯-Ì%Ü¶Yy5ÒÇT¼W7âå	u\0«\\9„múGy”üE\"Ó·Ì*½©ùÌ\'¨ÅXñú‹CÏÞ^×˜¾ðëÜV7î³¦¸ùÇîŽ<¯Æµ4!¶ËŒ‡‘Ys³þYŸ­kh?ñãØ\rÇîô®È½ÌÅË¾-&ÏÍò\0ñWþÚ´º*¨HâUcß­gßse0á³àðã]?Âñåøj0Gó‘Fà?\ZRŸ%9Éy	®k#atÌƒºDð\n‹û;Œ–‡ò\"º\0ÇÈüšÍÇúÄüEq,LÊ•;\'‰­D	bAÿ\0V^´¸û\'†â”Æ$Àoñu¨üvHkmªÒ`õg\"3Ÿ\rÄ­Žœ‚7VŽMÁ?2á¢f£r.®–P·GËÔWYª]‹(a-wdf#üë‘¸,²\0¢lîNµ½â7-¿îÚƒÊw§?‰!Çà2,$ëbGl¿ÝqÖºMOP[Wxq$ggU9Šåô©ÿ\0âii&~~ë\'ñ©¼M{åk>_œðåTù{sS¼’)é÷†ˆ“W8“å\'?Z×ºÖO\"?wnqX~\Z¸FÕðÄÉ•<ÁüêVò®5Û¨&ºdÃá.HÈèiÂ<Òù6”M1¯F._ëS\rxtûIÏºÔK 9ºÿ\0LÁ¥ÿ\0„vCÊÝÿ\0l‡øÕ¿gÔÇ›±cûtcýxü9uÜÿ\0ËdýkZÓn´è•ÖhÜüI¶–]*å-Ì©$oÆvùÖš§M«ƒ“Sau¼™TçýªkYïÿ\0×ÒH£-å¯ÓrÃ€±“õ«xhö¨û§öÞ\'<z0ÿ\0\nöÈ#øÇåþÇ³KrÀ8ÍD.¸?:«Ç±~Ñ÷:kýIî\0E-Ç®9ª\"i¨?•c}¥É\\sýêên­D÷¶‹ç VxëZ{´ìŒÞºÛ\\7–íÓð8®#Uù®ç>[’Iäµê1éÈ‘2{ôæ:Ê¬w÷@‰8c÷O…`êFOÝ5§tõ)Â¸ÙòÈMtq}ßá®vß‹N£ƒ]\n—•¥=b9è7Ne—.îqó?\nØŽh@ÿ\0V}q\\Ìwooq ‡ÌÄ|Éº¦þÝH˜£ÉaÔñUtCGBÓGÆUG¯5“­H¬ÑuO”û÷ªã_ˆÿ\0Ë[oÅME=âÝíu{|Ž:\Z‰jŠŠ³:m …Ñ#vsŸ™Næ³uò\nÂr~ÿ\05n9Å¯‡áb äŽá:ö5‹}t.¶í†—©šÁj™«ÜÞð¿\Zdä’™ÿ\0,úúê¿ˆNmcÛóýRh²Ü9Oãÿ\0V§\0ôïY:…ÐºEE³q†ÏúÌÒ½î6µF¿„NØîóû£ÇÜŠ»¬±:l I¿$|¤uª>M•ë•høå	Én;Sµ7É× œÿ\0“BWb“µ=€î>O©­•fÞŸ¼CòžÞõ‹ †[`Á\"\0\'^õ47È]WÍ|Ÿ”f/Z*ÅÊZN\\±ÔÜ³÷£?þªp\rè•˜÷«Í’ uê\nôå¿‡#2ÃÛ±ÿ\0\nçörènªÄÒÚº´¤°\rQ±÷¢ÿ\0¾±J·±Ÿâ‹þþTòH®x—vî~´¤qÒ«Œ®ð¡”w©d“j´óî*lÊæD£èhªâö[ô¥óÿ\0ÙoÒŽVÈó4ÜÈ¬[ eb})lef,a\0|§ÍVÊ¨[ràsÒŸ£$º”²!uŒ&9Ûœ×uHIÝ´a	GdÉ\'—Ë—‡‘3Ë¸úT÷v¢X$2¾GîñƒT5\'–ÊM™GÁë‚*åí´¶ºX¼óƒcåÆ:ûÖ\\¶KB¹¼Èíd3J©&èTÿ\0tºƒ’Ha“ÌfK(ãZƒK’Kû¤·p\'=hÔ¥{FK2ö`îäu•\\Žö°›V6tãƒFI\"¤ƒwÊj8oQ©ÜyëUìì¥ºÓþØ$U\0”ƒÛÞ«ªÊêNSŠêÃºšò£“\ZnÜÌ¿ªÜ$¯¦¼l }Üò¼Žµã+ÞNá”†lŽ}ª+ˆf-ŠpŒvÁÅ[Ì’¼gfTã­j¥U+r÷!B“ûE;µ-ëƒMÓÔ…Æ8ïV&g‚2ä)ÀÎ3QÛJ×\nP3ØšµRµÚQ\n_ÌjZù`€]:æ¼f7_Á°n\0®HäVô:|ò” üMbø†ìéS¥¬±gÇÌ‡Ž}k“)I.to†„TýÙ^#Ï•h?Ú^ß>_SÔýê›Äm˜lÎ$:Ô6Í˜†Xõ?xT`öfÕ•É\'?»<ÇÓ¸­}‹!Óï»Ò±çaåZ0=Åkè‡ýyOÝW\\z˜=‹7üXÜàÌg†à}\ruŸ@O@y|¶Q~eö5Éê#:}ÀùNc<7ñ®§áŽSÃq.âœŸ•åëØÖuu¥/žžî?Öÿ\0ã´nãýbþT¿é©üV”¸ÇúÅüEy¦­ÝoŽþi-ø-òŸ¹Çzv3á¸~îp¼½LñØÝ%¹Ál)å8©ãðì#äà÷«­|ìÎ]×h?|>qôë]¾0màÿ\0«æ¹ù@ÉÌ£.8íÖº-xaaà/îÓ–²@¾JµH™#|ßu—¥ñ9Æ¾WÏh°É·#§­;J`Ú¬+æHüýÖÍ/ˆœ¦¸ê&hñ“n{R‡Çò¾ç†~¦~0<ƒUõ#[¼\"U\\|¤r8îjï…ŽýBO™¤Ât\Z¡©³\r^ô	PbOºÃ‘Ç­m‡_¼ùÖø\rµG»nHnàô©î5‰\ZÝJUéšÃY	I?Jz`™á?†+µQO¡ÇÍcJîökí*VÃ ô¨m5‹¨£yŠÉŒc9âœ66‹>Ý™.2;\ZËÑbaìE(Bò°äîÛÆvpRØ{ž•0œE=~lT²ª•Ü\"Ýì\Z x#r…álätjÜ“[Ä¾lƒËó\0Dû¼•’Ÿ,\'÷\\zgšÙñ2©¸—99T“ƒÒ°ÌAbÏï	ÏNõ…¸=>”<ÍR†_Ÿ©<~5è+–Ôcùá;bô®@U:Å°wãñ®ú ßÚ_võb¹qŽÒKÈÖ–©š#\"?ùgý+ÈµÓBèæEùÛîŒô¯^òþê}3Åy¸ãí÷_¼t;Û€8×\r\rÙÖÑZÜüñ\0îyEo§OºkÚMÒÆ<Ây«u1Ž†»að™Ïs+,×HŸòÓ¦=úUÖo´J>Ñ€ËÈ­KnoPnžƒšÌ»góå\0ÚIûøÏZkA$Qæ6K`ÃÑ€¥`fû0;-[“÷™4r4ƒýÁ¾¬3[:|EmThTóò©â¦_	IÎãáëh¤ŒmÈ8\'åü+X’4Cª¶zá±]þÑáø\ràòqÅsî7*1·~}ù¬R¼.[~ñ­e#O[¸V“îõïëX\n{iqÜ\ZéááØà…i~ïñu®b8R+‰”}£‚;äP•àØ7i#F˜E¡j_º•r:0Éü+WWPº£ÆÄ_½øÖvž6øgRl¾	ûÇï+[\\=Ô·åQ¸u<VkqL¯á©WÌÛ·v@0®–âÂâÎáÓÏøM–Y$À@Ž1]-ÈA±¾÷jU%y“Ëîˆ¶Ð»’ÖëŸZ“ìvçþX­, e°ñ©ëÊ]ÎˆÅ[b©±¶ÿ\0ž\"šÚ}©÷|UÊBxëKž]ÆáÅ8c[sÜ’1VÙB· t¦ÛŸ|ã­Y§&î(E8•¾Å¥a‹Ò¬ÑKž]Êä‰äÅYà‘‡eéSø<ÿ\0¥ÜöE2ÖHÑ|¼}iþ¼ŸýÑ^Æ\'Dý\n:²·‰T‰úñ’ZÔÖ#i¼/VPNÃ–éY æåóýãüëzëÃÑîé…®Yiú›GDÌ/\rºÄCvHùSüK£]¸›-€\0çœãÒ“Ã˜þÛþW<Nƒíò0Á\'ÊªOßùì¢ö…Ï‡xjÏ7BvÆùÈî9­¾GoçU¡·T·ÜNx®Ü³—©ÃŒÝÔ2çK\n¬DJá½¹ïRÜÈž|Ç“—È {T²ý¾Ñ„~µ„¢KÝÃy­šéýjeÔË¾rð²…’>SMÓ’%Ü¸8ç\"´.¾ÊÁ²Ãõ£)„aÎN8jÒm›\Z{\r½Eqž<\\ëêµÛÂ«²ÌÊÙÇ|\Zã<zux@ÇU¯+0•Ò~g^\r~ðÈñÙõê>µ©ýØ%˜uûÂ¥ñýÝ¦3ÔTVyƒ’:õæ³Áü,ë¬,äÏÌŸˆ­°©Îyþ•‘;b#ó¨ú­kè§6*rOUàW\\z˜t&ÔNl.3°þìýãøûW_ðÑvxjß®sÂ¯^ÕÈjcþ%·9Úv~ÿ\0OÆ»†§¶å—¯2½OJÎ·ð¥o\"z£®\rÿ\0Mâ´ŒÜ¬•.ãÿ\0=ýóA$¾?ïšóMºgŽ~imÏ/„?sŽõfØnðü#äû£ëU¼v3-¾C6òœw©’#Ãð6Ô~ƒÅ]qø\"fsŽ1© >`ÌƒŽÝk¡×Õˆå?tæ°d?ñ4NdæAÛŠè5¤oÝ~C÷jíï!}ƒG>f«\nïgëÃvõ£_mºÜƒÍòú|¥súÒè­»UˆoßŒü¬1úÔºÍ¥Ãê—3Ç$kXÜ¬2F}\rL~/åð—<+ó_J~gÂ¬jbº½Ø<ÃÃGÖµü%ÍäÜ—Â¹Æ+W·–]VéÐ[‘æ|ß‰­°Ë÷¿#:ÿ\0		’R2²AŸzr™[XO¯4Y°${qVcµÜ¦O³ ÏCÇ¥z—¶ç\r¯±z<?6à ™>ïcøÖ\ZÄˆ>[dç¯Í[¡HÐä‰PÒd)9ñ¬½’£m6Ý?ÚÍa\r%/Rïî¢&?J±e+\ZõÅCÜIÞ²\'éÍ6;”+Y’3ÇjÛad/³›¹€_”ÉSáëY‹\Z4c(Ê~µ§¯\\*]ÎÞPo™yQ‘Óµfý¾\"v›v×mcò+ËúûRÜgwS†<t®ÒÛÛ1GÄcœ× <kL±åcÁâ»kXÇÛä@á£q\\x»ßämJÝ\r\"¿»ÆÀ}³^=«Iþ•s‰vüíÁÇ5ì,£ËûŸ†kÇ5\'ÿ\0H¸Äª>s÷‡½qÑêu=[3F7ƒÈí[‹ŒgšÅ¶?¿‹æCÏaÍl©ã©®Ø|&SÜ§§÷ÑŒ©ù‰ùzÖEôlg¬P>Xõlç[Z ß©F£`$1Êœ‘øV%äDÏ7ú*7ÎyŒÐ´(Ëní7Íac¸“ÿ\0¯[–í¶@-¶ñÓ9¬¦µ÷ÝþÌ•­l?ÑÓ÷2§´§ð¢–çg#(Ò-ÒC!\0Ç5ª•F<·Wií[:“ˆ´Û=È¬1üGëòxå˜yŒVKH\rüFÉ\\xZ´ãÌê>÷~¾ÕÌÂÁg”‰ò1Ôt®±V1áËRùPÇ‡’yëX‹yÛ—büê3B^ãÚ±­hÛ|)xåŸïæwŠÔñÂ×ïFxäòRÓáóü5\"#|ƒçÆGQÆ*çŠþ[kp7÷út¬Æ÷!ði-<Ä¹q‘÷F1õ®®àÑýñÏjåü9˜“‚X}ÁÇJê\'8xþr9ô¬åñ_	$;¹n½êjŠÜåIÝ»ŸLTµƒ7ŽÂPßtÒÓ_î¥ob|ùk÷*ÅAâ5ùON[‘\r‚Š(©,àmô{HtyåŽu/,{Ø çÒ²<qw8ã þuÒGiü#ÎûFï$œû×7á.§ú\nõdÜ¹õ8b­ ñ^ž–’¤ŠÙ3eølãšÞ·²:†‘\0ã(\rføÞíÊäoBO5¹¡D³XÂ¤¶<°r8=+9;Á1­9=<­}Pç*XV§‰ìïyØä~Ÿ¥\rž%ÛþÛŠßñTtÁ vÁa•ÏKtá!ðÌfm\"Œ³nõæ´!·¸†-†ÎùÕ?	¡:lj©,Ø>œÖÙ·»ívÜJ®{6ŒªÁJÆ:iòN+’!Fx$Uk]*á`ùŠ†ÉÎ+}ÿ\0sµd/=©Áu\0¤ùÈqž¢´X‰.¨ÉRHå¯4»²‡`\\ã¦i–zuÆÝ²FªÃ°jêÏÛÇüñ?…\"‹Í¼Á õ­*Vè/fŒ—´•VÐªÙÁéšâ<t6êð‚1Ê×§î¹Î#ôÅy¯Ä&fÖá-¾\\¨úW*£”R}ÎŒ4-PÃñÝ³ï’)¶Ÿ, |ÃëÍ;ÄrÐuäSm!0ýkL&±gEm¸|!>f?à9­æÅO\\“ÏJÆ¸lE÷Ø~³¢óbœîëÏJé]Lzj|iwG)þ¯øú~5Ú|6ãÂÖŸyx?p|½OJâµ^4»®T|ŸÆ2?\Zëüso†,A’`|¾|¿¹œö¨«wJIwB¶¨ìw¶ßˆ¥ßŽ¯úVp¾ƒ?ñù(ú­<^Åÿ\0?¸ú¥p{9v4¹Ìøìæâ•Ÿ~çéÓø§-ÆxùxxT3q4Ð•;yC·½jiöqÞhðC,«Ú£~u¾Ð‹`µLåCnÕ#¥\0È>•Ñk$¨(\'ðÖñ5¥^R«(\0ÿ\0	®Â{¸·.Ê‚ƒTä”“agÊr:	5X‡˜dàðFçZwŽ7êc Ù×œsYºÆ®ªœ€x#­tZ†–\"±¾ºÜÙ”ù°BàÔó$ÝÇ%tŒÿ\0	×3žåêøüê…Ü\"Kùÿ\0ÕäÈzõüjÿ\0„ù¹¸çwþ¯Î¯Máû“pòG\"€ìN\Z<ŸÎµ¡R0äEhÊQÐÄ–ÔÆ…–F>•%’•Ò§b	^‡ƒ×½k¶‹´¡x˜úeRA£ÜE`ð„üÀ…@?Zéž&6æ9cJWØÇ.JaÏËš¥$ÿ\0Y¼sÔWK.—plD\"+|†\'o@jˆÒ\'È-¦ÃýÙ8×…Þ éÉ-Q“}\nù\nÈÎIqÀëVôÐd³¸HÓ–úÕ›q\Zùvò+nÉÄ™©môû°Î¦)šD àzQ*±qÜ]È5ãûC†eùŸ·@qT®JB@RŸCÍZÔtùÚYG?ßÏÊþª¥&;òÜŒz 4A+nã´˜ÒM^2#VÀ\'nq]…š§Íû¬aW€Ý8®SG²š=EÇ#(SÕqú×Yd¿éÓŸ)‡A÷½«Ÿú\ZRÔÒõGån\"¼oPbÓJwGËŸ¼=ëØæÇÜ7NÇšñ«ÂwÉÌG,zýkŽS­Ý²KAûôÏ—×µk©ùH¬›0~Ò™	õ­üÛµvCH™Or?îŽñ$Â·=GN•—%„R]¹08.ãæÇ œÖŽŽ\Z0YSi\nÇöª°Œ\\c”~ñ;ñÂšÄÄÙItÈPånü¿Ç‘É#Ó¶*þÅ‡÷{åùxõ§îŒÈ<ÔËEÓ§SÇøÒÎØ™³,‹ÏLqJ{\Z³²’Â/ÝÆFÎNyé\\Y\"9eQt[s¹OØÝ®,£>X»®>V\"i¿}x+Óô¬—ÀŠkÞ:faƒd~BÌ~óàÖ&¡+LèO8õÏ³|™Ñ´ð£9JÀ\nº®Èm‹ÚÚ¦÷ÎŸBU:*¬€Òt^zÔ¾+9Ž 77\'†ãµG¤|š5¸&dû£§Z_ËæAÏNÕ“ø‡ø0á&ÎcËôêÑÎÄ<8…sÞ\r‚@>L¿*Üö®†|ù‰÷;ö¬¥ñ-\"Ko’TóÚ¥¨­ÇîÆ@ü*ZÅîn¶\nlŸêÛéN¨æÿ\0TßJá-†B£b|¤qSÔPð«÷ºT´HPØ(¢ŠE¬o7_õ\r\\·„ñö©¿ÝÔ[È²Çþ˜5rþÇÚföŠôúÌã[—üyÿ\0.î\ZÚðç6ûÇXÞ:\'ýýÃý+gÃŸñçN#¬ÿ\0åØ.§/¦Œx‘¸þ6®“Å#:\"ÿ\0¾+œ±ãÄmÿ\0]\Zº/s¡¨ÇñŠ\'öE¼H|\"1eÿ\0l×L9®gÂCqÿ\0¾k¥SÇáS=ÆÕÄ_õŒxíüªA÷j49vÿ\0=ªAþ5I	Š\0Í.=è^hzW–|Mñ<áþUêÇ…yOÄ¾|A¯ËßÚ²¨ö5¥ñ÷ˆñ‹N;Ó-”ˆ†§4ÿ\0‘¶Ó¥2Ø~épús]x/……q×.DGæpG¶kcGæÅKyéX³åc?4ƒð­þ<#äž¼žµ×«1{jÄ\r&èîUù:¿#ñ®ïÀH§ÂzyÃså1´ûŠàµs·J¹;•>O¼Ã sÜWàÿ\0žœIs˜þòp=«\ZúS~£Fé÷»õQHaˆç;yõJ›8ï úÒçý¶üEps2ÒG\rãHod`å?‡å®ƒD†9´ØRA­`øèn½O”¾#íÅt~8±ˆnA„µ¼ïìÓzœ}Üa<C±|À¢nŸÃŠì^Î9mÌx`‡•b;W!{Ï‰8ßþ¸ÿ\0ºk¶@„Ÿ*cct>Ôª»$	{§¡Ú°]ìøå#­tºµ¡]*i¼ÉSŒàœŽ¾•ÍèMXÎü:W[«ñ¡KËÀäœ÷¢m¦6½ÓÂ`<×\'vï»Ê~uÒý’a’·s/Ô\\ß„Nf¸ù˜ýßº?v#§WüªjÉ¦¹D[\\†ÏÛßñŽ¤òîÇü¾Æ:·¸ÿ\0xþTnÿ\0oô¬ÜØr•1x:\\Ä~ªhÝ{ÿ\0= j·»ý¥£þø4¹¼ƒ–Å${æ\0ì·9í»ÿ\0­N/x?åÖÿ\0«”|©ùÓ¶ÿ\0°¿>eØ,û”ÚK±ôÏüSZy—%´Ö8þëŠ»·Ÿõ_­1Ðm9‰‡ÐÓæ]¿¯¼\ZfMÆ­om¸²	ôæššÞšI\"9ÔŸcQë*<åùdëš ¨=[ò®¸Q„¢›0ç‘«.³§y¼ÉFàxç\"¼Îëæ,BÄÙo_zí.B}Ï}§¨®&uãýLgžÍS((=\r`ù·\'³¸S°psZ-²3ÁþU—d¸¸S³hÇ\\æµ˜_ ã«h|$OsgÂ:m„ÚZK$&`ÊÊÇ•´Âºvì¥ËõÏúÏl*ÀÐ­ãm:\"c\\çøºÖˆµ]ÃGNŽjg	s6¤\nI-QtxJÝYY.åà©Á~¸®gV‹ìš”°	ò¸ã?­nùN¤…i”{9¬ãÿ\0e?8a“Q%%ñ;•žÈì>Â×vê+ò÷‡ò®?W³kù¡f…Žw|Ãšë¥’HÄb99ç5ÉëNï¨HXDçûÍÁéYÇšÞE;\\èÍ„·šU˜BÇd}6är+Ö¬žÖä#Ääçi®²¥ŠÂßË‘F#Ò¹I%Åéic2•P+b•åktœÆö‹¶‰j±¨ù[vÞ¤Uo³1ˆ:9À\'åã½hèRI‘må…ºÇŸÆ²üO3Ë,^ná„þGZ›»…•î_ð~VÉ˜.rç†ë[²Ò¡ò½kÂe×NŠÎwžXàÖê\\JÙýÁ8$}áÚ³“³+—™‰¶ÆÂ)þoªš`™»Âôá(=cqõ™h_5}åMÁ‰°Hâ”J¸û¬?à4íêzçò¤66\"0¿6x©i›“§f?Q@Ò°ú)Ÿ\'¨üèù=Gç@Î×RÙ¢µ¿î˜˜ˆÆüÊ²ü)ÍäßîŠÏ¹bFËüC5ÂXûd£ý‘Þ½z‘J2g%ï–¼asç›uÙ´ +œç5±¢\\,!r\r€`u®?Tó¡r\\äy¥oÎí‡‘°@^õ„´‚)u3ôæßâ\rã¼Œpk{Ä×(Úg3¼ÛÎ¹ÚMNsóÕïM/Ûž O—´{Óš¼’Ù5<.â;v8\0œÖâêvd­ÇàEsº+¡;\n†5º¼Ûˆàñ×té{VîEYòXîâÔ-YÛ÷ÉùûU…º·#‰þ5ÀEªÌ´ýTU‘ªH†‰=«I`õ2UÎàMt‘:zº‘÷”þ5ÁIª˜ÔD:¢í8PÃêEOÔŸqûs¿ŽÕåxñ\'Ù•o®ªr\0¿5ÆøÊs>«õ^§5ÇŠ é%s£QNv3üIŒZ1šKP •Æ{)£Ä},óŽ¢’Ùr¿/äklÀiYÝ‹p?wÿ\0-GÓšØÒlcûÇÝºÖDù	ÒOø	æ¶4c‹óžÿ\0{­t\'½Œz®Û4›¦	÷˜gúW ønðŽš~s˜³¹Näôô¯>ÕÎÝ&ì—Ù„ûØÎ9ô®§Á:›§‡¬â]²LnŒþ©T¦êSiw_ù’;ÆQK»ý·üEdkJ?å—þ=N\Z»½ÿ\0¾«‰áçØ¯kžñ¸-~‡i| éÅtšÅ”cz}ÁÁ+’ñ\\æêô?Ç?‹º}6ì[XÃ»-•\0sW8¾DŠ‹Ðå.<EÉaûãþívåâ[!ÚŸqºjáÌ‚]|0(2“†é]|÷Áe,n\0m‡•ZUSv^‡%áòT#q“å<tÅušÈÛ¡Kòàu9k”Ð~¨Ã™òœ1].³sö4‘U~ûÔÍ]¡ìŒßZàòy_¹ýk¯Î;ÉùW#á¸\'yOë]P»€ô˜~b¦­Ü‚ö$Þ?ç¡ÿ\0¾i|ÁýñùSxIÇéOóPÿ\0ËU¬Ú}†˜¡ÿ\0ÛZ2}R“*Ž3AÆ?‚Ä@H*Æ—oý3\" ÀùV—`ÿ\0žcó¡‰	°Ï3ùÓdPüø\ZPƒûŒ>Hãå?,Ÿ\0aêç.<ÑTcaó¿nÕsVâqÌ£ðª‘œõÆ:Šôéüä‘Éÿ\0E—çÏÈ{u®dÏü°žÍ]Ýáÿ\0C›æêž˜Íp“\'#ýºŽYÔÜÚ–¥›5ÅÀýÛ/¿¥1	8?tôúVm—ýÇw­	ø·Ã\njãð\nkSOÃëÿ\0È°»½Û­h…Æ—Çæ¨hc:lGa=9\'š¾c[vïW\"5¶8Ç¿½s÷ŒN¢Ü§úÁÁõ­õÆ1‡þºç§ÉÔz;óÖ±©Ðºg_;«ùß§B+‘Õ’þbbWäsß¥u·-ó\'ÎÄc¸®GR\\ßJÆ9aó\nÊ;#K{ÌëËmµ€_¸8ÅrÚèS~û•‰\0r§Šê§8Š/™Ê+”ÖÝ´$Ëºà»Ò§ì ûGU¥.4Ë_‘HÙÆzô¬0[ˆþò|€üµµb¸Óí~P~N¹ö¬_œ\\ È_py©)îlxTnÓAÃ¶Iù³ï[Q\03Ã™¿dø_þA¨HbNy^kb\"6õq×ùÖSÜ¸’g«õþ” ôùjLàýãù{SéóVe ÏxRþ\"“·QNÇÒÄç=»QaF=…§J\0\0Ý¥Àô£>ÆŒû\Z\0òžl ?ìÕ¿	‘öÉztÉ»N·>ªj_\0/dÏh¯fº÷dyôŸ¼WÕÀûTüc÷†¶¥Ëxe=vŠÆÖÛ÷òqüf¶Ið§Â?a%îÇÔ¨ê™‘¡djVç½_ñü„›ÝQÐÛ:¿{Äc\Z‘<ã`Í9i;yþ\\Ñ?ä ëÃW2 €N0@®ŸCÃh³cŸ½Ú¹¤Ý´“Óº°+Þ‘ÍŒz!ð»•*ä‹‰¥uëU­Ðätû¢®È§Ï“ëý+º¦êÇ57{”®ÎØ˜ûSm9\\{SïW÷yàzSlT•ç¥	]÷/ÛÇ“\\×ŒWn«\0÷ZëícÏJå<mÆ¯\0÷ZòóGîÇÔíÁ;T2¼GÖÎ–ÛáOÒ“Ä‡›LñKmÌ+÷[ô¬0Õ\\K˜Îÿ\0à&¶4€\r„|0úžkéO”q~[\ZGËa\'iç†<×B’WÔÍFëAu–Ù¤Ý°fR¨#šì>[,¾µ‚å—;º\\nµ\"¦“tÂF_”r¼žµÝ|:B|7fÄÊçwCßµšT¥gØÎpz]\0³Oî0¤{8ñ÷OåW6ã oÎšÿ\0wøë‰T—r\\NÅÑ*ê\na†ÁÎí§ò«ºÒ4›Pœs„;Hªž0õ06+£©Á­Yi¶ËÄƒŒVÿ\0Êo€ç4åaªA•œ|ÿ\0Är?\Z×ñ²%ÖäPSøEeØF«Ù(ùû¶Ejø„bï«¯È>çJÆŠû%O\r’Ú‰Ùþ^Œ¸4š¥Û›¹áó”(r6²æ¥ðùß¨»¿ËÑ†*-Cþ?\'ýà9À+ŸÖ¥+Éú´HÒð©Ìwdmí‚ŸCÖ³—S™™¶ˆXg§á“”¹$ªnõÏF€ÌÄ%±Ë†´ ¯6gYÙ#I/æßŸ%}\Z¥]Rn†ÜãØÕƒ’|”ü\Zœ-þ\\ùn>]žÈåuí«\nZz`škq•”~5›¨BÒ¶o½ü\'ŸÇÚ«Æ¸…ŽùÇÖ¡S¹nv6ÓV‹³L?\Z‘u„Îóf²­Ô”ÿ\0XÇê*{X‹]Æ¹Vç¦):K¨£TÒ\ZÉ\n„\\¸ŒÓŽ²ä|·­ù\nÁtÜrŸyºŽ:Õi\"p¤…¶qSìcØ¯ic {ƒu(?i-!ãhU<õ,TŽAªZ_ñ0RAP\09ÖÞij7²±Ã4‡“Þ”š†`æº3/šO±Ë–B\nt®&hÆåýÔ¹ÈèÙ¯TÖ­#\Z]ÉùOîÉé^U2(+òÎ9®w5=QÑJè¹d11âAÁûÕzé¶ÚHC0Âž}+>Ä´déüB¯]°[Yâ¸^¸Ík€\'ñ\ZÚ1#O„˜Ýæõ«ÞgªH:W+m}w-²ñ‚ uÇâ)ˆï‡ü¼ÀßY\0þuM™ÛS¬÷ÆÆ°JnÔ§÷£yëUbñ> ÍÌp¿ºÈ¦¬Zî–ö)\Z¥œCtæ²¨ìic°¹c¹~|ñé\\…ò†¾í›%úŽ•Ñê—rÃ8XÑ$¥sáïr|å&AÀuþU’½‘i¥áåƒ³îŠäõ‰@¾”	Â€zcŠèµË¯²º‚6]£©5Ì]Üy³³¬‘Æ	û„Š_eøŽÖÑvØÛ|¹ýÞzõâ°¼HÓ\0¿ppõ©4Ð¢ØÛº;<©ò}¹ÀçŠÁÕÊÉqòÄ¼|Ÿÿ\0UE´¹]N£ÃCn›r3ýÞkVò\\ô=½ëJ™ Òí·ù‹ÇDÅhÃ{	VÛ,ƒ`ç1žg(½Æ¤“±£œ“óôîýV³“R·a‘t¸÷T«{ÁŸÆ¡Åš)Ä¹ø\n;tõªëuüôˆÿ\0À…8L\0¡ú0¥ËaÝþv{T^aÏÝ§on>SÚ•‡qàýhÏÖ˜%8åMoû&€8(´;Ùô‹VŽü„õÅUÐ­. ½”Ic{Ôv^$Õ­-ãŠ;¤1*€ªÑƒõ¦G­_$æbÑ³öx¯Cë7æS9y8’k¶¡.apŽ	|FO‡U6Ÿº*µ÷Š/o-Ä2,9PsTâñÝ®\\Æ z€k7]8ÙQkb=258ÞéZ>&@5\0s°VúÚIpf’é™ÎWùUiµ»wbÏrÎ}NML±r¸ÝÕŽ·AÚšT ¸Ý×éXJ\'§ ÖdZ­›¦,z°8­kDÒ¦\0¾»f¾Ä[PÄû6äŒëaÔíÌÄj¾Y—jÄ—y®Á²	ÈãÚ®C¥hò‘ÿ\0ûfì²ëWãðÆ›(ù5Pÿ\0FS[K9XçŽœ~k˜ÝJÜJHn!…B\Zè¦ðVôýÅè>ì*5ðdÑrÓFôã‰”´sH§NœuåfBjÌƒåüë\\ßÌ·3°Y@8ÞZøq¢çÊ…«Ï~$Ú4:ôÈ…?/¹qsM|W6Ãò©é^$#}™¥¶ Â¼©ý*¿ˆ™±he†*kVf…~áãaeh\ZÖWcØ#ãz\r¹ç©É$8aÈô#Ö®ÜDò!ÊEŒ{1¶Iì#S#Æ>YW‘ÿ\0ê®|}\'V<Ñèwe˜•‡Ÿ¼´g=327µ>×\\Ô,8¶½ž ;+`~TÝA$`ë†Gcî+*VÍyœ—Sé*¸M\'eoC³Ó~$ëÖLÎ·)ýÙFZëô¯Šöá5ImÛûñ6áùW‹–£Ì>µÕ\Z³]O6¦SxÛÐö}gS±Õï„ö3Eqœà¨­ýPo²·p:t¯\0‚éâpèåX‚+¶Ò~ ^c¶Ô”Oð$8þµÛKÒšµŽ\nÙcP~ÉßÔêl#Ûª@Ln¿?sÅjkÊ>ÐN|£”5‡¡]Ã}}¶Ä²näç§ëZsæ±¾ïð×r³’å<¹ÆQV’*øp|Ã.ß/Fâ™~JÏ?ÎWçî3Oðô™¾o¼Ø^Œ1K|I–lãî¹©Š\\ÌS½‘Ã\'6÷9bÞàqÒ°NóÄæ<â·ôA>ü©=01Ú²ÒÒbÙ6ëŒÿ\0Z×Òœ™•{ÙF9Ìqõìiâ1·ˆÇ^ÍSÇ\0ËnŒNsRù	´¦»¹âqrH§«G‹[|$Ÿ{øO5V>-ˆýðÉïÖ´uH<Øá	¼íë´ãó¨RÝ¼”¸Áõ¬á(îÙ¤¢ËðeG/À©m#?j\\îàžÕjAü_­:yƒž9ïS*—¹)3—6ËóI\'‘ïQËòW;jã+tÇ>¼{ÒÏ}œÞÃZ&¬÷ \0.ÉÊ¯ÊG5ÐhÇ/rwe=½ë@gbJ©Èç»£<ÿ\0™Fd=½ë‡»:)-\'ˆ	þÇ»ÁÏîÏµä2à2ÿ\0¯×®øãD¼çþYŸ­xü’mdËL¼úq\\”þ®(¿§œÌß3œŒ*åëbÒC¿n\\dU-1³#~ñêåóbÒO˜ÔqÖ»!ð™Ïâ\"‹&Êá·Æp$qøÖO–\\b³oÄVÜJ?³.Nc=9íøÖ!G\0âs‘ü/ÿ\0×¦›Ô‚U2Ç„8ÏT“ÿ\0¯]FŸûe¿î]pëÎx®fÒØùÀ›@9ê²fº-qoû·8ïÅ*ËB¢jkêÍv@.ÑÊtÆ+\"ÙGÚâi³¼pGk[ÄDÆ\r#EÀû¿JË²“7/œì†^¼Ö	Þ*ÅYó;š>0kˆõN!*ƒå+k!d–PçØã$­iøÆEþÒ	ö„‡\n>W\\ÖdEˆL5»gb ¾&u7 ÿ\0mé+òáac“÷ÇojÍ×—ý4â$q·®pkVëþF+ùKvùQíJÊñï¾cåÂŽA©û(7™Õøv1ý›  ùzâ¦dq1zMÐ4ØAÀÂ3SH?y!Ú;VIêÂQÕ2ÄPG°):zS¬¬IùTˆ\0QÅ:±rwÜÝB6Ø¬lmOXSòª×66ÈÑºÄ¡·ŠÒª÷xÌy?ÅUÊö¹„Tv\"–ÆÞæU‘Ó,ƒ\0ô§GMÃèjÄ}ùÍ>““E¨+jUû}ÿ\0ï£GØ“ûïÿ\0}\ZµE.ywHŸ?ß^OÃ\"ÊU\0éUMÜï÷¦søÒêgý0ñØ*¬1ï^læÛ:abV‘V\'ñ4ÚiÍ(=ª9›‡ã#8¤Ú>¿…;¢ö¤^M9;o–¤ò/’‡øiØô&”ð=óITa Á~ãñ¥è:3¡§g>¿…9?…Wµšê.T9\rÌêîæO£š™u\r^?¹ªÝûhjÞ”“T±3Zóìâúãñ\'ˆá]Rcõ9¬í_P½Ô¥‚{ù|Ù·ÝŽÔça·Vèÿ\0¨ôó*ã^siH=œV¨µ¨eÞ[eI£4J²Œ÷MNŠj‘P1[GRQb•8½ÈN²ÚöH\n·o¯Z}œÛ2»\0‚1ÍFbR)¿g@Gò­6£V“\'ØÀ­yl’¦cû­ýßþµs\Z•“ÀäãßŽ˜õÚ2d`Ö}äHË±ÇÊzz©ö®6µº=>%ÃÝ–ß‘Äç4‡Ú¯êZ{ÛHHF:\ZÏäU¦™Ý~¢÷§£y¨óÎjè³t´ûTÀ(?qOzl\\ö\'Óu+›…žÚVÇpq^…áÝ\\øƒ÷-},w»Õ³?û§×Ú¼°1¬A;Å\"Iu9 Ö”k:R¿BkÑŽ\"6–¹í.¡§¹k-Äß^X{\ZŸûZÐðþdL{:kƒÒ|q¬«\0·Ü|ÀÖÄ¾7ÕeM³ÚÛÉîÑ×[­;Åž-J¤ùd®u0ßÚ1ÊÜ\'çŠ¶³DÃå•üW	ŠÐÇÆjàûþU0ñNŠßHt?ôÎsýhKlÈp;}ËØƒI×µq‰â=\0ÿ\0Ë\rB#þÌªjt×´é}¨GþòƒWí#Ù^Þ¹Í4\'¦kŽÔüC§Û[	,õ‰å--”¯¹ªšŠ†¥~Ö×\rf¡7yŒùúRö²rå)SÒçw·J\n‘Ò²£ki?ÕëñÄTëi¿‘­!ú\Z´ªtD>N¥í¤ö§mlcLi’?ÝÕ˜þ§DfêSúV‰UìfÝ.åØYíÉdm¾µnÏSû0!•sg¯rkûØüºï.­X±Ñ5(¦¦£oòž“4IOíŠôí£7üNãûèñÌ};×»€ëûù—¯Q^“â³ª.›tZk7´*>P¤8Õæ&xò?ÒHìÀÖpÑ\ZCÞ5´·ò~û~qŠµ|Ø¶o™{}áÇZÏÓe”oõËÜ‚>´·ZšË,qqÇÍ\'	ùÖî¼!I‹ÙNrÐ×Uÿ\0‰EÖ,8íø×=\'”„+À™#²!Jú¤²BÖáÌ‘±ÉÄÏó5E;ŒXÿ\0\núë–Xëij°ëí2UX`;£‰£oY$ôëSE4óÈ¡ne<,·õ5VJ\'æ>ü×C Ùƒs@À#­Bœ«KÞf‰ªkÝCí¬#µ=Â†œsûæ.E:Ä™58˜§÷ƒåçéZ>%µ0+Ý¬ÌŒH?2Õ\r(¹Ôm³$móŽ‹ƒøWo$#ÊŽWRR~ó,xÂ0³Ïs,I,q ;[’+‘mJ|+D±ªñŒ+»Õ’Ù¯¥ó§ŽVÇLW\r¨Ùÿ\0g3•¬œà¾Yÿ\0\nó³V1Œ¢ô=l¦T%)S¨µ	|kª¥ôwr$,hcL¥2\Z›«6êÍ å¹Íê-‰ïYnþüW<E[|G³[†ëÛ4ˆú·H.¼Ûf\0²î˜®šËTÓµ=ïcsà‘÷_ŸË­|Õææ¬[^InâH¤daÐ©ÁÓL—ÄyõrÊ2Öß‘õJô¥¯ð÷ÄÍ_MeŽñ…ì1!Ã£z§‡<_¤øBÚÏ²|s¼7áëøV‘š–Çl-J[«®èè\rW¹?4}>õXªó‚d§^õ¤78ê|$Ñô=?\nu2>‡§áO¤÷.;QHgÎº¡ÍÉé÷EUŽjÆ¦?Ò?à\"«\0\0¯.Z3¢;N´ìÚ£”àÜt4î±)$Îi3MÉsKÔåDÝÄ£špä÷¦ŠPk;Üìô¤ô›ô¥=©ìÎMHzS02)Ý:Rl=\0žµZëŸ#þº\nœ‘ÍW¹ã?ë5t¤”µVö5ãÈüjLœÕež5$—QHoíÁÿ\0X+G8ßsE†ªõå.©<R’zÕE¿·?òÔ~U ¹…ºJ§ñ¥Î®\'‡ª·‹&,6N\0ëX¶Ó}¾úIF|¨¾T§Ö£×¯!û<yùº‘éRèÑˆ,|Æ´‹¾¥*nÜŸRk˜C)R2‡óõÍjFÜ¼©äc¸®žy—ÍgNÈÙ2¤çÜ{Š{Ž…nGg±SDÒ\Zf[‹‘ˆÁÈSÞ¢×ïEÕ×–Ÿê£à\n½q¨M£@0ÌGÊãŒŠÀ`rsÖîÎÈSr|ïä4\nx§ªÚ†Îž[Ù2’®¿L¹ŽîÕ[øÇ=ë‘íZ:Æ;³xqJ/SM5:mõGRcSéLkt=‡â)éÛ6y¬ö‘ŸàN}ª&±û‚®³w\ZWencjËn±°SØëYVQy×²(ÏNÕ½¬`ÅûßÒ²4øý‘‡¥iMér“º,=£/FaPùs»#ÄŠØrI¦žÔÕV…Êf¤÷ñ}Ë™GÑÍLš¦®˜Ù{qÿ\0\rZmƒïm¨ÌŽÂ­[fj°sžª‘x]‹¥äÇêsWmük¯Çßnÿ\0y¬Ã4gøi¾lc±¦±Ò]KþË›\n:)|yª\\[4Á)ê|¼\Z¯m®I8,¶p•Y¸êkN¬Få;{Œõ©<ñ!Û: —×åÜU8ý›üÍ9õŸ*˜`º0£ðïDV²LCHÅ‡¦x¶enƒw¿¯\Z*ã5”«s»Þæ¥:zIX¯ª QRìÇcSãÚ›ŽiEÜÍè$1äŠÝÒàµ˜ˆ®œ*Ý¶æ²bÀÅTÖ‘§ªÈ=3^…)(+˜I_C¯¹ÑlŸpŠçŽ¸ó2*]\rŒéåÝº6s¹O\"¸amr>ìÿ\0ÌTˆuH1ÜGL9·Ö#mŒý”¯¹ÝÞø~éæf{¿4ÿ\0zEÖ6¡¥\\ÛÛI#*½xÇøV\'ö–¶§þ>e?öÓ4äÕõYÉÝ¢~8<R•h8r²£	F\\Æ¯¦¬ñ}ÁÔu1ûö}ë˜Z7*Ãv5è—¼§~?Ÿ¨®oXÓRE2D»BõQÎÏñ_å^B\\¯È÷°ø¯h¹\'¹ÍïIš$VÊ°ÁÜÖ¦í’¬„{Õ»k™\"u’9yN?Z¡Öž™‚¨%‰àôš*3hõO|M¹µhí5×?ñ¯×Ô~µêkµ¸xž+ˆ]HÈ!Å|¼kç‘úV¾‰­>™v’˜Äðgç…˜€ÃëØÖ”ë¸»HãÄàcU^žŒúZ&x óØæ˜×QïdFÈpÀ‡Þ¹oE kšr]ØMqn19VFô\"®Iá(<Ó5½õÔRžwoÝšéº<žW·ö£ýÚ>Ô»XØúì,zª2Ž…“š?²üAÿ\0A8ïŠWò-ª¸ýÁU|Î:TÚ²Ÿ´)õATŠœqšó$•ÍÓÐ±¼cµ*8ªÀzÓÁ Rµ†YÝ’)Û‡Š¬u§8©q¸KZ^¦«†§†üi[PeŒw§G¦*0ñÒŸæ\090ßBLŸÂ –áW¡ÍA5Ác…<UGÔ¤ÙêPÁ$¹ªkäX{¢rÀ¨\ZcëUd”ýj/0šÕS;“ŒU‘lÍïIçU=äÑº¯Ù‡9oÎ¥žÆªn÷¤Ü}häAÎ_óÏ­MÛ®ìJÊÞE9d#0rMYš¦mã“ƒTîžDÁeõÔK7Njt“ÿ\0¯MNPfÂÑ©äüŠÑ\\»†6‘`:QO(?¼ÿ\0k¸úÖ‹]?ÙÌqìG=\ZA“Í1$õ	ßñ­SG¦Œàj®]ÑQR.ªr(m£ŸÊ¯Ë¤ÄÕ;!¨¿²?4ä¥O³fËM­t(3Þ®èÐ;MçBŽžõf2Þ2ƒ9¦¯Œ\"ñ€iØæ­‹SVŠ,+äwüê@õH6Z•_4IDàóŠSÍ˜ír–±“znþ•‘¤6.åbp¾µ«¨Ob1óÖ³YÂp\0Â—¶´ybzT0NZÔÑæ»E$\'óª’]1ãv>•MåÅ@Ò“Y¨7¹ßS¤­\\iùëM3wÍSÜM(5~Íª¼ïz_6«Ú”Þ—*\Z‘hMNU]Ôô¥ÈŠReô—žµ©§j²Û°V;ãô=GÒ¹är*ä/œ\ZÊP¶£|µ,‘ÝÃ2Í\nJ§åa‘Mgæ²4;‚lç„òcÃ¯ÐœéV\rÀ\'¯JÚ¼|ö*±¨â¶4c“4ÉäñÇY\'\0u¨ÚL’}kºOKe±\"÷—rúUMÜRîÅEË\'¥WŒf«,•&þ:ÒnÃ±;Y÷l‘Ï\ZÛ+ghêO×Ú¬ÜÝÅolóHØE¬MWÔ.n5G_ÝÆ=sêk»\\¥«éBD2Â»@ûÈ?ƒÿ\0±þUÎ:4lC^:àîN£üþUÎêúz²¡]ª8#û‡ÿ\0‰þTÓ·¡ß‡¯í=Ùna\"¼Œ±Æ¥Ž\0MoO§.¦yóœßKò Ï	ëZz“ŸÚe*Ó‘’ýBoñ®{\\Ô¡|Òû¤ùPZÑŽ3uge²ÜÏç­HŒGz`ð¼T3µ&^Óï¥´“(Ä)ëÍu6÷z‰d·»b­È+!Å+cÃ×ÞMÈ·æ9:{\Z¨MÅœ˜º*¢æêtÃV×W{r?í¹¥þØ×¿çúëþÿ\0µ?+ÙhÈþí_µg“Êsº«2¸*¨Î*î¥wFSü5Q\"=ëšI·¡iè3 cþØ£Ë=ºÒ”>´œXî\'>ÔáÖ‚¥\0÷¤ÓŠ0M8\0~´€îœSÕp:sRÃAò28”Ë–ÚŒTÃéU.[2éÅC½ìv`©©Ï™ô fì*¬ÏïVIÏ’}†i‹¦ßÜ·îln$ÿ\0v2kjq¹ëN\\ªåÄ’i3[0øO_›”Òçç\0~µm<â\'6hƒý©Wükurûhw9¼Ñ]lõ¦Æö¶Œ¿š´Ÿ\rï±óß[¯ÐG+Öi®§š3]ô_\rdÿ\0–ššÿ\0Àc«ðÖ÷µ)?ÇøÑÊÉúÕ.çœÐMzt\rtÿ\0â¾¸?ðRÿ\0Â¶Ò³ÿ\0W_¥>FO×)÷<³5\"9Íz¢ü7ÑÇY®üSÇÃŸ¿uÿ\0}ð£Ù¶/¯Ae9«¶·,‚rµè‹ðóE_âºÿ\0¾êAðÿ\0FþýÏýö+7B[¢þ¿E§8ägµ8ã§­wÉà­.5\n²\\cýáAð^œyÜÄVê2¶§‘RPæ÷6<ü‚)<W~Þ	±#æqõ£>¶í{/ýð(åd©ëOJí[À±žVý¾…*1àIÝ¾OÅ(åcæG*¿¥R¼¼81Æxîk±¹ðEùÝ[“èr+‡úè$ÄmÜúy˜®j›v¶‡¡ƒtW¿\'©ÊÈç5VI1]=Ç‚<Fƒ‹÷e_ñ¬Ùü#âþö•qøa¿‘¢0ksÐ•xthÂ,}(«“é:•¿úÛ¤úÄj›#)Ã£)÷R+B9Óê\nm-&:—4ÚZE\\vê3L¥Í0üÕ»fÈçµQ¯Z—564ƒ»5ì]–;½„ôvæ£Óg¹¹Bò\0tcüF¥Ó‘Ú+¶BˆÂîú‘SÄ§b©$àc4PV\\Ç›˜Ô\\Ü–ÖÛ“ÅŸâlš—uWŠ‘Nk¡³É±:µÕêvs@z«SóÆ*ëÍ<ž”Û¸-Ëø†ýî\'€á#<S[úz­­„1p2~´·—e’Ý\Z_ï*Ç}DÄå$Ê°ãŠÍÁô7u/¶6$œž*“Üm}ëƒØ©èÃ¸5™& ñT\rq+ð‘±ü(Q¶äÅ9l^º’D±0Á.-\\àg“þéöô5ˆÑ”m¬0E_„Ý«Ý‚¤a•ÈÃCRRÌ¬dddüÉíïYJQ‹ÑžÎM¯z-39VŒ\nÐû\04}†NÁOãQíbú~ÊVÑäTd”!Á5fæ\'…°êWÒªª5ÄË–?•k\rNJ¾îçoo7™oýåô©7Ör‘ªŽŠ1NÞÕ¥œ©ª—˜lqýj’K*½Z÷Q‰6Ž•_ìÈrÎ§,š*1Ð§ö‰lÓ–å‡ðÔÿ\0g\\v¤0Š`öcÒçæZx¸ÐÓZ×5ÙxKÁð\\Aö¢+s]§ü+¢’ç&Qå9›8d¾q´2JÇûªMt–^\nÔ§ÃLc·SýæÉü…w¶ÖÐÚ ŽÞ(âAÑQ@«#Ó\ZP1r9+OYÆA¸º–R9Â€¢´­¼!¡@Ù*íÜÈKVéâ€GzÑS`U\'…•!Ó¬mÆ!´‚?÷c¦*¤\'Ú“>ÕVH—9IÝ²¹¨˜U–æ¢aÍC\Z 9þºiZŽi1Y=3hõ4»iØÅ(À¡pÒž…æ¤Z¡\\@´í¢œ(§¨\rÆ(íN4”7`Ïz)i?•MõÔ@9£ÒJ^”z:SªL¦š}4Ó¸n!¤9÷¥4Rº‡æëùT2Z[L1-¼/ŸïF\rYÅ©ÑŽìÃ¹ð®ƒtI“J¶Éî«´þ•—sðç@›>ZÜ[ŸT“#ò5×àg¥.Ò—*4Uª-™æ—Ÿ˜dÙêj}hñúƒX\Z‡€¼AdQpƒ¼-»ôë^ÕŠ1PàºGQo©ó•Ä[Ècž\'‰ÇUu Ôy¯¡¯¬m/¥Ý¬3©í\"ú×	â‡Ðy/u£åAf·cÝ=¾†³jÇe,dfìô<Ó½_·V1€N·Z¦ˆLÁÏ9­HÔ’±¯V8•GÐôa¦¦¾žZV6üÓI»> qüéËÆjI\0@‘/ÝBŠf*á¤lÏ?iQ¾â¨§gª)Hôª¹‹zw§®8¨ñN^9íU1%Ø”\nw¹ªSê1B_½eÝjËœ¶ ¬^ÇuJšËÝ_‰¹%ì0Þ8\'ÐVmæ£o0ÁÝ†Md<äžMBÓg¥Eç#Ð§ƒ£Ouv\\ß\Z¢\"ý!¸oZ eoZš=Ÿs¥I-/yÔå“=MRúš‘MK‚/œ¾Ïµ[‹/ÐVtf\0zÖ½¤RÏ*ÛÚÆd˜òqÐR{\nç¨º#XÉ%ÌúÙÙ¦¡wœ‘ù‘ÊpÃ8 w>ØëTáÓà±gH¾bç«\0zÖá–=.Õíí¤]IÄÓ¯aýÕö¬“ô®Ì<#©óù†)V£²Ðo>ÔdûRãÒŒWEÏ<[†\nÓš®d9Àæ®mG\0ºn#8ô§ˆ>TUü+BîíšÆZÀ‘¸Çð§ˆ%9Ê…úš’[ÈÓïÎƒ¤U9µ‹Té!sþÈÍÂ÷™gìÃÊ?]ç†5¸VÎK†Û°mGìG¿¥y|šàÿ\0–p3¼qIo¯^Å(o-}Ó×ñ®ŠqpV‰.2ï(Á”2œ©îAüj@x¯,Ò<R˜]Ë[¿÷ñ]U§‰¤ÀócIG÷â«Ú¥¹2¢÷GWš3Yx‚ÆQó³ÆÚ~uz+ëY~åÄGþ+E$Ìœ\ZÜ±A¤Rî¶~”7ÝÙ)\rj…HiÚ¡”Fi1Ji³`¥Ú(¥¤†(žùÅ4SÁâ©;QESL’–Ònà`QÒHvRÒJ(¢–’ŠsIEîE%€)i)h¸.8¤é×ŠcO~h×êÂ†ìè5J]VÊ?ùk¸ú/5Fã_P“	Ç÷œâ¥ÔŠ)E³`­gê\Z”q6X3àáGõ®[UñbD§Í¼\0ÿ\0r3“\\^«â+Ct0)Š&àŸâ?ZÆS¾Ç]$æõØÍ\'Î¼žcüNÇõ­)3pf?v!ÇÔÖzüŠy\'ùÖä6ÿ\0f‚(²7c/îMd•Ùéâj{*|«©(Éæ”ŠUÚ”‚;\ZÒçŠÇâ0*5;A-ÀõªºˆÁXºÿ\0z¦R³6£‡•We±jææ8$å‡jËžúI¹ÝÇ ª’LIÎsUZB¬px5<®[ž½,=:+MYeåëUÞ^x¨ÚLÓ3šÒ0±¬ªv\\šm%-]ŒïqiA¦Švi˜ðqV ¤mª?úÕ´-)ÜxAÕtúf’¢%–ñ^+~«áåÿ\0YN]åÊq§ilC¤iR]caþ²áºaêk^I£¶·û%Š˜âo¿#}ù>¾ÞÕh«:(uT‰8HT|¨?Æ³g;¤8éD –§‰ÆJ³åû$8¦0öüjV¦[\\ã#ÛFÚ\\š2h»ŒKRâL}œ\0œçŸ¥R’[©9’YúÒÀJví¹Ï?z\n”z‰T’Ø„*ç-œý)@_LTžpÁ$rj30ÝÊOØÇ¡¢ÄÍÀÝê:ôúSdb~àÆ})c€\0Î}iª(o>ƒƒnáGj±o5Ü4r:}\Z ÜëÆÑNóð9SôÍ7M:Ó–ìÙ¶ñ£Ã´rýåÁüëJ’[b\nã;jåLÊGCŠt7;O*Jžõ…L<[KQÂ«RWØí-<[fq‹‰¢>ùþ•¯mâ•\'÷Z’Ÿfoñ¯-™2`rÊŸjU\nâw[3ÕXzuÑìQøŠäóæC\'åVÄôh#o¡5ã‘ÎÀ‚†=*ÄwÓÇ÷n%F5¤S’ÒG\\< ö¹ëË¯â·oÁªA®ÛŸ½ƒò¯#þÚ¾SÅÌ†¤]wS‰Gâ¢›„–íFÚ\'®\rjÏ¹ÀjDÖ,IHú©¯$Oj?ÄñþíH<Qt1˜ãjÅÊHÕadõ±ëcU²\'þ>ñ©WR²?òóç^D<SqÞÞ?ÌÓÿ\0á)“½ªŸø/i!ýRO¡ë£P³ÿ\0Ÿ˜ü\n”_Zùx‹þú¯$*ÇÞµþGü%‘Ž¶§þú§í¥Ø¯©K©ëŸl¶ÿ\0Ÿˆùÿ\0jƒwlåâ/ûèWEŸøõoÌRKã;tm¿eûîý¤ÞÈ‰a¹^¬õówl?åâ?ÌQöÛOùø‹þúãíã8ü¹Éÿ\0}\n•|XFÝ>BOûTsO±>ÁnzÏÛmÿ\0ˆÿ\0ïªC¨Y¯ü¼Çù×“Ëž4×ÿ\0¾Å!ñEÁû–øÉIÔ’)a¯Üõí[ÿ\0/	úÓN±b?å¾^Sÿ\0	¤ßvÎÿ\0¼Oò£ûkYn–ñ¤li{Iy\ra_cÔÎ¹d:4‡èµkö£î¤­øW˜G^cÅ»{m·cKö9ÿ\0Sqÿ\0€T:Òò5X%»kï=%¼AðÛ±>íQ?ˆ$þtS^w?X/Oü\0-4Øk’}ëk³þóýj]I”°”úÉûø‚p:ÂµFãÄÁA2_ ìšã°µVûÖÿ\0•Æƒáí@u¶Aÿ\0m–—<™¢ÂáÓøÍË¿ÙÆ™u<Ÿî)5sã»`q¤Ì}\\â˜|=¨w‚?ûü´‡ÃWÍÖÕOÒD?Ö©M}¤L°ÔŸÃ4Šw4½qˆ#Š }A&±îµkûÌ™n%aèå[sø^í\'Or=°‘¬é-þÈJ´3èA¢«O¤u0’½ÔÌØcšSÜV5yBB˜™ïL’à¦¡yÒ?ž`I×ëNÒ›:ù¡‡WnìÕÓÕPýª^ƒ%úÐÚå»¹ó7‚=«\"-ftŸDe(W`Ó	K$QÜ/\\ò}Ej¨ÛsÉ«_ÚIÊGBšµžïHúŠš;ëw?,ÊO±æ¹%¸Ø ³]ÇŽÖ„h‘¢í$sÎy¬êC×EUzlhÞ_<€ c·ùÖ{IÏZc¹¨‰$Öq‰ìE*jÑÎMDXç\"—­%j•ˆ“l·wj¢Ù.í0°ù×©CþLœ*Ýü–ªñ„WGþªR$%Wjžƒ9Å4™ÊªrË‘Ž¢ŠQÍè_cV­-\ZWPUŽã…U±ö©ôÝ6[©Ö4\nd<á¾êV=«ª²¶ŠÌ•´>däaî~‹è+)I½\"*µ£Ek«ìGc§GbTÍ\ZËv>ì]R/¯©­h¢bæYX¼§©4Û{qõnæ¬…5	$y5jÊ£¼™¼#éXÄ’kbììÏ\\\nÄ2£uOÖ´JæØÓ\Z¾<¦±CÑØa¢”ôqF÷ÅU‚çYÏRFh9#<â®gœb€£ž˜úWªbU@½b¦Xâç&‘•FNÎi¡2\rA­IFÅàP1‚8ëP}qFJž´ù…bgÛ’@¨_9Î8àåŽà})ÛPŒç? !ëJéŠ°Œc40Ç½4õÂ\"–B’.coÌQTæáo›”ìÃ¥h©Ï§ òZÂ¥õ[›Ò¯*zt3˜iâr;ÔÓXFüÆÛ	íU$µž2~]ÃÚ¹&·Glqi“	éÂz¢Å×ï+¨¤ó}ê}™¢Ä£CÏ)Dã9¬ï2—Ì¥ìŠX”hýÍ4ÜzT†6Ÿ²Š.ÿ\0\Zh‘Ý‚¨$žÂ¯hºÆ ¿h•„‹÷¥~Ÿ…oÇqa¥\rºu°–Aÿ\0-¥ü…Dš‹±.¿s&ÇÃZ•èåyQÿ\0zO”V‚ø^ÂÜƒ{©Å¸ysK=åíñÌó»{g\0~vE±œÔ^]]ŒeY½R-ˆü=oÀK™Èï´(©?´ô¸î´€Þ†I	¨#ÓÇaR‹ª\Z]IugÜºi–kÿ\0\0ÝGü$7¿Á\r²}\"¿d@:Re§Ò•ãØ‡6÷cá!ÕÏe_¢\na×u‚ú[Œú\0*Sn3Ò›öqž‚‹¥Ð–û•Î¯ªž·“~tÖÔu&ëy?ýõVŒ\n;P\"_LÕ]\nå/´ß–9¼Ÿ›Í\'™tÇ&âSÿ\05 !¾Pôs\\WÔÏÛ9ë#ÿ\0ßF&CÕ˜ÿ\0Àj,cÐT©¢ÑÌKfGÙä#†oÎÛÊ:3ÄÖêÀ\rH-ñŠjblÂI/ 9Žêu#ÑÍNu™ä_\'S/mÏpÃpÕ~æÌmÈ¬k„\0š¤ÓÜqn.èÈÖ-ÒÆu6Í¾†èän¸ô>„t¬–ÇqbkkR`mUå[lÖnÌŽtÓµ…RNNí•v~\"•r„:’¤whÀØÈÁ¦ÇÝ–Z¶ì®Å¹4‘jÜ–Pî«¼½ŽqR1È¤RiØ®;»³èhSPŠH„Ši9^)¥i¦jÕÈ±M5)ZaI‘(‘çŒŠd®q†FjB\0â¬Z‘´¡·IX}ÒäŒý+HÉ-Î,E5uº)ÂK¶ÕžÕ¹¤é2\\1mÊˆŸ~Vû«ì=MXÓ¬ãÍ‘VqÁt.}¶¢MáP\'•}Ø×§ãïXJ\\îÈÎUÝ$õëx•bö«²üÌ~ô‡Ôÿ\0…[µ’Ý¤’KÄpëÜ\ZXÀ\0ÅsúãË¥êÐêô”muìqÔ~U+²9!VNïS«QùÔ¡j­…Ìw–é<G(Ã5lp*u1i­Ì¿K$:TíúÌ\rµÄGQO½à5Òøâ_ø”yyåäò®|Å?,®ÔŠí¥ÊKfà×\'N$€gññâþ+wCXM=àÿ\0–òŸ«L3\\°åóõ¯Ù ½Ž€ëÖÙû’Âíë_îIùW:f›=þù£Î›Ñïš=šì+³Xàð)Þn\r4ÀXpAÏçIöwSýì{×fäf9;@Å&Yº·_J”AäPæ\\ClÒˆ‰<šT}¼Ó•ÁëŽkžNkc¢”i?‰‚¢¯SOÙ}hpAôàAçŠæ”ä÷;£N#1ƒ“Ži8èN\rKÀêi<À:sMNdNä0£íáˆ¥ýèàZRd=ëK´àn¾•ÓkÔäš¡öF	Jà”{Òùù9ÛÈ©8óÆN=hØ¸È¶Zîr»2üÒ¡}®0b_®*Ñ@Ç¦\rHnø>”8 M™ÒÂ‚2B©#Ú wÊÑ@Ï¥jÝÄF8 Vu–ã\rÐ±¬%ÍcXÍîXñ¯EZÒÓ,  Ý\\® N€usè*8­–Y\0êqÖ¬ßÍ÷`Œ&…QßÔÖ5’Ž‹s¢5ïÐuÕì·ÒrvÆ¼$c¢LS­àöëQZÂ­‡‚kZÒ\rÄ\nç±-Ü-­‹iÅc•ÉjÖÙPdõ«j1ÅD¥}…wr‡Ù08\0SZEhÅFËY6Øng<5	ˆŒñZlµ§<R¾r‰Ž˜c«¬žÔÂ”\\]\n8 %YòÇ¡¥òý©ÜEPž´à¼ñSˆÅ8\'åB`ÈÕ@©UiU=ªEL÷§q1x§…§…¥ÛM	¢)€òÈ5Ì^±\0àæº{Ÿ–\'°®JéÁbxÈéZAB…ÙƒÞ«“ž‚,›œñš##5Û¡#†ƒ;±HH½i7åÍE]Žœ\"N¦¤éëR¨ÔñS§<Wv#1IŒö©ÂÑåÔó\Z¤UeÈ¨ØUÆŽšc]¥Ÿ…JBh¬°—oAÜžÕ«§ØÇå‰¦Aü+üRŸð¤··#YîWäë=ÛÜûU´´Ï¾B	ì;aU¬½3ŠQ¼a¹ ¥¦`ï€\n£¢AVã=†+29‡µXŽ`{ÐÏ-³M©ë¶ßkÓ$QË§Î¿‡ÿ\0Z¹©’Q·*œœ$¤sÕ[N¸òä?èò}ìÿ\0õ®Ù¥r§5ç—Ñ¬7³B:ÇÒ¶t-P˜M¤­Ìc(OqéWk¸º)¯k˜ÏK½­ãÜ2ÕË”lçš¿¬]››ç}«ò©ÇaTƒ1éšì‚å‰æ»u´ç\"®:Ô‡qâ£*IéWÔC	\0Òn•&ÓÁ£iô4€Õ,Cgj<Î~ïÖ—q\'\r0ç8÷5Ô™0{Rnãžæ˜YñdÓwž qÞ€ÛIûérxzÓ<Âx,lç@€€8ñH¤Ž\Z¤û9$ƒüéÞ@œóSdÇv02ã¥J®¸1C¨+€?ÄT%phµÜŸÌóý)|Ìž@ªÙf—#žRe›\'@õ¦ƒƒÆ\0¨ƒc¦}éÊø8Í\0;qÇ\'œ¬z•““òÂž%CÆÒ{{Òc\"ºsäJÎ±b.yç\rœVÚ¯ÙX€Ý«.ÓrÜŽõ“w‘Kc µ›k’1Â“úTqåŸ5Füç‘Š’Ãt®zïß4¦ô5mS¦8­Ë(•Jîàž•c†#5¼¼E‘É^Es²ÙuKP[¸tAæ¬-e+€ÌSJõ©Hâ˜EC\\Ž•%NÕÆ*FBË‘ŠaNÕ9ôéBÐ)\nÓùíG½1+íÍ8/)}éhB\0ƒÒœ(Å<}(â·µ(æ¤Å12†¤|»9[Ž¸™Û9»Myöi³OÁ¼§9ÛŠèŒdÖ†”yy½á6àPÈ½1Å4Ì¹ïÍ÷tÚšK“©F+p1‚sÐT2\0äëÜR¾Iã$æ€ŒHÉÅn©;jÎWˆJWŠ)«Q¶{Õc~c!_û§£~4Ú‰U”ûŠÂtÏN†&3[š)Ž• Ç­gµ©Í?|òŽÄþóqÿ\0ë¬=”™Ó*ñŠÕ–eš8øf=­£¶\"k¯žà‡²ûŸðªRÈmcÝoóÊzÈÃ\'ðBêæY_\\zÞ-¹æb1®~ìv4e¾i¤i‰cNKëYÑKŒH\0onõ$›c†;EMtû>ÇŸÌjÇsïV£ºµ€%dQž¤àÎ*e•ÅféÜiÜèRìzÔÂðâ¹Åš^0¦œnzÔû!¶M­•{•òJÖ|Nñ¹të‚3š‘ä2°\r“Ž‚xÏ¥mYj…í%k\'¡<N¥<•èsÅ.PŒçÞ«bH‰ïAô5.ÅÎH¥!1Æ3LD;æ,{ÔØ^ø£íL,<¬¤ä\'>ÆšÉ!ê§ñ«¤…V ŒP¬vçpüëdAŸ´¯\\‘R&ÒFAÇµ[fÈû¹¤Ø¼¶Þ~”Óêjñ21ž)ù\\œ0Èü)HÜ1HÖêG\r– :SŒGÒ—p=ÁÅEä8S‚½4$‹œžœR¸É‰àç s×Ò–aÕN}úSw€ œÒ­ÈàÒ¨ÀÍH\"Ï,ØúT‰`ä±\'ß¥;ŠÄ#ÀÎqKµðOOæjÀ1®@ïLc»ø:P®ÀsóJp[?\Z“i9Ü:SÂ.\0\rõ40êU¹sä6N~µ›g)7ÜÖÚ…·aè+Ã?k§5›ÒE#hG@=i¤‘Å?‹`Ðñ»²jkÂú¢©ÊÌ½§ÝªÈ3]MœÂE†¸Êò­Ïê™“È“ïv>µÈãÌ´ÜÓÌéôçÛ$ÖÍÖ&ãýÓÈÿ\0\nÔ^•w/ÙuK;¡Äs¯”ç°#¥m£qšÁ—8ÚÌ“8íQ±æ‚Â˜ÍÅfÄ!5Ò‚x¨™ýêllq4Ò~”ŒÃÂÔÄ8¶)ÿ\0õÓP½üÐ	É¦éF}é:ž{Süj\0ÔðiXE…\"ž\rWOÝÅRB3¼Jßñ.uÈÆíçp=ë¥ñLì–jò^¹ÄXä×¡‡^á‘Þ!ž3Pœ“ÀÇÒž#-Î©–85½„UËÓŠysÉÀ«>Zú¨­.N1Ú“‡8\'œÀ`1ÅO³\\)žRãô£F\Z¤˜ÈãÐsC0mÅ‰þµ7ž§Ï!qË\Z\\©l7\'Ô`\0ôÍ)D\'æÁžVßâÎi¸ÆFA E-BJ€	ô¨by²>g?*ûU›¢K/¥3N\0Ìã®*u¹V²%\Zy#\r(ßß®*\'³ÿ\0-3íŠÑxä?Ä1Qý™ñÎÓO”W*í•¶åŽTô©ðGSÍ?Éqƒ·\0\Zù°‹[@ÏëH#‚GzŒÖ“8È8>”µ\r‰bÐ®G§z°ˆ™å0>•YïS­ÂmÇ#µH¾†Ðk¨õ·‰ÉÂãŒÓ^Î#»¾¹§Ç*\0I#å§ý¢<¿­az‰èih5©Øûÿ\0­`_ïþ´óqzGŸ÷E>z£µ22\\gÛšUP\0äf€¸äƒÍ\0\rÝ1^¢w8…F%ˆ-øŠ!ˆïßÖ˜]c\'$’{Sp:Eì+‡\0cŸzcH§ø¿\n­æJORó ¡Æ[i©sHÒ4¦ú´ÑƒÀ\"šgsÂàTJ ¥;Ž¼Tº©G7¸¯’1ž})›@þ´¤óÐW£Ó.eUe1rñŒÔ©·±o£ñH¤€äsõ¥V#·OZÑþÄ½ÆHþûÃ£^Žv!ú8£œÏØ/æ)¬Çpù=})ætÛµ9Òîóƒ\ZßBiW]`÷…5;nWí$@×\0äŠjÎ0sŠ°ÚUÐuúSJ¼PGÌ?\nÑK©Œ¡Ë¡VíónàñYvGý,½[ÿ\0Ùs4©À‡ûÄó€;Õ1%ÕZÙ\'Psû¹…?ZÎþý…¹d¸\'¥zVºxVøD$ººÓíŒîšáAü©­¦èPcíž&€‘ü6°´‡ó®ŽFfæŒvmÃæÆ}j Û$„‚9Þ¶Ç… %¶­{Ž…ŠÄ¤þ¦£oÙ[`YønÍXtiÝ¤5œ©C«)Tkc\\È5_I³t?¼=ëZ:.¢·¶HÄüëÃýk›ÓüYyq¨Ä.ííb·bBuõ©.ÒMTßÍm/Ìž„z}Eyµ ¡;-™èP^Ú¯GÐëÌž´Ö~k:Öú;¨ƒ¡È?˜©L¹kÅ£)G•ÙîNZ˜Íž•	—œf›æ{ÔØ›²bsÅ!5ðiwj£4Ââ€ùô OAþô\nŒÈ3ž(ó­Uš.yâ—}@eÃ ¡ -‡Å#ËÇZ¦Óàu¨–ñIq!TC“ØŸAUŠÅOÍ§1Ž»¹b•v¬%‡>õŽƒFíª‘þô\rþ]Èº’î´„åÓ©JÌ2ëÒ„\ZˆnæÂG¤·ÝÖàïFÂ¤[M9ÇË®ØçÑ‹éXE°sM\'ÑU®IÑ¦›lÜ®³¦‘ÿ\0]±üéßÙ;É¨éŒ?ëåk™òòq…Ø¦W=¿ïšs¬þÆ¸äžÍ¿Ý¸Sýi²i7«“ˆ›ŽÒ)þµÊ›HöäsBÛ\"\0vzõ¤;š¯q´í-Q¼ÄŽHW9Ær£ëOUÎ	aÖ˜®?vz÷íOŽlgå©ËUéÍ.àxÒ•ê¢•£Òó€OùÔš‰Ä«îÓ4rC¸ÚJÜ£Uc?Þ\'Ú—aÀ=i óžqNÏQVHÎ1CŽ¸Å\' t¡‹Àü(¸R8$Ž´Ó\ZîáF)6sŠ7ži€ÆŠ2s´Š\Zãæ56àF	ý)„g€¥` 1œŒ¹\"‚§îž‡¥Jåë‘UÜú}h²î#žŸ‘¦î>‡ó§c=³I´ú\n,+—vÈå”\Z…Õ- oÒ¤.§ëïH@b*Ò[kuœÐ[ouïSnžáëLiYÛžÞÜPÑJN;\rqI»ó¥Îs•ÕÁÉæ§Ù£e‰šêIžH9¤ÉÍ0¯ûTŒ¬§#Tºh¥Š—QìIùryª­oÉ*Ì>†§É=°=»Ò3€1Ré¾…¬D\Z÷‘\0W^K¹ÿ\0\Z]Íÿ\0=$ð3O.¤Ó\\pxéB¦ú“,D>Ê?ôÒSÿ\04o`>YæöÐÓHéZÚDóD\'œˆ-ÈÈyxÏÐu5¬bsNwÕ”ÖiÂ]\\dú9­›m?Pù÷ú„övÄgäÈÃÙ©ª«}i§64ô8ÿ\0–ÏÉNÂ¨ÜÏ=Ì†[™šV\'?1Ímû¸ù³?yšÿ\0ÚðGÛØÚ†ÉÜÎÅ¤oéjÌi\n¸`Øpwj¹“=©ªç=3YèÛlz­Û]WM .«¤,ËÚh=ðÝjÚZøfó?cÕZÕ›¤wI·ð.•Ì’ÙÆh*w`ƒRÐîo]xjö!¾9\"ž.ÎŽ0}=«6k9mÉÂéîETŠF…·A#Â}cb¹«Ñë7ñà´‰8ïæ:=ä)¸7¥jiÚ¬7q6™¨6\0?º—û¦£‹SÓ®0·Öoþü|ÿ\0/ð¬KŸ$ÝÉöw/ãµŠÊ¢RVhÒœÜÑÐH·:UÆ	oºÃ•qWáÕU¾÷ÊO­sšf¹qn¿g™Í«yoÎ>†µdOŸ˜.\ZÖOùå0Èü\rqJ”¢ÏEW§Y~ósanU‡ò§yÞ¸¬A§ß(ÌB9G¬rM#PO½ÃþšÉ¡<2®nùþâÜ`õ¬´Ü¯Xdÿ\0¾\r!½”Ë?ï“BFo\r4Íñp=¿:_´)®ûF^Ÿg”Ÿ÷M*ÝÝ?Ü³˜ÿ\0Àiò’èKúfé¸À¦›€;þµÿ\07[•í0ÇxežÇ»æPîÑ²n€µUŸTŽ FðO ¬ÌYŽf¾y?Ùp?3H5móö+TVí$Ÿ3V‘¥&É~Ê»š^d³Df¹o²Úw\'ï¿ÐVF©©›°À-£û©Üûš‚æyî4ÒcëÚ«Éé]4é(»³	Õº²VC¢¸x<gk-h~êþ3,8KË\'¯¸¬­œqÚš’I‡BCsšèõ2.ô˜Çz{ÝÛ]Cæ3§Ùª!½A5#(#Ö—nN	¤ÝN)<Î9;&¼Ši$ž46O\'ŠP­»ŒñïH¸Êž±ïÇhTÏ50Ç@@¬jTåÑ4¨s=tË= nRçŽig5Š­#¥á Ý‘Ÿzíæ…=1I¥9V$Ôj#ŒvZv‘Õ±Ó·=£Ìqº¼äF‚Î9Í=gŒâZiPF8Å\'”¬9¤±6x)Ø˜J‡4,‰Ôþ5‰pqš‹\n=ªãQKcÐœ>\"Ø»qÛšR\0\0sŠ¤[®sNC4˜*xõ5©‰aAáx¨ž~0™ôö‹Œ–\'{SZÜí>i&‡!‰Î}Å4äƒ·½Mä7=})|—P0§ð¤Ýƒq¡e…¥Û7÷N.õ¥/Úþyþ•Ÿ¿Ø»D®„äžh3Á&šP×­7iFAº.fäžx•&ÀzgÒ‚@ÈJBŒ‘EÀCÀœþ”èÎ8lg½D¬	8\\ƒúQ»oqEÂÄß.	ÇŠQÆÜàÿ\01Py€\r¼œÓV*3Ú‹lì‰q‘P<ËŽÂ«³qœå©#ƒšaqìû»r+OGÐµPVËËÜLv¢¯ ¬½ÎŽ’F;†ájÞ¥¬êú Xî\'+T^€RnÛ®k^Ýhš2ˆìCjW£ïO Â)ÿ\0e©¬Ëû‹çó.%gÏðçŠ¬¶åF3Å9¡<uéJ÷a°…)xn´2¸ô¤*Àsš7\0Å\0zf“ØÐG§lŒyêH5vÓd³»<7L8vû™ÏéÅf† c“Uä-¸–¡4·©§sesl’<#}×†Æ«Ùùr)lõK«dò•÷Áœ˜dùþ«éºž>Îëcuÿ\0<¥oÝ¹önßC[r)kEÚÜË!³‘š…NÙV…õ¬útæ;¨Þ7CôõFHÙfåHž9Ï8´µ.\rRP#§ ûÖ£ëwsÆËsoo+!\\0÷ã­f\";€ª¤Õ9ÁàŸÊ¦(¦<O ÁVaô8©N¥yùg”ÿ\0ÀÛþE=8Á¢Jý\n†÷¹dêº“F»%u> õ¨fÕõH›k\\·éJzÔ 3cX¤“µ^×æ&‹ZÔy_´6[¥Mö½@Žo\\ç×¥fÚ(;¿5¡zS²ÙJ*Jò\"s>íÅÕˆî3LU‘äÞÌ[=êÃ/\0Ž)ñÂää#ú\nž}öQ¾äxã¥òý°M^‡K¿›ýU•Ëÿ\0»R>‹¨ÇŸ:)‚+$¤BœÞÅ8ÓJìË1ç©Ï§Œàçõã&:ÓKg©?•m~§=Of–›ˆxŽ”ÖU=³KŒŸ”äÔ¨‡œó[zœÄ+\Z0‹š~ÖçŠ”®Þƒ½;?(†2±N2TþT»AMYŒ)¤!Kv4µ@@ ‚\0äÓðÙ‘Š”¢Ÿ»·ùPPu\'Þ¦E¸ƒR	r!pi\nwÏ\'Úš¨A\0•ú\Z‡÷.5d¶\'WqÏãN\rÏ\n„‡NÙ¦û³ƒÖ²•ÇD1Vw‘_Pÿ\0\\O_–¥ƒÉ‚¡¹bÒ·SÅK`Åc$w4Ü_/)”j/iÎÍ<vïL‘öj‹ÎéØý)…‹Œw5Ã»ûÇU\\ZJÑ$38À¦Ò>ûUë\rPÔ9†ÒgEþ-¸\0{“Àû»&°“É3[Èý[ÈpáO¡#½tªj;.¤¥»*$#wÌÃ>ªqÁ\0p&FÜ‘šE\'8ý\r2	:j_”2=ýê2ÇwLJ½±@\r¸É4á´çü*¶s‘“Úœ¶yÁRz\'½µ°£åôì†gù€ðrià¬MD¨Ç Á©|Ÿ”äœú-1	!éŽ)7… cñ4Á† t>´ŒŒ>òÞ˜1Y¹úsÅ7?Þ=zS~aÛ£fFìR£óŒÐ\0,NsŠ7($ANgçÀUˆõ S–%S×8æ˜Òm>´»ç4Å þ=©	ëÍ5võ\'“Ò”IÁ4OZB3JvîGJv:c&–ÀB@íùš\0“R·éŒøc­€*‚:SYW§­!n08¤ÜªXûRÆUôÍC\"øÕáarüùmùUëmŒ{î/lí€í$ƒ?•+¡œë!ÏƒÜVóXé©!YµhF:˜Ô¾*s\rÄ8’òé¿Ü(NÁk•ô­Vëä±x¾ÛnÇœãýÓÚ®ê¶k¦Ü˜	e8ÜÑ°ÁB{T6ú½•¼ˆÖºz¯•Êï›ÔÕ}Bú[ù¥¹¹”Ë<§,M*Ós²eSŠÝšóø~ài1ßnÛ¿)Æp{ãÓÞ©Ýµª\\Ç%»£²®;SÛøgòY	¹´y>ðt=2;YW\Z}Ý‘‰hØå$S•j ’ˆ¥ñ*èðvþõ<é¤(Ý4Y³Y¦I;¹üéëtÉÆþiIË .RãZ(ly™úUk˜Äl@9TpÙÀv¥W,î}3Y¾kjRh~—4òÇ-Ä|@ÑîÛŸÆºX¼Q§@€Cá‹GñJîÇòâ¹8A1uÍ<Ç)þ,U¤žâækc«oÝ!ÿ\0GÒô˜=Å¨\'ó4ÆñÖ¾T„»†ÿ\0LmÑ?¦k”0?MÄŠ<“žwzQd&Ùµuâ­ncûÍfðúêEf\\jS\\‘ç\\M+yØ±ýjIûµ88}iÙr©#å´å@¯4c¯>”py«Ü	\0‚1ùPTç$ö¦ƒ¸u w¥8<Çë@\nCg\rßÞ¤xš÷ùª lÕg²Éàž{Òlo*\\bEo`iûÙèk=-Ù«gÔT™s÷¤›öÍ!èZiùX~4ãÉÊàþ5Pª~yA÷4å¿viAíóP®-b6ÉlqïAŒä`¯æ3I\rÅìc÷w³¯ÐŠ›û[UQí+ƒþðùÐî\ZØr3ŽÞµ,I.Dcw<úSN©©Ÿ¶·ã…(–þùÌ/tí»ïmP¼}E=G¡ºkOöù’D\"Ô\rÀçéëÍYðÖƒq«Å›( ÿ\0Y$®#¹5%ÍÍµ¯Ø ¾Ý®ÞœäýI5JÇUžÁnc„+Ap1$MÐžÇëR•˜ºw\Z†tßøûÖÚòaÿ\0,¬#Ü>›ÏÎ oZYähú¸ÿ\0–÷mç?à8 ŠÞFßµ¤Ç³DU1‘úÓ_Ãòµ½Ì*;Äáÿ\0‘­ÒØV)ßêú¾®ßé·ÓIÿ\0–`íAôQÀ§[É)µ\0þt’ZM*Ñ·i€c;¸4›ldþr³\nJWŠ¬€ž”¡ œóíSpÜ¶È#î§¦¨° äñè)Êä“íC…Ý qž”ã‚3ÏÖ©\\7ÞcïOi˜ $óé@\\°Ê3Ô~4˜÷Ú¹y£í?ìÐXä,w6Cx©w.A,\rD.:s@U/ÈÎj„JáÎ\r(EÆÍ#0ŒóÛ¥·(çj\0aàô5(#<ñSœ>nõ¥!IáG>ôWbƒÊÒþF¬azîçÓ4Å]ÌBŽ”€«/$ç”„2óŒæ¬@\0)¦yd’@äÓ@B¿#ëVRÚé YV(A Æ¥5Œç46±{Kl.œD™AàÖ“v\n#•OÌ¸>çµ4£lÉ~ü\0)ì@]˜ŸjïÇð&O­fêI½\"_*êÉrŠ8\'ôsò°ÄÕ#$ŒrwÆ“æ4ï\'¸™pÞüÀˆ£\0{U­ßù~\\r$(?¹_Ö³¶7BG\"”&9<ÑaÉu4¹2Lì}Ú£,¤sƒŠPŠN)Ê±ã¥ ÈIx4Æ¡5h\0E!88$Ð+…p©Gï€û£Šw œu94®ÃB‘ÎïJÑ±Õ\'¶ŒÁ [–¿¥Ud\rêj\"\nô?…UÀÙ6v÷Q™¬‰lrÑ¼>ž¢ªˆTTƒTââ:1V^âµã¼·¿P·8†ã´ |­õ©îÅ`‘Œæ£›hc·Ç­Z–âAÔÇéU®A,:JK@D6¸Ú¹õ«{HçŒU;bvŒzÔå¸ïšq@Øùºi¹f&”}}iá€piŠã§CøRýMOÇ9m-\"èžõœªÂ;–©É£8ðA+N<ŠÑû$]qÅ1ìã$Húv©Xˆƒ¤Ê*NÊhfŽsVš×’CsüéŸeçx…_µˆ6F1ëAb­?ìçÝº¢xœA¦§.V‰Wõýh8Û÷sP¡èiÁÎÞziˆ“åÇLS[å)7…ÆFsK¼c‘òÐ<Æb‚ìyò¥2Æ:*Å½°—ÊvBSÁ?ýj im-ÔvD½\\Ô·š’@†ÖË„4ÍA}¨y£ìöÿ\0$+Ç¦jŠ§rhnâ¯×Ž;“NÝè&ÖÁíŠE Ò½À“#<÷§l‹!”mqÝIœçœQÆx&•ÆNg¹EP.]½œî¥×J0è’-@ÙÏ êÔbÚ_ÛûØZ#þÉãò5f9!“ˆ®ÿ\0½Á¬Æ9ô8¤1©\0ì\0žàâ@×dqÝä÷=E4# \'éYÀÍÌ3:CR\rFæ?–dYØsJã².º§°â›ä§§#¨§ÛÜØ\\/GwG%SÅ#È…Ø#†AÐÓ€D½‰yCûÆš÷\0¿•\'Ú}ÏåE‚è«´û‚{ÓI ‘ïN`rpi,qŽ­°aŸßÀžÞÕ(‚òE$Š}}©ˆj¨ }î}h(yéFÓÀúÓ†Wï=ÿ\0¥°yl6Ž4|ÊI¤,¼òE6IS¢å½è¸\r/¿¦ù‡d¨¦3±aÆ)¤ñœÓ¸.NzUY\"MÄŽõ6ê(LŽœšL¥}Š¾‚ž§z-YˆÝÀíV£·ˆ¸G­e)Å ÙŸƒŸAHÙëžµ®ÖÑ÷FižL@p€Ö^Ù2ý“2ÕKG»qÉ$V¯ÙãfèN?*ŒÛ)%¹QUí“¦ÌþG#­&æ^½ýªñ¶VRyâ›öNð5^Ö(^ÎEPFyàSxõ\'5+Àà@¨ÊŒ‚Ò´M2Zã®zRÏJ1A ŠvLB€O­#*ñÅ&v3š9ÝÁÍ&†Dñ|Ýé¹\npzTÍ»=3ŸJkGÁÈ? -YjFò¦O:ü,yJ’öãØÐÌ²$«¸`ò¾ÇÐÖ[FW¡©â9LJrw@g`úÕ€»CPÛýÐqšÐãÍ.k–ìdPp	Ú«hˆª¤S£hC×µ8¢œ€p+šufÑ‚BÈàŒgéRùd1ž´Õù>SÈíKçp œuÅbù™¢²Bˆºd~T¬­ŒƒŠêÃ\0ŒúSYÎFI5>ó)Øcp3ÔÓçnsïN.\\àŽ_zM›‘€×µi:ŒPBÿ\0…!tÛzñJÎ©Ábr{TRÌ¥J£¥ZÉm!ÍòŒäéUÜ¦x*7•·süê&;›Œ×DccHq*Tc4‰¹ÏÊ9÷©aXæBr;T’PªqéíZ\\Ñ[$*e¸çOÊ›<òÜœ¬c¢úÓ^9dØe—~ÑÀ<R€Tu?…ŽÂ¤køõ2rª)€á³ÆiT±#$sÒíÓnCSRØ”|š°î4Šçš{Åqjû‰ÊçëKöiè	õisÁÝÒ—Íe=±ID£p6‘øSXž1Z·JlR•BáŸjs=B’ÓÁëOÂóÀ«‚Ìô¦‹ufàïF–´· ïS/–zsÅ0ÛÂ¶yô¥Ò)àƒøÐì\ZƒÅ\0²+¥FÏÆ\0\n¾”²G ÈÚBŽzÓB†Ë6\0ô <†’[¤ûâ“ŸîÊ¬oÀ£Ì´\\,\\Ôt+ëZiU\Z÷¤VéõŸçYkµ†=j’é­þÌ×R4alŒÒ§%Fó“M0vèXgz<Ï—=é¡¸ö¸¦Ëƒ¡¢úˆS*ƒòòÔ)Æ\0ëùÓYX/*Ùé0HäôéÚ€\0r{ãÞ—nà\0ã‹œ£ÔÔ»FbOáEÀ”ôG’ÌBŽ\\Tñm?y‚ÿ\0SW¡òËp¿0ïYT©ËÐÒùŠ	i)Æ{ô\"¬Çh#Q¸’•\\Àù°O¶ÓI´2äøŠå•i3¢4â‘Æz¨\'ëR*\0œ­9TÁàÛ±ÔÐVNL®Tˆàçv¥8¡\0‘žæ¤bq÷”æ£np9Ýõ¡]ŽÈaRäãÌ/©\'Þ…ûÙõŽ€œÖ©Ø¹$ãÅ0&ã’ËéIæv¶0+zÏÃ\ZåÝ¬WV–\r,S¡V#éÚ¤º\nñîaóÈeÀúTŸ˜z×A{àßÚÆÒ6‘tTòJ€Øü«Ÿ¸±¾‰ŠÉm4^»ŠÚ]L¥4@Ì§<dÔ9%ˆQšsBÊß6)HoáÕÐ’1cv§\'&»\ZqVÏÍœý)v³/~;S¸\0$Ž1L|ž	¬½ÎE w©µØ\\PŠ\0n´ÉÏj•T’\0\\f™$M¿œ\nR±QÑ‘@H­XÁÆAÅAn¬T| ÕÈ-®\'?º‰ßè8¦¼‚H„³òœššàƒ–«ƒKhÆë™ã‡ýœäÔ.ú|\'ÞSCHWd_h˜°Ãn=€«Öö×Ò.D[vr~µSûZUm¡Šýí¼ÕYd¸¸9’fb}I¥hö4·6³§Ûn¯U›ºÀ»æj´·0M 0y‹mýk6;DÏÎÄûÔÂ 	\nù w¤â˜Ô™1”î—>ƒÖ“‘¸<Œæ¢X_ˆéJCGü$\n\\¶+ƒ;Û§Zˆ·5\"FÎÇÇ©«Bl·©«Z¹V®àù™©¼µQ´.1úÔÃ€@<ÔrdðzŽôî‘“Œt§ì\\ãæ\\STs†=iê\n’9¥qî*:dš“oË–ð¦ªàŒÔŒ¹\0ö dL±œph,1·v©ö.0)¾ZŸj@FŒÊ@=ãR0Éá²})»NB>´TüÀŒt¢àÌSëíJ¬“ŒcŠŒ>KŒÒnb6àg© W,á1Á¦’ 0ED®ŠnIÀ8Í>ƒdÂESÏ4¾bñÁÁ¨[ÇÄu¨ÎBàõ W,´¡P¸üé¾i‹¨ã¨ç­Wg$Ÿn”ÂI–&‹X/rI&g1Ú™ŒŒi¼îîw*p#¯AEì -Ï\n8Í÷I š0}M+ŽÃÜðZ¦X•Uy!<r)NGo§5B€õ¨Ø–íŒÔBŽ§šB	ëØQqØ`,äM.ºþ4áŽÚ‚Ùaz\ZˆÂ¡$`ä{qMòÐ¯B=j˜.=±Û4c0ÏÒ‘,êTŒqëFÙ\0€?HXœl;}©Ù9\'u+#ß(P\0ÒÇu\'ñž(bIÛ“L1™÷éRá¡JM®v€qŠ\rêùx`	ôDã\'éMòOC’µC£W´e”œÅáÖƒ#-Á\'¨ôª›:J¨Î~cëC¢ÔdâVeeñQHÍ•sŠŒ¾ëI¹Û’x÷ªTìKÁÝÏ#\0Ó<ÛÅ Ås<cý™ÅH\0IšŒãÕZÛr[}o^¶8‡X¾LzNØþue¼Sâ3ÃêÓIþøüÅg2sÎpi¦2[œŠ4{r]{V—ýlÑ¹÷…ý$\Zî¡eZÜ‘ÏÍ\nŸéUÈæ @÷Å@»7 ñŽ¦Ÿ~ÇIŸýûDÏéWcñÔ¨1/†ôIÜ•þµÊ•PÜf™Ï9ïÍ; ¹ÓÉâ\"ç-?„-U»˜\'dªj:Œq¥_BO8YC1Xãp=OJdvÀ½\'6¤¾ðàDh´ÍGÌQÑäR®}øàV–=¢xU’êÑRY0ÐŒ#Ï@­dÃc”B}JB¡¾ä+÷Ÿü*®¥«Ï²	X#â(» ©’æ\\¨/©oÂ“YC¨5¾ ¨`¸RªÎØ\nÝ‰=ªOÿ\0jÚÎèæHà?q„enÕ†Tcæ­+\rwVÓàò ¼2[°L‰ù•V¶¨«¦e:— ÈÎÙõ4ž^\0b·UÑîx¿ÒžÙüµ²n?ïƒÅXMËPÁÒµ{YØÿ\0ËƒäIôçƒø\Z»‰Ç±Î¢ñÞ¤Œô­í#QÓŽ.ì¥ŒgïÈüCTJ‘œ­¸¶$òJ”c©šŒei¦BÀãi &r«ÔŠkJO\0¢¢#®qIô [?/Nôlü§…PHÉ•Fòö¢à=&‘zñõ©~ÑÓåð¨6äýºS€>´\\.IçdîÇž²b	çÞ«ùGžø¤ÚÃæÏµy]rW9\'µ\r)ÎÜûÕL2¯\0dÒ\'	cŸÒ’C¹py‡8ç5(q¿Ú©™¤­!‘‡ÝûÔj/nÇ$dvö¨ßæ\'q$Žª˜0Ã˜{ÔžddsÉô¤;Œ*X€Up:0\0=‡nôòÈHùÆj^¹ÉéL•qÉã4É\rÁÎjVÂSXªò(ÜL{\0ßÐUy¤(=:Óævp*&@½Ï#÷§ƒÔœ÷4à›úR” d	¡°C`sÏL{Pw\0ü½©À÷‡^†…ÆA$t¤Æ.}÷\"ŒîÊ¤T%A#9¥òÿ\0Ù¤d°íJ¹Àþõ)`dÓ]Gü³Ö‚€\'ñ¥%zp:ÓG\'¾}éÊ	ãZ„<zsFÖ¸Žp}¨àœEÅaÙÉ#>Ô¤g€2GåMÚ_Ž½!@ ‚*AarädúŽÔ g©4ƒ\0¤æŒÔgŸÂÃPIÎFi¤œž>´;Iõ¤ÀLs×µ…ÇÛ½\rÆ0HïM‘Õ[o|äàóLyãn)j„.îI\' ö¨ÞEÝéM\'¸Í7¹$\Zl@Á³’§nÁù³íJÃƒjEQƒŸË­+Üv¶zwíKÐŒ/#­Fx ®h˜d“õ¥f^ƒ Zbœ2(ôçšvŽzQž=O¥õ\'\"ž¹ Ò	¸ƒÞ›È8æ¥i!^y$œïšº½¤>c6Hþ2?ôïõ¦ŠðZM#\0W\rèxãÔú\n°×°Xf;@%¸d<ª}=j•ÍóÌ\n(1Ä‡<·»\Z„8=©=@t’É4­$®]›øZïAÅ?\0ò;S‘NÜàâ€n6ò:SÈ6jr§s‚=\rJŠ¸Èæ•î2·–sÇJF‰IÎcWv€~R¾õŒ¨Ç¾)¶BÅž·ªi«¶ÒþdþyÉ‡Cø6EYOÙÜäjº4.Çþ[Z1‰¾¸)ü«F-œâ¢)•¥dÇÍ©¾l´Kã?WIÿ\0<o‡–~›ÇÊªÞhz…˜ó$µv´‘üèGÔdVIN>`I©ì¯/,_uÌÐŸEn\r;>t FÁ$AMØ<V¤~!’N5{¯WOÝ¿æ?Â®ÛËá»ÇÃÍqe#v•r¿˜¥Ì×@åìbGì85+\02SÒº¯øD\Zæ?L½¶»Lqµ¹¬+í:óNm—p:“ëßèi)&±@e;NSÁÀ?Zp€ã8çÒ•G9þ¸ªÒ§‘ïš\0ÏN{ûSÙIèØ»Xt\\Z\0`TÏ#š\Z\"À0Î:Söãœ}iÀ‚3ÏAHv+˜€ÉÖFÄîJ´€±ëœPí´…Sõ§p±P£Ó\"†Ý»8?ýj´íŽ;ö¨d}ƒ…\rë@¬F3×c­9p Î}é¥†Î{T‘Ã½A#jt÷ :g‘ñ†&åù‹\Zœªãå cÒ˜FNhòº1û¬§éÅ1Lço^*tÈ9Î\0þtVbÃ ÐÃB0„v#×zŒÔáÙU·©§¶P+8$Š€	Îiáv¶G4*GpGaH†ÈÉ${\n\\ï\Zl©?ëqÇCMòþ{\nVæQ¸i@\\Œuæ£+‘Æ0(R¹p+]‰Ð˜°ò°O=4|Ø<ƒíQnÜC‚)ûCG\\óÚÇg+Ær}iN\0[&£999À¨R7t$P€±8É<)ÌÙä°$TlÛq×ÛÒ“qÇ\\)<ŒQ¸Ç‚pJŒ“ß»†3ÁíøÔRL3À{\n‹~\0\'%hÉ¤™[ Ž{S%”¹ÃÖ¢lH¡SváÅ¡qÈy4Üœœ\n‘W/€ð¦•¸éíG0(Üq‘J«Æy$ÓÊäwÚ8r;ÖN¡Ñ\n\r¡›7p\\bž©×å§àcyÇZÉÔlÝPQ†2H<Ö‘T#df¤äõëÞ‘—æÏ\\Rç}KTc½„1ç<ç=©.¿Jw9õ¥ m<õ£ƒ¥² )“Aæ­ÅdUD—%7Üwü;sR£Gd¾fä/Ž%\' ¸;ŸzÎ¸»’éŠ eF?3–o©®ˆ»j÷9\'·h¢I¥ŽÛî,£·ð\'øš¨Ò<’o•‹±îjT€€=»SÌ`\rÀþ•>Ð=‹±[Æ	ö§íû\n{.N \0ó}*“º2q°ƒµ<6AÆE5²ß…8@™#ÕÔŽr½5_i9Ïµ8[äå² «5PŒHv)³±äp>ôÜç¶	5Ê~`¦ÛÆÝ\0 E!“ÐpzPÆ@«†ØgôíL–Õ”œ“Î3@Y•€ç“Ç¥H#À<ôæž\"t<¡Ï®(zn4ÇºËs´c½4Â¯œŒâž[	#ùÓÖRÀö màžÞO2ÚâH_±F\"¯ÜjZêÄ··m8‹!wuçÔ÷ª†\\·QÅL¬9?Ê‹wPH<¼ÓÕHw˜¦nc¯jE-’Íž(½À”Œ`SðŽj°^0iÂBPpAüè~C$;çŠBÁãµDd$uÆzœTm!Ùò·ÿ\0^3Ž…±Þ£gÏú¼\Zn	NTñLÈlîSô¨7aIbri™\'ŽIþí#ç4ôP¼Ï­1\\=¤=;zTÌI\\ö¦|­¹˜äP7d€Z@‡°l|Ù}i †–${SK»ƒÀ+Oˆ0*p¢ö\rEàpÃ8¦¾G#Oui1ÐsÇ½hX·~=*dl·#üi‘úúÓÖ	ë@Xy#ª}é.C|ÔÉ>U9-ùÒyÁT§ùP‡°â¼ñøæ¾ÉùQçÔdÒù«ýÚDØ¤Ž ¸nœÐvˆÀ$ç=}*09íŠ{w«½€z†9981RG¸;žµã…Æ>½1R†Ú9o¼(ì„>xæ˜§{\Z’3#©‘Øš‰Ñ™r‘éIÉ€–ç$ôô	œ6OÓ¦(cÀãa=©1Æs‘ÐÓ¸ž£Š¨`PõíŽ´˜pAâ—À#Š\\¹Ü1í@ÄLd‚IÏ#)íääJ@’G¸ø~aÐf¤¨Øý@õ¡@Ï w¥±Üù£!%ÜHÁô¬ÚfÐqLŸn´¡IÎì\0iU²	ôõâ“#62;W;LëR‹µ˜ªž?\na Þ¤ß¥*çSœÒ»4Ðk@ÁÅr3ž}h$‘ÜN9íAQIî5‡©¬¡qNtÈÆênôŒœS^B½ˆ¾Íìà‘Û\'¥?j¯lÒy€¶Á¦9a‘ÓÒ­)7c	NØql	æ£Ý€AÀ\\óK’q´ôõ¤eÓƒZÆ™Ë:­è†‚}é1Ï\'¯SOHËãjçÜÕ”…PíZZÆl‰#¸Tw=jXÑ‘É÷©X•à¯&šB‘Î¢ãœ\r£ëFIÈ cûÔdåÅ(qœ“@Àõ=éP¨ûØçò¤m§ÜŠla°yÀ»Ð€~ã–ÊäSXç\'oëIÈéœš~ÐËÔ† .Ãv8ÝëA9êSJ®rsÞœƒåÆG=h°¬!TÁ:SIØ0µ=à<ŸJvÒ2AÍ=\0„D3ò¶Hö¤ã…<ÔÝãëM;÷p2­ÁÚO<Ñ¸€yéÔ\Zš290sNàŒ|­ß¥&À…›Üœ~T‚GÜ3ÓÚ§eVÛòëQ›}Ã†aíþ4À7àuù»\nd‡#9ëÏáRÈôcP¾å £qà~T¨($äùÒ¬j¤AaÎ;\nŸrÿ\0³Ïq@ÆyoÀÅ=#mnþ¢‡ÆÜ‚N:ñNŽLÐCLV\0 \0Á»S¼‚Ì¼ŸNô¾`×Ú”Hì@PxëR41aºc¥Lr\0ïÆjcq÷G^ÔŸ7?Òžà‡ˆÕ{f›$}ù\0ôÅ5œ“ò’Hì(ßœrp9æ’ÄÜg<rî8Ûô ®T•n­$K°`Œgµ7¨\re;}TšP3‚éš²ìTL$àíQÓéJâzŒòU¹.G×Š<…ÿ\0žŸ­ •ˆÉ—yö¢ÀfÆ\'>”¥F¹Å$]OÒœßÁõ­:’ÅDS´ã¦ié\ZùEºœ÷¤·ÔÔ‰ÿ\0çëId…&†=»P~è¡úÒè1ä\r…»ŠD‰$+ÔàãŠqÿ\0TÔ°tO­&\'¹VH•Nj$$àZ±7ÞªéÔ}i=†8¨/ô§/@ ýó@ûÆ©l&4“•µ±bÙ’EH~òTQõüM$Z&eVNN) –L“ÎE=¿Õ\Zb«üEK*\"žC6y ³`óIü\rõ ôjÎFÐêJ8…OsëF~õýBþ4z²f·w#C`´Ù{ô4¿Ä?\nIkXng=ÁG9ïšŸ˜P¿Ö†þ*Õns±¨0\Z¥‚5‘›vHª5èÕ5¯Þz¤f‰qûž8úRGó	=iGú‘õ4CÔýh\ZñPª<¦=ÁÆh‡ø©WýKÿ\0½Rc\0!=Å1ÏïÔT‰þ¬Ôoÿ\0UÐ	6Œ“Šl„‘R¦£—îÔ€åÀÐ9Œýh_º(_õgëMŒ3•\'Š`}hêÏÖ•»RBê\"p™¦î9niÃý]0ujcc×çP[“Cœ(#éD_êÅ÷GÖ“ÜË”½c=¾”ÖèiÃýYúSb,ÄÀ©º•£š‚õô«ï%1‘·Ë¸¯5]É/É<\Z±/VúUfûÇëK „É;½Å8¡1Þš:7ÒœzGB\'c’I§Ç#*Á ÷¨¡èiÉþ©¨\Z,ƒæž·är¸ïÆy¦GÒœ:¥4œ¹òÏN)±f4­þ­¾”Û¼)NÈ¡ð0 g9ìqR·úÏÊ£}¿Þ¤IŸ ]§­,Ü.sÉhŸøhŸî¥daÛŽsN9$ŒñœTc¨©?ŒýhñÂ›zw§ù)éKÝüiÔÿÙ', 'relaxed_booth')\G
+
+# Query 19: 2.23 QPS, 0.00x concurrency, ID 0xFFF66E9B3D962FA319C8068B5C1997CD at byte 13797502
+# This item is included in the report because it matches --limit.
+# Scores: V/M = 0.01
+# Time range: 2021-08-21 11:09:35 to 11:10:35
+# Attribute    pct   total     min     max     avg     95%  stddev  median
+# ============ === ======= ======= ======= ======= ======= ======= =======
+# Count          0     134
+# Exec time      0    78ms     7us    14ms   579us     3ms     2ms    14us
+# Lock time      0       0       0       0       0       0       0       0
+# Rows sent      0       0       0       0       0       0       0       0
+# Rows examine   0       0       0       0       0       0       0       0
+# Rows affecte   0       0       0       0       0       0       0       0
+# Bytes sent     0   1.44k      11      11      11      11       0      11
+# Query size     0   1.05k       8       8       8       8       0       8
+# String:
+# Databases    isucondition
+# Hosts        localhost
+# Users        isucon
+# Query_time distribution
+#   1us  ########
+#  10us  ################################################################
+# 100us  ######################
+#   1ms  ###########
+#  10ms  #
+# 100ms
+#    1s
+#  10s+
+ROLLBACK\G
+
+# Query 20: 0 QPS, 0x concurrency, ID 0x655E93F30F576321245A814D06B07CEB at byte 7195
 # This item is included in the report because it matches --limit.
 # Scores: V/M = 0.00
-# Time range: all events occurred at 2021-08-21 11:03:39
+# Time range: all events occurred at 2021-08-21 11:09:30
 # Attribute    pct   total     min     max     avg     95%  stddev  median
 # ============ === ======= ======= ======= ======= ======= ======= =======
 # Count          0       1
-# Exec time      0   153ms   153ms   153ms   153ms   153ms       0   153ms
+# Exec time      0    68ms    68ms    68ms    68ms    68ms       0    68ms
 # Lock time      0       0       0       0       0       0       0       0
 # Rows sent      0       0       0       0       0       0       0       0
 # Rows examine   0       0       0       0       0       0       0       0
@@ -648,8 +742,8 @@ START TRANSACTION\G
 #  10us
 # 100us
 #   1ms
-#  10ms
-# 100ms  ################################################################
+#  10ms  ################################################################
+# 100ms
 #    1s
 #  10s+
 # Tables
@@ -657,126 +751,30 @@ START TRANSACTION\G
 #    SHOW CREATE TABLE `isucondition`.`isu`\G
 INSERT INTO `isu` VALUES (1,'eb104b95-3532-4828-8550-89da717b9667','ãƒªãƒ“ãƒ³ã‚°çŽ‰åº§','ÿØÿÛ\0„\0\r0;*-#0F>JIE>DCMWo^MRiSCDa„bisw}~}K]‰’ˆy‘oz}x99xPDPxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxÿÀ\0ôô\"\0ÿÄ¢\0\0\0\0\0\0\0\0\0\0	\n\0\0\0}\0!1AQa\"q2‘¡#B±ÁRÑð$3br‚	\n\Z%&\'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyzƒ„…†‡ˆ‰Š’“”•–—˜™š¢£¤¥¦§¨©ª²³´µ¶·¸¹ºÂÃÄÅÆÇÈÉÊÒÓÔÕÖ×ØÙÚáâãäåæçèéêñòóôõö÷øùú\0\0\0\0\0\0\0	\n\0\0w\0!1AQaq\"2B‘¡±Á	#3RðbrÑ\n$4á%ñ\Z&\'()*56789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz‚ƒ„…†‡ˆ‰Š’“”•–—˜™š¢£¤¥¦§¨©ª²³´µ¶·¸¹ºÂÃÄÅÆÇÈÉÊÒÓÔÕÖ×ØÙÚâãäåæçèéêòóôõö÷øùúÿÚ\0\0\0?\0¢ÍæDuô¦˜±ÚmÄnA«Õl!« µÏj`ÔŽŒw\nè°¬n2cINŠ\0Š6]Fý›ƒ[JkšYAˆ/ñ•½i/™?¨¨êWBfàÒf‰>î}*Äô˜\"mÔ»…@±©ã€õsøRÌê0Šåps‘L‹I·N_sŸsW•BŒŠuZ$Ž8cˆb4ô%PE&i3@¤È¤¢€4™4Q@Q@Q@Q@!ç¨¥¤ 4hz¨¦5¼gÔ~5-Yì®mÇfüé†5jŠžTÌ¬ÇU§gÚ§¤ªArÕ+¥Ãç×šÓ*aQÉr}áúÒjãLÊ¢¯µ”g£Q5‹ŠB*R\Z°Ö’Ž€Æ£he^¨i„ÔM÷ÔûÔÌê¦¬~d€vš\0·\Zç“ÒžN!8¦–©l´¬ÒfšnjF<\Z1õ¨A§ƒM&W>´ðÙ¨TóR-Zl†üÑ¸RS[‘Š«ŠÄ”T1¹co¨5-Rw%«ESQE%\0-%”\0´”Q@”P‰. ‹ýdª=³TäÕàSˆÑœþTè´hAÌ®Î*»¤’%ø¤3>Õ¨\\q÷Å7û&æošâ~}:Öå\\v1¢Ó!Œå²ÇÞ®DŠƒjŒJ–UÃR$dœô\0F)Rzð*e@)Ô€j QÀ¥¥¤-é@¦ç4f€4RRÐEPEPEPEPQKI@Q@RPEPQE\0”RÒPIKI@%-\0””´RÒê¦ù1çî\n’’‹ÈšÝ¨üj6´œÕš)Yì¢Ö’v ÔFÞUþý+N’§”|ÌÌÚÃª‘øRƒZ8¦”SÕE£æ))©TÔÆþî)<‘ØšhMÜfi	§ùGÖšco­0+Îv²8ìjÐ5ZáÄp§5a~èÏ¥8ŠC¨¤¢¬sIE\0QE1Ü/Ö“v\\q u¨Ì£°¨÷g$ÓI¬ÜßCEC)ôy§ÐTY£4¹˜ùQ»EV†aEPæ–Š	Å\0„âšZ’€’i(¢€\n(¢€ŠJ(ii( ¢ŠJ\0Z)( ¢Š(\0¢Š(\0¢’Š\0ZJ( ’–’€ŠZJ\0J)i(\0¢ŠJ\0(¢’€\n(¢Q@Ä¢–’€\n(¢&)h ¤Å-\0”RÑ@\r¢–Š7hô¤Ú)Ôb‹±ÛI´Óè¢ì,FA¦j«oÉ$\Z½IIê5¡C<SKVU=T\ZŒÁþ\Z›r–ê3V¬~¤~4}–?SùÑfFµQZ™…„âšNhÅ©‡š( ’–Š\0J)h ¢ŒQ@E% ¥¦æ–€ŠJ(h¤¢€ŠJ(h¤¢˜š3IE 4RQ@IIš3L¤£4fi(¢€ÑE%\0QE\0”´PQE€J)i(QE\0QE€))i(\0¤¥¢€ŠZJ\0))h ¢Š(RQE Rb–Š\0J)h ¹Å4šhoZ_¥Y!EPIKI@Rcš`-bŠ\0(¢Š@QE\0˜¥¢€–Š(\0Í¤Å £4Ú(ÔSh £4™£4\0êJ)(i(¤ ¤¢’€ŒÒQ@šZm\0´Sis@n£4\0QE†%-&(Å\0QE\0QE\0”fŠ\0(¢Š@”Q@Q@	G´PQE\0RRÑ@Ä¢–Š@(r:óO;Vr]8ûÃ\"­G\"È‡Í,YëÍ80=ê¶â:\Z]ùëT¦KfŠ€9iâPzñZ)&CL}CEP‚Š( Š( Š(¤QE\0´RRÐIKE\0”´”\0b“´S1IN¤ £4¸¤Å ÑIE\0-%f€\nJZJfŠ)\0QIE\0RQ@ÅæŒšJ3@…Í.i´P³E6ŒÐ¨¤Í ¤¢Š@QE\0%Q@%-\0”RÒb…¢Š\0(¤¢€ŠJ(=‚öàÔÖÇ÷l§¨9¦º¨•šõÈÅbjZ,GC@˜tjˆHdSÒË€ƒÈ9¥Egî*r	\"]÷Æi¡—ƒzSÄ¤uæª¤© ùO>”ü‘T¤Ñ.(´²)ïOª`æœ$eèjÔûâZ¢ [€~ðÅJ7CVšdÚÃ¨¤¢€ŠJ(h¢Š\0(¤¢IKIL’–’…Q@”R\0¤¥¢€’–Š\0J)i)(¢’€ð¤Å-%\0Ò~êJ\0N(¥â“€(£“4ZJ3E\0QE\0fŠ(\0Í.i´PE6ŒÐ©)3Kš\0(£\"ŒR3FhÅ\0QE%\0-Q@éŒ¡†\r>ŠÄÔ©\"4grž)CîõdŒñU&ˆ¡Ü½?•4Á4õ¶™ã.¨vÖ ÝùÖ­Ø‘B·8ªŠWÔ—s(’¥M\rÄ …?µ_žÅ&”0;s×êxá†Ù~U\0ú÷¦âÐ”ˆ\\ g]¹íJ@\"’i7Ÿj‹yŠ|rB¤t¦†*zâ…—ûÂ†Ã*Zhd©pÃ¯\"¦Y‘»àÖ ñFïQMI¡r¦jz\Z+=%eû­Vë³\nµ4Éqeš)‹\"?COª$))h¦QKE\0%bŠ\0J)i)\0†ŠZC@	E-%\0QE\0QIHŠ( bQšZJ@QI@IE –“4P€hÛEÐ10i)Ù¢€4”¸¤Å F\r/4™ aFisIÖ€ÑIŠ0i\0QIFh¸ì;&ÔÚZb°ìŠ8¦Ñ@Å¦æŒš\0Í²ºó?w!ù»Z¹Xó©G\'ÐÖ¬âhóüC­g%ÕŸFMHFiÔ•®!)ó/ÝþUwOí	çwÿ\0ëP@ ‚2*ŒŠÖÒ†Nªâû’Ñª“m’~¥eYsøŠÎ‰T7z•$#îšÓŸ—Ðž[’A¸{Uv=º\Z¶·u•?Ì‰ÇÌâ*¹“¨¦´ê°a‰ºqô5[Ÿá`~µHD&“Šs+/QL4œ\ZaŠ]Ä{ÓGJO3xVN\r™2¸Ï\\\Z&uï‘T²CJ—¡©M¡´™¤—\n~÷2°n‡5”²ƒÔb¦V=U«E2\r\n*¬w8<Ôë*·|\Z¥$Éi¡ô”¿­%P‚’–’%-%\0QE\0%Q@%-% \n(¢…Q@	ER(¥£\0””´”(ÍR\0ÍQ@¢’€ŠJ(\0À¤ÚihÍQšu%\0\'b—›M sG\"ŒÐ19£š\\Š(3FhÇµ”•\"m%XqUãv¶Ÿ#§ó§qõÈê+>TÜ¸î:TÅôe5ÔÒF¡àÓ«6Æ}­å·CÓÚ´jd¬ÆÅ¦È‚D*{Ó¨©˜wC!SV`—§ð§^Cæ&ñ÷–©FÜã¸­>$#RŠŽ&Þ€÷ïO¨\0ät4¾czÒR\Zw˜ýáMó~aŠ\r5”0¦¦Ð¬‡ü¤dÔ‘LmÑŸji9­9îO-„Ï<\Zz¹ïÍFHNÝ÷¥kŽå½Âœ	\rf3³œ“RG;§È÷¡Ã°&j,Ä}ášXpy¬ØîQºü§Þ§=*v}Y—¡©ï\n ²2÷ÏÖ¥YAëÅ4Ú%¤Ëá•º\Z* >†ž²²ûŠ¥>ä¸–(¨Öen¼Súô5wL›X))i(\0¢ŠJ\0(¢ŠC\n(¢€\n(¢€–Š)\0”QE\0QE\0&(ÅP1(¥¤¤IKŠNh\0¢Š(Qš)(sFi(¤æŠJ)€´˜QHm4Šu-\0GÍÓè *ÒlmÃ¡«tÙS|e{ö¬‘¡“*Û—½_´›ÌL¼*;šœr€¨ªnè,fŠ‡y4á#zTò±’ÖeÂyWc	È­\0ÙíG”¯ ‘‡ `V‹¹-¡±¡)õ:FHÏATïYâBQsïéW8_bT­¹1¤ªp^†áø5hH­ÐÖ-5¹iÜR)¤SúÒR\0F\"«K^W§ò«fŠ°Œç]Üçš`sÆjÜÐÿ\0~\"«0ÍjÉ±\Z*€)É#¡ùXŠm%1#»ìãñj7WR\rdÓ”•9RA©qi*Nk.çNn­_†æ)‡ÊØ>†¥¡’æ“{/CN\"˜ËŸj%K¡Ñ…L²#t5žÈÃÞšƒÁÅR›BqLÔ¢¨¥Ë¯¬%Â7^*”“%Å¢Z(†Š¡	E-% Ñš)(h¤£4\0´Rf–€\nJ( Š( aEPQKIHŒQE\0&))ÔP1´Râ“€(¢Š\0Nih¢%-\0QP½ÌhÛI¦ý®/Z.;\rŒñJ}B§¥œ–¥ÅÝîÓkî\r$M”Ç¥Y¸MñŸQÍQ¶·éMj€˜œS£™IÃpi§¥@êwdSˆ™|Ú»Ò³•Ý;Õ”œcïZs\n×-¬ŒžëéO,’>•E®Pd…9r†9©çh9n6æÒ3“§ÔU	ù\"´déŒóÚ¨>Ns×½5+ƒ‰-½Ñ\'WAdV)Z¯ÚÏ‘‚iN=PEôe³M¥¤\"³,J¯<?Ä¿ˆ«4š°l)µnæ-¿:Ž;ÕR+dîCµôë86|;õÁè+\"®ÙÊvà2ô¡»j¹v÷OŽP^ONÆ±™J±V#‚\rtN%<0¨¯mänYCëõªÑêˆÛFaÑNthÜ«Œ0ê)´Š\'Šòh°7n†®Åðÿ\0!ý+.’•“|Ã*AÔÉ¢±£–HŽQˆ«i~O/â*\\XîLÄ©õ+©ö4Ã*8Ê°4ÃQa–ÖF^†§KžÍY¡™z\ZzÊÞ§v‚ÉšË*7COëYjÞ†¥I™j”û’â^¢ [€zÔÁèj“L›0¢–’˜%-€3E%\0´RfŒÐÑIE\0QE\0QE\0QE\0”´”\0QŠ( bbŒ\ZZkº É4€5Ÿw{€U\rGyx_*½*%	\\/aZF\'$Ñ¼úÒp(ùj„jSÕð@4ÊktúT5q§bÈ9ª¦ÉO½N¥6áw nâ¡+2ïqŠÃh¥,=j\0qOàÓ°îéPµJF;ÓHL„Õ‹I0ÛCÒ 8¤É\"©««cM €qïP]Gÿ\0-ãRÂþdjÝûýjB21X¦Ó.Æ[ŒŠb1VÍXš?-Êö=*»ŒÖéÜÎJÚšpI½}êjË·«b´Q·\nÆJÌ´î:Š(¤1ÈÁéY÷yoþÉéZ4Éc!SN.ÌLÌøØ£†©¬\n1¨¥­I4º:š»ÁÆƒüë*Õðvý*ÀàÖi¸±µrÝÍ²\\.†\Z±î-ä°ãŽÄt5­Æ8Î¦;$\\MjšdjŽvŠÔŸM-cý“T%†H›…hÈ©)ûi6Ñp¤YXuæ›Š(z2È^)õTšA#/CSÊ-Ž\"ÊÃ¯5UgÄ*PÀô9©i­ÊL°²)ö5*ÈGCTéC2ô56¢—u©ÖejËYGqŠ™[=\r5&„Òf¡¤ªk!êeŸÖ©IâOIMWVèiÕB\nJZ((ÍR\0Í-%%ÔSsKš\0ZJ(Í0\n(¢€\n(ª×7kÀ94‚Ä³L±.Iæ²nnZSÁÀ¨¥™¥bXÔf‹wæš[-#6x)µv$Z(¢˜\Z´”QYŒo¨ô¢r|”aÔPzƒøR1ÝØæ“)óŸ­¦Ðh°îL‘4ƒ#FÑ88#Šìƒ*qV`ºINÉµ\Z…Ñ_Ë¦•«R©FÁ¨ëB`IhØ%;EY95INÇ\réWúŒÖsÜ´G<~dgGJÏ##žÝkR©]¦É7Ž×ëUÐRE?ºjå¼½3U\\Q`Ö­]­`r)j$*zÀÔNô´QH\nw‘äo¸5TÕ¨ÀAèk-”¤…OcZÁÝX–8GZ¾‡zë>­Y·T?QD–€‹ävSÁ¤¤¬ÆYKÑ¸©r®0pEQ<Ð¬TðqZ)²yI¥²…þîPûtªrØL¹)‡ÝjÒÎÃ¯5\"Î§¾*¹“™ŒêÈpêTûŠajßb’.ã5R[”ÊnE=S$œÒU©ì¤•×Ú«cîE˜” ‘ÐÑE0%YˆëÍJ²+t<ÕZ*\\S)I—hŽAª«#/|Ô«2ž¼T8´UÑeeaÔf¥Y÷ü\rVÅ#.†\"¤YHëTUÙzÎ¤Y‡qŠ\0¾’ƒRCTCÐÓƒ‘ÐÓLV.QP,Þµ(piÜVEš)ˆJ(¢Ä¥Í˜ Í‚Œ“ÅG$‹åeÜÞ4µN®¯@R³‹±æ‚:iàûÕ$Kažæ˜I=iÝzÓª€ŠŠ—“Œô¢â±ò¼ð)6ûQp±¤N)…ý9¦œž´¸¨Ó“ÖŸÈuõ’ª{ŸAL‚f7\n\0ñŠmh5¸è¥q‡\"ši5˜ŽõyÍN\0<àTR(Š¤C/Û¿ÚmÊŸõ‰ÓÞ =ê+Y|›…lñœ¥Z¼M“:75\rY”Ñ«–Íº!ê8ª&§´|HWÔR’Ð¨½K”Ù“ÌŒ¯åO¤íY&Y”zsÚ£èjÕÚl›=›š¬Ãšé‹¹Œ‹q2œâ¦ãªÖh$Š%Ï\rùÔÊFEÑpò)âT=U03ô¥ÅE‘EÌƒÜU)Ô4Å…8-.ÚiXD;)É”`}*LQ¶ÂÅœçžÆÓb9\\zSfP\nB(§P!”†œx¦š`ˆèqNõ¤ óÐÔ2¢I÷×ñi¹¥ßëEØe·eå~aPVö¨]úð}kE.ä¸•h§:•84Ú²Š( V*x8©VïÊ¡¢†“—Ãt9§UÇJ•fa×‘PáØ¥\"Ðã§õ•‡^j•[¾½ISa–@úôõoCUiÀ‘ÐÐÕr*E“Ö©¤¾µ2°=(È`ij\0M8=‰*‹…‰O#5\rÝç”0:šÈ–V•²M4®Ü\\´­×Š€dÒšRxÀ«µ¶\'qKc§Zh4”UÒŠŒ\ZRÙ¥aŽ\'<R\nAN\0áKŠ#&yQ;äú\n¬ó3ûAQÑUbœ‡k©ô9¦ÑLsÿ\0­8ïÍFi_;Pö\"£9¬Ò4r8+u¤«D0­>u”oÝx5WtöÞ²Bz0È¥.ãbB6Ö;\Z {RR(ÔR;ÒÕ;i€n•l×;Vf©Ü†í7Ã‘Õy¬æ­Œ0k*DÙ#\'¡­i¾„IÂˆâ†@:\nr¶@¥Îj®Åd1\\©àÔ©:ÿ\0üª2™éQE=l_VVèiûÚš®ËÐÓþÓ/¨ü©8°æEý€5€¹ªFâSüU;7V\'ñ¥ÈÃ¡\\\0F}*ÈäqÞ²:VÕ²³©\r¹ˆÉö¡À®Bçh$ñŠ\"™d\ZYâÞlýk=’H?¨¡Em\ZTÓU¢ºÏ\rS‡85\r4RiÓNÍ! ÒRÑ@)g¥)Sr0y.>•e×?ZˆžÆ­12*Jsr:SjÈ\n)h ¢–Š\0JrÈËÐÓh IpÞ©Õƒr\rgR«9Š—ÜÑ4ñÒªÁ+>Cv«+Ò§a’,¬=êA\"ž¼T™7Ü4X\núÌ¢«ªúÓŽIçšZÑX–1jJ­%P…¢’–€\nJZ(\0¹¦ÒÒeéKHŸtSª\n+QKKZa(4´†Ù`sl¿ìœTdHª\r0’zÒHm94”QT@T–òys£úi˜£˜Ñrñ6NHèÜŠ¯Väýíœrw^\rU¨FŒB8©mg}ê‡NGIÛp‡ý¡M«¡_SP6ƒÔUKôÃ«Žü\Zmë4wd©Æ@£ÎY£ØüÆ³QkR›¾…pqN\rM9¨£5©#Á¥85E&ãJÃ¸¬ w¦RÑ´ÕÆÑNÅ!É°•zÆS·ny^ŸJ£O‰öHn‡éS%tvfÎàü7¢’>0zS2Å‰b=)áÈëÈ¬®lS–Øu^?•@|È¾•¦@n}*	pªR}Iq]\nË9ïR¬™ªÎ )±Tâ™)µ£.nÍ:««TŠÕ\rrJJ¥©)Ž›‡iôS¡È84ÓVeMÃ#­WéZ§rX”QE1Q@Q@	E-%\'µûÍô««Ò©Zýóô««Ò¡î>‚ŠdßpÓÅ2o¸i£ÜÑ@êh«$¾õ%+u¤ªQE(¢Š\0(¢Š\0™Ê)sLOº)ÕÑEC\nNô§¥ 	‹IKF(1KEÁEPËÞ²BˆdUr0H=¨·“Ê™[ÐÔ÷‰¶rGFæ£fWB\nfvÈ¾iÆ˜ýR%–µ!ûõ>«U*æ¡Ï”Þ«TèŽÁ-ÅÎzÑº’’¨›“ÛˆÝ¶ÈåjylŠóÜ=*X·»xx?2ú\Z†žè¥%ÔA)qW$Ež?6.½ÅT©½Ê\ZV˜EIHMRb!aŠJ•¹¨ª‘\rX¿jû¢Áê¼TÕBÕöÊfâ¯â±š³5‹ºÀ)$ãýjŒ´{Ôçü*FPÃ‘@P\0qI;žy¦t©¥MŽGnÕ­Ó\"Hrš•M@\rH¦“@™aM:¢SRY´ZŠ(4€J†dþ!øÔô†švS¢Ÿ*locL­w (¢Š\0(¢Š\0(¢Š\0–ÛýaúUåéTm¿ÖþuzT½Àp¦Ë÷\r*õ4’ýÃô©C¹ PzšY$mÔÑJÝM%P„¢Š(QE\0QE\"}ÚuF­NßHciqE!9àPPM-Š(qFh\0š\\b	Z)h<PhÍ!4”ÄØU÷>m’?tàÕ\n¹`w	!?Ä2)KkŽ$šßvœF	¨¤=\rl±uÍ¬\ríŠ©Väù´èÏ¡ÅT¢;	î”¦’¨–QE\'´œÁ/û\'¨«7‘íq\"ýÖþuŸZ6ö‹F…Ì½*$­©q}\n„Ò\ZCy¤Í;\\ÓZZCÖš&@#¨­@w(aÜf²«BÑ·@uâ¢¢Òãƒ$wT¶}¨÷§‘Í!‘¡\rÂoLŽ¢©šÑª3&Éìy¤BZ!§©¦‘BšÐ…£\'ž¦¢ðj\Z(˜t¢š¦PPQKIHº†\\UB0qWqP\\\';‡~µq}Ñ\r- ¥­%Q@Q@‰-ÿ\0ÖŠ¾½*„ëE_N•q‹ŠIGÈiÂ›/Ü5 g÷4QÞŠÐ‘÷6•¾ñ¤ªQE(¢Š\0(¢Š\0(¢Š\0^M.1N¥ëJåØf3ÒœiüÅ\'Ö•Æ%Z	¦“E„)4ÂipM¦!1E-%`§Á\'—2·¡æ£¢\\¹x›g$tnEV-éCHì¡KJe$†Ùm9Ó›ý–ªµjÛ›9‡§5TÐ·c`i)M%Q,(¢ŠfÆM—#Ñ¸ªÔ AE&®¬4ìË7‰²á‡cÈªõzûçŠ9GqƒTªc±lJF¥ ôªØm[±o™×ÔfªT¶­¶u÷â”•Ñ1ÑšT†”Q\\æÃMAr›£Ü:­X¦‘Aèi§fÍ4Ú‘×k{S£ÚÜ:ñØŠè¹›CTÓÁ¥0àü§ŠM¤TÝ1Øzš”ÔŽµ\"š††IE ¥©S\\nR)Æ’˜ºQRN1\'ÖœmV·%\"\Z*R‚šS\\vKF(¦!ðÿ\0­Z¾•ŸúÕúÖŠŽ*$»Óeû†ž:Ó&ÿ\0VjFgw¤£½¡ï\ZJVëITHQE\0QE\0QE\0QE>\0£­«vÞ\\p™\\d“ÅA¡T¡UÉ¨É©&”ÊÙíQT†õ¥Å;éF)ˆJCJi1E€i¢Š1H,6ŠZJ\0(¢–€&¶”\"È­ÑÆ3PRâƒ@ÞÃh¥¤¦@QE\0QE~ß÷Ö×¥R«:síœ¡èâ¢<¹}ø¨Z67C)\r-BJ#¨¤¢™°9è5³n}G-rµgct†Š^ÔNéq oQP©ÆE[º\\ÇŸJ¦¼[EÝ÷9éë <)¬´ÃUdÂíi*r½\rJ²×Š–š\Zi’4íÂ˜9æ–¤¡ù¤¤—¥!È»˜Â‚iÝhÅ0IŠ“˜§qŒÅ§ž*6v¦®!Qq\"ŸzÐQÅf+æEúŠÔ^”2C½2_¸jCQÍþ¬ÔŒÍîhw4V„n´•!ZŽš\n^Ô”¢˜„¢Š(\0¢Š(\0¢Š(LÓ‹3(^ÂRõ  \0QŒÒãu éF3NÛF)€ÜQŠ~) HjM´Ò)1ŒÅ%;c€n)h¢‰EP!(¢Šd‰EP ¢Š(Ñ¾É‡cš¹~¹etaTjÿ\0úëêŸÒ¢Z4Ëb•-%C\ZzÑJzÒS3-Xî%Àäc5h6j0s!ú\ndó²Ý?§LV2å¡ªvEª*8åW\Z’¡«#®å#ÔVqâ´»U	×l¬*àÉg\"€i Ó n0ŒRT§šiJw%Ç°ÐÄ{T‹1‡ëQŠJ,˜®ÑhOžß•(‘OPj¥.ãêjyùË¡“ÔÂ‚SûÇòª{ÛÔÓÕ‹)ù»Rä99p:j6j‰˜‘œŸze59ŽfÏ½74QVKw~ðúÖÈ¬ZÙj$8ŠzÔs«5!ëQË÷\rAfgz(ïGzÔPòE1†\r\0á³Oq‘‘GPÝÑEÉ\n(¢€\n(¢€\n(¢€\'Ç­JP3NÊ/­.)qE\nLS€¥L¼Ó±N b›·ÖÆžzRRp)‡Þ4ÓN4ÓR1´Ršm0\n(¢€Š( BQEÉ\n(¢€\n¹§¶KÆzš§RÛ¿—:·lóS%t8»1v¹_CM«©¶|ÿ\0z«ÐÑb5%)¤ª!îhé£¹õj£1ÌÎÚ5£còÚgÔ“Y„ä“QÙOd\nJœƒƒV¢¸Ï\rÁõª”U8¦Jm\Z…V¼^U½x¨c™“ƒÈ©Ý„°œ‘Íf¢âÍ/tU¢Š+BEÓƒ\neXwÄv¦RŒw§í…k‘QO({SqEÉ°” AE¤¦\"R7\rëÿ\0ÇJŠœƒÍH6¿+ò·§c@QNaƒÈÁ¦Ð[ÈZÑrŠ}ª$TI\rG\'Ü4óQÉ÷MAFiêh õ4V¤Œ=jDåqéQÓá½¨bBƒŠJ|ƒœÓ) aEP ¢Š(\0¢Š(Þ(¢—ÓRJ(¦Š)vúÑ@ÄÇzCJh4\0ÃM\"ži¦\r4ÓN&˜}ªF4Òu¥Å! ¤¥¤ Š))’RÑ@	E-%\0QE/\\~öÒ9;ŽµN­Z2	\"?QU}ªš\Zn¥6œzSjÈf¤&ž?Ý&²ëNo’ÇìY•ê9QVHR«9”P³“ž”qM¢•‡rx#¶7RÍhTf3¸zU1Áâ®AxW/#Ö“O ÓOr¶Ò4£ŠÐ’$™w)ìERe*Ha‚)\'r„\rëA©)(Å4Š—9ëMaŠwDtPhª xsŒ7Ì=èùOCcL¢€Púô­(Õ¯Ò²ºt­Ks˜ûTH¨’“QÉ÷MHj9>é¨-§ï\ZJS÷%j@Ú(¢™$ƒæJŽœ‡´8Á¤=ÐÚ(¢˜‚Š( Š(  RÑš\0¦PsNé@‚9ÈëL¤£<RÐ!)½)¦š\0Ji4§ž”cÈÈ$ÐE<æ˜h†˜iæši\0””Râ	E-‚’ƒFh\0¤¥¤¦ ¢Š(-´¾TÁN†‹¢RTäEEKJÚÜ«è%( RSâ•ûB˜ó‹p=H™Z\Z‘ù{Ö}D6·\n(¢¬¢Š(\0¢Š(\0¢Š(X\'h[ŽW¸«Î«quëÚ³*Å¤Þ[àŸ”ÔÉuE\'ÐB0pi1V®£þ1øÕZ”ÊÒgµ)¦\Z¡Ô”¦’¨–QE\nÓ¶?¸O¥fV¯0-LŠ‰9¨äû¦ŸØS$èk2‘œ~ñ¤4§ï\ZCZ’6Š(¦HT‡æ\\Ôtä=&46ŠV4”ÄQE\0QE\0^‚h¹¦Pt¢Ž´¿Î˜†‘ÜúéÈ§ÿ\0:c› óÞ€qI‚M;‰¤¦t¤cKHzP!¦šiÄÓO4¤ÅHWi¦¥”†bŒfŠi5#IE%\nJZ)ˆ)(¢´P0¢–’ì%Kj3rŸZŠ¤‚O*U|gžÂ[–5—AíTê{ÉIS‘Š‚”v	nQEP‚Š( Š( Š( Š( \rwó`ÃrGª¸ÚÄzSì[2úŠ[ÅÄ€úÔlìiº &’Š*„!¤¥4”ÉaEP ­Cû…ük>¯ÙŸÝ­L¶*;–Jd\r<ô¨ß¡¬ÊF{}ãM¥o¼i+RD¢Š)’QE\0QE\0QE\0QE\0hfŒQKL íGHOaILBäŸ¥£ æ“9¦æ›KÚž)ˆJi4ï­&3×@hÅ/\"Ò`4óMéOÅ4Ô”4Ó\r;˜¤h¥<RR(¢ŠbŠ\\Râ€°˜¥¢’ö\nJ(¦HQE\0QE\0QKI@Q@Q@Q@Q@[¶Ù”ûâ­^ŒÆ¡ª@à‚;V„£}±Ç¦j%º.;(¢Š ’M¦K\n(¢[´?.=ê¥X¶<­)l5¹{øj9:Sâšý+2ÑžzšJSÔÒV„‰ES$(¢Š\0(¢Š\0(¢Š\0(¢Š\0Ðè9¤É=)1ž´½)”\0RÓs“E1æ—µ&hÍP€œÑŽh¥1ëAÅâ“¿4®14„bœqLêhÒi4ãM4€n)\r8ÓM ÓM:“ cE8\nv1F1RqA?•ÓMIEÉ\n(¢R@ì¢–šCØ	¤¢Šd…Q@Q@Q@Q@h[Öà{b³êå“|¬¾‡52Ø¨îVa‚G¥%Ip13~u40¦Ó©´ÉaEP ©íú­ARÀzÒ{\rn]SÅ~Zjž(còÖe”[ï\ZJVûÆ’´ J(¢˜‚Š( Š( Š( Š( ÙÅ!æ’—8¦1GiRšæjƒ¯ZP)@Ç^´ìãëNá`è=¨çè(úÒš@\'z;ÑšJ\0CÉö£¥)ô¦ž”\0†›N¦š\0CIN4ž´†4ý)qŠ_¥!©>´ÒisM&‹\0†’ƒE–Š(\0¢ŠZÂ\nZ)	¤=€šJ)i‹p¢ŠZC°””´S”RÒP ¢Š(\0¢Š(\0©ìÎ%Ç¨¨)ð¶ÙTûÒ{\rnOx>u>¢«UË±˜Áô5N”v)‹M4´\Z¢X”QE\n–õIÞ4žÃ[–TÓº­0Rçå¨e\"£}ãIJßxýiµd°¢Š)ˆ(¢Š\0(¢Š\0(¢Š\0(¢Š\0·š3ùS<rj†\0S‡)	õ¤äÑp°ï¥/JoJ3Å\0.i3Fx÷ qLBÒgŠ3ILšiIâ›š\0;QKŠP\0®ëEÖš’„4ÃN&˜M\0&ših	Š\r8Óq@Ä¢”ô¥ÅH	ŠZ?•!4Bi)hÅ2w\nZ(¤;%PE”ÄQE\n(¢€\n(¢€\n(¢€/ÉóÛ“ê3Tjí¹Ý\0…Sa†#Ò¢=‹bPh Õ’Ä¢Š(SâûÔÊ|z“\ZÜ°(ìi¤ÍAD\r÷6œßxÓkBXQE(¢Š\0(¢Š\0(¢Š\0(¢Š\0¶>´gÒ“­(â™BÑšLÑÖ€ô¢ŠLÓê))3ëLBšCHMÄ%*¯4ìzÑŸÊ“c°R\Z	¦“H`M4ÐM4š\0	¤\"z_­\0 QA¢	KŒý)qG_¥!‡Ó¥\'_¥;ùSæÄ\'?JJZ\\zÐ!1E.)\rEPHh4”	°¢Š)’QE\0QE\0QE\0QE\0Z³n}óQ\\\r³7çKjq.=E:ì|ê}EFÒ/¡Š*ÉŠ( ANŒ€ÜÓh T*äqÔT›TX»‘7SIJzÒUQE\0QE\0QE\0QE\0QE\0ZhêÔ´¼h()GZJQÖ˜%-\'cM;RQü4S”ð:{Ó;SÇAC{Ðy4w õ¤1´ÓN¦ž”i¤¥4”À_ZCKëM=))Ê)´åïHbúR´£µ ëHb9çÚsõ¦ÒGLÑJ>í% ÒRšJ`QÞŠ\0mQL€¢Š(\0¢Š(\0¢Š(\0¢Š(\0¢Š(ñJ¿Z±u÷Ö«Åþ±~µbëýXúÔ½Ê[i)i*„QE\n(¢€\nÅPEPEPEPEPEPEPÿÙ','ã„ã˜ã£ã±ã‚Š','isucon1','2021-06-03 15:58:09.000000','2021-07-04 04:41:50.000000') /*... omitted ...*/\G
 
-# Query 18: 15.21 QPS, 0.00x concurrency, ID 0x323419B48CA5913A1217E6F5BA713101 at byte 32203630
+# Query 21: 3.20 QPS, 0.00x concurrency, ID 0xB5B9D2CFE100A1D0ACDFA234C0D2004A at byte 48034729
 # This item is included in the report because it matches --limit.
 # Scores: V/M = 0.00
-# Time range: 2021-08-21 11:03:43 to 11:04:44
+# Time range: 2021-08-21 11:09:35 to 11:10:35
 # Attribute    pct   total     min     max     avg     95%  stddev  median
 # ============ === ======= ======= ======= ======= ======= ======= =======
-# Count          0     928
-# Exec time      0   129ms     9us    15ms   139us   332us   762us    20us
-# Lock time      0    13ms       0     2ms    13us    31us   109us       0
-# Rows sent      0   5.96k       1     670    6.58    0.99   43.03    0.99
-# Rows examine   0      58       0       1    0.06    0.99    0.24       0
+# Count          0     192
+# Exec time      0    28ms     8us     6ms   144us   316us   555us    14us
+# Lock time      0   961us       0   540us     5us    16us    38us       0
+# Rows sent      0   4.69k      25      25      25      25       0      25
+# Rows examine   0   1.47k       0     129    7.84  107.34   28.86       0
 # Rows affecte   0       0       0       0       0       0       0       0
-# Bytes sent     0  57.09k      63      63      63      63       0      63
-# Query size     0 112.51k     117     129  124.15  124.25    4.36  124.25
+# Bytes sent     0  97.31k     519     519     519     519       0     519
+# Query size     0   9.38k      50      50      50      50       0      50
 # Boolean:
-# QC hit        88% yes,  11% no
+# QC hit        93% yes,   6% no
 # String:
 # Databases    isucondition
 # Hosts        localhost
 # Users        isucon
 # Query_time distribution
-#   1us  #
+#   1us  ###
 #  10us  ################################################################
-# 100us  ########
-#   1ms  #
-#  10ms  #
-# 100ms
-#    1s
-#  10s+
-# Tables
-#    SHOW TABLE STATUS FROM `isucondition` LIKE 'isu'\G
-#    SHOW CREATE TABLE `isucondition`.`isu`\G
-# EXPLAIN /*!50100 PARTITIONS*/
-SELECT COUNT(*) FROM `isu` WHERE `jia_user_id` = 'quizzical_sammet' AND `jia_isu_uuid` = 'cdc3d931-51eb-4c6b-969d-f4735e602a6e'\G
-
-# Query 19: 27 QPS, 0.05x concurrency, ID 0x1842E6B631B4CA92D1232CE63CC6017F at byte 2636652
-# This item is included in the report because it matches --limit.
-# Scores: V/M = 0.01
-# Time range: 2021-08-21 11:03:43 to 11:03:45
-# Attribute    pct   total     min     max     avg     95%  stddev  median
-# ============ === ======= ======= ======= ======= ======= ======= =======
-# Count          0      54
-# Exec time      0    96ms   188us    19ms     2ms     5ms     3ms   690us
-# Lock time      0    70ms   142us    15ms     1ms     4ms     2ms   515us
-# Rows sent      0       0       0       0       0       0       0       0
-# Rows examine   0       0       0       0       0       0       0       0
-# Rows affecte   0      52       0       1    0.96    0.99    0.19    0.99
-# Bytes sent     0     752      11      90   13.93   10.84   14.63   10.84
-# Query size     3 1004.94k   6.49k 100.26k  18.61k  40.32k  14.66k  13.78k
-# String:
-# Databases    isucondition
-# Hosts        localhost
-# Users        isucon
-# Query_time distribution
-#   1us
-#  10us
-# 100us  ################################################################
-#   1ms  ####################################
-#  10ms  ###
-# 100ms
-#    1s
-#  10s+
-# Tables
-#    SHOW TABLE STATUS FROM `isucondition` LIKE 'isu'\G
-#    SHOW CREATE TABLE `isucondition`.`isu`\G
-INSERT INTO `isu`	(`jia_isu_uuid`, `name`, `image`, `jia_user_id`) VALUES ('602742d5-32f8-41bf-b9ae-42fd5bfaf33b', 'åº§ãƒ»çŽ‰åº§', _binary'ÿØÿÛ\0„\0	\r\n% !###\Z&)&\")\"#\"		\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"ÿÀ\0ôô\"\0ÿÄ¢\0\0\0\0\0\0\0\0\0\0	\n\0\0\0}\0!1AQa\"q2‘¡#B±ÁRÑð$3br‚	\n\Z%&\'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyzƒ„…†‡ˆ‰Š’“”•–—˜™š¢£¤¥¦§¨©ª²³´µ¶·¸¹ºÂÃÄÅÆÇÈÉÊÒÓÔÕÖ×ØÙÚáâãäåæçèéêñòóôõö÷øùú\0\0\0\0\0\0\0	\n\0\0w\0!1AQaq\"2B‘¡±Á	#3RðbrÑ\n$4á%ñ\Z&\'()*56789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz‚ƒ„…†‡ˆ‰Š’“”•–—˜™š¢£¤¥¦§¨©ª²³´µ¶·¸¹ºÂÃÄÅÆÇÈÉÊÒÓÔÕÖ×ØÙÚâãäåæçèéêòóôõö÷øùúÿÚ\0\0\0?\0úµŽ*6`ŠY²@Àižhš0ÕŠõÛë@\\Œ1ÉéÍikÑ	»µYãˆ¾É$ûª{Ô²MDy²žƒ5ÌÄuñÔ—ºi[8—Ì\\`àžjœºµ¯Ùîgµg¸‘NQŒ÷¬gRIÚ(Ö+™œ2Å*Ã€pH9ÅG¨ýŸ/áY^\ZwþÎËÚËóŸÞqŸÂµ5?³¥9=³ùÖñ½ÕÌêit‰4¿ùÃô?ÌÕÚ£¥È*ý™«&\\TÔ^ûiE\\–ŠŒJð·åKæCùTÙ™¢™æ/¿äiCƒÓ?•+™®âù¬?Œ:ï³^{ñ—í:xÈûã>ÜÑÔŸ6Ý;Kã÷€ð2G©Y6ø·Fÿ\01äŒw«~1ÿ\0~“ƒÈ‘pUl0±-Ç\'¯Gð³ž»zÜàÛc‰¸à®“Ãn’p\0ç…äW7r¡­›	rbº?\rš6\07ž#9µO…˜nµ6.É:uÊðÄÄß)ã<t£ÀÑy>³O$Á‚çÊß»oÌxÏzeÿ\0Í¦])ó¤ãwŠwPEà«„^A@ÀÃ¿~Ï˜ñžõËSø/Õ~LÖ—ÆtÔQEqe-Ew[¨Ã›øOJžØbÒ!Èù{õªz°Í²|®ß7ð•nÏþ<`ë÷^µ«þ\Z3_)jJ\ZhóæçÁÓ­jV>¨û.¡æaœ“§ZØ¥?†#ÄÌþº²üÒwãt­\nÈIöè_2N­òÇOZ×¢§@†Æu«n¿|I#|§åaÀäVgY>ëÉš[\nx#ëFŠ›„6\n(¢³,(¢Š\0(¢Š\0(¢Š\0CÒ“ñ?•)é×Ÿð*bbúòkŽÖ”RV+ûîÁ<Wb9kŒÖP6£90—ç¨nµµÙœú-¢ýÜ`À\'8\rœWo	ýØùÁãÒ¸›H±å%×‘ÕºWovõSô¥m‘—Rµ¦´îHÀr{Öž}ÅfÙöû£Œ÷è~•¥ÏµcWsZ[fêÛBD[Ìžc­/Â³uV\n!ÌŽ„çîŒæ•?‰=‹\ZyÎŸ_½×©¨µVf¤ÊÑ|ãæQŸ^*{›ŽíÜuÇ^j\rVB–é‰Dd·R3Úùxà\r%÷Ú9™˜y#àqRj/åÙ–ù_0ù±šf”I²$È²eÌ£”ýD‘fv²)$Ÿ¡ücû$:S—Y‰˜K‚Bâ¯Lq‡!~SÉíTt Þ\\¥¼¾Hÿ\0WÓ¥^ŸýCôäcæéDþ0_	RÍ˜Ü¾YåþÍ_¨!#;Â€Ì9\"§©›MèØ(¢Š’‚Š( Š( Š( {&ÃÈ	ÇÍéN¶%ÕÈd>[¾å`xéÿ\0Ö¤·£Rì0$<ÍK†höï`ÙëŒÖók›C:kÝ\' 0 ŽÁg5V–™û-´0–9&44Ñ£Ï:´æï$P½ò*K±g®Iýjž¤q¥ÈAèi·kpúmÊ£+Jc!@îk•Ñíî°oÒhçò÷²QÊã¯ô¥yX§Nôå+–”whÐ‘è™ªxºo”@GÒJ±¡ Mæã?í\Z²§Œÿ\0*·.YËÔäœy”Lß:hnã·’\'0;O™Çé.^e;N	\rš±x@ÔìŽFþ?PÜ.nfàuëëÅZiÚëú¹„×%ìÊçSHÐ³I8Çl\ZšÞüJ2²IÈÎ\rg])6ÒžFÒ—LOÜ(ÿ\0g½jéÇ–æ~ÒHÕûY8Ã¾;×	ã©ZMBÈ3<ÅÆF+»X†Ò¸_¨]FÃëŸÎ¹gm,taÜœµ(xÈi¤ŽGïO¡¨,÷dïR7YpzÔÞ1ÏÙt¢	\'Ìã¨àÔµ¾K‚7ueÁ®¼¼YuÉ®Ðý±ös‘˜à\Zèü0¢=`*åòµÎ\\‘äž <untÞÈÑ\0ù@Üxîþ½Gî3/3GQÿ\0UØ >ao•Žâ—ÀÑ”ð•²ù)R@Nà9õïMÔ¾mìa_0°ÚÇ\0ñëSø\"!‚ìbH@Sû¨Ûr§\'€{×=M(?UúšSÖhè±F>”´W×c3U\\Ä„		ÿ\0VjÄrù\Z\\nUœª/Ê:š«­ñ”ŽWÁ9òÛâ­Å¸é±îR¤ ã<ŠÙü\nýÌv”¬bÝÜ‹¸¤k‹,ñÖ·ç˜@™Y8ùFká™nT\"Üd¸ÆAæµ5ý@iç9AW4Ÿ*QlÏµfÖWlÒ‘–Â:cµkË:ÅÙg8â°´ë¢ú´hÓÜ1 ¯O_Â“ZÔÅ®¯?kx²€˜Ä{³Éç4JÓKÈwå¡§Éæ]9ó„™R@Œr*ûO\Z9Vl3Ò³4»¡=Ü€K¿åÏú½½êe”Iª\\B÷?2•ÚŠ£+•ïëQ(Þ_!©Z*ÅÏ´ÅýïÒ—Ï‹ o4ß ÿ\0ÏFü‡øR}œÿ\0ÏCŸR¢¢ÑÔìKæ§÷…D?Ä*­ÚÏ;¡xò;ÆçOhfJ:Ž…?úôr«n.yßbÆõþð¥Ü=Ee¼î«—òT{œS\rã€±“è\Z«Ù6GÖ\r|ZZÏ2È‘É½‚îµ»}£÷cþõ/fÙ^Ý-Í2{´ÝÌ:ƒY¢íÙ”ù‹cïV™\\È§=ãÖ”£Ë¹QŸ>¨PÙ®3XP××\'ÈœžUº×i\\^²Š—×e–ã¿Ü?Ê´ õaS¡NÕ1äâ9Àã;JícáÝü+‹³#u¾ÖŸ’8nk³UùÊ+J»#£+Ø:›ë¼pØä*Ò;b¹´¾h/eXŸïHA™üHÞ#·†FŽkˆUÔà‚‡Ö¦¥)7tT*$µ:@5›ª¸^%TëÔf©Z“ÅÝ¯^2¥–ù/9­YGƒJ¥v‹•E%dlYØÂrW9\rVÕsäÆ¢7ü´2H-ôØÜù`Åµ:Î¼¹ûR¨X­Ü)äù ÔF-Êå6”l^Òò,¹òþñÿ\0WÒ—RÉ³ùQî9À¤±ÌZio-TåŽÕnãUnî\Zæ Ÿcwç#çÒ‹^mŽúX±¥‚ “1¢ßÁÐð9«“`|.ãŽžµSKO.Ñ³ÄKgk6OAVg Ûœ«|Øã½L¾0ZDz}ÑÀéO¦F1\ZñŽ;?ç/r–ÂÑIÞ–ÂŠ( Š( Š( ¥r¶òN@ÊSéIe+K»íKåcîóÖªNó¢»G éF•$Ú˜3*,dc×?uJ>ëf’½‘r{–†eX’IcÏÌÊFGáR^MåZ´Ð+qûµëYš•Äú{¨9ï‚*Õç›g¥µÈdc€v•Ç_zŽ].û¶¸’iBÉÂ¸êÝ)º”Œ¶ï»È%GAõªºuä×·QØŸ.r9ü)—z„–º›ÚÕö¨müŽ£Ò«‘óZÂmrù\ZºV\"ÒaG!YAÈ<w4,ª	<µª=ÍŠO¼.à~\\g¿­B\ZR’™Ï½+^LÊ³J×v&¼m×–.˜e]ù9éÒ‰@7üÊrÙ•C+¼On§iiägŒcüjVŽEwN½;Y/ë©Q“wÕŒëèÙíd	’vž3KFXÔI•Â÷«—½´\r#`«’2y¨í®ÍÜa‚‘œ[)K‘«heÉM?ˆÒ„›‡ç\\\'ãwÕtï)Yðë¸¨È=ëµKIxdrž+×Bº‚Òkf”Ï€203Ç ×,Ò:©E+XÀñŽ|­(s“ \'‘Á¨¬²mÉÜHÉxÁëOñ‹–ƒIl7,¯CM±}Öƒ20$žy®ÌÂÂ²¸û¦gn`Æ9Ü8®ŸÃ|hÈ~_¾x‹îšæ.Ø}˜†x@ÿ\0iN+§ðÙÿ\0‰,|¯Þ?êÇÊkjŸ0W±wUÈÑ/ðóa\\à:J·à¨Ä^Ó”F‘aÉnUù\0÷SX´àB6`n$8ŽçÒ­ø%<¿éË²8ð‡ä²£“ÐúW5_à?Uù3Z_Èè¨¢Šá:Œ½`f$aÏÜ8=ªä|éñðßêÇúU=aw[¦UÛýÃŒUèGúCŸ¸:õé[?áÄËí3×\Z”Cý$~ñIî5µr3å‡?ÃYR€5X°g‘xtóZ×êú°÷ê=bLW¸Ì‹J?ßÊÝ~WLv5[XøžB>Øñ|ƒ÷~Y óëW,¤\r©*ùò¿uÇj‹R”¦°nš3´~ïfG~kHÿ\0ä)|2æœw\\H|ÐãoM¸ÅC#‘ªÜâdùvåvò>QÔÕ«Þò~óx\0*¬îãQ¸xÀ~R½>QÞ¥k7èM_áüËËt…F$ïš{\\©O‘†êÎ’8’\"~”õ ™¢ü*\\—·•¬Z’_6ÂRÛr8äñQExù\0”>ÀæŸò¶Ÿ&Ý„^†¨¤± Ú¢?ÙaDbšz¤ä¹]ÈîÚBÊc‚9rÍÒ¡ÁXð°Eóu±šždSï#yôVªÏk–Ý÷dp\Zº\"Õ¿¯ó9-QÇ.èL˜÷O=k2?’Ù¿pvç€NMjj¨­›ƒäí\0ÆyëXæÜ%¾|Ä„ò)QÖµ´›dºÏ©Ãò¸ ž§Ž†ºzç4ÀŸÚ1â7R3É<t®’±ÄüHéÂü,+ŒÖÈ·\'të×%W qÚ»:âµ©@½¹|±œ‘ÂñKñ3Z›\"7[p²ÊrF/Zë—§Ýüs\\”»® _=Ÿ‘W®±\0Ç\0þu­]‘ƒÜçÉgÔccþ·¦Þ£=?JÈÔ]ÅõÀûm¦²D½kójqêÀÈÝ<V òÛ€­§°,p%#={Öñ~ñ1®¤¹ †ãEqŽVEPGé[ÚQºþÍRcÓÜd‘ä·Ë\\ýÄIrŸèZ4ž»søs]N“nÑé‘©²µCÉ)p*§nR£¹ÒÊ¡´hÖhÐ‚‹¹	àVDöñÃFÚÅdÝ’ÁdÛŠÜœ*é¸xË…Aò/µdJ7Ç5œ˜>‡‘\\PØÖoÞùmyÐX=» ù‡–NIæ°ÀA<Š4ûÌ)ûÊx5ÑÃd,nŽ¨GÝÏ#šç¢¶ŽßPºUûoÊÃ’ÙSôª…šKF=Âè÷\"ž0¥Ž×1ãµhN@´9ßŒjœ .pwLrGÌ8íW¦!b9$vÈ¬eñ\ZtÝƒD1žêj‚ÙÕãùX68$TõÜpøPQEŠ\n(¢€\n(¢€\n(¢€0™L–Ò°¡úT~?=Øìÿ\0Z–ÞxÍ…Ñƒ·#qQxlaî°O;xüë¶Wör^‡/‰øNø½95{V…®|8èŽ¨ÌŠAnEgkÇ7\'Œð+n]£IþîÅÎ\n—¤!êi´sþãS\nXŽ)5‹K…×ä¹|—TÜçéOÐÀ\ZÉä}ÖÇ{YEó7`n8Î®Mª¿\"w¦¯Ü·¥s¡DŸ•‡êj²®c8FúŽjÞ—ÿ\0 X¾üÍB±*EòƒŒö¬oïKÔÇ¨ú]«=æžUXªÜGn*¶òy2-ØScpo ]§;š-eó,²Ü0\'ùÐö_×V(ëwé#7P2ÖDT”±S€Ót¨Þ;dó«ç#¡pOÙ_vH¨<Ôv¬\rºáØä†íZóþîÆ-jhA•æÿ\0cÄ\Zs›—ùšô¥Ü\Zó¯ˆkÿ\0­7å—ùšä–ç£Mh—õ±‘âó„Ò\0ÉÃÇ¡¥°oô@K¸?}rzÒxÄ|ºN3Ã¿±§iå…’’Î§\'!†{×~ádÖè¨·oÞF	þòä\nêü:Gö$dÄ’rƒ¹k¹6ÛÞ 8É,™®§Ã¬[C‰²’Idµ©ð³XÖíü,ƒq)Âþ>Õ¡àÅÙàÍ8m?w÷b9QÉè}+?Zÿ\0‘PÝåŸÜD¿tý}«CÁ˜Ó\0XÔ¾ìG(9?wÚ¹êÿ\0ú¯ÉšRø×£:\n(¢¸N³3WŠ3µÛû‡š½üzÅ×î¿J¡¬.è#ù$lþ¬ò*ê?—emc…^;Ö¯øhÍi&e?\Z´`™†d	­yŽœŽ:ŠÊ”ÿ\0ÄÞ3™Gïo”Ö¬ •âO²LWºÌ«ß¨¨ó]ð	Ã.)š„›u`>Ñ³å)@Z’Å÷j82—!NC.1K}ks& fŽx–Q¹]2GÐÖ‰¥={×¸Z°mÍ)Þ§EÆ:ÖUýÃ&§:‰`ÆGÊÃ‘òjÔÓÎZlº·Oº1Žµ‘¨ZO6§3Ä,Øn:üÝ=iÓKÚ;‘^þÍz2ÌFR[lú\ZxiŸ[võ9¤[9ÈD¶ uÆGm-|ÿ\0gR1ÇïO¤¥q(¹h‹0äi/½Ÿ—<V0‚4eœ1ÉÃÿ\0õëicÆ–è‘ã$ü¥¿­P*>\r§AÔ>k:rµÿ\0¯ÔÚ§ÃB\'ƒUmÁÈj˜@QÔ¤(9üÝ)%»–#óX1«ƒLŽñ<Õci2`	ÛÇZ¿y¯ëüÈ²EÝL¾×	á¹rAÁúÕ5‚6wFèsØÕëû•€HLLÄ0.{UíH™¶µ»¨þñJšj\\º#J–çw-ØÛˆ®Ó[‚y9ÅkÖ%„Öòê+å†l\'öúVÕaZüÚ8{rè-qz¼À\\Ým¸ÚC‚™Ç5ÚW«K‹›¬O\ZþðzsUCviS –eÌ Ê¬28Œ×R¸ÛŸš¹‹6ÍÜhˆÝü+ƒ]2·ÊFOâ+Z½%¹—§ú’|ÑŸ™ËÖ¹íN\'{¹™-í%Ë‘ó>ó®‹I#ûE\"É~C“\\Ýý¹{»‘ýŸ‡Ì<¬¸Ï=ëhüoÐ]y¬¥’óçÑ­ßÄ·ý7W[akåéÑe°ãîîÎ+:jù›ÛI”>s„žºkÆ<ÛOBÙÅUGî ŠÔê€H1‚+3RÚ$ˆ“z¡íZ38ŠJ’8v¬{»˜¤™JK*qƒŽk†šw¹¼Ú½‹éì„ÿ\0XFûÝkÝÕ/.»º0ËÂ×Iß°E—8(>cÖ²îa6Ò.Ø™9ýâ‚xü*¡-Ð¤µE´“nŠìfâaŽqWgm±}í¾øÍW‚36˜©¼|ßÄƒÏ¥MrH‡#{Öo™}ìX²HL«\'ÍØcnªXçÉrÛ2_ø[©ŸÄ8ìQEIAEPEPEP|vAe8‹?¾]ÌÄû*ÌðÉùî†ðž?\ZÛu`a€?v•bxh|×G¿ËÏç]Q“tç#%5až ´Ž\"’®íÒO=ëtB·\ZrFÿ\0ut¬Ÿ€RpNïé[VßñéûƒùTÎOÙEŽ)sIæ““¯Èœ’»†qèkGY·Í³Ï“À\0­T°|I7¹~þõ©ªŒéÏõ5SoÚEú—îØÍ#æÑ`÷\r×êjÚ£,{v¥WÒF4¨@÷þf®`úÖ5¾ýMSI•…³}²9Ž\0U#h÷¦Ãk\"E‡eÝ“œ*ç4sK‹ØÄÎ¹´¸x˜DW8éImg2Âªªßìž+Kš9ïŠ~ÑÚÄ}Z¾¤7^:¨9¯9ø„1®éÙY{ýkÓ{WšüDçZÓßâ_Ç“Põ±ª‚OCÆ]4IqüI§’ŒÈ¼ÿ\0=ê?ò4 NáëÅK§’,ÓE9éœ×¡„ÖÆ¶Œ/%Û>™Õøu³¡Är$üÀc5Ê^¸ßë]Aë•é]O‡yÑ!ä¾s–Æ3ZÔøY’º&×üSZ‰ÌêNL¿wñö­_x;Lâ1û®‘}Þ§§µdëÄ/†uš5ÌË•ü}EløP©ð†—°¡BäÇ÷sßÙ®z¯÷?ÑšÑ^÷ÈÚ¢Š+„é2õõ)ˆäsÏÜ8=ªßüÃÓ†*ýGJ©¬)hSÌF~ë`Õè×u¬jÛ¾èÏ<ÖÏà‰®äe;ÄåiÀ21òšÖ”ásÏCÈ¬¹fµ\r>7þÏJØ ´ª=…£F>Ÿ/™~~dÂž\n`ŠÐ‘ÇïðÊ\nœöúÕÚr\'šÎBž1ŽGzÑ’!¶fÎŽsÈ§6¹‚)¸•ìï4îº}Áõ¦K\n½Ä„ˆÉ\'®9éO°92áãnŸpcó©Úd,¬yÆÜÒnÒdÎ.PIZ›‰F>”¶ÊE‹dºj×”ä]?ìõèŠ^p(sÐÍQ´®¼Èƒ³Î:•]~õ‡=A«Æ!äí\nŸNÕ¶ ŒöXÿ\0…\nH\'JNÅ[Ø‰€i	Þ>ïZ±i¹£pÅ¸aŒÓä¶Ê\rÎxjrDDlàKÉÍIÆÁ\ZmNö	–Á=ME3$g‚¿,öåÉ Èìü¤Ui,ÝÀùæöœRêÅS›]¶TmOrÂv5§YÖ–¯\rÞæ,WouÅhÔÔjú\ZáÓQÔZáõGf¸¸!àÏ˜~øíšî+„Ô2d›Ý²çïwæ´ÃîË©ÐšÄy|ž½Wµtjr„~b¹í=OÛâ%bãºœ‘]ü²nœ•u:KrŽˆ˜˜1Q¶°$÷VDº=¼ú”¬Ö²,£.²À’q[\Z:áÊÇ°€Çªp./hg\\Ë¸á\rhŸ¿&&ýÔd¦h÷+)KøÛ(Hä|ÄNØýkhD–ÀEæOòŒÓŒ‘4Ñˆ¼øòðò:Iùçð©n$ràÍ*|Ý6äPäÞŒpÞæÿ\0jæƒˆ®\'A|Í¶Cè~_lþ5Òž†¹É$ausþ“•—§·Jæ£ÔÚ¦èÛGÛe	,ŒJŽIÀn3T/di\Z.m€ÆylñWZÂÏ”áÈû¤qY“ÆÊè¢+gPƒ®Š!mÅ/ŠÆ­\"Î=ÛsÏÝéÖp	„áw{g–ƒm¤chN>êœEÈÌ$l/ì+?´hþ¶`ˆ[1ùgqã9Ï½Yªö€-¾2rxcV(–ìqØ(¢Š‘…Q@Q@Q@õ²ç<Çý+Ã¸ßsŽÛ­løñôýßô¬oc}Ç®?­tCøsù?xˆ~æèMkÛÿ\0Ç¤?îåY> \'ÉƒÓ\'?¥k[ñiûƒùR—ð£ó~6cY€<E7å«KRÓäü?˜¬ëOùeÿ\0yëKPæÂN3ÓùŠsøãò&?¥Œi‘¯ó5v©éƒ\ZlX÷þf®VU>6i…QPPQE\0WšüEãZÒŽUçñ5éUæß9Öt >ð þ4TaxËô¢~aßàÔ¶JVÕ@WQ“Ðç½Cãiy‚=ø5-Š²&Õe€æ½ÂÎjã¯¤+ly*‘ßnq]O‡Îí–sÎXŒ\Zäï2–ç:’9Âä×Wáþt(2ÌÇŸ™†\rkSfeÐ“ÄÂú‰.ˆGæ”nQõö­Ï`øOL ÆsœÆ0§Ž£Ú°|@Þ_†52$x‹;Ýw(ç©ëÃ$Ÿ	éd²>mÓæA€xêsVþÏô6¥ñ\ZôQEqV±äB#.pz6ÓZQq\nº+7YMñ\'îÙð	ùN1ZQñº+Y\rÇâfdŠFµÀnÏtñZµ™\':ÜXóG=¾éâµ(©ÓÐpêeØ97ò©•ß÷YqŽkF_õ/†ÛÁù±œU&Ý(ó¾SÃœÖ„œDÜãƒÍ*ŸGá*Ø|Ò‘ÊŒUÊ§br%ùƒr:v«”§ñQPPQE\0QE\0RRÑ@y}àß€Í ™sÿ\0|šy¢ž„ë}™Wq8Já¯Fòì#·l·vëÍwOþ­¾‡­p7H\nóm|Ø8zÞRg¾¥Ý=qxå(à†Ío¹Kesòžýx¬91z‡ÊÚ\0ê\"·d9¶“ ‘´ç¤÷FÜ]×JÄE”‚	ädô«§[«eUÇÍ»ï·÷qëéPhÑ Ò ù8þ.µ£°{þ°©&¦ìÍâ“ŠÐªº|HÊUæà¯ÉÎÞŸýz£x|»â‚r2A\nW8Ï½lm÷?e\\Ÿø˜cÎï´¯\"96õ’KDk‘ŠÄ¼„Ã4™kb–×ë[•¨–7DíØÕÎó©¤õ*vµÍ@› U8û½¾•—¨ÛþõH·YFÜg~Ó[\0a@ô¬­M7Ì»­žP«ÁWÅz„’Ü¿h¡,¡P»@Aòç8â›yþ§î»¹ÔT–ãÑù¨â£» F2d=PR_ÞÂÙÿ\0Çªœ8É<?^µb µ9µC–=y~½jz™nÆ¶\n(¢ÂŠ( Š( Š( \nI:<|È[ËèÚ³<;Ì—\'Ð/õªwÑyqBé™rMZðáË\\Ø/õ®×\ZRk©Ë	¹TI“x€æ(GC“ƒZ¶Çý\nÉùò®_PóŽ¡re9@ä\'=«~wh´-Ñœ0p*‰ÂÔâ‹Œ½é2™\r¯ÈÃ?y¸\"´u\">Àã¹Æ?:ÅÑeyuiOÌA<Š»«O(¸ò—ý^ÀßŽiÎ/Ú%Ø•+Sl»¥ÿ\0È2Çùš·¸zŠ¥¥œiÆ3Y£YÈTñœÖN›œ¥aÎ²¥s ÜB)k=UË Ã¥Zûs!£w¤èÉ\n8¨3JŠË—QXÔ–P\0ëÅjË•Á_­/e+\\Y…ìjWšüEÀÖô¢sÛùšïEîpÎ¼ßÇóyºýˆ á]xÍC‹[šF¬fìŒßãv”N1»â¥°P,Ô”Ú	Î³Š¯ã/½¤îÁË¿J±bŸèI„˜V¯Gð×m±/@ò\nG?/$×Wáÿ\0›D€íÔü\Zåo2\",Ü6kªðñÆ‰KgŸ¿×­iSfd¶IåxSQq(‹lYÞë¸zã½t>\ZmÞÓpmÖèw(À<u¹ß?—á]IŒ¾V\"Îý»±Ï\\w­ï\nL%ð¦›‰„B ¸\\gŽ¸í\\õ—î~¡µ&¹¬mÑEÂt™šª’±‘>3÷N+I~èúVN¬2	“Ô>+Xt¬þ‘‰™n1®!&@3Œv<V­eoÝ­¨ýúòz”ñZ„àz\nU:z:™z{†½˜y»È^…qŽkJCˆœð0ZÎÓäß}.&ó>_îãÖ„Ä,IŽ­ÒŠŸGá+ØçË|•?7UúUÊ©eþ­þçÞêŸAVêgñ;QRPQE\0QE\0QE\0”PhüM/ú—ÿ\0t×qqþˆ§žÒW}7ü{ÉþéþUÀÜCÊâÍòd¬+¢ŽÌ‰î_ÓcÅêŸ)`à–È­»‚”Ü0ù+×¥ci -ïú¹åêÆµ®H[‰Ü¸Br+YnŽy-Kz0ÆmßwøúÕú¥¥s¤ÛžOÈ9nµv¹j|lê‡Â…¬©‰:ˆ¢ÀuàžÕ«XògûP|±ŸÞwsÛµ:{±O¡±Xº„eï÷ã\0nÏ=+j±¯cÍó1·vÉ8ü)Òø‚{5‘¨ª5ÐÜ’÷Ö½cê2\"ÝüÒJ„(ÆÓÅM?ˆsØÔ‡gÆÑ×¯J†íÂ¢üÎ¾ëVýZàçP]*üê¿QšQø‚[¶9¶C¸¶{ž¦¦¨á$À…ˆ$Ž£¡©)=Æ¶\n(¢ÂŠ( Š( Š( fó>Üÿ\0±RxoïÜã\0qøšY“~™nqüÒ“Ã 	®}¢»åü)]N:Ä\"Õ@ûL™ùºÖ¼€¾„=LKý+\'Y}³—ølÿ\0T?ôÉ¥g?†Cí\Z8\"þ,õÚ•[Ôóö¢xÇóªºKfþ.?„óŽ¼U½Lbì68ÙÍTÿ\0‹ò\'þ]|ËZpÆ’ƒÙ¿™®p¹8ÚBk¤ÓÈ:Zã§ÍüÍs‹¼†$Œm4Qø¥êa~ìI­ÉóT—šÑa‰¥Ç=jºÃ¦\nkGi3IÏ~?*u§5-S(_|¶Î}8¨ì~d ƒÎ1S_ô9	ÉÀô¦i¨Jsœc½R»ñ\Zq¯¥yï×!Óÿ\0Þ\\cñ¯H8â¼ëâ	ÇˆtÑßzÿ\0Zâ¨õG¥†\\®æGŒsçi\'#\0çž@â¬Ø6i…Fê~SŠ­ã}+qÇ¿^ÕfËÒ2<·ãžq]Ø?€uÆ^&mÎØåã²75Õè\0µÀôc“\\ú“lq	nøWÁé]^€Â=\nÝIp~YdV•$¬Ìã«¡¾%“Êðž¥ ‘ã)C\"î#žÃ½oøGæðŽœû‹—ˆ1b0N}»W=âiR	êN³¼x‡‹Ãž WIáBO„tÂ\\¾èïa‚}È¬+?Üü×äÍ)A©Ý®†ÕQ\\\'I‘«FXÏ”Ž»öžµzò3%±\0È þí¶š£«&ùcR8Çñ6­)—tDc?Ž+fí™1fŽºœ{–èŸ¾Ù;Ö…ôZUàýÅÍR¶ˆ.©Î¼žKät5~ï¦wH8þ\n©»Í¿†TÒÝšywLïÑÓiÓî®±pñ	t]	§Ø6é¤ýìòŽqŽhœÿ\0¤>džLö¤íÎîmEXÐ¹Y¿åŸJŒ_;»lò˜#†éV-bc•?7U¬˜ãv!-.s´ó×ùÑ›wY¸ÅXÒRþ¨£R‹§ÉÝëšª°Œ“å ôÃRù /\nÃèÔrÄÇÛL¶×a6îðÝ03Kö¤î®?à5Nú/ôhF&áÿ\0å™çñö¨#[1ßp8þ.¢…µr¥ZQv5Ôdd¥(¸ŒœçÒªEŸ,\rì}È©bÊ9zb¡Å\"£ZM“ùñàã½/÷…PuÌÀ~fê8ëU¥…ö©ld‘T©§ÔO%ÐÙðÃ4ˆ	G¥R²±Û”t5n8•%•Àùœò~‚¢I\'chIÉ&%Æ~Ë/Cò?\nàn Ó÷\0ïó^0\ro # ©ü+Ïn\"EhþK°C}q[QÙ„÷54µrp³”ðâµ¯_n;e!	È+J+öÆ§Îßùh½9­[ç	§Nw²\0‡-Œâ´kTc=Í-0Ÿì»rw6P|Ç½[Ï±®VÞúâ;iX^±( ‘ÛßŠ€xžäûëÇ\\ÌùŠ‰P“m£HÕIXì³Y\ru=Â%ÿ\0X2Á¹ëÖ±àñUäio ÏXîU«RÒÞÇ+Ú•f`Åƒô©TåN÷š‘¹X·Q†¿c²ç%‡Ì£ŽÕ­#2±w{V3HRäÜ©2€8ëõéQM=Ê“[µ>Ë¶çf+´úVœÒù1î#\"²nn‹Ü·1F8ùIÇéJšw¸äÖÆÐè*µÞp ygÙêv‘DF`ó´g®:Õ[ÅÞËû¨ŸøÛ¦;ìY‡ˆ€>QÂô©*8¸‚0Wnp;SÁÍ\'¸Ð´RRÒQE\0QE\0QEš¶Žú\\*r?\n‡I´šÚæs*í*”:­ÚDŸ¼…—hÆèÉ#Žä\Z™u{…$·”ÙôR\0ýk~gf®cì×2’&Õ­^E‰ž{UÑm%PƒŸ,~šúÜ›p%8ëš®Þ\"1œ¼öà¹?ýzžvâ—aªi7n£ô¨¶_ÇÁÏ·®jª\Zdöú{Öþ)µ¾Kè•‡÷¦*œþ.°$—¼gãƒ´Õ:ÉÏ™’é>NSµÓFÝ9zgùÖ*¡Çx8¬i“I±îÄ ÿ\0€ãô­¨.ôy€?ÛvDuÆõ_æj£4¯.äV¢ªY=,O*I–uÀJ¸n\"YïÈ\'#Ú¢Š=2llÔá±*UµÒm˜ee‘‡³ð¢SOS:xXÇDTšâ&FFÝÈçŠH®#‰v¢}jÌº$L˜ŽWVõ<ÒÅ£¬y÷ŸqBœ-¹N‚NéMTñÏûÕÌx–ÚÛR¸ŠîêM²ÂFÅÿ\0¯]Ôv±G÷Q?ïšò¯Šùñ&–ØÂ§ ã<Ÿð¬§(ô7„\\Z¹Ÿã&ãH$àg§jÍƒZ§ÌŒ1ÔñY2’@ÚPˆnq€?*Ò±y¤µŒþìŒí®¼,­LÎ²m“\\F’móbSpÄ6÷¬‰-äŽi fÄ‰Êœä2úŠÖº·–X\nÉ¾1Ô¹\0U™,ç@ZÕâš˜î¢!”sÓÜ{W6aIÕ4wG~WŠXiûëFp×S<Y!ßñ<\ZŽ×Åúž›òZ_ÜD€ä ~?.”jé,2H&©ÉQÈ#ûÃÔW#u7\'“^9Î=mÜú÷\nU£{&¾G¦iÿ\0u‹vÅÐ‚éiiˆÅvšWÅ­\"ñ‚_Ã-£|Àù‹õÈÁý+ç”Ž™>ãÒ“ín¼õæºcˆšÜâ©–áç¥­ó>³:¥Ž®ñI§\\ZÝ&Ý~EoHC‘‘_ XëÚÈ’C3G\"Usï^±áÏ‹³¢Ç½ÏO9>Wät?…tÇÙ=*¾QR	º~ñêPDUFò¤^¸%²:\Z¿t¹N®8êµ‰¢ê–ºÅÊÜéÎd‡\'-»§­ëƒˆÉùº®¹¿y3‹ŒZ’*éÿ\0~OžFà}ñŠ’v*Î|Í½:®i¶2o–_™Î\0á×¥—;›}×4¥ñ‰ü([C˜OÌæê+9Wç$‹rw@ç­jBC¸\0sØbª‹wÜsc=½8ÊÍ‘Z-¥aŠ?*õìiÛN>ïëS,œ­8Còô¤äŒÕ¯Óý,,‡\rÿ\0,Î\rBœ[c÷£>½E]ºƒÍDxÚsòœS±A-Ç©ªŒ—(êÓ“–ƒã\\Žý)ñ¯ïæ¤T\n84 c¥däo\Zv±I¹„rIê=ê7\0Æ2ýjÓ©ò×ü)\Z#åŒã¯¥Zg<©¶6Ð|î@Ò­ÿ\0Z‚ÕpÖ¬\n‰ntPV‚#¸ÿ\0ixÏÈxü+Ï\'*²Çÿ\0jwgÔ\nô+Ÿøó›ýÃü«Î&—Ëš,½Ò‘’8­¨ÞÌ©îmi\rËüò¶ã¥ij/·LŒ›0¿xŒYš4¥	°?ˆV–¤øÓ&ùÕF,8ÖßiòÜ‚\"N•vÂHNrÃõ®oÈ2©&\r2OpÃŸ×Òº”ñ$¼ ÂÝ9ÇrÆ9B¶ËK\'Èþ	0?kOv&ÊvújùÑ­±œ†ŠqÇë]Ý¤\n.a?f‘0FlŠâtûû`-§ÎèçÏõ5ÜÙ&.ãýÔ‹ÿ\0ÈRÄlU=Ë÷¨]@V‘Oª\ZÎ„µÆ÷Þ8eàóZ7ÁJ\0Ó<^ëT-æÅÔH.$`[xú×,/ÊhÓS¬½Ò4fÎéa`	*é¸5VŠYæ—V²99LJ—]”+D†òrFq\"g5»3$x{GÎ@ëUî&&ýöY:§Ë\\’~ðéÓúÔwÊL©ˆR@vÁ,ŠN©lB\'ù‰ärµì^d€ùf¨lX­Ñ£ê\\ˆm…6á@Ç¥>šƒ¨Æ0êÍš ¢Š(\0¢Š(\0¢Š(\0¢Š(Åubò\rFH¢Ò%\0…\\Õ˜ú¥ä¸ßs+}Z“_oøœ¶W#bð>•@0A=}«ÍI]›B*Å¦¸‘ŽZGaîäÔ{°IÉãóP‚Iúšpçåþº…&ÑVÐ°+’2=xâ˜Bôàþ.BÅŽ:~$ÔÆÉ§7Ê´¾R1åAÏ)~Ïq³ò8¥Ðšw pFsIT}F4Z§û@t8n´õ´Tû²Ê§ÕXŠPÄç“ôäÎÜ±ã°§í¦º‹‘\"ŸPƒþ=õ+¨ý–CS\rc\\•ÖnÉÿ\0jBSóy p;Ò«dõý*Ö&kíìãØÒÅ~&„aoÃû¼j˜¬½gU¿Õ¦ÓåÕdY\'IB‚ˆANw\0ùf¨Ýœ½‰ì\'šÒç9$Ã‘-}aÚK›GŒóŠ»‰î­Ô+iP•Çaâ¤TRÜšQ Ž=mMH]EŠTâõdmã5a²})éÐšÒ¶ñ¾œÖ&Í´÷ÌAR1ÍS6ÈÊ3Àüé‚Î GÊ¹\'+Óñ«x¹µiìcÐ¡©XÇ<{dÊIŽSÿ\0­^oâ\r\Zk9ZHÔ‘Ì‘ïQ^»$`®œ\nÄ¾·ÐÅ:åüž¨qÔWáw¡éàñ² í-WcÄšCØðM3>õÑø‡ÃÒXÎÒ@ £r6t#Ô{{W/ÀÏÊCv¨Ž¾§ÐBjqæ[2Pß1=Ç5j+–þ/º*’äöàœ×CŠöš)ÔoT\"ô†7ÏÎ}H¦átõÐS¬©ëÕ½¡¡xŽ÷H¾[‹)š&^¬{c½{§„|WŠ`òMüÐjJ¿4\'nz¯ýzùf}Ûº-jØjRÚ\\E=¬Œ’ÆAWV ‚+Z8‡IÚ[ø¼1Q»Ò_ÖçÖ)%åƒùrC%ÜDªAqìGzŸûVÕH³ÄÇødþUãú7ÄÍfåR2ñÍ\"ŒÈ2ÞüWCÿ\0S‰tè¯ÊÜþµÚ§ê|Íj¡.I-OEKÛi>åÄGþ*pÁ†T‚=yŠ|@@Ó4XH=Jäì¦¤_è§™tÙþ¹Éÿ\0ê§§Ffz]çÉãŸ6­ü\'§ÊAÇþ=Vâñž‚ãþBW©žÌø\Zv§mEp\ZÇŽ4»+.¨Ës9p<–Ü8ç\'${Vg…~#G¯ëÙ^Hl<¸¼Å–Iä\r¿ÌÒëb­¥ÏR¢±ÒêÞ\\y:Ô-ôt?Ö§Xdsòê,Gû Si“thÑT>Å1ÿ\0—éqô¦ÁÎ3{uŸgúQa—@¥-f6™/;É?8ÝýE>+KØåÜ×ÊéýÃÿ\0^—q\\±{ÆŸs×ýStëÒ¼ÖY6ÜF>Õt€“€ËÁâ»ýXÝ%ËFÐù>YÈ*wŽpsý+ÍêïP5c# p@5µ\'dDµv:m`òM¶çÍÚAR1Z:“§¾æLp>uàsXZ=ÌÊ&pEÔc«+´{Ó¯¼Gö²%¼Á–qˆ†¯Â®U#›3öR›Ðè¶¡Ý…XÛ\'§cÓ­q÷\rm*Mkf+nû˜~5ZãÄs\\Û½¨o=–Ž%òãüþñªÑE{\"m–ñ.Ûÿ\0×5‡×9n¢}„~Ó4ÚÚ0x­ž\ZiÂþjÌWW·\n©>s€–i·ð&ªúT{Á|»g©9Ívš\r‚Ã‡Ú>QéSí%UÞLÑZŸÂ‘=ž•ojVK€d¸ï¸ÈGâx§ÂÆKõýòœ6v…ëúTúš˜­žtœÆÊ\0ç•üªC!ºˆ´±?\\ápzvâµŠ\\—F”œìÆkª‘ÙËu<Ï	¬¹#Þ¸É5ë¿‘í’Q‚¯ç¥z$Â!ºr0U±È¯;Ö4¶Ðf‘”Òfl+|ƒž‡ýŸå\\X©UQ\\¯CÔË}ƒ“…EvÊrü@Ô »Y¤†ÙÙ®6‘ÁÇ§ÐR¯Åy‡Ûlû¿º”ÿ\0Q\\>·!ŽW ƒôãú×!5Ãî8n+†ª¶Üú–ág¼??ó>°ø“áû°×jý6Ê‡˜Íu6wöš„^eÌS§¬nò(¼u\'æ8íZZäöS,¶Ó4R/G°EoS_8êä°jôåoSë:+Ä´Š·öÌ‘êaoaèI;$Ž0Î½WEñ.™¯Ã»O¸@2Ð¸ÚëøwúŒŠê…HÍhxøŒZßZw6(¢Š³”(¢Š\0(¢Š\0ðêÍÀû‹×éYa¹éZ> ÿ\0˜pc\\~U– +üb¼‰¿y¥Üé‡Ã©f!Éý*@ ãŽ}ª}ªzSÕò>éüé¦«™ˆAÎ}:{Ñ¼½‘éI’Ì	ü¨›¾ÂHwn0AüjAÉèMBž\0çéR+zóôâ³½ÁÁÏ4¤à\0_Jfrx”\0ONÙ§°\n\r“R©p*\"áüýiÿ\0tp:ö¤ÝÄ+·zU+¶âË´zU†=N9ª÷`•³\0	Á\'Ðg­iJIOQò9m©Õ#rAï‚jÈnOjÎ[¨‰iQGlšsjÖA¹qZ:¾æ‘ÂÖ’Ò˜b@Ç9ïÎ+95k&ép ú*ÂÞÛ¿Üš2{üÂ…R-î)a«Gx´ZyÊ,Ä\0£$“Œ{×\'cv5ÍrâármmFÈ”ô-ëTü]¬K‘²¶ÜL§,ê3Å^ðåºiþ\0Ã¸ÞÇÜÿ\0‘W]ß¢/Ø¸Rö’Òú\"Åí²:2H¥¢<à}å>¢¼ã^ðñ·”ËlÖùFQè}kÒ.nWwþu‹q,l¬³ŒÄNr:©þð©äæÖÚša1r£+t2<!àöžHïµDÛ\nR&ïîj‡µ¥Ô5Cm>ÏÊª;Ÿ\\WG®^E¤ÉiW™×Ê¼_èq^u$lÒ±“®rsÖ¦¤Ö‰hz¸ZS­QÖ©ÓbŽÑž{Õ”R½;õô¥Xºô©Ò |¸þµ„žç­ËdX³¹’ÞuxØ¡R½kEÔ!Õ4Ä—?¼Q‡†¼•\"Ç$;×Qá+Æ‡R0nÊÊ§qÿ\0Ö­°ó	åfT#:\\ÝQèfØvÅDö17eÇºŠž´á!ÀçšÞGÍ«dÓ |æ(Ž{ªI¢ÀzD ûqZÒIŽEBÌI<Ò»,äõ›ìÖÝÑ<Ì›<`×7¥Z‹vá°FJñƒ“]—ˆ°m`\'þzgô5ÌøkræE<ŒV”Þ—-;¦_“J’1•–AÇLUaâçeÄ {1×S#g©ãªÛƒíMUq\'–æwºÕ¿jŽ›foñ«QøÄÑ`&«xqÔyÆ´XFdØ½@ÓY¯R¤÷À¤ñŠ?hÞ\Zµ~1ðøãÅ6ÿ\0òû+öÀoéZ0|Lñ*cÌÈ1ÎèGô¬g»³èœÓíªc¶sëYÿ\0iAnÿ\0S¡dØ‰?‚ß3¯ÿ\0…¥©½»G=„#ùmþ8©,|i=âK¶(8i$;U~¦¹}°Þ°T7\'Ð{T¿kŠà…–m°§Ý‰S}±BÌ£{)XSÉkÇWüÎ–óÄs^e-ðàŸàcÁ{þ5\Zt÷Œ²]HÎÈRx…?K@Žd.yÁâºh¡P9â“®§­îqT¥:O–JÅ+}=!Q„wÇ5dÄèjÖßn)1óS‹¹“Øuœp}ë§·†j\"›oÌ~élf±m° {Vo‰â’ñmR9„{2q·9®è>XÜÅêÎÁôø]\næ@o0‘ùL]1QÃ$ó)?+y˜°¿Oõwx>£\"¦C­[ãÊ»9’°ªöšn:ž.žò¶Zà±í½ãô¬ÝKM–=>W£*Œ•(0Gqôö®GûWÄQ&fþp˜© ñ·$Âµ&>V8^×:žï((ÙÜãüE¡,;ÛdD½ŽI€úTìjòëØå¶¸’)¤ŠH*ßÏ=Ç½}wnIó\";]Gp~¾ ×Ÿø›Ã‘_@ó[§•åd\\±‡ŸÖ3ÿ\0ŽûŠò\'Kª>“˜s~î®çšÿ\0kð¦==9¦ÜÃ-µÓÃ2”‘:ƒÓê=ª-ýóI-ë¶îš>¤{f¶´íZh%I`™â‘9‡O±®]FpqÆjÜ#Ì±ÀŒÎÄU$úQ­î´’³æÕñáo‰ïº+]{÷ˆHU»QÊÿ\0¼;ýG>Æ½aY]C!¤dr\r|~’4W&lÈ„‚è{Šë¼1âé´;ä—}±âH°zB=kªž\'ìÌñqYdd¹èéä})IY:5ö®iQÞi’ÈÐ?U0(ÝÔŒðE[:zyÆHåž7n¥d\'?žk°ðšiÙ—(ª‚°0.Ôû´\\þ„RùWóóýùÿ\0ì¨à^\"”&¨„ž|¥8¬£0Ï#ƒW|H§ûR3ŒƒñëXÅ	bA?y2IÉøKÂA·¨©b˜\0xç5šªpwuíR«×µ-¶± _q^xç4àê@{Žõ@3õçéOYNÔòÜ\re\0çß4/9<uô5GyÛš‘ä“Ï¥MµH`®Fr)ØàvÇ¥TY\rH\'\\\0Ã½7µÃwnäÄã§Ýæ«Ít‘‘–ÜqÎ*­ÍáéÆ;ŠÉšrsƒþ5Ë:hŸA‚ÊS=o¸Ð“T#*„(ýjŒšƒ7Ÿ¦k*{“œ1ÉªfääöÇCSË\'»=¨B5h£]¯‰ÎOµ4_u¥c˜Ž½Mù95>ÍÜÓœ×ûaÜIèiâü€67=ëŸ­Ï÷°M›¡óô7† ÝÛ¿CÎ=ªü\ZÌŠ\0,À®KÏ \r9\' (=zÕ(Ê;39ªsVš¹Ù5ôw‚Æ6?dj\\Áà¦H¿¼œàJÎŽì	l‘Z6÷Œ¹ÃqÑ‡­oORß8+eXz«ÜÑ™öúœÒ9È’xòª§ úƒŽ=jÄ«r/#,\0ÿ\0X{7¡­÷Õ%—Nx-|¨na\\-U³ð‹ÎÉq¨]±sÉXH‡¡=ÿ\0JîŒ©âu‰âÉbréë±œ–¶asÜ1Ïzc\02‘ÇÚ¶n<+nÇ6’ÉúägéU‡…åÜ·¬Ëß\0Ö£Ø;1Íiµw{˜’ºŒóZÛð½”¿k7r±¯	œóW­|?enU¤W•×»5n\r¨ƒh\n p\0é[B’ƒ¹ÅŠÌ=¬\\cÔ¾²îS’sõ§‰xëYa¶°ç·Z$ÉëŸqW$y–eÂÄÐNj$ôÇëJ:OJÌ«\\Èñ6°zoÏèk•ðÑÆ¯tìp€}ãÓéžõÔk7P:¬Dï#$ÐûW35ÐŒŒP1…ÅaS\ZqåZ¶{8<®uW5M¿>«DˆþnxÉâ²n5‰hÏðñX“]c‚qTé‰ÀèOS\\2ujY7¡ïQÂÐÃéýæÔ·ùnXþ\'5¼À$±&²’ÃqÁŠEnO¡¡Òåètªš\Z¿líœS…Ñ zÖhnpGZxsŒëøVnšÜ¥3Mo$£¹©RðƒééY%ýóÆsJ_¸àÒP\Z“¹ÐÃxw»õ®£Fñ4ö®©+y°w\rÉJó¨®\n	ëÒ¶m%?\n9¥tÉ«JuÉQÛ\rÒOl“FG–ã úÓZQº¹Þ™4‹ËvÉkr%Lÿ\0tœ7ô«ßlŽO#·C^½	s¤Ï†ÆÐú½iSètvóp9éUï.Ÿ¨Exª¼žÙÇ­Vy‹»7rk½½,pšBT8Èíññ+8I•ÎzS¼Üç5#4A\'ŽMPc‚:qš¢³c’jO7$õéRØì™iÁ¬MBH ¾P—RgËP2N9ö«×ºŒzt·W.ÆIõ®CÂ·kš…þ»v¸Ü|‹u?Àƒÿ\0×\\×ÔÚn.[$dx›Ã1ÞÛ4öˆ¦KF>O¯Ö3ÿ\0Ž×™Énö³¼s®×NþG>žýëè¸ðâXN:ddo¥p>&ðôWv¦æÕDaÿ\0žž‡ýƒÛÒ³œ5º=œ;›÷uÞ)nnRTif”áG$ý+Ð®t¼ás{~ÙÖ®FÈ€l³×ã]ƒ¼)káÛ/¶Ü´rß:e§\"1è¿ã^{ã-}µí}X‹XsC¨÷\'ëZ4©ÆýMUic+rFêßÌÁ.ÌÅ‰É\'9=~µj	ÊãœúûUEB@Ü3øÕ”ˆ…àW3žºžº†‡G¢ë·\Zlû¢„\'óïï^•k¨ë[$¶wæH¤faøc5âÈJã?Jìü®}–ýlnt7åÏ[ÑB»Zt<lÏ¦½¤wêwÚÞ ^óßóGö¾¿ÿ\0=æÿ\0¿Æ¯åE£rÿ\0wô®hÏž±çÞ#bo`ÁÏî‡_\\šÊíéí[Zì\r4ñ:Ÿ/¡¬˜ìØœƒé‚MrÎ-·cDÕˆ²ÜóÍ?8íR}™°6õšV~j\\ÇÍæ7žØ9õíOP\'Ÿ¥4£«\0Gÿ\0Z”þ.Ý;T¸´;ÜP=*EE žþ”û‡ê\rI\Zm9ã\"¥¦…t\0ÆFTwƒQÜ¿–€•XÇËÐœþFô“1P~àÇOÎ°­)%dK+¢ªÖæ—B‹»t\\‚5™w0T$žAãœV¡Fâ,»z ÍWÿ\0„k[¿“6ºMì œe lTÒ¥\'²lúj•á\r[Kæ`’sÎ9¨÷‚9®¾†¾+¸aåèÓÆ{~95¡Áÿ\0Ë÷í­ãí\\)ÇåšéXz¡Æñøuö×Þp>`äGù»úW§ÃðO^6êÆ!ßæ,•hÇð2ôæêÖÃž«ðªXJˆy¦\Z:sA¸–ÏjBÄÆAîJöØ>(?¿ÖÉÿ\0®vàZ¸¿´Ð0Ú­ÉúF£úÓúN†Úøe×ð<$ôàô1Á\n¤’;úWÐIðODQó__0ôÊéS‚ÞòÞûþþ/ÿ\0T°s3yÎ¥þãçbHÁ\'?J³Ìwsž¿Zú~\røeG?no¬ÿ\0ýjü)ïnÉ[Òë¿ÿ\0Z‡›ê„³ºK£<.ÞCòÝ+ Ó56Cå¹ÌdãžÞõëiðŸÃQãlw|zÎjaðÃÃÀ‚ëúmÿ\0Ö¨†¤ÓB©œaªÁÂqmwœ‚G ò)§8µêQøGŠ0ˆ.@?{Óô¥oiMšè}$á^„iÊÚŸ;RQæ÷v<¤‚CÚ€Kþµz“xK#[¡ÿ\0áPŸ‡¶=®®à¿áG$‰R<ÁÍÍM÷ë^†ß­Ü¿˜}P\ZþÒ\'ú½E¿GøÑÉ!ó#ŠdƒÀk#RÕv«E{ë^‰uðúõ¢+mü\rþUÊ]|(×ƒ¶¹³ÿ\0t»þ8®:ôëKH­W.–2ç­-QçóÌKrO¯5—<øÆz× Ýü0ñ@_ÝZA!ÇðÜ(þx®zëá·‹\"\'~;úfèÿ\0È×\"ÂTŽèú˜aä´šûÑÆÉ#ó3ÐSO\\ç\'ô­»¯	ë–jMÖ‘¨ êI·cÄ\nÆ’Úh›C*Ù£*Z¾F·CzrÚIüÐÜãÓƒò03QíÈ´¼‚\0?0íIÅš¦™)b	0iûÎ}*ðsœÑ’Åg(«Ùš&Oæœf”9cÉªäíòiC´dpjyu\Zw-	9ÉŽ•³§I•í\\ê¹ÏÏzè4¥Ì!³òúÖsVF‘±Øèò¸µÔÄLTý†C¸œuþUƒ{}}le™Bªàn7žüU)ÃU’ÂÜFŒ¹‡nüVàVXU‰(\0Ü@¯C\ZjMŸ-œU¶p¶ºkò/Cœî	`U€çÕENb§S¸}kºç‡bâIÇ>¼šVþuXIŒw§òÔ\\E¤äTÁ²¸ÅRŒá¹©·tÇëEîCÌ¼g¬Ï¨_\r*6ÄP¹znnß‡µwzDqéº­¼xù\0êOz–÷CÓo¥iî,a’çG9ìk‘—]6Ó47\0¤Šqµ¸¬¹Î©ÖR¥\ZiZ×ûÎ¦{Ð$ŒzË’øE1‘·YeX ×96¿óñÜU\'¼¹›\"elô!Oó§Ê£½ŒãIûº›ºÅÂhokcs·N˜à907üó\'Ðö5ÀIk$4s©GC‚ùäWMj5Xä-ä+Fãl‘ÌÃl‹èEZm5deðÖ¥w vÌŸîçø‡½qbVª_‰ô¹lª$ÔàÕÎV8ÀëSmÚ;à×Hº ågÏÖƒ¡K´ùkú`â¹¹ÓÕ4z¯Ý[á#9ëPùÑˆd;ÏB\rj_ZMe YãhÉèHëþ5—_ß%´\0—sÉ\0Ï_¥uR‹nèóñ3Q‹æÚÇ´YÝý¢Æ	¹ýâ+Ê§ó~µÏDÍÆƒåEùSü×ô®Û&æcøå[¨nTlÁÇë.®Søò:êõKq3ÄÌ8ÅfÔÜŒWêòÉ¢ãâf.¡8ÇÊ¯Ö¥]M×ƒN¼U“eÞÔ†ÍzŽ)*Ì~Í]J2@xÈ5aoaríP!’AíùW¦x;áõ«YÃ¨k)æ™è­ÎpbÞþÕÕE{B%Tqº}œº³ˆôûi¦oTCõ=vïf!®åŠÝ{¨;›ôãõ¯K‚m¡X­¢Ž(—¢F¡@üK]*ŒQÎ6Óáî›	V¹žy™NpEüºþµ«„4+w,šlÄä™2ùüó[´Uò¥Ðjr[2--­”kxb´hùTôQT&îQE\n(¢€\n(¢€\n(¢€\n(¢€\n(¢€\n(¢€\n(¢€\n(¢€\n(¢€\n(¢€\n†kh.mÄ1Ê¾Ž¿ME\0s÷~\nðÝñ&çC°bz²Àª1ŠÀ¼øCáK¢L6³Ú±ïÇúæ»ú*\\\"÷F±¯V™â÷ÿ\0ã9:f°G¢\\ÃŸÔé\\†§ð‹ÄÖ\nÏ^F½\r´™?÷ÉÁ¯¥è¬e…¦öV;)æ˜˜u¹ñuöw§ÎÑ_[Mo*õIP©ýj¶Óë€=kíÝ>ÏQ€ÅkÌGø&Œ0ýkÊüað~Î{inü.¾EÂ‚ÆÐŸ‘ÿ\0Ý\'¡ý+–¦QÖ.ç«‡Î£7ËQ[Ï¡àJÇ\'#\0w®’Â\'6ñ†}©ŒáG\'ñ¬XíYo„,¤Ø`Ãzþ5ÕÛÂï$pD>w!PW™U¹>[ksßŒ¢“—MÎ·HQká=û»û‰äªäÔš”p:ûT³¨Ë¶‹ý]ºÆ;ã¯õ¨€#Çjõi.X$|>*¯¶­)÷ƒ<zÔƒïÒ„\0Ž”æéõwîs½D\rÎ^µ27#?­@:ŽÆ¤FÁÏAïU1%Ø´ ‘ž´üžâkë]¶³R ùžö®fÿ\0Äw“‡ØE¥sTÅÂ»ò=L.Q_«\\¨íçÕmm™¥\\õ\0s\\æ©â¥!¬â”†Uâ¸É¯Y˜îsŸz¥%ï£W±Ug¶‡»G\'ÃR·5Û7~Õo¼1“œmQÇÒ£}IÈ 9#ÐW<nÜžqJ%cÉ8\'õ®w5«¹éAS†‘F÷ÛHä“Ÿ­KÉb	={gµa+08$Ÿ¯j³r9¨q±¯6š2e¸éÜžµ«n¦NTb¹Û&i$ äœbºûi®®#³Ó¢3]0ÉÇG©=…5íevcVª„o\"æ¦E­ÞE§]Âg‚àíuÎ\nŽìb:ÖE¦‰g¢<°Ù\rû]—Î~YÀ$g?…uí4:„–v,ú„Ü\\Þ à°žÕÎ>F+ØÃSöqWÜøÜÃíæù>Ìfãè(Ü} p>´»k¦çœ3P}¾W\\“š¡æ–8^kya†e\r4[È$\0NZ™DQÝÃ~áA¬%‡¼¹›ÜÖ²9õŠyH±ÿ\0tÕ…Ó._$¢¡üÍW®5[xóîâ\\vg“qâ­6 BÜt©4}Zìõ+ß}©¦í=Â“Ü*ô¯WðÖµévÖ×ÄCÑ€à}\rx,þ2äý–ÊW<òì\04Ûêö·!üˆ\r¾yˆç\'ñ®šqäVŠ%ÂOâ>¡‘È4µå\ZÄ9âE[£k)ÿ\0–3ýÑô=+¶¶ñ\"È ¼hàÿ\0MÅ_µŽÌ‰Q’:\Z*„Z½œ€7f{0Å[I¢“ý\\ˆßî°5i§±›MnIESQE\0QE\0QE\0QE\0QE\0QE\0QE\0QE\0QE\0QE\0QE\0QE\0QE5Pe˜îhÔUw½·O½*þ5Nmb4RcŒ;±Ú*%RÝE³Rª^_Eg3XBŠãõŸØiÑ1žú%aÿ\0,á!›ô¯(ñïuÍöšdmmlü;“—aïé\\Õ1qKC¿—V®ö²9çÍÞ½¨^8<ÎAÔŸñ®Ãî¾{¶Kažì{W=F±F7;\09É?Ö»x,³´ë{}Ë¿¥ÉÆXÿ\0…yt`çQÏ¢>ƒ2¯õzÎ;½>H›–$õÉõ§A÷¥OQ‚¡Í+«(\'i9ô~•è\\ùQÊ@\0ùSÉùyéP©Ú¤¿Ê1’Ç ¬MO^X•£·9n…ú~UZªž­8l%LL¹`j^êÙFÍ#Tg\0×1y®ÍtFÂv\nkâõä|—Ï©<þ‘$íä&LOØrTÿ\0…pN¬ëh´GÔárê8Uw«5f¼É99ÍfOy‚vœ\Z©-ÞyCÁ5Q¥ËrrM(S¶ç{š¾…‰.ÙÈÛß­01=NH5á³Úž¤çŠÛEÐ‹èN­ÏŸJ™X†*°qÔ~=©êF~\\àô÷õ¨jå.û‘€úzÖ¼—SùPŒàdžËPiÖ^ïò[)æFì}©¯JÐ¼/\ZZG6¦’[ØuŽÜq5É÷ôZÏ‘Í¥L±ªt!Í2·‡|9-ìmöwZGþ¾úAòƒèƒ¹®¢[¨tû§è¨Ð[·2Ìç÷³û“éíZ%Zâ$Æ‘[Ä\0ŠÖ1òF?Æ°nX´íŽ™ÇÖ½\n4cO^½Ï‘ÆãêbåfýÞßæT#õƒÇ\'½Yn=ê\"=±ŠßšçäG¥.ÑéN9Í\'4îÅc‘½ñ-ýÀÙŠaPNíÀG·¥cMs©\\×7§’cùR®õpIã¯LÔ‚O,¶ì¶5èª1Z0U$¶)Ð¹2î,}F:rù|ü¡yãŠ´/)vPK\01×]!š=ª½„z\Z,]E¸ï”“õ¦›„\0Ðw¡™‹Â»sÙyæŸÉµB&sŸ¼8¦°ñÝ”ñÕ6V²™\09\nHã¥^²ºÕ,ÙÚâhp?…øüª®f‹ƒé€ißmÂÈr:¨oåMÒF½InÎ²ÏÆúí²ííî@ùÓóÐÛü@fó]Ø:˜ÈÝå0<õæ¦ñ6ŒÚ}iÐjB6ÁBÈÃk)î§µaW\râ¬Ê§W–K›c×l¾%éª{q{H¤Vý¯m\'ÀƒU·|ôW?­|ÛyØî>Cºrc~Äz~1O‚ïn0p2ö¯%Ö”]Ÿæ}ËhÖŠœõ4^\"g\0«[ÉŸî·ø\Z°ºéÎ\Z\0Ýþµ|Í r\nÈêGub*ôZ½Ü1_\\í!ÅuÓ—:÷g©åWÁÔ¢õŽ‡Ò\\ø¡}5 ÖíQ úþ5ó¯ü%šª>ögã¡õ©ÓÆZúŽ.þŠkGí#¼‘Ï\Z|ÛEŸC\rbÌõªšzê–mÒuüA¯ŸâñÆ¸3æIlÃ=<¼Tãâ ¸Ì9úXºÓ]–m^Ç¾\rBÐŸøøñ4áylzOÿ\0Šðañóø¬¡ÇL\"¦¥Ý§+™Š_Y—T5¨öGº‹¨	âx¿ï±KçÄzJŸ÷Ð¯Õï4ý uýà¥ÿ\0…l¿~ÅÉôÞ(úß‘Ù•»éæÇýõüé<èÿ\0ç¢ßB¼üSµ\rÎŸ&Ü8¨®~/X[Ê´ùØðZkÞÈ‰à¥”~ó£ÿ\0ž‰ÿ\0}\n<èÿ\0ç¢ßB¾“âåœ`ÿ\0Ä¶sÈÀ3Ò­§Äµš0bÑ®X‘ž[ôªöòþ_Äª»\\÷Cq<Ëýô)\rÔ¬Ñø¯ÿ\0…‰pX…Ðeõ”MoˆWíþ§F?í\\\nO%Ñ}à°’{_î=Àß[ùoàÔÓ¨Ú³¥xxñÆ»\'	¥Yz+±üp)ßð•x™ÏËcdão#J­KÈµ‚“=³ûRÓçè¦˜u{aÐ»}¼\\k¾.fÇÙ§—c!}iÇPñ”¼}šûžÉf+7Œ™²Ë•®ä—ÍÆuˆ±òÆäûâ£:Ï¤¬õã»¼c æÓV=ÿ\0Õ¢:aÒ¼Y8eŽ¦sýùQ­fñu{3HåÔºÔÞzóë¥FO’¿ï\ZÏ¸ñm¬\0™oíÔ²GæÂ>!—ýfŸ1ÿ\0~é?ÄÒÿ\0Â¬©ù¬#ë›¤ÍGÖjË£5X\"Þª:íGâV‘b‡Î½¹”ŽÖñ3W{ñ§NVÛk¦^Èäà4ß(>ôãàm_½¤#Óý-*7ø©¸ÃØ£gÒxÏõ¡V{Ê-„°Xo±U#óâî­0Åœ6Ö ô%KÔ×-âkT®ïn$SÑP•Sø\nìîþß¢&#¯r {ü¦¹ùì?²w#Y5±é†R?\\±Tâ¯Èþc£–·/rªg;mmuxAPÈ‡«ÊØü‡¥lD±YBV>N2]ú‘Þ«Ï||Í×€ôáP=äV€M~0KqÔúôÕÏË<DôV^G¬çOÎ|Ìê´XRj7cA0§·÷¿¥1üic,çÏ2«òçñ®JÛÆW±jy Bñ´/PFÓÇçQ3†¥·´·¿ˆd–%•Ç³Þ½(aÔ#Ê´>gŠuê:“ùzì>\'Ò˜ô’¤öe\"¯Ã­YÎ@†î78ÎòkÊ#Ômå•aM¬pÊÀçúWApYÁ—#(-†ÜAôÏ¥aˆjŠ×©Ñ‚Á¬L´ºGA©ë’Jn|¾Aç“\\Ô—$±%¹²“ÐçBI	8\'¯å¶ê;¶}e\Z0ÃÇ’šK’GÊ@ÅR7H¡R?\ZcÞ˜ØÉ,ptA(•/y[¹ÐkZ,ÙpjºH²H?}Ã›¹úW:a]‡¯Ïak-°Š9â’cuëù\\<§—„8öúWS…ãÌ¶<ºX‡F«ÃÔ~ÈƒqÉïšp~@ƒQ€G¶{zÔˆ8\n2IÀ©5‹KsÒH8ý}+wHÑ^òXLé!Y#†0KÊ}½½ëCÃ¾¸½¿T\\œ8WÎØ‡÷ÜöúW§é¶iŒÉ¤±šõÆÙµ?î ì*#	OÐáÆfðêÛÈ‡JÐàÑü£ssêK÷-1Û{·÷šºX-Ù¦k›·i.[©nßJm¥šÛ(Ûó7RÇ’jú¯šé„#d|¶\"¼ëÍÊnì†–$vÍrlI>ýk©¿.ÆfÆHzäMÄoÃGÈá«T®aqç§œÔžl88Ç½FíÆ€{Š:‚ÐŒç=hÉõ „=$¤Ú¿óÑj¬ÇsËÚYI˜ÆšÁˆÞ	Á\'šÚK\0BãdŠAÃ”ŽÙ^+Ø0ó2£XùRû{ç¨ÏlÕÔ·µ%÷1ëŽM6HÐÆ _Øðj!\nÅA9#=)=£Ð¸žRp¼Á\'­\0¨R	^¸öª\\½\\Ž)»Ù‚2y9æŸ0¬‹²„J‚NAÈéU$Ü;rè8õ˜»bS´˜æ¤)($†=N9¤#É<àzTŠ¬\0\0dŽ‡UõŠ!Û´ÇÖœSn\0éÐÓ‹w\r™]-ËÛ¼7)ºÞCzoP}kúÒâÂ@\\o€ç(8Çlújë®Ð~llPê®„rT˜Çå\\uð‘ž«Fvaq³Ã»-WcŒKÀ#Àn¾†§MSaÁ8öóZwž\Z¶˜îÌ.Fp¼‚~•u¡ê¬J\"ƒÕx?•p<,£º=ªy9y\ZcTnïcO]O¶îk™qs>tzƒÅFoNY:/ÌÞ8ª}\Zü·ûH”œç½8j#9ÇÎ¹}ŒrI=©Eþ3ÏÍO²mÙ3EŠ‘Õ¶¢X“¸œpqQK\'*ÄsÈ®`Þg©ü©Ÿl\'•ÉÏ\0ñMPwÜ2;ltR_ƒœœãÅ¹–âeŠgvà*Œš×ðŸ¯üBŸÚò}‡HŒå®&Ýôè6ú–‰á”ò|5§¤ÓŽ\råÂäŸ úÑì¢¾g5Lz^§+¤|9×õdY^ms¾—ñæ·—áÆ…bêÚÞ¹ndOà„™öô§]êš¶²Ù½»•Áè»ˆQíŠŽ$¾	Ï\\òMZ•>¦.swÛåþfš\'‚¬p#‚úìŽáüzÔßð‘hì>Ëá°Är\Zy‹T‹E^0:òjq£ Á+ÏjVSZovÅoíâÛAÓ#=‰v)ŸðœêøýÅ­„@ôÛ\0â¤þÌ‰GÝ¦9\0Î9=(ºìC•õdGÇ>#l…¹	äm„T-ã/8?ñ1‘AþêVŠû¸5²@ÇBit%ÙîRoø‰¸mRçëœTo®ë²ŸT»Çýtâ´šqÿ\0×£ìÈ:¨?AO™!]Ú\ZËHKê—eO|ÓúS|íFFËÞÝ0ï™­meÉÀ©E²ú=©©ÜWÔÁxÜæ9õrM/ÙgnÜw?ã]\Z[¯ ÍN– ô@>´s2nsb”mwãý£HlnW¤’?Û<We¢œ3VÆ6ÀÏ­5>¢lã#¸Õ-u¶¡y6Êx«ÃÅwsD-|MZ¥‹\r§ÌLJ¾á…mÞéh\",½G9®Fò0¬F=x«M=Â-ÅÝnrž&°BÔô¦óm/ÉïËãºŸBÊ:<¾G,ORzŸ­všä é1Fã%$Êç° gðà\ZæÌA—åO¨æºi$£¢\n³”ÝäîüÌ¯\' ÷\\Óãß	av‡ñ)Çÿ\0®µŸ )Ï={S\"±o7tŠBƒØõü*å.Xó>J¤”íšvæB³Ï\Z†_¾þôù	eÇ§ëH\0cÓ¶ûu¯­UÔŸ3>ã‡\nj¦ëÆG8ªå	Éü9­œ{t¨Ìg®0=êìuÚëRƒ&ŠÔ‚Gâ*ûÄ}*»¦3‘úV‘šj÷%ÆÖ±Z7h¤VR	­]HÁJÈ ‡PÀã‚=j³§1ï[šDþe«[}†©æ6™˜SÔq×ÿ\0×^†²‹j]O4ÂÊ¬ã¼N~ÚâàC\0g\'îŽ¤×}áŸ	I9iwF‹ýõÛŒ¤\\}ÕÛ•jhÚ4wQ	çHíl‡šÚÓŸî§|{×]~rGÄ-ì¡â;tû£ëïY¸*’ºØã«˜T£IS[´¶Aj,ô¸Ì6YË»}ùÏ«ÿ\0JÓ°¸´’[‹kYËlBÊƒ¨=©ÑT\n£¥p¾+š\rx®Ï\\²ÿ\0Wr¾\\ñŽŽ£ëŒÀÖ›h*”%ˆ›Mêÿ\03Ó#yïVy¬ý*úSN‚òÑ÷C*äOð­%ÀÆƒ¦´g=ã)çµðô–|Üm	ìkÇ†¿¯Ä	–Ø0éÊ…zÅ{‘ÿ\0oó¢€:ñÉ¯E¸Bw3)0ìó®ÊPN7&çp¾5½„í¹±\\Žü¯ô©¿á=€ãÍ±•Iî¬\rpÏ{« í×,÷¤-UÞóS‘Fù÷c» ?Ò¯Ù¦=´=¼s§n9ŠàM¢“þ7þyÜß5çMu}¸àEøÄ)>Õ}éýú£Ùù~$êwM±\\Bñœõ\'ÚB€£?,ý*bÒ)Ãž@9éGØ%F€äqÁÝ¾ä×LXˆÐ=	æ¢.ïîrz…îjÇÙ]X—RT‚šhÂ¦$B (“Ó@¶¤B)øwc¦{\Z‘mˆÜØ\'ƒŽ1NŠcÜ\0ÈÜJ·\nÄÀ$õÍ)T[4¡EüLX­‘ÌsŽ™æ¥Ð*ýÑœä·­\néÁ‡¹éS‚¬	sŸ­rÊs{ž„iS±Q­Q‰!yÎÑe·&2ÀCš¸\0ùŽ=i¦æ4#o9àÏ4Ôê?„R£Cy•¼™„ck‘Ï­HMÊ©R§’zæ”ÉpàŒ)>½éþSY\rÆtÕmmN*‹¾ÈRí£Áx—#¦3Nûhv$Ær8æ§ŽÖ?.XƒÉcÚœ!Œ®à:Öë]ÎGk•ŒÊÃýNö\'¡5RdŽU!­Ðdã%kU ý°ä™£ìŠÿ\0Åµ¹8>”8Ç¨&ÑÌ^ÙB–ÌÊˆ\\ê8¬û„÷b9âŒ($”tÇÖê¶Ê4æeÁ €OBk˜ÑvÍ©””ü­#Ÿa\\ÒŠçµ´fÐ›Zîkÿ\0fÚ¡â5Èþ,\nèôMÀFÚŽ©[O\n£™›°¸ïUáÓ¢žá\"E?9\0ãZµ¬Ý‡1YÛöK1µz“ÜÖ5¢¡¶ìéŽ!½±.¡¬\\kSüÍ²Þ1ˆà^1éZ’ÎÈÝOZ«§Ú#âdB‡=‰®«O³ÞÀu?N•Ì‘\r¦VB\0^k ·ÒNÐJñéZV)ŽqÞµŽ8â¦Nú¢yÌ_ìà`Š†[\"‘Ïl\nÝdààTƒ½dÛa¹%¯éíUžÜ€p:Vü±­T–N½-îÌCONõCŽ1Èõ­gƒƒÇ#œŠ‰¢ÁàsKat2ÄD§nÔyY8éŽ˜­$Æ#ŽŸ•;ˆ¢!õàŠzÇù\Z¶!ø>ôõˆã©§¨;,@sŠ#îz{T«N?S¤[»ñEõ%ŒD2¯<uéš‘SŸj“Ëªˆ™^áGÀóÇzóLî‘Â¶	<Ç¥z=çÉi!=—5åÚ„ ÊI ‘œÚ´Š¸t1u_•x$óT·tÖŸq1’Wã\'·<â¡Þ›”0Ç¡Çô®ØÆÊÄêH\0Q€2}{~ÆvÞ™¡™S$Ã“˜ã8#ŠÃ¥+w=²)âúbÈÁ#$ö«<ŽàŠ‚&;>µv!»Àïï^“>Ê¡L™¨ðX‘¶´@Ž	¥û8ÆGQÚ±»:š¹’Ñåy¨$^0Ek½¹çŒâšmc™nØ—’O>•p“ØR²Õ˜ðX=Äƒb–ôÙèšºZ›´e±ÏÉáîOÿ\0Iea6Éw©Åˆr\ZÞË8i÷œz{UÓ~×Wlì	è pzJôhÑmsHù¼Ç3Jð¤n£=Ì«$øUPF£ ­HœŒz\nç\"»V¥^†ìc¯5Ôô>u¶ÙÐ¤¹5•âÍ8jÞ¹‰Fébhþ£Ÿåš|7ŽxÅ][‘·có¨”n(ÍÓššÝ3Í¼âgÐõmuÿ\0 ûƒ‡\rŸÜ·÷¾žµìp6Œ1Aëï^¬Û%ž»yj§\n¯Æ{ƒÏãÖ»	x¤³}:íòöë˜™ÞOOÃ56ù^ç¯™áa(,M>»üN¹óžÂ\rê6’ädgž†¼Õ¡pÙ\0Ÿë[¾\'ÕN£¯Í(DØ§b6;zÇYd?w=yÅz´ÓŒON¥-·P€GSM1„ÆñÛš²|×8Æzýj³DÎÄ>œš´õ$°FqÞ“ÌOîÔâ|§¥StÒ¸¡¤Å€,	ÁÔûš<ÿ\0˜|Ÿ*ñóuÍRX)À8äiŒN2v‚Ünn?\ZëL‰É	†äNÔž`TùNþrr*–\"1¸ïÇ¨¼æ\'rÁúZ4~¡æI\'–Ï‘ûÙÇsQ¼˜fA96Hö¨¼òØÐr20zÑLÙU8<J4¬GW€ÍòóÏ$ÔqåN×Î	ê;ŸZ¶,³‚è95!³Tpæî\0žjlžãæhY\0$‚r;œÕ¥™6‚0\0v§I\Z4{U1ïÜUŒ+œsÁëÁ¢É»4\rÂäç‘ßÿ\0´e†à¸ÎN•eå~BG\0tê@§‡]¤äàsõªV¢Òr»`sÏzb¹W `/b*¢¾1·$£Ò¤IŠ6ºóF©äæVÆXà„sÅ*ÈzòäóŽÕ	¸ŽPc¡ÚqŠ‘nb9çŒƒÈ4ÆSÕeìç$åsÁî=«˜Ðä#W$Œ…¿Q]V«gHªÈ$c¹=$I¦ÍŒä¦+ï2ÖÌôK;¡å€\0ªÐâ©ÛæYÉ<œ“Ÿz¯…|âÙÃ&êGJ’ÖM²sÞ¹qß4¤ìŽ¦Âï×Þ».Ý#d2p\\à:â¹m$‡u\rÓ5Ú¯Ä¨Ë ÈÍ`Ëf´KíÒ¦®*­´«,jÈrdUÕ”®…b=ù¨z‘ßÖ¬‘òñÉ¨™jÀ¨è\nð1UÚ.x9úÕÆëøTGd‚ãÚ¤e&#1éQ4|cUÆ×$óQ1íÒ… ŠHWš”ƒ“Žx¦àŽqÒ™$e Í<\'?NÆz\npÁÿ\0ëö¡\0ÆÆjUQÛ¯ZPFzñR(öÅ\0\n˜çõLœqNA‘ô©€\0d\nkA3#[o#Hºr\08¯ ºpÀ†÷¯ZñdžW†®Ø~^ƒ½xÃÝàåŽ¤àVê2’÷Mhrsûáä€õÆ)|»ç=©¦ú<à†Áô)†ä¾J¢ž8ïš*¶·G|êáâ·¸4³`úT®£O¿jNð~e=Ç|Så&B1–mÝQH ‘™I;2xÇ$ZßØ7IÞç\"Å¨OššZ\r‚ã§©çüŠÓ·py-Š¢öBàï¶aäà£p²P{\Z‰f–Ðì»ŽHÈ?Ä¼~¼ÊØgeò>	§Z;Ù[OqV§RÀ}+›MZ%_•‰b0	?•X_]Æv¨·‡þzM‘ùçô®U‡œ´GuL]:KY\ZW–Öü 2ÌÇ\n€d“ô£Î‡M\"ïWÄ·ÙÌ6}V?ö˜÷>Õs1Ò­wé`ËtÇâEÉ /aX\ZŽ§su<Sm1Ì‹‡=˜ç®1^-œ·>wšÊ¯¹OnýN’}eî®žiä/#zlvúT‘j žƒÐ{W=kyo2m¹UI8åOÿ\0J±p\"¶HÊ»yŽp±¯%¾‚½d­¡ãs%¡ÔE¨Œã¿¥hÅ¨Ž>nk†Oi¼|Å¶²§!O¹ÿ\0\n¹ÌªHç¦¬¥LiÝØïbÔ8ÝŸLÕ±©€H?N+Ïã»¹!v¡Éü¾”ó(bœ\nŸd\r¢×Š™gÔ£›®ääôÖ°­¤–ÞVšß í+»w@jyn\rÌ¡d¶ƒµ{u 2°\n©ócîç[F’KU¨ý´Ôyvê¯§ÜVX3dœœRˆD@í9ö=*v1à$ÁÎ:ûRïˆ¨\nH$àdv­„I†xÏ#ŠFLç¡Æ\"®£,Œñ‚sÆ>”¤Bå\00è3þy¦\'±H@’sÖ—ìÉè:¸<|Àf—l^Ô•–]n™‰H²Ø?p÷¨š)Ü|ÈØ#?7Pkl²¤NU†ÑÓÞ–7\"2w€#œšèWÜÏìdûÙe8ãÒ¬C°•¤)çÒµžMÊ~MÝ2\0¦¼1í.Ðœ`þ\"šopÙÒ{`Ê\n…åéÉ÷©ƒG–Øë¸1Hl¡b©Á?6[ØpäÉž;`{Ð	àH\n(+q¸9Àç5TYH#;Y[ù²xÿ\0ëS¨I#©ëô¥q—¾R\0IÈÏ ûU	XüØ,óúR™q¹7 nÆ›æ«…©;ºÔ´6åW\'\rŒsßÞœ™ž©?…XÙ9‘ð\0ä(É¦ŠÒ\0Ä³±\'z¥;ŠÅU ’)ûËÍ;d¸\'F8I«ÀÁ!2{ŽÒ£r$Áòº½ñB»¼qÇ‘æ³8î\0Æõ©²I¶?‹cË$ëÓ©MJ°§–8\'£óÞ‡°u2µXiònbxþ#ŸÆ¹}\ZðÉª¾;Ÿ¦3Úº­]-2Eä:ðA®ÃàqW¦\\ò=qÅdô™Kc¾;\0\nÆ8ª»ŒnFz{ÕÒC8VžµölÐ‡Ü¤ž}ê1rÕnŠ§+3gCÕL¡‰\0kÒ4ë••TçƒÅx\\Œöòp òk·ðˆüëgpq&>FÏZãåæV[£Vºž‹£Lc¸¼²|o¶“å¨Ü©þcð­õéšãoî?³üO¤ßŽ ¾ìÒ·@¯óÅu¨ãÐÖ7.qµŸrF$vüj8\'#>ô÷ðªï\'qY½ÉÇž\rBÍ‚G½\r\'áP4™àž¦§¨Y±ìÞœTOŒç\0æ˜î1×ŠŒÉÏô¦!ÅñÔàöÅ7?þºa“4)÷ †÷¥ry¨‰éŠ\\‚x<Ð/\"Ê±Îx©•ù8æ©+qÇz™XE€»2jU<ûU5zô©Ÿ)ÅRBf\'Œß>•«0ükÊ|¼LÛF‹·½wþ=¾’1ååëé^[æ3²™s“×=\nôpér·Ðµ,Ö£ €Øàqš¢w3áÜ¦§[rà’ €Ý»\Z¹¢„;À$òHëô­ìS0HèQƒžG¨©L¬Am duç¥i‹d)úÒ…tíÀ\r\'èÖÆBÜ1`vŽ>•`Ýº©Q#ÁJ¿äí\nP‚3œsHmc	–\nÄãzÑ£A­Ê1\\arªÍ+È$ó± wÎH«¦Ê 3’ôÅWû{Fd Œ‘SÊ“º”ºêDª­¹$ñJðBÌ<Àž@¤¾^q&IÎN*26d\rŽ¤gŠ}ÐÀ×ôô_)¢P¬yÂqß¾*•¬óÏ)edÏû¸ÿ\0Ùõ5¯¨±’XÁ<`ãÔ}j\r_#.ŠúŽ{TYÜ«$®Yv\\Kt¾xå²N°÷ªÒèÂ3ÅÆãžpú×I-´îH2\r‡ \0â \ZlÛ9Ù<d‘UÊ®MÝŒ&åü½ò±h˜¤`cëWö²¹¹#äÔæÒUJ`+wçëC._j£(­K@Jìc	â9Æ75W‘Á#«ð«(ªkžá†)m$6Ò8\nGQïô¥¯Q­PF¤hÃü8Éüÿ\0¥\\Š·Ñ\0žëÓéTc—l€dóœüêâ^ÆÑ–\\wÿ\0Z°«^èÚ\rZÌ‘lm¤fÄx!r2p¨ßJ¶rÆ þ¥‹qRÃqWg+„$à}:~u/Û \n\Z2H<ÜÅs^ªz^Æ¶ƒZ•Ž‹ÇïO>ôŸØ±ÿ\0ÏSùÔ­{	n@lwÅ\'Û!þèªç­Ø-OÈqÚÑ•ž™aÅ>4UQ‚u9”À…y*y=;Æžy„íÚ}}k×NìáŒ¬¬üç!—Âž¤…s–?xŽ§ðªí4VåbÌO**	uÂ!àzÒ½…búÎH¸åªnPƒ—rAÀ5™ö‹–a‚ÀÉáJÐ6Òòl#¨¤çi\ZS—Bëß@­…Ö£kù+Fyôü*ºB¬¸<Ðž?J”*Œ1 œcŽõªGDps{è2mÎ¸-Î9PxúgµEå…PIç°\rœ\n˜ãyÂ€=¹­¸|;}q\Z<FØ‡\0çj•6õEË¯zV0UYS$À\rÒž“2ñ·•äîêk£\rÕvn+=ÌÀT-á-P|Þ\\GýÙWùßc/«ÇùŒhïXH?t¤wt\"§kè¼½þ^{\Z¾ÞÔ	*ÐDsÿ\0M\04Áákàp O@$^ZjvÜ>¬ºIeÔÁ)Ô`b™êl“Æ}M^ê*¤%±ðH#‘ùÔ)áZ% Y³ƒÀ9«ROS	ÁÇC/U˜¾™2†ÏËê8®CD`5µã¬ºŽ+Ð_ÃWOsž ¢Ñ&ÿ\0XÇ’ª%¸úW?¡øbŸËcê)\'6óÈp¬z`ýOˆ¬ïûË	j¦™Yˆl&”\\tc?•tËðóTŠ}RûIÓ£`’æèJ‚MÂ–„\r[ÆÖ…“þYØ[´¹öÜ3ü«£–ænV9™Y$_ÞmÎxbJ¦§ÉºImÙƒ¡Ê¶qÏøWXu‡öˆ>Ï§øƒR*zÉ¶Ûß’éUåøƒ¥éÌ?±<¦£¯C{3N—õ¬¥J\rêZªÖÇ^óøv‹kµá\0=9\"·<9®®¯¢Ã>| ,£Ðâ¼ïAø™«_x†õ‹-:ßN\'h[;s3êIäb®Þ¬¾ñG™ióé×cÌ‹Iå~¢¼¼D)Û£=<4~±MÃ®ëõG§™~^O5ËÅcÙê°ÞÛ‰`}ÊGNâ¦kœ÷¬Z±Í(¸»=iåêçÒ¡i3œzsUZ|œÖ™æûÔXWe¢ùàzÐ[œÕo4dÓ¼Åö¡\\	3œŸÆ·?ZŒÈ=i<ÐxÈÁ¡j\'±(<OíÜý*(’úSLË‘ƒUk³žx§oÇ=*›Î;j?<wÅ4µ¤%ÇCškÜázÖcÝ…Q–äUxõHbIïnHû-¨Ë18Ý€5Q@ÕÌÏÞè,ÐZk\ZÍµÄK¼Å¡‘NyÎGJå\">wÄl§=^ÊAÒ–þá5ÿ\0´jZy/9;¦€òÃÜz×4Ó°b¸É=sÆ\rztàÔlfÚgX£ÂíÀñ‚gŸÞA\"ÿ\01Vc±Ð\'ÈñžŠÜð\ZG_ý–¸–”È r@Ï½BÍ’H‰sJ»6MÑè±hZ{Ñø¯Ãì#7xãñ ðÈ‘¿ÑõÏ¸öÔ#õ¯3û8f ¢×nÐj7²ˆ±û ž£Ë)|Ê»¹êÿ\0ð‰Þ˜/4¹=v_F­G7…õTBÛH\0íp‡?­y4š›¦åŽ7-× dŸÊŸ•o°–l†=ûb“½Âç[.¡å¹WtƒŽœ\n†[Æe!@ã¯ÓëY!òp(£ßúÔñÆiiÓÔgœÓõ²_7q;Á9\n9© ³’\\nùBäU¨|ˆãÀ^s€s“õ§	A;TAÆOk`ë¹…¬Çm¡$à’ORj·…Ñ¼øÈRÃkw÷« %o#ÚrDdséôªþr$9$¯–G^ÕšøŠ×c¯X~û7RWÒž!`¨ÙÏ8#<Š[-“¸®	Èâ¤g ðHý+Rl\r•O›z`Ž´Ž£nÁƒÚ“%{ŒRH_vIîW¨úÒÔiŽ…Al1+Ëu¨Ì	æü±®Üdà~´ßq%qÀcùQæ·<c\0~>ÔÅ«!’Ö;¶2òFG¥$–q|ƒ{Øx«eÃ®sîðG¥FË¼Uã¨Í+j;Ø¢Öì1+ŽA;ã4Öˆœ#ciS‘Vå1+›+Ó\0òj„¬y»LžâŽTôÛ#‘Ø?Cø\ZnöôoÎå’ÀÆI£ÊoîÎ‹yÌm•¸XÎçE\'¡#8ªrÅ#ÒNààdŠ²fŒõ ·O›¨ü)FS· rG&´IˆË1È•BwtïHÒ˜†8$6>oéWw‹v¿·øÔ2\\´²sƒ€p1CW)IÇa‹;‚23Æ\r!˜žÄœðs€)7\'r)P:ŒÔ/±ƒ·LäúdT{4ÑºÅÔ]K`,Êùã®OSK¼‚p@ÎéUZ<ã÷˜äc¥2H¥Ë)¸è}=ª]$ÊXÉ-ËLå@ÄœôäV4ú0ff†yÐdŸ–R0{ñW·±… d¨É45Î¨8>ãµD©6ô6Ž*÷•Ìõµ–,¸¹þsg?©0ãÏ¹\0õÍÃ~œÔÍp¬ØHÆjc[€Ob½sDhÊú“<\\\Z÷Pælƒ‹‹¶=H°íõ¤H¨<»ë´ãƒç·éš†;yÕXºãiàçdv®Oð•åÝªÝßºÙiädOuò–ÿ\0uzŸÒ¶„u±ÅR£“»1£¹¹ˆu;ýç€Rr{WaaáípY}³ÄZõö“¦‘¸,³<ƒý”íõ?•gÇ¯éžmž\Z„M|7³\0Hÿ\0tcüëP¿»Ôç7:­ÓÜ¹9ÄŸÿ\0]oû¸í«ó2´¤umâ»8 šËB°ó[Q¾s$ï~˜öÅs¯1Že‘dÛ2¶õ‘@ÈnçùÖiº` çõ¦Ç9\rÂî>½ë;)6ÙZ­ŽÒÓÄú!UÅ†î1Œ^Y>%_SµúöïZiþÕËex…ôÉü¶úŒ^^?à]+Îwøf8É<ŒqÖÁ¢o4©B1‚3RÕöˆîw:‡ÃÍZÚ3-´ö÷¶¤ñ,2ŒÛ“Ås·\ZMÅƒ:ÞZÍûL¹çØÖM´­g\'™§\\OfÀg6Ò÷}@8?ˆ­¸<_®Ûíig†õ{‰Ðÿ\0¾‡_Ê—¼¼ÃKÜ«åq‘€k¤ÐüMi«ÛÉáÿ\0¾ÅFÿ\0Fºÿ\0žgëUàñ6…|Q<A¤ÍjÇ“5¸>¼r=zW¨}õ›“¦JÒÙ‡;óô¬kF3‹RZ\ZÒ›„¹“Õ… Ô<1²F$å%êåãí[vÞ#ŠeOÝ¹ÅÐšó­Æ×–*,/a]GL‘°-æçñ´×U5¦‰{ÍôšeÁÿ\0—kÔ%°nÕæJjoÝÕÊÄáñQýöºýN©u` ý9Í(¼#®+“\Z&·\Zî´]\']ö÷\0ƒøS\nëPãÍ±ºû2+>w}SD<^´ê\'øwÛr{sÇZ>ÚsÏA\\aÔ¯\0öw9°·øRbázZ\\œu\"ÿ\0\njqn×2x\Z«Ïævßn<Î¶©x«‡\Zôä‘ö²GQä·øR®­¨Ëþ§I¼oûgÔÕ]39a*.Ëæ¿ÌíZøëQµö3“ú×+ÿ\0 lÓŒJ{Ë*®Ó5jŠ»®¯,­‡NeÝ^”ï},/óI/™Õ6¤ª9qÇ½gÝxŽÚÙHyAlð«É\'é\\àK\\µþ³=Ç)oÕ?‰¡uëK±4È‘À!gŸçsïÍ\\iU“ÚÞ¤µBžòæò[™Ð‰n.m\ZïUìÍ(r]ò%”²;W\'¯øêB+[–2!Õ¿Úo_Z¥}y\"É};;·?1à~«1“.~^GÎ+¶Gw©ËRª–‘VD¶Ú„¶S‰mÛË’3ÁÇ¡®„m~Õ®lq £2@1ó{Šå^#\'9èjn.,§I­Ý•Ô‚gÔ}+§Kêcèm4`g“Áä¹¤\n `Œ©©dÖtÝRËÏ’D¶Ô†LHÏz¬¤”ê	Ç_Oj[1X‘Ð€ “ÃS„ylÁqÒ™æ„%F9ëHn2¹#ŒýïJ,úrÆÔT?>YNDY‹\0«Ž;:ŒI¹ŽæqŽzÓ–\'2|¹xÎ{RºCI· /L¸?Â;TñÛùåxàžpyÍ>(Ç¶:UÄò×o\02Œñëëõ¬*ÖQV;(áœÞº\"/³…VÁäS”J¬@\'9?Ê­oùGËÔu¦Æ ƒÇ§zÁb&t¼%6ìŽoY™þÚˆü®ÓƒÅ3Âó4LÅNßëKâQ]£bÅ;Âœo\n2»0~¹­•K.fqÊ’öœˆéRý0wqž0L—Ð*tt“Üýi¾Z2‘òíã=9ö¤kXÜÃpàíIb¡mMž¡`]ÄB’Ù$çIã¯µ*\\ÅÈÀç#9éU…’`ìÈ\'©\'“UZ$G9<Èžµ¤*©laS8|F¨\\äa@$Ø§UT\0œcxÇzÃ.NíÄ€2FqîEO]NPÄÙN¥›§ç[n®a§BûÍ\Z¸Â\0ì*¬×£i[pÊV¥{c€îìØã\0qŸZìF­»°q€9üé&…ª),ÄJÍÇÊóþM4å˜¹Žyýj´ldA?xgÇåOrÄ‹µ8{{úšM´	_R5ŽàG\Zãèiv]Ï5ýjúÞÊ£Üß\"—íÒÏ¿þ;Y{ý‘¥ S…ˆfo•sÍ\"ï;I=À÷úÔ&F8ÏQïQía+Á•FN85Õs!ÎrI-…^F1ƒQ€¾J°$<éôÅ\r\"¨* ºÿ\0úéVhÖ5ÉR0H	ö\\$¢“¼ôô©!m¼K·q?1ëU#‘YŽÔÊ0>†™æ˜úqøœ{Ñp¶¦òö±\0mÎG\'ÞšÊv=Ç®j¹\n¥0ÌOrx^[©cqåI˜¢àl7•m”÷<Š£5ä{ØÔóyõ¬æpW%·Iœb™œ‚QòÆqœ\Z~a\"y%2ƒ…\0¯#ŽµÑxwÁºÞ¾¦h![k9’öèùq(õÉûß…s\"[‹ybžÕRI\"pàH•°zZ:ç‹<UâbêWf`0°Bv¦=\0—Ò“vÛ¯~kn¥«øWÂiäèÈÚö°¿zòuýÔgý„éøœþ5Âêzýö·?Ÿ¨Ü¼»ŽLA¸ßOÒ³SNh£+»åÁàÔÔídß/$ü£Ú‹ÝîjFÒ†_•±éN!&\0?8˜ö¤xHˆÉSÓ¨1Hª\nüÀž€¥«Ð<À‚G@;R¢ã•ÎsÆ\rG·9\rœŒô4Ž¹É€F3íF¨2?Ì>bCrr3ƒ[–máË,îd’ÓU‘xžB| Àþ€ŽÆ¹a+„\nb=zVmÌ’	Y¤SÆ:bˆÉ\'®¨¨ëµQÒ‚5Ü†CòN‡*ã±\rÒ²ÜJXyd€zŽÆ™¢ø³QÒà6ÐÎgÓ‰ù¬n>x}ð§§á]•šøwÄÄfJº&«Àû%ÛæO¢9û¿C]Î3W¦îEÚø‘É²È\\°ÎsYèB\\ºw9çð®›XÒï<?~`Õa–	\'8?CÜW?uo,Z‡Ï*0È#‘Èãšä©“¹¤\ZoÈ¯4°²£åXv`x?tÍã}jö	#Õ¬4Ë§#jÝy{dSŽ¼px®rfš4Ž(Ù›y$Ž1’kD„`T°íõõÍgM;X¹Yöd\ncwRð1^jÇü$š­¢f+»†ÏbäUS`\0p8ã’iw“… m88âªJêÉ\Z;Ü¼Þ)ñöÑù2£÷Õ¸aôíT®üYâ{9vM¨9Î\0?XY#\0Ï<õ«;Q,¤\00«Œ½8®ežÆïá¿6å›_ëï½\rãï“(	\0•éÏµ_\Z–¼Èwêò1a‚dgúW1£Æ\nÀÄžîÏ5Ó‘û°1Ïñ¥9(ì¿Z0RÖE)¾ÞÒ‰d‘—ø”sëŒÔAs-ß›,¥ÃrXœcÛ¦Ê©S´uÎ1SCk#°)°c•I<úy”èÁÊ÷!(@}ø£ìás€AnAô­‹ë7#ýK¿—ƒ»‘®*ÔžÖãG76‹nÂ3 ŽæA2Ž¤ü¨J’Ø©B‚ßs˜kpÄî`Hû§]­ˆVÜA>«Þ¥û@ˆçÓµFÒï\09\'p3Ç½tSöNZ¾É/tŒáP\\\01Žæ™,hÙÂädN=1OÛ¹³,qÁô«QBpCŒžçŠèõ9\nIk:˜áBÃ¨¿\ZœÆøm€àúöü}*ÓEåŽÏÍÐT¤%T\0G<Ž¸¤ýe˜~PJ0ÏÇ;b”*Ü±âµ	Ðò\r0ˆÚN@ à‘ØQª…Õƒ*‚	ÏELD›Ô³\03Ï?¥ZhPàÆ‘ÎGPÐ( “É\0r3ëI«;-\nþqVžÙéS­Þà‚N	è~•CÕËÄq3LŽVU%9êcšÍÓ‹zšB´ã¢4#™YF9ÔÔÁùùpƒZ É,Y!w¼`€?¥F¯(0V9\'è;Ö2ÃÝY3ªž.Í9zû§±\'ËçÔqSx][iÆAØ¿žMRÔ¥2ÞJNI+ŒŒqV´)LV¬WUC×¯­>GÊãs(ÕµçgTª‚?:ŠyŒ*3÷}zóU~ÚI^Ç×ÔC0Á=3œþ<+OÞ:ëã•­Á¼f_”…×ŒŽÜTJe¸œ$jK³Ç­mi^\rÖ5’¿g°¸x— >Í‹ø±ãO¤6‹(¶ûUœóc-ö9<Ï,ÿ\0uˆïí]Šš†ÚtªÊ{»™‘Y(”\\nì ñWGÊÁPíŽ1À”ÍÀÄ”œ=I¤FmØ$‚NB°çóªd$XûÌ œÀÊ—1ª7õcÜÔ\r#‰FðZUžR8ÆßB1šjYeŸŽ¹õ4õòØœÏ÷N3ïT÷HHbÃsµJ®ÎOÍ†QŒv÷ž¢\'Ê±<ÊŒ/÷ªºìTzg½.SÑhÐ«œÿ\0Ú¾S“×ýM1Þ[—õëê*œpÈßtÇ¦N3õµoìy‹»nê8üê¶\'A&rùxP	<ãñ¦5ÂFÊç9Ã7o¥F¶³$…WNGÍÛëQÉ€þò ê¹\0nÅ\ZØç“‘‘Žr¼ÿ\0U3xÀ2Iäb£Äˆ0¯áÓÚ…0†_0‘œœŽ}(Z!.ÐN[ Œž¦€ªÒ1\rœ`àÿ\0JA$Aw³+\0pÁõúÔ(ÜW=žàI«0ÜÊƒ\'€G\"ž–±ÄÇœíÉÀÈ\\\\çqOó›qcÏ§P)ßAhN6ñÐpzâ˜åvprÙ9=i‘ì–?1û t#Þœ¬®X)#ž3F–±cNÒócqMeÜGÊ?:”…2|Ãß¿åOØ2»I`AíÍ+ØV+¼…äµ4(c–9¨*Ì™^¬ÏqÈæ¢y°„ S†çÎ‹ÜDOËß¯lS8ÆAÆOåL2¸^;ÓWÍˆŠ6s×åÒÓ¨ˆ$Š<.OÖ©O\n\0@=}³[‹¡j3°c Ón9úö­»/¹µóµ_JÓÐuYæ¿,ÔÝ-wçnC’«´w÷¤FÁ>b’§ þußI£xz—þ)´Luh#ir}:št«ðöÙAYõ]IÈç÷+\n~§‘B•¶]|3â­I„:,öÿ\0Úú|¬;+‚X¦{FýWùV¿ˆt˜ô\rU­Cºe<É `ÂHû¼õÅR±ñ~a4/£èK¶%¢k†óç!Ž1ÐŽÜ{Öv¯­O¬\\Ü_jwâîèåÏ è\0€1J½INÉüÙtà“»Ðë®üz|\'­æ´fP¬#8Üô\'ýžzâ²Ç€u7Òá½µžÆXX°Žq¹0yV¿\\±ñôWÍ`—SËep–-¦KqÃ¬ÐŸ»‘ØƒŽk—¿ÐuM«<%´˜§F&7¾Çà”bL¾\"úøWQ\'kˆ”É.úÔ§Ã¥cP÷V¡Ôãh9\"¹¯´ÜpíŸRäšzêØfùœ}je)ÛDQÜÚm)À7†:¨àÖf£n¶Ó2«	$ðsè*„šƒ‚U&“ òiÉ3Ê­æÄ.îµ”¹¬›-8ö%ðÍÝ–Ÿqmq©Ùý²Ù	/n$òËuæü×¢GñG¶AöiË´}éå2~„W•Ø«µ‚#~óÅY6×L@2m sœ~5QI­PœšvG¥Éñnñ}ƒBÐmMëiÏÓ­W“âçŠÞ6¨ÛÛ/@°Z¢Ô^nÖTÊYAç·åA±mØ}ä.y¥R±-³«»ø‰âYOÏâKô_ö&)ü±Xž\'¹Ôd	w{wpùåæ‘œý	=ªœV±³ŸÝð1ÉõúUä¶‰	m¡Î2§>”ûÉ’6)û JuÝÛ5*B‚Ld–ÆqÐb‘\n„wÌ9+Óš{+\0l0G¥^èWîLª«)<“ŒíJQÃ’ê3Ÿ”ƒ×Ú¢VÞ£€Ì3Í9¶·ØQØõÍ=A±åd,VAŒžFx«\n!HÁKË@Ãï&öúÕ)c9Ú¯’sœÖ4ÞÜùI%]Ù;ƒµL¤Ó\Zó72†pâ7Ïð£äý*\"L3r\0:í=>µÍÁ¥=»œ<Û³Ë!^*Òù 2âø…\'9Ž~œÒÕ v¾›\ZÊâ3û¹`ô~â¦-¼ƒÖï€Àçðì+Å¡ýõÐ\'ûÎqSG‘(òo.Tžù?1BæµƒKêkˆ$.Ï·#ÅÅ\rnK¦<úoæ™m{«B¶Ö¯”c±_ð«_ð“x–4|A¨ÿ\0ÏDGãñ‡pÐ‰­är†ÇEó«vS]-Æü¶\0æ >#ñ\0ßÛswá­a\'ÿ\0@©ã\\Öå6³jsJ‡1Ä‘äqÔ¨ö§«èEÏÉ|uëÈn\"+¥¨ówgƒ\\~&¯øÁ×~$Òüë?%m×ýtÓÉ±!ÀÉ,kBÿ\0PÓtM#û\"ÁKMåyrÈ@ùƒŸâ$×Ò°tŸ^h¨ÃarYj¶{IvxqþÐçŽ†¥E©^á£VG]s¤xBqý§âGÔ.­¶‘üÿ\0ÀÉ+Täøc¥e|%á;Ki@ÿ\0ÍIÄ¿P:øÕ[h¼	«Ûì‹X›I¼n\n_Z´H¦àZ$ðîšmý–¡ä5¬Ë(?÷É5£š[ÊÌ=OÅ\'ñ4‡ûgW¹’É…ËŒ}p:zŒûÕË)íìíÄpG±O\'\'8ê}ê9´›¸	àqŒçàÿ\0…D#\nH c#ó¢íúNÅÿ\0¶£È:œ{uÿ\0ëÔâé[r|¸è;â³bR °\0sŒžp?Æœ±I½Y·€ÝÀÀ5Ðo]ee,„m$g?¥I÷˜ª	b{ý+\nEu9lƒœ=¿ÿ\0^¤IÙ9lu$Œ\nêƒCl\"¯äŽ2O5)—8>›…a›™–A™ç£``ûTíw+B¬Äþî9£Ô/¦†”ˆ\0tïLÚ?¼•Dj.ª¢HþlQý¦çŸë@îe[Ü|Ä¬‚€¹gÍMÀ™\'‚HªËŒŒ…9=ýhXãiÆõ$“’GO¥Y)€2)ÜU€äcƒíJ° B®»°$R<‹nß6p”<ÈÇ<Ñy4µ\Z±	÷=U’0À1ÉÁÉ$Iõ|…e¾Qg©¡–6rR5ÁØbÃüñàœóŽ>´†Õ<ðU¿ZÐ	Rÿ\0?#nî*Œ<Ž#BBŽ qM¢ÑÉÜNâr´ÆFœœä‘ZeB¨Cƒœã¡5ÙÙÝˆ\\NAâšØ\n	!êr}ÀäV¤z~§%„wQÚJÐ¸%] €y\'Ûš‰áeÝœŒð3ÏãQMãZÎÒ-<jR¥¤D…Œ6\0¨üEKvC³{µÊ92 CßsrE1âa	&lÇjªœþuUuË`¬Í4’3zPI®ùafé¸õø¬]Y·hÇæiËk²ÿ\0™H¯0b@Æ	Á5êv©–ŠÑH;qøÖÏ<®‡nüœIûÇ#¸ÎE]äÝ›!ï¢6ÿ\0¶Îõ+m…äe3WÇµÆµòmç†ÒàmÑ3øã­s~Cœ)e$®iëoˆ·?1ÇG½\r+Záfö.Mª]Üî77“HÄçæþ9ªÏ,nŸ6u9ýM(†\"HÆIÆI8ÍIVåJÎ	Å-6cò*I* °èHéUäL«ˆœIã¬¨ªK)õþ”*ä3+†ìEôk©”±Î‹ˆ¢öÍG»QU;¡\0óÏ5¨žaç ägœ})X€˜w7$ã¥MØhÎp¼Â|2ç¹âºÅWúu¹³ºE»ÓåíÜçàÖd°¬€’Kƒ#¿½S(ÑPœž6úU©[A»\\í›F°Õmï@f/Í%£H‡Øw˜,£wFCt9íX¶÷óZ\\$Ð;$±œ†N+°·Öl5è„z®,õ÷n”a$ÿ\0xvªÜNÉ«\ná×>õRíQeo,(]½µlÜY5„ÅnWjã!È§­e_DŠåã9WLÔN:+„Z½ÙCJÁ† Ãø‰=ûñ[B&bWhÏ9¬-,·€rA#žõ¨ÎJžNîÜôª‚L$ìÄYO™€ °ê)™–WaŽG<ô¥99sÕ‡ò50†RªB{qU¡7d\0 ä’¼Ô€dªKgœUû;•rä¨<V”zm¶B£@çe:ÐƒÔµJM\\Àn3!\0z“8@í$gðô½ý™m’J’1ëÆ}ª7Ò ‚¬Ã\'¢òWÞ¡b¡}èÈÄF #9$`úzsÈ¥—,Œä¸­94ÀŠÉ†ìqPf‚K€ÆzŽƒëWí£ÜN”‘\0ÆOÍŒ)KºFn½ëOû>ñÛ±ª²ÛL„îR1Ðõ58¶O,—Bêl*¥ÀÉÎyúRž^Dy#5žwÂÙ!³ŽŸýz•f\"3¸ü¤‚3É«ÑŠå€#;qè:Šcf5Ê¯ÊNrGÓ2ÇÀÝ@éGž»~eÄ`àòiu¸\\í2òFÁÇä|•<’A•îmÓ3A=«JËLK¼\\Ý*ÉW;›å/þ¨Ä:nuª\\õò­£åæqÀÀ÷«\Z¯‰!±´ÝmˆKp9,}½ë?YñÚÓì\Z_îlããŽ7Žÿ\0‡zÄŽß6œ“Çµ6ÓRU›†ùÒNçcœóÖŸæä¨23ïLûX‚Æz¥$k ç’AÏáI´Á]–6ìM¬7e‡ÞçœSÚÖÔ°xÓË˜th\\¡Ï¹“v€AíÉúÒü…ŽÒ}Éî~•-ßpÔ¼ou#Q–Lgä¼ÌcŠU×u8×lðÃp™ä`r?\Z¤å‰Ê•zóLU?ÄüvÏ§¥îÑ¯¿§‹»Y-˜‚2Œp=ðAÍj[ÜÚ\\ü¶wÐ’GIFÒ:Zæï\0¤§b3LkhTù*Œz²6ÂF½Çò; ™@>Fâ@†:dL mº·õ®e\ZîÕÁ±»™œmlŸL÷«#Äz¸)\\GÔíQ’*oaÙ3vHâÁáAÛÆýj?²BGÝ Ž«žž¦Ÿe«h:„JöÞÖR9‚vhÎ}9–IâiœA0x”à?Uî+YÜ¤xá˜L\Z_²\'÷Ïäj)oÂ¿‚;\nûDzŸÊ‹0æFQ‡0cœ09ñ¦–eF€\'×ëR:çi>˜<})‰¹ßp§Ÿ›ŸËšzÚá°m’|9<PÔœ§ Rz}*Ø·uŒå—F:ý)\'ŒH0wcn#Nè—®¤Ä\n®7’F~cÓê)æ¸Ôÿ\0…0£¡I8`OoZ™CÇàñ\nW¶Ã*Â‘ÃÇüérèÎPRyÇz°d‹\r’ËÏ=?JŠ{¨@\"0_ÅÜÓ½µäf8 rI9zS~ÒpÀ’€c©ª¯<0v:ñÈ¦Êd)-œž:Ñ~ˆ	ÞfpÝ2:gœšÄ¹±·34›-×=ö­2\0 d)üqBÀrsÛ9¥+\\Ù›äÇ@Ç$c?Jš>8THþ!ÔÕèô·’EóœÜÖ¬:|x,ËÔ0ã¯cXÎ¤cçèi7¡Ïlo0v®	ÆsŠkƒÙÆG×I§Ú°K}D,í‘H+pqÐ{Ö?X‹eûu9dGfb>PW)Â=„vò}kª60I&J1À\'®@tØ™ÙÆä‚O5_XMØN”Œ½Nà>côÍ7{Â@#%Žzq[GNG›æù\09úŠgö^UJMŒ‚6°Æ*Õh-Ø½œš3až“ž)„¯bKýªÄ¶*²¥W##¡¨ÝÁ]ÊÈIã#9²”^¤8Éh+m?1`ãóM+†\'AÎA¥ÛÇ#‘C*îU\\Ö•“\'aB\0ŒŽy¤x£;AQÆyïMÛ0“hl’sÉãôÞD¸\r¸ût¤ÐÊ’ÚâN7c5a*ãåOZ½(°$n$ã*CQKo•l©®}©j˜\Zº7‰þÉoö{è¾ÙbÇ[œ²úíôúUbÎÞÜE%•Ú\\As˜¡XŒáoCí\\„–¯&ÇsÅiÚ¶`\nFFÜúÓœ“IWctàÆÙ\0<>ÝýkTFea…#=k;N8	<gŽ¦ºKyaQ´)`G\r.k-|‰»ÃdJ«¶ÅœœÖ¬PÆ‰!<}>”è¥‡Êø¼~b¥0«ªv““É®IÕr}Q¬`—˜Ñô)œúS›rª0=r})#ýÑØà”ÀÁ?Ê”ÝeðŠIQÎÑÓÜV/š]M•’½‰”Þ£®r¤ŠI#“a*Û1‘ƒBÞ¤ŠUXnèFH?ZcÊÛ†I`xè1øÔ¾fõ±ª\'§©õ¨‰l’#`sÒže2¾ÒÄlqŸ¥9LBð8P¼eOQZDŽ·+ª:D2sÏðŽGµ4ÏÈR™B0ß/SíO’eƒ†v ’~^*µÍâŒLNõäcƒô­nô¹2i-G¶Q2YY{)Š¡3C’\0ÎÑŒt¨f¹o8#<t U76_—q\'€;×T ÒÕœó’&fE\0Æ¸-Èã¸¨ãLG”¹lã,?ÎjÕ¬Èw\\³nGO¡5jdg·h­þ\\ð¤»Z\\‹Úé°ÙD×ZŸÍ´ä#t®1ÜÔ··:œ„0)l¤ÛÜÿ\0…2[[«ƒ	¼ºó¼µ!TðøŸz)‰>ñ8zß4^êÃIu­â.(˜*‚\rMŒA˜: SQÛ(c€@ÏN\r=VuÉ\\7Ý gƒÐI´Ø|²UÏLãÓÖ£‹LB¡¡›\'œg·±­ ²DŒqžÃÚ˜¶Æ H<““Ž£d\rX º\\ÞcÈ[¯$õ¥:eÁ\\…zîR8­dÉ ‡û§œZwÚ^7ä¤ö=îÁ0È-‡ ­G*ªƒ‘°€jè–Q+1d^¸R¿ÎœÉ)ó@\'¡\\\n¹Î¢£•o,‚¬>aÐÔä ÜJ¯\'\0ž}«`YÙœH#çÀÅFºtrÉ„°äQ¥…©Av4€ªóx®§äápÛFAZ‰´Ö_–\'Ýó´.›q\r¬	/Æ“°k°é--Y¦Š9Tä¯J­$Ãh¡##@qÅ:{{…ÈòØF¼ä0\"¢TY2òmTÎvc“EüˆÙðJ3ñÁÛIóÏÿ\0¾kKÏU8\\éŠ>Ð=GåNâå5u¿ë\Z-¤·WQÃ-¢}ùâ~WžêØ#õ®e\nA#\"BpÀàÖ[IªI¦gMª]Ic¹_ÉwÈÈ5<Y/ó[qã“ÀúSMØnÛ#BI¥ìp9ïô¡g\"Ç!»sÇZˆC3,9.1Q\\[\\)ùè;Òº¸‡µÚ+Ÿ(ŒœÖ’k§W†9\'éQÈŽ‘a‘ò£ïœ}j=¬èA >R8?•7ØB©.NA0Nî0~”ã‘\0\0s‘Îyõ¦¦â€Œýç<æ­*)ÉO\0ð=@V–3ÀDäu=óØRý‘ådDáñ½êõ¸ÀódTÉ 2Oô³mös0Û$QçlÖ5*¸t4…>faÅ¥\\»ÿ\0£(É£˜°D»ÉfÇqÈ­PªwíbxÊì8›QâÊ±Î9Ü9?ýjã•yÉYèŽ¨ÒŒV…‰5$›€«Bº<wç½K„…C\0F	Éè=©Á÷rBž§#ð®w)7¡j)öÄ—À;zb¤0•RFáœš™Ëc†FÉÆ?­E&X*s¼ô9àP¯4;$@Qƒ±s·hÀ8É¨¶GÉ‹¹Èð¡·’0xuæ’H‚!+#0|“‚}ët»Ûó9\nT(\0vê{\Z„BdmÌ§1ž«Ü})¾{+”|9}«°²ð7‰/tøotÝ=d‚åwFÞrpH\"©Â}„·ÛÔäÀ9e•6©|¸Ç½Q,·ïÛÝ‡ojëµ‡ž.³t‰åÉò¤G#ð\ršäotmbÞCÆŸumØù±2[ÂßCTV)K\"ß.Xs’@üª¦æg\",zäŽ”÷³xäýö	CùûfžË(NÒyÚ9®¨¥¹ƒÕ‘JÄÛÎ[ÐzÐ\"òð@ûÃ\'ÐT¥wïdtÈÅ;kÈ„œ¤e;ýißÌ.\"³•ù@#ÃÞ ”3à3) öéŠ|‰È-•8éJ‚õ8?äÔÙ7¸\\rÛÆ¨²g>£µV˜âä€ÜíVÒ2]B èIê*›g3eœ/\'ž*gk_±pÒEm?)‚	9==sZx;C+c=sëYºrHñ+„;ˆ\'\rmÙé·÷­‹;ifÀì¼Çµ8j´	§{”ËÊŒ<³–êO9\"¥û\\ªÊÁŸ ki<1%²	5[Ømqü÷7ãŽ•Fyô+&Ú²ÍtùÎGÀSi›èVû}ÓÊ¡Èù8E\'ð­Û-7Yž\"ÂØB˜æIØ\"Ïÿ\0¯Xÿ\0ð—]F<½*ÖÚÕzoÙ–ÿ\0õÖUÍÎ¡¨±7Wr¹\'’Xþ•6†ÍÏ+Üí™ô=8³jÚ´o&rb±Bì}FNãY³êw·\nÚÚ#µçqù¾¼u®ZßD·îÝ˜Ÿ½œZ+j™aŸ,«»·Ò“„^ÃRw½ËmtÂ@Î{ª÷#üi>d.Û,¹$Ÿ¦*ªYÊHÊ­ÕO42½±£Ú—%‚Rl{Îädã%pX÷ÿ\0\n¨\\9ÏLœ÷«0ÛÉ<ŒWn;³V…’r É’C·Qô­„nT·Ó%¸@÷Ëàg$ð«âÞ8—b R:‘ßñ«J\n©PNGëUæÜAS‚WøÅ;ë¨nVU,ûvãnïSùHX\0<s“Q Ëm‘ŽNçÿ\0ÕSFŒ…”’ry\'ŸÊ•õÐ7$„ ,ÇŽßŸÒ¬ð„Èä.*$B  ààö«/d±8#9=)zº*<P6ÒU‰öéô¤iWg—Ž1…Š¿ä¦Ì´ã ç¥Dm£`y-þÎxj‚t*÷X`çœU‡Œ“ûˆãi­Gå<nJ¡\n{“Éô¥mÈÀÊŒ„÷¢úA£ÎF<†¾”èåY‰Jñ‚9Ïõªë6ç‘I\\ç€Ó#•B‚y\'Ðvôtêjb\"‡iRO#4J€¤zóšª¯BÈÀ#’j=îÀ+‘œóÒŽ€î\\[˜Ñ°A$ÿ\0ë§›”À\0“Î	ª2`.R1òºõúTºÄ\'‚Aà­=ï©¦÷+º“Ž¹8\'èj¹ka‚¸Pr2yo@k9æ,O …û¤g¯Ò¡rÌ™Ùw¢É ½Ë3^<ÊB¡FvãƒPmÊ„qÏ§­F$™:û\n•X‘•L€IúzÒ½…¯@2ä#VÆi7Ÿùä(Û¸’ŒØ\'Ûü(ØßÞoÓü(¸ìGœIS.àôõæ®Gk*Z(þaÓ\'“ïš€ÝÆXÎ:RH‡#nN00ýUDˆÛŒ\nÀnç#“Ö wiãnHÁsVR!\Zãsž9šÈÄ`’p2AÁ‹ùb\0Ò,OæçŸãN\n›N0@ldàŸËëR.Ðr9ØÃO(\\»ŒO>Ÿ_¥\rwEaLÌ6± dáp	Ç&›äDc\'%Tò[X¶\0	ÆÝÏ¥AuÉ¤ðh²¾ƒnÅXì0AfG\\|½AéAŽà Œ\0£±ä“VŒày-°tçS0Af=r¥+\\‘Me¹H”!\nÝHÇAžôè5Æ|÷ù\0ÁÀÈÇô§Hì[`bO ê=ª´/	lrOÝíô¨tâÕŠRh™µL°EW#i {RkDmÀ˜)cÆÕêsš‚Kd…sž=~•	±nTä‚xàf¡ÐƒÔ¯k$ûšQÞFÌí	ã\nNyöô¡¥eˆÈpÄðW<CYfÞh²U€Œõ {\n]í\Zî÷€C\r\'A.ÃuYynÞXäE\0¼:{ÕY¤}€Ä…¶ŽIþ•Y¦\n¬¡°3Ž ~täp¶PŸâãôïW\ZV{\"%Rãe–V\0ŒÆsƒøUy.5UplõëuõŽáÔéŒñøUÅ…QYØzŒ“ôžjƒ´©9 j»5±7bÛx§Æ6§Ë‹Äú¨ÓuÓâHý+@xÿ\0ÇQ®Öñ-Ãü/oŸÍy¬‡‹’	\rÈ\'ùTFy~pTúõâ“³ÜF¥ÇüQ:ÿ\0¥]ÛÌÃ¡{(Á?÷ÊŠ-<q¯[JLO`H9[4lþb¨Ä<½ËNùéH1÷ŠŽþ‚šŒVÃ»:ËoŠ:ò×\ZO‡¯¬ÖJ¤þX­ø¹}ÿ\0Hðw†äd$e˜5Á4h’¥Ž=FOÖÂJ’~yù¸§d…#½?ôÍÒj?-ŒŸÄÖ—~XýVTþ!ð}Ë“ÿ\0Î·hç±\\#Ã5Ë‚ÊÇãiŠX£šy6ªeAûÀuÿ\0ëÒpCº:××|‚9 ðþºÓ§ÜYd]²ö½³é]‘w§Çà?ÜjÚlp\\NCÛÆ‡#\nªÇ’ÝÎ3\\Í¶g£Ú¥ï‰î\n#ŒÃhœÉ)úv¬­{ÅWšéŠÚà´V0[ZöŒtçßŠ†¹—.ásWáåÞ•eâ,|@°}‹QB‘K3íXäê	=³Ò¬øÙüK¦êFï,rënaWŽßçÞ¸£\Z”ÚàH0AÏzÞÒ<câ=\n×ìö\Z£ObF\ZÊõDÑcÐnÎ*¹yviœÌÑ´Î¦êYdÉÎ]‰ý:SE¶ÀÁg¸®Ù<Qá{þ<Cá©tù[­Þ‹ +Ÿx›Œwâ®Eá\']ü)â=>òLÇ¥é6³l7ó¦äÖÿ\0æ=Ž(ÆÌG<ñÆjÊå[åÁN•»ªø[[ÐØSJ¸…7c~ÍËø0àÖ1GPvŒa‰ìi^äXînƒ¨^™«‰‚3 RX`\ZªDá_ c8àf˜×&E`˜Èn?ÂšwÑû%xÓ˜ÛTOtÎ\0R< qÁç?áU‚oRIÜG$úqM”uƒŽ\0§äÂ÷%|F\0SÃxëJ²É¸ˆ˜†\'§·¹¤DRË¼‚#ý9WÏuXø\0d“Å+‰“Ã{:d1Úf\'éVÎ£‚¹DlŽ@P+?fà¹çÁãßéR„p¼œöÀ=Å>aÝ–~Ù¹Ã•\0€\\TÑÜ«ÊAl`íõ›öVù¹Éàt4‚9Ï±=½Å%¨^ÆêLŠÌ3€•9îH;zŒ÷¬lI\Z\rª¡ˆä““ŠHr$¤`zÔlÐ¬;›ç¶ÒIPâq‘VÖeóJ’ÆA­cÉÑy<ú“Šk\\È¹œ1ßÞBæñ”¡Áe8È>¸ªÓ4±‘‹÷A8ÍRŽô: >`äŒñVÌ%~n[²ãµ ¹DÒ:«¤{XçŽ¿)UPÜmÊœGµLd…Š(\nx\n8§`¶àJ±Á^¦˜Ê©>bHÝÏ<dúý)ÝÜ>žrM\\}‘², Ž3Î*t…ðKÃ Žôn\'aZÛÉUóˆ:æ³n®ˆ\0üÄŽ¿ýjšêy.J =aëïU^XAÈ99Ÿ¥VD\ró&pIb¥ª€Ç=j‘!2œ¨Ç°äJsBÁw3féíCcD$\r»8Ú98õ¥&DURN	È^øÏ\\zÔ¡Y@óøzšHÀ*|Å,Ã$ƒëÿ\0Ö¤À~qÆÀÿ\0í×õ£pÿ\0žIùõêxá-fPsÐæŸöqýÏÖ•Æ bÊsÏÀö§G‘à	ßÎœÒ*°ùaÔã¥E\".ÙÀG×5§’Ñ.ÐªYºŽO­8´g §ÝÓ?OZæ\0î\rŽwuúÔ¨ŒW\'nà1æŽºl1€\r…\\à14‚\'RÊ²|£“Ó\'ÛéD¡‚åFrŽÖ‚”o\n­Œžù¢àðrê»—yÉù{û\nR|ˆ •ä’8¦yM)Ù„RCåIäˆÕ‘Ï?! ŸÂ–—µ¹Jë¹¹Ã(Àª»‡ÌÃdàcõ¦\0`ÜdÅ)P€nL‚{Ná¨(Œ¶rƒüé…›yÂœpÝ(xŽ3“€aLØ!Ùƒ’N1“üèÐ{ Þ±€ð@äOjI	P›	H çó¨ç•#ÇüDå‚œš†k™X/n2;ò>´µBõÓ|îÌÙFãoz­,èfàã¿ð¨¹,¤’:Žÿ\0…G·~äŽ29Zn×»dú\náÃe¨äúSüÍ¬<ÜŒà¨íOu;X´‘÷sJlq­“Œžäõ¥{•Ê+HHùr \0zþTñò²ì@\nõÈÎO­)@@ÉÈÇOSíDDí`È[·Ö7¸¬Ä.YˆÇs“ý)]ÓT2y-ßÚ£BUÉ€<z@/´©È.AÏR~”=4§–€`äœ¯9$RÊž	8áHç4üŒìK(È¤POÍ’¤r3Þ¥ƒD{™*g$cdçÒšK«€	Àïß>•fÞ	ï.2rY™‚¨¹í[lt{/>WÜÀ€\'dêqÝ¡ëõ5QZ_d-6êgZi7W2(d)\'R­ÁêOaŠ½&µc¡ƒGE¹¿zàŒÇï·Ö±µ\rvkÅ0Â¤äÆ—“ÝÛúU%b¤*ôÇ;zý>”¥«ŸRY®§¼»’âîfžGêäóŸAè*¹Ì®©Ûž€ò=j]€W Žõ4q±‹yV\nLvúÒ½¶r<À#îž	#ö©]ÑI5êBœäzÔ‘Å€ˆ*9Úß­[Š8Ên^Aé‘Ö“w—öv6Œ¯Qì({X™(¯!9$?*ÚòÔ0ØÈr>n0GÖªÏ,pÈH;¶Ã4Û¡nÃÅ¾!ðüA4}jî:y8š3ÿ\0|Õø¼w¦_±,ð­´Ò7lÒœÛ¿ûÅAÚMr³ÈònÞc•TÃ˜ pE	&>mv;“¥xCZøm§aÅ–´¾Iú	1¶³õ/kzJ™§Óex:¥ÄÍˆ÷—#ó\"¹F‰JâU,IÁÈz·¥êš®‰9}P½³#ªÆùB}0{Qf¶Ô^ëò±6ÒJ²zc=é\Z&Ñ†8Áäà×Kmãë©ð<G¢iúž8iàÿ\0G”Ÿ\\Žå[VW~ÕfÄ·7º=ÃœwWþúþT¹šè7¨ãà¶l8_•±Áæ­KBÀŒ3œ.0+Ò[á{ßZ¿\rj¶:„Xùv??˜È®7TÐ5-\rü­bÖD-ÓpÈo¡¡4Äb(1gæQÓ×ëRFÙSµÝˆéR©òíÚpK¾ôåSµ·nã¯®?Â›ƒm±‹¯$ä7µ4.àØäÐ\ZžD-ŒIŽ‡šw—\"ã…Ç¿_¥4)[òÀÛØÑ%£º‡Ú8 tÆzÕ,*ï õ“ŸZz°(Û	;º)¤;YÍj¡Cn*ç¶M5måf.£†è{ŠÕ‰ZFÁ;ˆã‘Ò’W²¤g“Éÿ\0ëS¸XÉh$W?)eHþ¼Sd2y„…$ôÈâµ¤}¹PrHÀÆ}MT¸œÀƒj<zñëC´*‚Ê\nF,?úÞ¸©£*€2$rKçP;©„†\'Ÿ­Z·³3F¬êcƒ©>ÄzPØu#iç”\r®\\¤ŽµHm^@¤bp3Çÿ\0­WÚ8ÂTÚ1òÔm\\ÌXq_­Ab¼HÇ÷nŒ\0À\n1øz†8§Ü[ËÉo”žàV„[‘È\n£ÔŸZA\"K!uÜ9ç4Ö¢Ð¬±(ëž¨<ûûUpßyKuõ«Ë3Å™´m€\0=y©œ)ÎôŸP8¢ÀPs…àeÓüõ¢6\nîÔU\0…qŒQƒD–ˆÊ	Üx*¸àÿ\0ZMÚ¬›ÔÅO ¥Ü?ç£S\'³œ¥lÀkšì)ÿ\0?£ò6–\ZåD¨Õ\ríÏãJ«V,¸ë†õXÄJ„mœóŸÆ•7(\03œzZÛD‰Ð¼d_²ÍóvnþÀšˆ)rü½Ïz©æ™Y])^„Ž\0úzÔþZÊ¥Ó;³–‚E+­Æ¶$Þ`¦C1à¹à\Z{\Z(y2ýGZ¨Ä¹f\'b) \'SK\'šx,¸ã·ëB²wXi	+¸±ÚÙ\rn¸©žBÃ- ,\0zÕg“Ë\n\0ldmãÏJnö+’@ŒŸ™Hçê¥ê2`íå—Œ,GÌF@>Ôá*í€@8àqŸ_¥Sžñw’$Ÿº½?úÕXÍ„VmÆ1žƒöÍ\ZØWi–ç¼G¬	9éëÍCqvÒ±YƒÐg¯½UmŒ„ (FOQøÒ,FM¤8À\rÓQ_°ÒD,CžƒŒÓ	o³\rí±O$O·5<h\Zp’PqÐZC\n™Ó•=Bþ}(RM\\j7€ìÜÎG?P{Sâˆí†,FsíïV[Ôc\"6èxëéíS*óº1ä@+	U±ÓOÚ+yò\ZA´ö=OÒ¥Xv¨‡–:ç§ãS…F]¢<:ñÏJPë»g=8ÀÍa*Ò{qÂÂÚ•Í¹v\r’àtÅ,P¤R1\\¨#žµ>”îb~nzz`R²‘!nHqßéIT{2–\Z;Øa·]§æÜO%Oqõ¨äH€R¤€ƒ\rJyqŒ±úFÕòXà/QóÔö¥íe¢*Xxµ¶ˆ¥ö4†[ŒðkR×DhbjeâIFa¶Ú²ûãøWÜÕÑ<\Z&v’0 \"ñØ2Ž:D½Ï¹ü«•»Ö®µiY-’Híå9y™/»é]JJ\ZÉÝþG©©»AZÝ{–î®íôÌ˜ÑnnÀQÌQï7½d4òÝ]¯$ieaË·8€vü*ÔvL“‚9\\ñV~Î<³\"6@à3øVXMÛq¼+Q¹”ÌÚ˜çn#=êÇ”çh½~•3ÄI*‡§~€{STm@	ýéôÈ­“º9œ-Ôbá	ÂžIç×ëS¤¹FÀ#=\0=>”ÉÉÆs´Ôª¥‘p@âžÄ½	ÒhÝIpTp	c’j4˜Æï¿$òãž?¥L4àí¾L×bu?_JÑÑ¢¨ŒmSÇ\'¯µ ±Šó;Êp­Èç?_J…¤-ÆÝ®ÌsžÃ¿µtFÑd`dT`08Áþ´Ã§Û¾6¨ñÏCÞ˜k±„¡Ø\rªB0ùsÎM(\r´2®q‘žœÖÙÓJ—ÁQ§Ò ¸ÒŠ%€8-Ú¬Ì°„H	b®Ó×5imñç•ä\0:Š•me…Îè[ ›nxô¥@óÏŽß•?1î„6ê#ÎÀSø»ö¨ZÎ)ËyŠXÏ¦=NeÚH<f¬%ÑXÈAµ{íÀÏ¨£V32ËM»°¹7\ZN¡qe6AF…ÙqùWCs¯xƒUŽÙ5½HÞ%©\"=ÃœœrÇ©éY†è™\0;FÆ®G •\'ÌAÀÀÆ=hQÐ.ÉãÊrªyI©–\"e\0#¦ÑÒ«ùªÉ€7v\'¦)¤^MØSŒœÓ½ÂåÆEÁ{`Ô¸Hð	‘‘ëôªeÝb@cÔç\0ŠrÌ^%;J¶8Ï?…È~…‚bw€@3Ïÿ\0ªšB¶Û•çh=j«NÅIRx,W&ªÉpÆ\0b“\'¡rÔl.¥é\'@gÛÉ\'bªÉ1oø÷\0“ÆMFC<#z1Ç$dÔ;•Éó# cW‚¾ô\nây¥bc#IÆýj\0ìÄ\00ä ôíšFÚÛb[<ŽƒÖ¬C\ZÃ…AóKwëßÒ‹…ÄŠ\rŒ\ZVÉ˜à\Z¼ÅÞ\"@ýžÇëUÀGÞò¶äÎ\0äsê=iÈ\\3P@Éèá@D‘Ã…@Á€ÈlçwÅu‘2Ìå”`€:óéëïQ™¦•m\r1‘ÇãR[£†¶«\0\0$gJö\rI~PvÈ¹ÐgG!a†LŽ1RË\ZJþäuóíMØÕË‘œŒúSar¼rHùÎ3‡·Ö®DùnP¥ršjÚÃœž7`ÔñÙª±B\0\0ä°9É v¹) å¡ë“Î½$Ëeù˜ÎÓšŠä¢mÌä/§\'è)¦ñR>óàqœm¡aÍ$•\0WÒy_ìÅÿ\0|Ó…Ú¾K \'¦hûJÏ!H›±K\Z¡È!\\à|Üg×é[bÛ\0Ä’[€9«*I\0É¿4£kà¯;¿ª½ƒN¥„ÇqÀ<mïéSÁæ¬ò>Ö`zœŽ¸éíT¬R<“Á`HÅZ˜—™1æ(9ëŸZo`Ðâu›p\02CpÖ¢¶\0dÚ6’@õ÷ÏqSÂg–&Q’˜!]‡ UYb–X÷,y+Ð¨ÇáR´Ø°÷Ï&X3¿ÝîTÈfb²äŒ…8¦ÈIE|¦#î‘ƒùÓTewÊ‘†ç ÍUìÕÄÛ{4q‰@Äî´üÔ…%R¬¼üÊF@àç4ár„XÙ~\\õÉÉúÒ³JFÁ è½©>£Û …ÉRI$àjEÊbÒd<¸úS€El9$ºåNzŸOjvÐ¤á3\"ò«œñõ©érã``’IU#‡jr\"n!0Tc/žM©ÎQŽsº—rÁu½Ší`s°ÔVRMÜÚ)“¬aÛ©œ€2iÉ—!Uú{oJrKº79hà°Æ5\\c÷»C)\0¨éõÆã$z\ntÛVvNÎ‡…ê¹¦8`TH€a²p\rNf€Ê8ë’iË¸.bbryÏ5’¹ºQj÷!u.ŠTàžÞù§y%— ’ØûÝ¾”Öf)Ô«)öÁçµL	üÇ$@<}j/Ñ›EE‘òüÛG#<Ó&%FI\0ØF:cüiòE¹BïÇCô¤ß<qœëôª„[VZ‘)¨³8é–ÆmÅÀåC¾*ÁŠ$’{vJWºåÚÀ«qíUåvù—8 ¸ëŽù­ÉÙœÓ¯JBRå\027AÆ«™\n£!*±“–¨fg+å61ÁÜx4’Fã²p0\në…¼Ï:®\"SºZ+*ÊÒ\'x¹•&ß˜—läå›úSEnóm¦pr]†ÿ\0\\ÖœVQÂ¨Ä¤äøVö¶Ç5ÞÌ©\r°¥PR1üMÉüªÜCYIf?7_ÿ\0UZ‘™\0Ÿ3‘Ö˜V7R_jœàçœ})h=ÅAŒõ$ŠMÄ–@N»ó‘ÿ\0Ö£.Áã ÛßÞ•P®A9-éëL.î(bŒ6•:³pO¶)bd_õ¸ùÎ@ŠkìnáÈ8$÷â›ÊTä€giÁ?þªKP%óg,™_SŽžÔÉ’­¹‚`÷ÿ\0ëS0Aã$žHêúÕ!ˆI	ùŠ¸ÆsŒ}hØ.Çy›	B|÷‡çÈe.;à\ncGìªä“Ät©#OÝXdõ Ó°ZãZJ2´*W¡ÇûTÎv‰\0\\€½…X`ÙP²œ“ŽcéšqB¥ˆ9Ï\0×ÿ\0­F–\rLZ©cåHY€ |´Å‚UÊÆÃyvµ{;HãÞâ¢o7Í;\0`FFAé@=\nF9FÒ#fù¾nØ¥RIä²¶qŽÕr@\\açÐTŸ+\0É;€G“vb)É!à‚ÇhÈ\0piæQ Þ00I+üªì‘#„ùdÀ\Z®úp•p$q‚@Pyü}¨¨<ð«Ã0góÏz¯3eg%°HÆ0>µgìÌ½ÖF<OÂ©Ê$‰Ô\"§‚sœý=\Z½DÅ2¨r¡ò+O¯Ö–éI …ÐŸ­9-£Ã3©‘y\nNBúÖŽô ³²Ó¥ao0!V ­Ž0{zÔÐÀ\nl”}ïï¾´ùBˆƒ)f\npÜt÷§ÛÎÁ 2÷[¨4”O)D„€\0aÆÁåR}„‡ùÓ–;zÃ½;ÎP1ù/AN¹U‰H+÷‰èO¥-FˆRÅ|ÞŠ\0ÛÐŠ¸° e	Èn\n¨Æ=ê\'i%L\'9QÚ“k»[9ä“h»­º\'f8 òO©¨æ‡H*§¦ÜTo33„³6©ÅPÅ2ÇjŒÙÏZÈ¢¤™I8Áüªìjnm¢2:ã?þªVBñ1ò€XÔvéä©V-ÐŸ­7f$Œì?Ç6HzUe…e‘€B$‚TŒô­)¤d@¨Ç`3ŸzŒ–Ú|¸×AÆ}É¥{‰êÊßcGäÊÊz`(ûóÜÿ\0ßB…¸‘ÆH_j_9ý•„sP(vmÝqÖ”Æ\0Läî89¢Ûï?û´æéûÕ¯R^ãâ	Œ‘È$~U<V±‹#)`Ç®1Ö›Dÿ\0yªÌòo÷ó©–ì¥¹`±®	ÆzRÈÄ\0£¡4‡ýZÑ/ÞZ:‰™\0·i:°àgšŠ+Xn@7¶Þ3Ö§øò­v÷ÿ\0Æ¥’÷2æ´Ž2Bn“ÖªÆÄ…RsóMhÝ}óô5›ÞO÷¨{¡)‰ZnG@1R\'É#…ã¦=©?å±ú\nQþ¹ÿ\0\n}	dnç|C=zš¬²™L›‚üäƒéVýl5R¼ßj¢Øºñ²d’HÍ5Éæ\'váÈ©þ<ÏÒ¢ƒþ=àB¢EÀFäHù!³ÔSÚWÚøb0)‡ýLŸZîÉô¬&énZÎË(ØrNsš7œý(ùÅøÓ{?áY5©·3¾ä>c¬˜V8p3øÓ\'ÈÚrrÅ+­O ¤¸û¿ˆ­ingUê4¼¶w\ntŒv¸jAßýê$ÿ\0–•Ð·9^äQ.Ô“àt­YÛ¤òKæå‚ôâ«\'Ü—ëWôßõ“Õ#%¹`ÙñòäãÇCK\0/ÄŸ›Ö…ÿ\0!þñþt¶½[ýêhqjIóOsB\"›Y\\˜6ö¢ÓîÉõ§Gÿ\0S¿RvêÀdZŽVÿ\0NŒ`TÐÿ\0Ç«Uy¿ä!Ö¨gË]Ù9¨åbˆ\nð@üênõ^ãýQúTõe\0\rÀ\0O\\Ruµl“×«þ¬Røõo÷¨}@7	rr;R²€¸ç¿áLñê~¢¤~ƒüö¡¨CòÁIúýj#+“Ÿ§µLŸñïùÕoâ“ëM”ö&QçD\'$gñ¥‘ˆE óÀ¤ƒþ=—ñ¢_õKõ€ä åKÉ¶nHã<*þïâjAÿ\0Íþí–2i%uf8Q‘Š»Ìƒ¦ñ‚Gz£kÿ\0»W‡úÈ~”Ê+Éû¯0/ny¬ÙòÒXä0Ç5¥qÖO¥fÍ÷ßýáGBF\'Í\'©Ô¡¼¥‡`#š‡³ý*Wû¶ÿ\0JB{·¸‘òY‰#=úÕ‹{—Kvo””?Ä3Ÿ­Rµèÿ\0MüzKõ£¨ÖæcpÛœ?ìqŠž)\0ÁÏËœŸZ­oÐT«ü?îU\rnËí+}8¨mey$@ÇŒv÷§7ü{Iô5\rúäú\nEt/´(\'\0Ö h–I›#[˜«oÿ\0è*¸ÿ\0]\'ûÿ\0Ò‘%9‡¨#$dò\Z[¬¬yÉ$¯SEçü³úÿ\0Z/?Õ÷h+¬ï	Èç¯ÐT„–v\\7cŠ®¿x}ò`®?ïÑÐDÐYÂcÉ\\œÔ¿c‡û”ø?Õ~5-!ÿÙ', 'isucon')\G
-
-# Query 20: 2.33 QPS, 0.00x concurrency, ID 0xFFF66E9B3D962FA319C8068B5C1997CD at byte 33642107
-# This item is included in the report because it matches --limit.
-# Scores: V/M = 0.01
-# Time range: 2021-08-21 11:03:43 to 11:04:43
-# Attribute    pct   total     min     max     avg     95%  stddev  median
-# ============ === ======= ======= ======= ======= ======= ======= =======
-# Count          0     140
-# Exec time      0    46ms     6us    16ms   325us     2ms     1ms    14us
-# Lock time      0       0       0       0       0       0       0       0
-# Rows sent      0       0       0       0       0       0       0       0
-# Rows examine   0       0       0       0       0       0       0       0
-# Rows affecte   0       0       0       0       0       0       0       0
-# Bytes sent     0   1.50k      11      11      11      11       0      11
-# Query size     0   1.09k       8       8       8       8       0       8
-# String:
-# Databases    isucondition
-# Hosts        localhost
-# Users        isucon
-# Query_time distribution
-#   1us  ##########
-#  10us  ################################################################
-# 100us  ##############
-#   1ms  ######
-#  10ms  #
-# 100ms
-#    1s
-#  10s+
-ROLLBACK\G
-
-# Query 21: 3.03 QPS, 0.00x concurrency, ID 0xB5B9D2CFE100A1D0ACDFA234C0D2004A at byte 38861706
-# This item is included in the report because it matches --limit.
-# Scores: V/M = 0.00
-# Time range: 2021-08-21 11:03:43 to 11:04:43
-# Attribute    pct   total     min     max     avg     95%  stddev  median
-# ============ === ======= ======= ======= ======= ======= ======= =======
-# Count          0     182
-# Exec time      0    38ms     6us     9ms   210us   515us   858us    13us
-# Lock time      0   501us       0   117us     2us    20us    11us       0
-# Rows sent      0   4.44k      25      25      25      25       0      25
-# Rows examine   0   1.76k       0     129    9.91  107.34   31.50       0
-# Rows affecte   0       0       0       0       0       0       0       0
-# Bytes sent     0  92.24k     519     519     519     519       0     519
-# Query size     0   8.89k      50      50      50      50       0      50
-# Boolean:
-# QC hit        91% yes,   8% no
-# String:
-# Databases    isucondition
-# Hosts        localhost
-# Users        isucon
-# Query_time distribution
-#   1us  ####
-#  10us  ################################################################
-# 100us  #############
+# 100us  ###########
 #   1ms  ###
 #  10ms
 # 100ms
@@ -788,49 +786,49 @@ ROLLBACK\G
 # EXPLAIN /*!50100 PARTITIONS*/
 SELECT `character` FROM `isu` GROUP BY `character`\G
 
-# Query 22: 0 QPS, 0x concurrency, ID 0x63ADC6E0E7D3641922313DA6B4D40EE9 at byte 3558
+# Query 22: 51 QPS, 0.02x concurrency, ID 0x4BE060F988E69CE753173420E7096F5D at byte 1672852
 # This item is included in the report because it matches --limit.
 # Scores: V/M = 0.00
-# Time range: all events occurred at 2021-08-21 11:03:38
+# Time range: 2021-08-21 11:09:35 to 11:09:36
 # Attribute    pct   total     min     max     avg     95%  stddev  median
 # ============ === ======= ======= ======= ======= ======= ======= =======
-# Count          0       1
-# Exec time      0    37ms    37ms    37ms    37ms    37ms       0    37ms
-# Lock time      0    70us    70us    70us    70us    70us       0    70us
+# Count          0      51
+# Exec time      0    21ms    66us     3ms   404us     2ms   666us   156us
+# Lock time      0     2ms    14us    75us    33us    60us    13us    28us
 # Rows sent      0       0       0       0       0       0       0       0
-# Rows examine   0       0       0       0       0       0       0       0
-# Rows affecte   0       0       0       0       0       0       0       0
-# Bytes sent     0      11      11      11      11      11       0      11
-# Query size     0     157     157     157     157     157       0     157
+# Rows examine   0      51       1       1       1       1       0       1
+# Rows affecte   0      51       1       1       1       1       0       1
+# Bytes sent     0   2.59k      52      52      52      52       0      52
+# Query size     0   5.43k     105     111  109.06  107.34    1.65  107.34
 # String:
 # Databases    isucondition
 # Hosts        localhost
 # Users        isucon
 # Query_time distribution
 #   1us
-#  10us
-# 100us
-#   1ms
-#  10ms  ################################################################
+#  10us  ####
+# 100us  ################################################################
+#   1ms  #######
+#  10ms
 # 100ms
 #    1s
 #  10s+
 # Tables
-#    SHOW TABLE STATUS FROM `isucondition` LIKE 'isu_association_config'\G
-#    SHOW CREATE TABLE `isucondition`.`isu_association_config`\G
-CREATE TABLE `isu_association_config` (
-  `name` VARCHAR(255) PRIMARY KEY,
-  `url` VARCHAR(255) NOT NULL UNIQUE
-) ENGINE=InnoDB DEFAULT CHARACTER SET=utf8mb4\G
+#    SHOW TABLE STATUS FROM `isucondition` LIKE 'isu'\G
+#    SHOW CREATE TABLE `isucondition`.`isu`\G
+UPDATE `isu` SET `character` = 'ãŠã¨ãªã—ã„' WHERE  `jia_isu_uuid` = 'd87bcd31-6490-438e-814a-bf3c889aee73'\G
+# Converted for EXPLAIN
+# EXPLAIN /*!50100 PARTITIONS*/
+select  `character` = 'ãŠã¨ãªã—ã„' from `isu` where   `jia_isu_uuid` = 'd87bcd31-6490-438e-814a-bf3c889aee73'\G
 
-# Query 23: 0 QPS, 0x concurrency, ID 0xB3099B1F54923403DEE3EF20F3B5B682 at byte 819045
+# Query 23: 0 QPS, 0x concurrency, ID 0xB3099B1F54923403DEE3EF20F3B5B682 at byte 819021
 # This item is included in the report because it matches --limit.
 # Scores: V/M = 0.00
-# Time range: all events occurred at 2021-08-21 11:03:39
+# Time range: all events occurred at 2021-08-21 11:09:30
 # Attribute    pct   total     min     max     avg     95%  stddev  median
 # ============ === ======= ======= ======= ======= ======= ======= =======
 # Count          0       1
-# Exec time      0    20ms    20ms    20ms    20ms    20ms       0    20ms
+# Exec time      0    17ms    17ms    17ms    17ms    17ms       0    17ms
 # Lock time      0       0       0       0       0       0       0       0
 # Rows sent      0       0       0       0       0       0       0       0
 # Rows examine   0       0       0       0       0       0       0       0
@@ -855,50 +853,15 @@ CREATE TABLE `isu_association_config` (
 #    SHOW CREATE TABLE `isucondition`.`isu_condition`\G
 INSERT INTO `isu_condition` VALUES (1,'eb104b95-3532-4828-8550-89da717b9667','2021-06-03 15:59:09',1,'is_dirty=false,is_overweight=false,is_broken=false','ã‚ã€ã‚ã‚‹ããªã„ã­ï¼','2021-06-03 15:59:09.000000') /*... omitted ...*/\G
 
-# Query 24: 51 QPS, 0.01x concurrency, ID 0x4BE060F988E69CE753173420E7096F5D at byte 1722415
+# Query 24: 0 QPS, 0x concurrency, ID 0x0B2C7574276F62137C2BC6622D8DA33E at byte 1823
 # This item is included in the report because it matches --limit.
 # Scores: V/M = 0.00
-# Time range: 2021-08-21 11:03:44 to 11:03:45
-# Attribute    pct   total     min     max     avg     95%  stddev  median
-# ============ === ======= ======= ======= ======= ======= ======= =======
-# Count          0      51
-# Exec time      0    14ms    96us     2ms   276us   568us   342us   152us
-# Lock time      0     2ms    19us   299us    48us   176us    55us    28us
-# Rows sent      0       0       0       0       0       0       0       0
-# Rows examine   0      51       1       1       1       1       0       1
-# Rows affecte   0      51       1       1       1       1       0       1
-# Bytes sent     0   2.59k      52      52      52      52       0      52
-# Query size     0   5.38k     105     111     108  107.34    2.28  107.34
-# String:
-# Databases    isucondition
-# Hosts        localhost
-# Users        isucon
-# Query_time distribution
-#   1us
-#  10us  #
-# 100us  ################################################################
-#   1ms  ##
-#  10ms
-# 100ms
-#    1s
-#  10s+
-# Tables
-#    SHOW TABLE STATUS FROM `isucondition` LIKE 'isu'\G
-#    SHOW CREATE TABLE `isucondition`.`isu`\G
-UPDATE `isu` SET `character` = 'ãã¾ãã‚Œ' WHERE  `jia_isu_uuid` = '0fc60a68-0b90-47f6-8489-1c5eab104bac'\G
-# Converted for EXPLAIN
-# EXPLAIN /*!50100 PARTITIONS*/
-select  `character` = 'ãã¾ãã‚Œ' from `isu` where   `jia_isu_uuid` = '0fc60a68-0b90-47f6-8489-1c5eab104bac'\G
-
-# Query 25: 0 QPS, 0x concurrency, ID 0x0B2C7574276F62137C2BC6622D8DA33E at byte 1823
-# This item is included in the report because it matches --limit.
-# Scores: V/M = 0.00
-# Time range: all events occurred at 2021-08-21 11:03:38
+# Time range: all events occurred at 2021-08-21 11:09:30
 # Attribute    pct   total     min     max     avg     95%  stddev  median
 # ============ === ======= ======= ======= ======= ======= ======= =======
 # Count          0       1
-# Exec time      0    12ms    12ms    12ms    12ms    12ms       0    12ms
-# Lock time      0    72us    72us    72us    72us    72us       0    72us
+# Exec time      0    13ms    13ms    13ms    13ms    13ms       0    13ms
+# Lock time      0    69us    69us    69us    69us    69us       0    69us
 # Rows sent      0       0       0       0       0       0       0       0
 # Rows examine   0       0       0       0       0       0       0       0
 # Rows affecte   0       0       0       0       0       0       0       0
@@ -939,15 +902,47 @@ select =utf8mb4 from CURRENT_TIMESTAMP(6),
    PRIMARY KEY(`id`)
 ) ENGINE=InnoDB DEFAULT CHARACTER \G
 
-# Query 26: 0 QPS, 0x concurrency, ID 0xA9779B63FC3747EFB3817E90D314B215 at byte 2513
+# Query 25: 0 QPS, 0x concurrency, ID 0xDDF8867787468413CD4D464358663984 at byte 1008
 # This item is included in the report because it matches --limit.
 # Scores: V/M = 0.00
-# Time range: all events occurred at 2021-08-21 11:03:38
+# Time range: all events occurred at 2021-08-21 11:09:30
 # Attribute    pct   total     min     max     avg     95%  stddev  median
 # ============ === ======= ======= ======= ======= ======= ======= =======
 # Count          0       1
-# Exec time      0    12ms    12ms    12ms    12ms    12ms       0    12ms
-# Lock time      0   156us   156us   156us   156us   156us       0   156us
+# Exec time      0    11ms    11ms    11ms    11ms    11ms       0    11ms
+# Lock time      0    28us    28us    28us    28us    28us       0    28us
+# Rows sent      0       0       0       0       0       0       0       0
+# Rows examine   0       0       0       0       0       0       0       0
+# Rows affecte   0       0       0       0       0       0       0       0
+# Bytes sent     0      11      11      11      11      11       0      11
+# Query size     0      36      36      36      36      36       0      36
+# String:
+# Databases    isucondition
+# Hosts        localhost
+# Users        isucon
+# Query_time distribution
+#   1us
+#  10us
+# 100us
+#   1ms
+#  10ms  ################################################################
+# 100ms
+#    1s
+#  10s+
+# Tables
+#    SHOW TABLE STATUS FROM `isucondition` LIKE 'isu_condition'\G
+#    SHOW CREATE TABLE `isucondition`.`isu_condition`\G
+DROP TABLE IF EXISTS `isu_condition`\G
+
+# Query 26: 0 QPS, 0x concurrency, ID 0xA9779B63FC3747EFB3817E90D314B215 at byte 2513
+# This item is included in the report because it matches --limit.
+# Scores: V/M = 0.00
+# Time range: all events occurred at 2021-08-21 11:09:30
+# Attribute    pct   total     min     max     avg     95%  stddev  median
+# ============ === ======= ======= ======= ======= ======= ======= =======
+# Count          0       1
+# Exec time      0    11ms    11ms    11ms    11ms    11ms       0    11ms
+# Lock time      0    52us    52us    52us    52us    52us       0    52us
 # Rows sent      0       0       0       0       0       0       0       0
 # Rows examine   0       0       0       0       0       0       0       0
 # Rows affecte   0       0       0       0       0       0       0       0
@@ -981,20 +976,20 @@ CREATE TABLE `isu_condition` (
   PRIMARY KEY(`id`)
 ) ENGINE=InnoDB DEFAULT CHARACTER SET=utf8mb4\G
 
-# Query 27: 0 QPS, 0x concurrency, ID 0xE568444375ADEFFF1EDCD938F3FE2419 at byte 3151
+# Query 27: 0 QPS, 0x concurrency, ID 0x63ADC6E0E7D3641922313DA6B4D40EE9 at byte 3558
 # This item is included in the report because it matches --limit.
 # Scores: V/M = 0.00
-# Time range: all events occurred at 2021-08-21 11:03:38
+# Time range: all events occurred at 2021-08-21 11:09:30
 # Attribute    pct   total     min     max     avg     95%  stddev  median
 # ============ === ======= ======= ======= ======= ======= ======= =======
 # Count          0       1
 # Exec time      0    11ms    11ms    11ms    11ms    11ms       0    11ms
-# Lock time      0   440us   440us   440us   440us   440us       0   440us
+# Lock time      0    31us    31us    31us    31us    31us       0    31us
 # Rows sent      0       0       0       0       0       0       0       0
 # Rows examine   0       0       0       0       0       0       0       0
 # Rows affecte   0       0       0       0       0       0       0       0
 # Bytes sent     0      11      11      11      11      11       0      11
-# Query size     0     165     165     165     165     165       0     165
+# Query size     0     157     157     157     157     157       0     157
 # String:
 # Databases    isucondition
 # Hosts        localhost
@@ -1009,6 +1004,41 @@ CREATE TABLE `isu_condition` (
 #    1s
 #  10s+
 # Tables
+#    SHOW TABLE STATUS FROM `isucondition` LIKE 'isu_association_config'\G
+#    SHOW CREATE TABLE `isucondition`.`isu_association_config`\G
+CREATE TABLE `isu_association_config` (
+  `name` VARCHAR(255) PRIMARY KEY,
+  `url` VARCHAR(255) NOT NULL UNIQUE
+) ENGINE=InnoDB DEFAULT CHARACTER SET=utf8mb4\G
+
+# Query 28: 0 QPS, 0x concurrency, ID 0xE568444375ADEFFF1EDCD938F3FE2419 at byte 3151
+# This item is included in the report because it matches --limit.
+# Scores: V/M = 0.00
+# Time range: all events occurred at 2021-08-21 11:09:30
+# Attribute    pct   total     min     max     avg     95%  stddev  median
+# ============ === ======= ======= ======= ======= ======= ======= =======
+# Count          0       1
+# Exec time      0     8ms     8ms     8ms     8ms     8ms       0     8ms
+# Lock time      0    36us    36us    36us    36us    36us       0    36us
+# Rows sent      0       0       0       0       0       0       0       0
+# Rows examine   0       0       0       0       0       0       0       0
+# Rows affecte   0       0       0       0       0       0       0       0
+# Bytes sent     0      11      11      11      11      11       0      11
+# Query size     0     165     165     165     165     165       0     165
+# String:
+# Databases    isucondition
+# Hosts        localhost
+# Users        isucon
+# Query_time distribution
+#   1us
+#  10us
+# 100us
+#   1ms  ################################################################
+#  10ms
+# 100ms
+#    1s
+#  10s+
+# Tables
 #    SHOW TABLE STATUS FROM `isucondition` LIKE 'user'\G
 #    SHOW CREATE TABLE `isucondition`.`user`\G
 CREATE TABLE `user` (
@@ -1016,56 +1046,23 @@ CREATE TABLE `user` (
   `created_at` DATETIME(6) DEFAULT CURRENT_TIMESTAMP(6)
 ) ENGINE=InnoDB DEFAULT CHARACTER SET=utf8mb4\G
 
-# Query 28: 0 QPS, 0x concurrency, ID 0x3ED09FC12F64EE299789CDE51B895144 at byte 1286
+# Query 29: 0 QPS, 0x concurrency, ID 0x23B3B41AE69594E3C7CD60AA1B336E72 at byte 0
 # This item is included in the report because it matches --limit.
 # Scores: V/M = 0.00
-# Time range: all events occurred at 2021-08-21 11:03:38
-# Attribute    pct   total     min     max     avg     95%  stddev  median
-# ============ === ======= ======= ======= ======= ======= ======= =======
-# Count          0       1
-# Exec time      0     8ms     8ms     8ms     8ms     8ms       0     8ms
-# Lock time      0    33us    33us    33us    33us    33us       0    33us
-# Rows sent      0       0       0       0       0       0       0       0
-# Rows examine   0       0       0       0       0       0       0       0
-# Rows affecte   0       0       0       0       0       0       0       0
-# Bytes sent     0      11      11      11      11      11       0      11
-# Query size     0      26      26      26      26      26       0      26
-# String:
-# Databases    isucondition
-# Hosts        localhost
-# Users        isucon
-# Query_time distribution
-#   1us
-#  10us
-# 100us
-#   1ms  ################################################################
-#  10ms
-# 100ms
-#    1s
-#  10s+
-# Tables
-#    SHOW TABLE STATUS FROM `isucondition` LIKE 'isu'\G
-#    SHOW CREATE TABLE `isucondition`.`isu`\G
-DROP TABLE IF EXISTS `isu`\G
-
-# Query 29: 0 QPS, 0x concurrency, ID 0x8C8EE8F0B87888473675710D3B4B2E82 at byte 678
-# This item is included in the report because it matches --limit.
-# Scores: V/M = 0.00
-# Time range: all events occurred at 2021-08-21 11:03:38
+# Time range: all events occurred at 2021-08-21 11:09:10
 # Attribute    pct   total     min     max     avg     95%  stddev  median
 # ============ === ======= ======= ======= ======= ======= ======= =======
 # Count          0       1
 # Exec time      0     7ms     7ms     7ms     7ms     7ms       0     7ms
-# Lock time      0    49us    49us    49us    49us    49us       0    49us
+# Lock time      0       0       0       0       0       0       0       0
 # Rows sent      0       0       0       0       0       0       0       0
 # Rows examine   0       0       0       0       0       0       0       0
 # Rows affecte   0       0       0       0       0       0       0       0
 # Bytes sent     0      11      11      11      11      11       0      11
-# Query size     0      45      45      45      45      45       0      45
+# Query size     0      15      15      15      15      15       0      15
 # String:
-# Databases    isucondition
 # Hosts        localhost
-# Users        isucon
+# Users        root
 # Query_time distribution
 #   1us
 #  10us
@@ -1075,55 +1072,17 @@ DROP TABLE IF EXISTS `isu`\G
 # 100ms
 #    1s
 #  10s+
-# Tables
-#    SHOW TABLE STATUS FROM `isucondition` LIKE 'isu_association_config'\G
-#    SHOW CREATE TABLE `isucondition`.`isu_association_config`\G
-DROP TABLE IF EXISTS `isu_association_config`\G
+flush slow logs\G
 
-# Query 30: 26 QPS, 0.00x concurrency, ID 0xF4F636EF33D0E74805151F71FF8A9A38 at byte 2698860
+# Query 30: 0 QPS, 0x concurrency, ID 0x04FE10A077C05EAF9CD71E643C48AD51 at byte 1554
 # This item is included in the report because it matches --limit.
 # Scores: V/M = 0.00
-# Time range: 2021-08-21 11:03:43 to 11:03:45
-# Attribute    pct   total     min     max     avg     95%  stddev  median
-# ============ === ======= ======= ======= ======= ======= ======= =======
-# Count          0      52
-# Exec time      0     7ms    10us     3ms   141us   185us   518us    19us
-# Lock time      0    23us       0    23us       0       0     3us       0
-# Rows sent      0      52       1       1       1       1       0       1
-# Rows examine   0       1       0       1    0.02       0    0.14       0
-# Rows affecte   0       0       0       0       0       0       0       0
-# Bytes sent     0  12.49k     246     246     246     246       0     246
-# Query size     0   3.61k      71      71      71      71       0      71
-# Boolean:
-# QC hit        98% yes,   1% no
-# String:
-# Databases    isucondition
-# Hosts        localhost
-# Users        isucon
-# Query_time distribution
-#   1us
-#  10us  ################################################################
-# 100us  #####
-#   1ms  ##
-#  10ms
-# 100ms
-#    1s
-#  10s+
-# Tables
-#    SHOW TABLE STATUS FROM `isucondition` LIKE 'isu_association_config'\G
-#    SHOW CREATE TABLE `isucondition`.`isu_association_config`\G
-# EXPLAIN /*!50100 PARTITIONS*/
-SELECT * FROM `isu_association_config` WHERE `name` = 'jia_service_url'\G
-
-# Query 31: 0 QPS, 0x concurrency, ID 0x04FE10A077C05EAF9CD71E643C48AD51 at byte 1554
-# This item is included in the report because it matches --limit.
-# Scores: V/M = 0.00
-# Time range: all events occurred at 2021-08-21 11:03:38
+# Time range: all events occurred at 2021-08-21 11:09:30
 # Attribute    pct   total     min     max     avg     95%  stddev  median
 # ============ === ======= ======= ======= ======= ======= ======= =======
 # Count          0       1
-# Exec time      0     4ms     4ms     4ms     4ms     4ms       0     4ms
-# Lock time      0    24us    24us    24us    24us    24us       0    24us
+# Exec time      0     7ms     7ms     7ms     7ms     7ms       0     7ms
+# Lock time      0    22us    22us    22us    22us    22us       0    22us
 # Rows sent      0       0       0       0       0       0       0       0
 # Rows examine   0       0       0       0       0       0       0       0
 # Rows affecte   0       0       0       0       0       0       0       0
@@ -1147,20 +1106,20 @@ SELECT * FROM `isu_association_config` WHERE `name` = 'jia_service_url'\G
 #    SHOW CREATE TABLE `isucondition`.`user`\G
 DROP TABLE IF EXISTS `user`\G
 
-# Query 32: 0 QPS, 0x concurrency, ID 0xDDF8867787468413CD4D464358663984 at byte 1008
+# Query 31: 0 QPS, 0x concurrency, ID 0x8C8EE8F0B87888473675710D3B4B2E82 at byte 678
 # This item is included in the report because it matches --limit.
 # Scores: V/M = 0.00
-# Time range: all events occurred at 2021-08-21 11:03:38
+# Time range: all events occurred at 2021-08-21 11:09:30
 # Attribute    pct   total     min     max     avg     95%  stddev  median
 # ============ === ======= ======= ======= ======= ======= ======= =======
 # Count          0       1
-# Exec time      0     4ms     4ms     4ms     4ms     4ms       0     4ms
-# Lock time      0    49us    49us    49us    49us    49us       0    49us
+# Exec time      0     7ms     7ms     7ms     7ms     7ms       0     7ms
+# Lock time      0    51us    51us    51us    51us    51us       0    51us
 # Rows sent      0       0       0       0       0       0       0       0
 # Rows examine   0       0       0       0       0       0       0       0
 # Rows affecte   0       0       0       0       0       0       0       0
 # Bytes sent     0      11      11      11      11      11       0      11
-# Query size     0      36      36      36      36      36       0      36
+# Query size     0      45      45      45      45      45       0      45
 # String:
 # Databases    isucondition
 # Hosts        localhost
@@ -1175,18 +1134,50 @@ DROP TABLE IF EXISTS `user`\G
 #    1s
 #  10s+
 # Tables
-#    SHOW TABLE STATUS FROM `isucondition` LIKE 'isu_condition'\G
-#    SHOW CREATE TABLE `isucondition`.`isu_condition`\G
-DROP TABLE IF EXISTS `isu_condition`\G
+#    SHOW TABLE STATUS FROM `isucondition` LIKE 'isu_association_config'\G
+#    SHOW CREATE TABLE `isucondition`.`isu_association_config`\G
+DROP TABLE IF EXISTS `isu_association_config`\G
 
-# Query 33: 0 QPS, 0x concurrency, ID 0xC501DDF8F78DE21723E3E3AAC552EBC7 at byte 933858
+# Query 32: 0 QPS, 0x concurrency, ID 0x3ED09FC12F64EE299789CDE51B895144 at byte 1286
 # This item is included in the report because it matches --limit.
 # Scores: V/M = 0.00
-# Time range: all events occurred at 2021-08-21 11:03:39
+# Time range: all events occurred at 2021-08-21 11:09:30
+# Attribute    pct   total     min     max     avg     95%  stddev  median
+# ============ === ======= ======= ======= ======= ======= ======= =======
+# Count          0       1
+# Exec time      0     5ms     5ms     5ms     5ms     5ms       0     5ms
+# Lock time      0    27us    27us    27us    27us    27us       0    27us
+# Rows sent      0       0       0       0       0       0       0       0
+# Rows examine   0       0       0       0       0       0       0       0
+# Rows affecte   0       0       0       0       0       0       0       0
+# Bytes sent     0      11      11      11      11      11       0      11
+# Query size     0      26      26      26      26      26       0      26
+# String:
+# Databases    isucondition
+# Hosts        localhost
+# Users        isucon
+# Query_time distribution
+#   1us
+#  10us
+# 100us
+#   1ms  ################################################################
+#  10ms
+# 100ms
+#    1s
+#  10s+
+# Tables
+#    SHOW TABLE STATUS FROM `isucondition` LIKE 'isu'\G
+#    SHOW CREATE TABLE `isucondition`.`isu`\G
+DROP TABLE IF EXISTS `isu`\G
+
+# Query 33: 0 QPS, 0x concurrency, ID 0xC501DDF8F78DE21723E3E3AAC552EBC7 at byte 933834
+# This item is included in the report because it matches --limit.
+# Scores: V/M = 0.00
+# Time range: all events occurred at 2021-08-21 11:09:30
 # Attribute    pct   total     min     max     avg     95%  stddev  median
 # ============ === ======= ======= ======= ======= ======= ======= =======
 # Count          0       4
-# Exec time      0     3ms     9us     3ms   697us     3ms     1ms     1ms
+# Exec time      0     2ms     8us     2ms   581us     2ms   959us     1ms
 # Lock time      0       0       0       0       0       0       0       0
 # Rows sent      0       0       0       0       0       0       0       0
 # Rows examine   0       0       0       0       0       0       0       0
@@ -1208,15 +1199,50 @@ DROP TABLE IF EXISTS `isu_condition`\G
 #  10s+
 UNLOCK TABLES\G
 
-# Query 34: 0 QPS, 0x concurrency, ID 0x46D8711AFE54E410D62DCB9623488C60 at byte 936440
+# Query 34: 52 QPS, 0.00x concurrency, ID 0xF4F636EF33D0E74805151F71FF8A9A38 at byte 2486644
 # This item is included in the report because it matches --limit.
 # Scores: V/M = 0.00
-# Time range: all events occurred at 2021-08-21 11:03:39
+# Time range: 2021-08-21 11:09:35 to 11:09:36
+# Attribute    pct   total     min     max     avg     95%  stddev  median
+# ============ === ======= ======= ======= ======= ======= ======= =======
+# Count          0      52
+# Exec time      0     2ms    13us   850us    42us    69us   117us    18us
+# Lock time      0    27us       0    27us       0       0     3us       0
+# Rows sent      0      52       1       1       1       1       0       1
+# Rows examine   0       1       0       1    0.02       0    0.14       0
+# Rows affecte   0       0       0       0       0       0       0       0
+# Bytes sent     0  12.49k     246     246     246     246       0     246
+# Query size     0   3.61k      71      71      71      71       0      71
+# Boolean:
+# QC hit        98% yes,   1% no
+# String:
+# Databases    isucondition
+# Hosts        localhost
+# Users        isucon
+# Query_time distribution
+#   1us
+#  10us  ################################################################
+# 100us  ##
+#   1ms
+#  10ms
+# 100ms
+#    1s
+#  10s+
+# Tables
+#    SHOW TABLE STATUS FROM `isucondition` LIKE 'isu_association_config'\G
+#    SHOW CREATE TABLE `isucondition`.`isu_association_config`\G
+# EXPLAIN /*!50100 PARTITIONS*/
+SELECT * FROM `isu_association_config` WHERE `name` = 'jia_service_url'\G
+
+# Query 35: 0 QPS, 0x concurrency, ID 0x46D8711AFE54E410D62DCB9623488C60 at byte 936416
+# This item is included in the report because it matches --limit.
+# Scores: V/M = 0.00
+# Time range: all events occurred at 2021-08-21 11:09:30
 # Attribute    pct   total     min     max     avg     95%  stddev  median
 # ============ === ======= ======= ======= ======= ======= ======= =======
 # Count          0       1
 # Exec time      0     2ms     2ms     2ms     2ms     2ms       0     2ms
-# Lock time      0   135us   135us   135us   135us   135us       0   135us
+# Lock time      0   128us   128us   128us   128us   128us       0   128us
 # Rows sent      0       0       0       0       0       0       0       0
 # Rows examine   0       0       0       0       0       0       0       0
 # Rows affecte   0       1       1       1       1       1       0       1
@@ -1240,14 +1266,14 @@ UNLOCK TABLES\G
 #    SHOW CREATE TABLE `isucondition`.`isu_association_config`\G
 INSERT INTO `isu_association_config` (`name`, `url`) VALUES ('jia_service_url', 'http://54.95.51.246:5000') ON DUPLICATE KEY UPDATE `url` = VALUES(`url`)\G
 
-# Query 35: 0 QPS, 0x concurrency, ID 0xC16BFB122FC5E6F8A4CA23B1D689D52C at byte 933078
+# Query 36: 0 QPS, 0x concurrency, ID 0xC16BFB122FC5E6F8A4CA23B1D689D52C at byte 933054
 # This item is included in the report because it matches --limit.
 # Scores: V/M = 0.00
-# Time range: all events occurred at 2021-08-21 11:03:39
+# Time range: all events occurred at 2021-08-21 11:09:30
 # Attribute    pct   total     min     max     avg     95%  stddev  median
 # ============ === ======= ======= ======= ======= ======= ======= =======
 # Count          0       1
-# Exec time      0     2ms     2ms     2ms     2ms     2ms       0     2ms
+# Exec time      0   890us   890us   890us   890us   890us       0   890us
 # Lock time      0       0       0       0       0       0       0       0
 # Rows sent      0       0       0       0       0       0       0       0
 # Rows examine   0       0       0       0       0       0       0       0
@@ -1261,8 +1287,8 @@ INSERT INTO `isu_association_config` (`name`, `url`) VALUES ('jia_service_url', 
 # Query_time distribution
 #   1us
 #  10us
-# 100us
-#   1ms  ################################################################
+# 100us  ################################################################
+#   1ms
 #  10ms
 # 100ms
 #    1s
@@ -1272,75 +1298,15 @@ INSERT INTO `isu_association_config` (`name`, `url`) VALUES ('jia_service_url', 
 #    SHOW CREATE TABLE `isucondition`.`user`\G
 INSERT INTO `user` VALUES ('confident_chatelet','2021-08-02 19:17:31.000000') /*... omitted ...*/\G
 
-# Query 36: 0 QPS, 0x concurrency, ID 0x23B3B41AE69594E3C7CD60AA1B336E72 at byte 0
+# Query 37: 0 QPS, 0x concurrency, ID 0xD1ED593C9B7BD370F8A8872A9FD41911 at byte 817308
 # This item is included in the report because it matches --limit.
 # Scores: V/M = 0.00
-# Time range: all events occurred at 2021-08-21 11:03:24
+# Time range: all events occurred at 2021-08-21 11:09:30
 # Attribute    pct   total     min     max     avg     95%  stddev  median
 # ============ === ======= ======= ======= ======= ======= ======= =======
 # Count          0       1
-# Exec time      0   217us   217us   217us   217us   217us       0   217us
-# Lock time      0       0       0       0       0       0       0       0
-# Rows sent      0       0       0       0       0       0       0       0
-# Rows examine   0       0       0       0       0       0       0       0
-# Rows affecte   0       0       0       0       0       0       0       0
-# Bytes sent     0      11      11      11      11      11       0      11
-# Query size     0      15      15      15      15      15       0      15
-# String:
-# Hosts        localhost
-# Users        root
-# Query_time distribution
-#   1us
-#  10us
-# 100us  ################################################################
-#   1ms
-#  10ms
-# 100ms
-#    1s
-#  10s+
-flush slow logs\G
-
-# Query 37: 0 QPS, 0x concurrency, ID 0x8C36362580246C7408A9940F62DD30A6 at byte 6646
-# This item is included in the report because it matches --limit.
-# Scores: V/M = 0.00
-# Time range: all events occurred at 2021-08-21 11:03:38
-# Attribute    pct   total     min     max     avg     95%  stddev  median
-# ============ === ======= ======= ======= ======= ======= ======= =======
-# Count          0       1
-# Exec time      0   200us   200us   200us   200us   200us       0   200us
-# Lock time      0   195us   195us   195us   195us   195us       0   195us
-# Rows sent      0       0       0       0       0       0       0       0
-# Rows examine   0       0       0       0       0       0       0       0
-# Rows affecte   0       0       0       0       0       0       0       0
-# Bytes sent     0      11      11      11      11      11       0      11
-# Query size     0      23      23      23      23      23       0      23
-# String:
-# Databases    isucondition
-# Hosts        localhost
-# Users        isucon
-# Query_time distribution
-#   1us
-#  10us
-# 100us  ################################################################
-#   1ms
-#  10ms
-# 100ms
-#    1s
-#  10s+
-# Tables
-#    SHOW TABLE STATUS FROM `isucondition` LIKE 'isu'\G
-#    SHOW CREATE TABLE `isucondition`.`isu`\G
-LOCK TABLES `isu` WRITE\G
-
-# Query 38: 0 QPS, 0x concurrency, ID 0xD1ED593C9B7BD370F8A8872A9FD41911 at byte 817332
-# This item is included in the report because it matches --limit.
-# Scores: V/M = 0.00
-# Time range: all events occurred at 2021-08-21 11:03:39
-# Attribute    pct   total     min     max     avg     95%  stddev  median
-# ============ === ======= ======= ======= ======= ======= ======= =======
-# Count          0       1
-# Exec time      0   193us   193us   193us   193us   193us       0   193us
-# Lock time      0   190us   190us   190us   190us   190us       0   190us
+# Exec time      0   159us   159us   159us   159us   159us       0   159us
+# Lock time      0   156us   156us   156us   156us   156us       0   156us
 # Rows sent      0       0       0       0       0       0       0       0
 # Rows examine   0       0       0       0       0       0       0       0
 # Rows affecte   0       0       0       0       0       0       0       0
@@ -1364,20 +1330,20 @@ LOCK TABLES `isu` WRITE\G
 #    SHOW CREATE TABLE `isucondition`.`isu_association_config`\G
 LOCK TABLES `isu_association_config` WRITE\G
 
-# Query 39: 0 QPS, 0x concurrency, ID 0xC2E62D5F1075F64A0DB6EB15010BD794 at byte 818476
+# Query 38: 0 QPS, 0x concurrency, ID 0x8C36362580246C7408A9940F62DD30A6 at byte 6646
 # This item is included in the report because it matches --limit.
 # Scores: V/M = 0.00
-# Time range: all events occurred at 2021-08-21 11:03:39
+# Time range: all events occurred at 2021-08-21 11:09:30
 # Attribute    pct   total     min     max     avg     95%  stddev  median
 # ============ === ======= ======= ======= ======= ======= ======= =======
 # Count          0       1
-# Exec time      0   153us   153us   153us   153us   153us       0   153us
-# Lock time      0   124us   124us   124us   124us   124us       0   124us
+# Exec time      0   152us   152us   152us   152us   152us       0   152us
+# Lock time      0   149us   149us   149us   149us   149us       0   149us
 # Rows sent      0       0       0       0       0       0       0       0
 # Rows examine   0       0       0       0       0       0       0       0
 # Rows affecte   0       0       0       0       0       0       0       0
 # Bytes sent     0      11      11      11      11      11       0      11
-# Query size     0      33      33      33      33      33       0      33
+# Query size     0      23      23      23      23      23       0      23
 # String:
 # Databases    isucondition
 # Hosts        localhost
@@ -1392,19 +1358,19 @@ LOCK TABLES `isu_association_config` WRITE\G
 #    1s
 #  10s+
 # Tables
-#    SHOW TABLE STATUS FROM `isucondition` LIKE 'isu_condition'\G
-#    SHOW CREATE TABLE `isucondition`.`isu_condition`\G
-LOCK TABLES `isu_condition` WRITE\G
+#    SHOW TABLE STATUS FROM `isucondition` LIKE 'isu'\G
+#    SHOW CREATE TABLE `isucondition`.`isu`\G
+LOCK TABLES `isu` WRITE\G
 
-# Query 40: 0 QPS, 0x concurrency, ID 0xA71BFB156C3C00A2D4F0F36D72F73BD8 at byte 932527
+# Query 39: 0 QPS, 0x concurrency, ID 0xA71BFB156C3C00A2D4F0F36D72F73BD8 at byte 932503
 # This item is included in the report because it matches --limit.
 # Scores: V/M = 0.00
-# Time range: all events occurred at 2021-08-21 11:03:39
+# Time range: all events occurred at 2021-08-21 11:09:30
 # Attribute    pct   total     min     max     avg     95%  stddev  median
 # ============ === ======= ======= ======= ======= ======= ======= =======
 # Count          0       1
-# Exec time      0   144us   144us   144us   144us   144us       0   144us
-# Lock time      0   141us   141us   141us   141us   141us       0   141us
+# Exec time      0   146us   146us   146us   146us   146us       0   146us
+# Lock time      0   143us   143us   143us   143us   143us       0   143us
 # Rows sent      0       0       0       0       0       0       0       0
 # Rows examine   0       0       0       0       0       0       0       0
 # Rows affecte   0       0       0       0       0       0       0       0
@@ -1428,20 +1394,20 @@ LOCK TABLES `isu_condition` WRITE\G
 #    SHOW CREATE TABLE `isucondition`.`user`\G
 LOCK TABLES `user` WRITE\G
 
-# Query 41: 0 QPS, 0x concurrency, ID 0x6C2EC1E5F745A854E3C9683C148B8F34 at byte 3957
+# Query 40: 0 QPS, 0x concurrency, ID 0xC2E62D5F1075F64A0DB6EB15010BD794 at byte 818452
 # This item is included in the report because it matches --limit.
 # Scores: V/M = 0.00
-# Time range: all events occurred at 2021-08-21 11:03:38
+# Time range: all events occurred at 2021-08-21 11:09:30
 # Attribute    pct   total     min     max     avg     95%  stddev  median
 # ============ === ======= ======= ======= ======= ======= ======= =======
 # Count          0       1
-# Exec time      0   104us   104us   104us   104us   104us       0   104us
-# Lock time      0       0       0       0       0       0       0       0
+# Exec time      0   138us   138us   138us   138us   138us       0   138us
+# Lock time      0   115us   115us   115us   115us   115us       0   115us
 # Rows sent      0       0       0       0       0       0       0       0
 # Rows examine   0       0       0       0       0       0       0       0
 # Rows affecte   0       0       0       0       0       0       0       0
 # Bytes sent     0      11      11      11      11      11       0      11
-# Query size     0      64      64      64      64      64       0      64
+# Query size     0      33      33      33      33      33       0      33
 # String:
 # Databases    isucondition
 # Hosts        localhost
@@ -1455,22 +1421,25 @@ LOCK TABLES `user` WRITE\G
 # 100ms
 #    1s
 #  10s+
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */\G
+# Tables
+#    SHOW TABLE STATUS FROM `isucondition` LIKE 'isu_condition'\G
+#    SHOW CREATE TABLE `isucondition`.`isu_condition`\G
+LOCK TABLES `isu_condition` WRITE\G
 
-# Query 42: 0 QPS, 0x concurrency, ID 0x0B3768862E869E94B1893CE30CDC0C51 at byte 4877
+# Query 41: 0 QPS, 0x concurrency, ID 0x5F6CDADE369D56CC108C40676724E2B8 at byte 934089
 # This item is included in the report because it matches --limit.
 # Scores: V/M = 0.00
-# Time range: all events occurred at 2021-08-21 11:03:38
+# Time range: all events occurred at 2021-08-21 11:09:30
 # Attribute    pct   total     min     max     avg     95%  stddev  median
 # ============ === ======= ======= ======= ======= ======= ======= =======
 # Count          0       1
-# Exec time      0    69us    69us    69us    69us    69us       0    69us
+# Exec time      0    73us    73us    73us    73us    73us       0    73us
 # Lock time      0       0       0       0       0       0       0       0
 # Rows sent      0       0       0       0       0       0       0       0
 # Rows examine   0       0       0       0       0       0       0       0
 # Rows affecte   0       0       0       0       0       0       0       0
-# Bytes sent     0     111     111     111     111     111       0     111
-# Query size     0      29      29      29      29      29       0      29
+# Bytes sent     0      32      32      32      32      32       0      32
+# Query size     0      40      40      40      40      40       0      40
 # String:
 # Databases    isucondition
 # Hosts        localhost
@@ -1484,16 +1453,16 @@ LOCK TABLES `user` WRITE\G
 # 100ms
 #    1s
 #  10s+
-/*!40101 SET NAMES utf8mb4 */\G
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */\G
 
-# Query 43: 0 QPS, 0x concurrency, ID 0x5DA5148A17397865E2523B01877E348E at byte 816794
+# Query 42: 0 QPS, 0x concurrency, ID 0x5DA5148A17397865E2523B01877E348E at byte 816770
 # This item is included in the report because it matches --limit.
 # Scores: V/M = 0.00
-# Time range: all events occurred at 2021-08-21 11:03:39
+# Time range: all events occurred at 2021-08-21 11:09:30
 # Attribute    pct   total     min     max     avg     95%  stddev  median
 # ============ === ======= ======= ======= ======= ======= ======= =======
 # Count          0       1
-# Exec time      0    62us    62us    62us    62us    62us       0    62us
+# Exec time      0    51us    51us    51us    51us    51us       0    51us
 # Lock time      0       0       0       0       0       0       0       0
 # Rows sent      0       0       0       0       0       0       0       0
 # Rows examine   0       0       0       0       0       0       0       0
@@ -1515,14 +1484,43 @@ LOCK TABLES `user` WRITE\G
 #  10s+
 /*!40000 ALTER TABLE `isu` ENABLE KEYS */\G
 
-# Query 44: 0 QPS, 0x concurrency, ID 0xFCAE7CE2A6EAC2DA59A10975A2CCFF68 at byte 931979
+# Query 43: 0 QPS, 0x concurrency, ID 0x3CF21F1CBA5CE7CE63BD18F17FB8B000 at byte 817592
 # This item is included in the report because it matches --limit.
 # Scores: V/M = 0.00
-# Time range: all events occurred at 2021-08-21 11:03:39
+# Time range: all events occurred at 2021-08-21 11:09:30
 # Attribute    pct   total     min     max     avg     95%  stddev  median
 # ============ === ======= ======= ======= ======= ======= ======= =======
 # Count          0       1
-# Exec time      0    50us    50us    50us    50us    50us       0    50us
+# Exec time      0    43us    43us    43us    43us    43us       0    43us
+# Lock time      0       0       0       0       0       0       0       0
+# Rows sent      0       0       0       0       0       0       0       0
+# Rows examine   0       0       0       0       0       0       0       0
+# Rows affecte   0       0       0       0       0       0       0       0
+# Bytes sent     0      11      11      11      11      11       0      11
+# Query size     0      61      61      61      61      61       0      61
+# String:
+# Databases    isucondition
+# Hosts        localhost
+# Users        isucon
+# Query_time distribution
+#   1us
+#  10us  ################################################################
+# 100us
+#   1ms
+#  10ms
+# 100ms
+#    1s
+#  10s+
+/*!40000 ALTER TABLE `isu_association_config` DISABLE KEYS */\G
+
+# Query 44: 0 QPS, 0x concurrency, ID 0xFCAE7CE2A6EAC2DA59A10975A2CCFF68 at byte 931955
+# This item is included in the report because it matches --limit.
+# Scores: V/M = 0.00
+# Time range: all events occurred at 2021-08-21 11:09:30
+# Attribute    pct   total     min     max     avg     95%  stddev  median
+# ============ === ======= ======= ======= ======= ======= ======= =======
+# Count          0       1
+# Exec time      0    33us    33us    33us    33us    33us       0    33us
 # Lock time      0       0       0       0       0       0       0       0
 # Rows sent      0       0       0       0       0       0       0       0
 # Rows examine   0       0       0       0       0       0       0       0
@@ -1547,11 +1545,11 @@ LOCK TABLES `user` WRITE\G
 # Query 45: 0 QPS, 0x concurrency, ID 0x5766C19745B5366CA4D4427C4304DD4A at byte 6911
 # This item is included in the report because it matches --limit.
 # Scores: V/M = 0.00
-# Time range: all events occurred at 2021-08-21 11:03:38
+# Time range: all events occurred at 2021-08-21 11:09:30
 # Attribute    pct   total     min     max     avg     95%  stddev  median
 # ============ === ======= ======= ======= ======= ======= ======= =======
 # Count          0       1
-# Exec time      0    39us    39us    39us    39us    39us       0    39us
+# Exec time      0    33us    33us    33us    33us    33us       0    33us
 # Lock time      0       0       0       0       0       0       0       0
 # Rows sent      0       0       0       0       0       0       0       0
 # Rows examine   0       0       0       0       0       0       0       0
@@ -1573,68 +1571,10 @@ LOCK TABLES `user` WRITE\G
 #  10s+
 /*!40000 ALTER TABLE `isu` DISABLE KEYS */\G
 
-# Query 46: 0 QPS, 0x concurrency, ID 0x3CF21F1CBA5CE7CE63BD18F17FB8B000 at byte 817616
+# Query 46: 0 QPS, 0x concurrency, ID 0x72CF112D46E83BCC7FED72CFC7278B33 at byte 933550
 # This item is included in the report because it matches --limit.
 # Scores: V/M = 0.00
-# Time range: all events occurred at 2021-08-21 11:03:39
-# Attribute    pct   total     min     max     avg     95%  stddev  median
-# ============ === ======= ======= ======= ======= ======= ======= =======
-# Count          0       1
-# Exec time      0    27us    27us    27us    27us    27us       0    27us
-# Lock time      0       0       0       0       0       0       0       0
-# Rows sent      0       0       0       0       0       0       0       0
-# Rows examine   0       0       0       0       0       0       0       0
-# Rows affecte   0       0       0       0       0       0       0       0
-# Bytes sent     0      11      11      11      11      11       0      11
-# Query size     0      61      61      61      61      61       0      61
-# String:
-# Databases    isucondition
-# Hosts        localhost
-# Users        isucon
-# Query_time distribution
-#   1us
-#  10us  ################################################################
-# 100us
-#   1ms
-#  10ms
-# 100ms
-#    1s
-#  10s+
-/*!40000 ALTER TABLE `isu_association_config` DISABLE KEYS */\G
-
-# Query 47: 0 QPS, 0x concurrency, ID 0x5F6CDADE369D56CC108C40676724E2B8 at byte 934113
-# This item is included in the report because it matches --limit.
-# Scores: V/M = 0.00
-# Time range: all events occurred at 2021-08-21 11:03:39
-# Attribute    pct   total     min     max     avg     95%  stddev  median
-# ============ === ======= ======= ======= ======= ======= ======= =======
-# Count          0       1
-# Exec time      0    25us    25us    25us    25us    25us       0    25us
-# Lock time      0       0       0       0       0       0       0       0
-# Rows sent      0       0       0       0       0       0       0       0
-# Rows examine   0       0       0       0       0       0       0       0
-# Rows affecte   0       0       0       0       0       0       0       0
-# Bytes sent     0      32      32      32      32      32       0      32
-# Query size     0      40      40      40      40      40       0      40
-# String:
-# Databases    isucondition
-# Hosts        localhost
-# Users        isucon
-# Query_time distribution
-#   1us
-#  10us  ################################################################
-# 100us
-#   1ms
-#  10ms
-# 100ms
-#    1s
-#  10s+
-/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */\G
-
-# Query 48: 0 QPS, 0x concurrency, ID 0x72CF112D46E83BCC7FED72CFC7278B33 at byte 933574
-# This item is included in the report because it matches --limit.
-# Scores: V/M = 0.00
-# Time range: all events occurred at 2021-08-21 11:03:39
+# Time range: all events occurred at 2021-08-21 11:09:30
 # Attribute    pct   total     min     max     avg     95%  stddev  median
 # ============ === ======= ======= ======= ======= ======= ======= =======
 # Count          0       1
@@ -1660,14 +1600,43 @@ LOCK TABLES `user` WRITE\G
 #  10s+
 /*!40000 ALTER TABLE `user` ENABLE KEYS */\G
 
-# Query 49: 0 QPS, 0x concurrency, ID 0x8EE30A8CCD1B00BD602268D23FBC8687 at byte 932793
+# Query 47: 0 QPS, 0x concurrency, ID 0x6C2EC1E5F745A854E3C9683C148B8F34 at byte 3957
 # This item is included in the report because it matches --limit.
 # Scores: V/M = 0.00
-# Time range: all events occurred at 2021-08-21 11:03:39
+# Time range: all events occurred at 2021-08-21 11:09:30
 # Attribute    pct   total     min     max     avg     95%  stddev  median
 # ============ === ======= ======= ======= ======= ======= ======= =======
 # Count          0       1
-# Exec time      0    21us    21us    21us    21us    21us       0    21us
+# Exec time      0    24us    24us    24us    24us    24us       0    24us
+# Lock time      0       0       0       0       0       0       0       0
+# Rows sent      0       0       0       0       0       0       0       0
+# Rows examine   0       0       0       0       0       0       0       0
+# Rows affecte   0       0       0       0       0       0       0       0
+# Bytes sent     0      11      11      11      11      11       0      11
+# Query size     0      64      64      64      64      64       0      64
+# String:
+# Databases    isucondition
+# Hosts        localhost
+# Users        isucon
+# Query_time distribution
+#   1us
+#  10us  ################################################################
+# 100us
+#   1ms
+#  10ms
+# 100ms
+#    1s
+#  10s+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */\G
+
+# Query 48: 0 QPS, 0x concurrency, ID 0x8EE30A8CCD1B00BD602268D23FBC8687 at byte 932769
+# This item is included in the report because it matches --limit.
+# Scores: V/M = 0.00
+# Time range: all events occurred at 2021-08-21 11:09:30
+# Attribute    pct   total     min     max     avg     95%  stddev  median
+# ============ === ======= ======= ======= ======= ======= ======= =======
+# Count          0       1
+# Exec time      0    22us    22us    22us    22us    22us       0    22us
 # Lock time      0       0       0       0       0       0       0       0
 # Rows sent      0       0       0       0       0       0       0       0
 # Rows examine   0       0       0       0       0       0       0       0
@@ -1689,10 +1658,10 @@ LOCK TABLES `user` WRITE\G
 #  10s+
 /*!40000 ALTER TABLE `user` DISABLE KEYS */\G
 
-# Query 50: 0 QPS, 0x concurrency, ID 0xEFB479A2B160435A336C0323EB0C5AD6 at byte 818751
+# Query 49: 0 QPS, 0x concurrency, ID 0xEFB479A2B160435A336C0323EB0C5AD6 at byte 818727
 # This item is included in the report because it matches --limit.
 # Scores: V/M = 0.00
-# Time range: all events occurred at 2021-08-21 11:03:39
+# Time range: all events occurred at 2021-08-21 11:09:30
 # Attribute    pct   total     min     max     avg     95%  stddev  median
 # ============ === ======= ======= ======= ======= ======= ======= =======
 # Count          0       1
@@ -1718,10 +1687,10 @@ LOCK TABLES `user` WRITE\G
 #  10s+
 /*!40000 ALTER TABLE `isu_condition` DISABLE KEYS */\G
 
-# Query 51: 0 QPS, 0x concurrency, ID 0x20F25CBDA48A2D0CE99B119BD6E3CA7D at byte 934395
+# Query 50: 0 QPS, 0x concurrency, ID 0x20F25CBDA48A2D0CE99B119BD6E3CA7D at byte 934371
 # This item is included in the report because it matches --limit.
 # Scores: V/M = 0.00
-# Time range: all events occurred at 2021-08-21 11:03:39
+# Time range: all events occurred at 2021-08-21 11:09:30
 # Attribute    pct   total     min     max     avg     95%  stddev  median
 # ============ === ======= ======= ======= ======= ======= ======= =======
 # Count          0       1
@@ -1747,43 +1716,14 @@ LOCK TABLES `user` WRITE\G
 #  10s+
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */\G
 
-# Query 52: 0 QPS, 0x concurrency, ID 0x27BE0213CD3E5EC57485E1B752392A87 at byte 5709
+# Query 51: 0 QPS, 0x concurrency, ID 0x518F43A0D71C43A38940C300D44B4752 at byte 817895
 # This item is included in the report because it matches --limit.
 # Scores: V/M = 0.00
-# Time range: all events occurred at 2021-08-21 11:03:38
+# Time range: all events occurred at 2021-08-21 11:09:30
 # Attribute    pct   total     min     max     avg     95%  stddev  median
 # ============ === ======= ======= ======= ======= ======= ======= =======
 # Count          0       1
 # Exec time      0    15us    15us    15us    15us    15us       0    15us
-# Lock time      0       0       0       0       0       0       0       0
-# Rows sent      0       0       0       0       0       0       0       0
-# Rows examine   0       0       0       0       0       0       0       0
-# Rows affecte   0       0       0       0       0       0       0       0
-# Bytes sent     0      11      11      11      11      11       0      11
-# Query size     0      82      82      82      82      82       0      82
-# String:
-# Databases    isucondition
-# Hosts        localhost
-# Users        isucon
-# Query_time distribution
-#   1us
-#  10us  ################################################################
-# 100us
-#   1ms
-#  10ms
-# 100ms
-#    1s
-#  10s+
-/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */\G
-
-# Query 53: 0 QPS, 0x concurrency, ID 0x518F43A0D71C43A38940C300D44B4752 at byte 817919
-# This item is included in the report because it matches --limit.
-# Scores: V/M = 0.00
-# Time range: all events occurred at 2021-08-21 11:03:39
-# Attribute    pct   total     min     max     avg     95%  stddev  median
-# ============ === ======= ======= ======= ======= ======= ======= =======
-# Count          0       1
-# Exec time      0    14us    14us    14us    14us    14us       0    14us
 # Lock time      0       0       0       0       0       0       0       0
 # Rows sent      0       0       0       0       0       0       0       0
 # Rows examine   0       0       0       0       0       0       0       0
@@ -1805,10 +1745,10 @@ LOCK TABLES `user` WRITE\G
 #  10s+
 /*!40000 ALTER TABLE `isu_association_config` ENABLE KEYS */\G
 
-# Query 54: 0 QPS, 0x concurrency, ID 0x5929CCF3A5674E8906278E23572F899A at byte 6033
+# Query 52: 0 QPS, 0x concurrency, ID 0x5929CCF3A5674E8906278E23572F899A at byte 6033
 # This item is included in the report because it matches --limit.
 # Scores: V/M = 0.00
-# Time range: all events occurred at 2021-08-21 11:03:38
+# Time range: all events occurred at 2021-08-21 11:09:30
 # Attribute    pct   total     min     max     avg     95%  stddev  median
 # ============ === ======= ======= ======= ======= ======= ======= =======
 # Count          0       1
@@ -1834,20 +1774,20 @@ LOCK TABLES `user` WRITE\G
 #  10s+
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */\G
 
-# Query 55: 0 QPS, 0x concurrency, ID 0x4DE6CB1852630C845CD4C563682DFAC0 at byte 935585
+# Query 53: 0 QPS, 0x concurrency, ID 0x27BE0213CD3E5EC57485E1B752392A87 at byte 5709
 # This item is included in the report because it matches --limit.
 # Scores: V/M = 0.00
-# Time range: all events occurred at 2021-08-21 11:03:39
+# Time range: all events occurred at 2021-08-21 11:09:30
 # Attribute    pct   total     min     max     avg     95%  stddev  median
 # ============ === ======= ======= ======= ======= ======= ======= =======
 # Count          0       1
-# Exec time      0    11us    11us    11us    11us    11us       0    11us
+# Exec time      0    12us    12us    12us    12us    12us       0    12us
 # Lock time      0       0       0       0       0       0       0       0
 # Rows sent      0       0       0       0       0       0       0       0
 # Rows examine   0       0       0       0       0       0       0       0
 # Rows affecte   0       0       0       0       0       0       0       0
 # Bytes sent     0      11      11      11      11      11       0      11
-# Query size     0      62      62      62      62      62       0      62
+# Query size     0      82      82      82      82      82       0      82
 # String:
 # Databases    isucondition
 # Hosts        localhost
@@ -1861,16 +1801,45 @@ LOCK TABLES `user` WRITE\G
 # 100ms
 #    1s
 #  10s+
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */\G
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */\G
 
-# Query 56: 0 QPS, 0x concurrency, ID 0x8141D18EAF0BE3E1F12838CF67C743C8 at byte 934975
+# Query 54: 0 QPS, 0x concurrency, ID 0x0B3768862E869E94B1893CE30CDC0C51 at byte 4877
 # This item is included in the report because it matches --limit.
 # Scores: V/M = 0.00
-# Time range: all events occurred at 2021-08-21 11:03:39
+# Time range: all events occurred at 2021-08-21 11:09:30
 # Attribute    pct   total     min     max     avg     95%  stddev  median
 # ============ === ======= ======= ======= ======= ======= ======= =======
 # Count          0       1
-# Exec time      0    11us    11us    11us    11us    11us       0    11us
+# Exec time      0    12us    12us    12us    12us    12us       0    12us
+# Lock time      0       0       0       0       0       0       0       0
+# Rows sent      0       0       0       0       0       0       0       0
+# Rows examine   0       0       0       0       0       0       0       0
+# Rows affecte   0       0       0       0       0       0       0       0
+# Bytes sent     0     111     111     111     111     111       0     111
+# Query size     0      29      29      29      29      29       0      29
+# String:
+# Databases    isucondition
+# Hosts        localhost
+# Users        isucon
+# Query_time distribution
+#   1us
+#  10us  ################################################################
+# 100us
+#   1ms
+#  10ms
+# 100ms
+#    1s
+#  10s+
+/*!40101 SET NAMES utf8mb4 */\G
+
+# Query 55: 0 QPS, 0x concurrency, ID 0x8141D18EAF0BE3E1F12838CF67C743C8 at byte 934951
+# This item is included in the report because it matches --limit.
+# Scores: V/M = 0.00
+# Time range: all events occurred at 2021-08-21 11:09:30
+# Attribute    pct   total     min     max     avg     95%  stddev  median
+# ============ === ======= ======= ======= ======= ======= ======= =======
+# Count          0       1
+# Exec time      0    10us    10us    10us    10us    10us       0    10us
 # Lock time      0       0       0       0       0       0       0       0
 # Rows sent      0       0       0       0       0       0       0       0
 # Rows examine   0       0       0       0       0       0       0       0
@@ -1892,14 +1861,14 @@ LOCK TABLES `user` WRITE\G
 #  10s+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */\G
 
-# Query 57: 0 QPS, 0x concurrency, ID 0xE3FEF7A1401EB86587886CD19A4A4066 at byte 5433
+# Query 56: 0 QPS, 0x concurrency, ID 0xE3FEF7A1401EB86587886CD19A4A4066 at byte 5433
 # This item is included in the report because it matches --limit.
 # Scores: V/M = 0.00
-# Time range: all events occurred at 2021-08-21 11:03:38
+# Time range: all events occurred at 2021-08-21 11:09:30
 # Attribute    pct   total     min     max     avg     95%  stddev  median
 # ============ === ======= ======= ======= ======= ======= ======= =======
 # Count          0       1
-# Exec time      0    11us    11us    11us    11us    11us       0    11us
+# Exec time      0    10us    10us    10us    10us    10us       0    10us
 # Lock time      0       0       0       0       0       0       0       0
 # Rows sent      0       0       0       0       0       0       0       0
 # Rows examine   0       0       0       0       0       0       0       0
@@ -1921,14 +1890,14 @@ LOCK TABLES `user` WRITE\G
 #  10s+
 /*!40103 SET TIME_ZONE='+00:00' */\G
 
-# Query 58: 0 QPS, 0x concurrency, ID 0xB6DC063A74EDC86AFDCE342E5A3A3561 at byte 5149
+# Query 57: 0 QPS, 0x concurrency, ID 0xB6DC063A74EDC86AFDCE342E5A3A3561 at byte 5149
 # This item is included in the report because it matches --limit.
 # Scores: V/M = 0.00
-# Time range: all events occurred at 2021-08-21 11:03:38
+# Time range: all events occurred at 2021-08-21 11:09:30
 # Attribute    pct   total     min     max     avg     95%  stddev  median
 # ============ === ======= ======= ======= ======= ======= ======= =======
 # Count          0       1
-# Exec time      0    10us    10us    10us    10us    10us       0    10us
+# Exec time      0     9us     9us     9us     9us     9us       0     9us
 # Lock time      0       0       0       0       0       0       0       0
 # Rows sent      0       0       0       0       0       0       0       0
 # Rows examine   0       0       0       0       0       0       0       0
@@ -1940,8 +1909,8 @@ LOCK TABLES `user` WRITE\G
 # Hosts        localhost
 # Users        isucon
 # Query_time distribution
-#   1us
-#  10us  ################################################################
+#   1us  ################################################################
+#  10us
 # 100us
 #   1ms
 #  10ms
@@ -1950,68 +1919,10 @@ LOCK TABLES `user` WRITE\G
 #  10s+
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */\G
 
-# Query 59: 0 QPS, 0x concurrency, ID 0x9DE5931F062D2F5BEF0CA583D4BFA5B8 at byte 935279
+# Query 58: 0 QPS, 0x concurrency, ID 0x19B5F1DD811E9E8873D13F0D55D6D90F at byte 4263
 # This item is included in the report because it matches --limit.
 # Scores: V/M = 0.00
-# Time range: all events occurred at 2021-08-21 11:03:39
-# Attribute    pct   total     min     max     avg     95%  stddev  median
-# ============ === ======= ======= ======= ======= ======= ======= =======
-# Count          0       1
-# Exec time      0     9us     9us     9us     9us     9us       0     9us
-# Lock time      0       0       0       0       0       0       0       0
-# Rows sent      0       0       0       0       0       0       0       0
-# Rows examine   0       0       0       0       0       0       0       0
-# Rows affecte   0       0       0       0       0       0       0       0
-# Bytes sent     0      42      42      42      42      42       0      42
-# Query size     0      64      64      64      64      64       0      64
-# String:
-# Databases    isucondition
-# Hosts        localhost
-# Users        isucon
-# Query_time distribution
-#   1us  ################################################################
-#  10us
-# 100us
-#   1ms
-#  10ms
-# 100ms
-#    1s
-#  10s+
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */\G
-
-# Query 60: 0 QPS, 0x concurrency, ID 0xFD0EB48DC1C2F45E2271C89B4D3326F8 at byte 934675
-# This item is included in the report because it matches --limit.
-# Scores: V/M = 0.00
-# Time range: all events occurred at 2021-08-21 11:03:39
-# Attribute    pct   total     min     max     avg     95%  stddev  median
-# ============ === ======= ======= ======= ======= ======= ======= =======
-# Count          0       1
-# Exec time      0     9us     9us     9us     9us     9us       0     9us
-# Lock time      0       0       0       0       0       0       0       0
-# Rows sent      0       0       0       0       0       0       0       0
-# Rows examine   0       0       0       0       0       0       0       0
-# Rows affecte   0       0       0       0       0       0       0       0
-# Bytes sent     0      11      11      11      11      11       0      11
-# Query size     0      58      58      58      58      58       0      58
-# String:
-# Databases    isucondition
-# Hosts        localhost
-# Users        isucon
-# Query_time distribution
-#   1us  ################################################################
-#  10us
-# 100us
-#   1ms
-#  10ms
-# 100ms
-#    1s
-#  10s+
-/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */\G
-
-# Query 61: 0 QPS, 0x concurrency, ID 0x19B5F1DD811E9E8873D13F0D55D6D90F at byte 4263
-# This item is included in the report because it matches --limit.
-# Scores: V/M = 0.00
-# Time range: all events occurred at 2021-08-21 11:03:38
+# Time range: all events occurred at 2021-08-21 11:09:30
 # Attribute    pct   total     min     max     avg     95%  stddev  median
 # ============ === ======= ======= ======= ======= ======= ======= =======
 # Count          0       1
@@ -2037,39 +1948,10 @@ LOCK TABLES `user` WRITE\G
 #  10s+
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */\G
 
-# Query 62: 0 QPS, 0x concurrency, ID 0x8C4DA8ABB42ED7D30051C0B21CE68D50 at byte 935889
+# Query 59: 0 QPS, 0x concurrency, ID 0x71736836AB087459522E0AA6BDAC7F73 at byte 6349
 # This item is included in the report because it matches --limit.
 # Scores: V/M = 0.00
-# Time range: all events occurred at 2021-08-21 11:03:39
-# Attribute    pct   total     min     max     avg     95%  stddev  median
-# ============ === ======= ======= ======= ======= ======= ======= =======
-# Count          0       1
-# Exec time      0     8us     8us     8us     8us     8us       0     8us
-# Lock time      0       0       0       0       0       0       0       0
-# Rows sent      0       0       0       0       0       0       0       0
-# Rows examine   0       0       0       0       0       0       0       0
-# Rows affecte   0       0       0       0       0       0       0       0
-# Bytes sent     0      11      11      11      11      11       0      11
-# Query size     0      40      40      40      40      40       0      40
-# String:
-# Databases    isucondition
-# Hosts        localhost
-# Users        isucon
-# Query_time distribution
-#   1us  ################################################################
-#  10us
-# 100us
-#   1ms
-#  10ms
-# 100ms
-#    1s
-#  10s+
-/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */\G
-
-# Query 63: 0 QPS, 0x concurrency, ID 0x71736836AB087459522E0AA6BDAC7F73 at byte 6349
-# This item is included in the report because it matches --limit.
-# Scores: V/M = 0.00
-# Time range: all events occurred at 2021-08-21 11:03:38
+# Time range: all events occurred at 2021-08-21 11:09:30
 # Attribute    pct   total     min     max     avg     95%  stddev  median
 # ============ === ======= ======= ======= ======= ======= ======= =======
 # Count          0       1
@@ -2095,14 +1977,101 @@ LOCK TABLES `user` WRITE\G
 #  10s+
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */\G
 
-# Query 64: 0 QPS, 0x concurrency, ID 0x3A8C4615943B0B7D945BF31310DD9583 at byte 4571
+# Query 60: 0 QPS, 0x concurrency, ID 0x4DE6CB1852630C845CD4C563682DFAC0 at byte 935561
 # This item is included in the report because it matches --limit.
 # Scores: V/M = 0.00
-# Time range: all events occurred at 2021-08-21 11:03:38
+# Time range: all events occurred at 2021-08-21 11:09:30
 # Attribute    pct   total     min     max     avg     95%  stddev  median
 # ============ === ======= ======= ======= ======= ======= ======= =======
 # Count          0       1
-# Exec time      0     8us     8us     8us     8us     8us       0     8us
+# Exec time      0     7us     7us     7us     7us     7us       0     7us
+# Lock time      0       0       0       0       0       0       0       0
+# Rows sent      0       0       0       0       0       0       0       0
+# Rows examine   0       0       0       0       0       0       0       0
+# Rows affecte   0       0       0       0       0       0       0       0
+# Bytes sent     0      11      11      11      11      11       0      11
+# Query size     0      62      62      62      62      62       0      62
+# String:
+# Databases    isucondition
+# Hosts        localhost
+# Users        isucon
+# Query_time distribution
+#   1us  ################################################################
+#  10us
+# 100us
+#   1ms
+#  10ms
+# 100ms
+#    1s
+#  10s+
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */\G
+
+# Query 61: 0 QPS, 0x concurrency, ID 0x9DE5931F062D2F5BEF0CA583D4BFA5B8 at byte 935255
+# This item is included in the report because it matches --limit.
+# Scores: V/M = 0.00
+# Time range: all events occurred at 2021-08-21 11:09:30
+# Attribute    pct   total     min     max     avg     95%  stddev  median
+# ============ === ======= ======= ======= ======= ======= ======= =======
+# Count          0       1
+# Exec time      0     7us     7us     7us     7us     7us       0     7us
+# Lock time      0       0       0       0       0       0       0       0
+# Rows sent      0       0       0       0       0       0       0       0
+# Rows examine   0       0       0       0       0       0       0       0
+# Rows affecte   0       0       0       0       0       0       0       0
+# Bytes sent     0      42      42      42      42      42       0      42
+# Query size     0      64      64      64      64      64       0      64
+# String:
+# Databases    isucondition
+# Hosts        localhost
+# Users        isucon
+# Query_time distribution
+#   1us  ################################################################
+#  10us
+# 100us
+#   1ms
+#  10ms
+# 100ms
+#    1s
+#  10s+
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */\G
+
+# Query 62: 0 QPS, 0x concurrency, ID 0xFD0EB48DC1C2F45E2271C89B4D3326F8 at byte 934651
+# This item is included in the report because it matches --limit.
+# Scores: V/M = 0.00
+# Time range: all events occurred at 2021-08-21 11:09:30
+# Attribute    pct   total     min     max     avg     95%  stddev  median
+# ============ === ======= ======= ======= ======= ======= ======= =======
+# Count          0       1
+# Exec time      0     7us     7us     7us     7us     7us       0     7us
+# Lock time      0       0       0       0       0       0       0       0
+# Rows sent      0       0       0       0       0       0       0       0
+# Rows examine   0       0       0       0       0       0       0       0
+# Rows affecte   0       0       0       0       0       0       0       0
+# Bytes sent     0      11      11      11      11      11       0      11
+# Query size     0      58      58      58      58      58       0      58
+# String:
+# Databases    isucondition
+# Hosts        localhost
+# Users        isucon
+# Query_time distribution
+#   1us  ################################################################
+#  10us
+# 100us
+#   1ms
+#  10ms
+# 100ms
+#    1s
+#  10s+
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */\G
+
+# Query 63: 0 QPS, 0x concurrency, ID 0x3A8C4615943B0B7D945BF31310DD9583 at byte 4571
+# This item is included in the report because it matches --limit.
+# Scores: V/M = 0.00
+# Time range: all events occurred at 2021-08-21 11:09:30
+# Attribute    pct   total     min     max     avg     95%  stddev  median
+# ============ === ======= ======= ======= ======= ======= ======= =======
+# Count          0       1
+# Exec time      0     7us     7us     7us     7us     7us       0     7us
 # Lock time      0       0       0       0       0       0       0       0
 # Rows sent      0       0       0       0       0       0       0       0
 # Rows examine   0       0       0       0       0       0       0       0
@@ -2124,10 +2093,39 @@ LOCK TABLES `user` WRITE\G
 #  10s+
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */\G
 
-# Query 65: 0.13 QPS, 0.00x concurrency, ID 0xEDBC971AEC392917AA353644DE4C4CB4 at byte 434
+# Query 64: 0 QPS, 0x concurrency, ID 0x8C4DA8ABB42ED7D30051C0B21CE68D50 at byte 935865
 # This item is included in the report because it matches --limit.
 # Scores: V/M = 0.00
-# Time range: 2021-08-21 11:03:24 to 11:03:39
+# Time range: all events occurred at 2021-08-21 11:09:30
+# Attribute    pct   total     min     max     avg     95%  stddev  median
+# ============ === ======= ======= ======= ======= ======= ======= =======
+# Count          0       1
+# Exec time      0     5us     5us     5us     5us     5us       0     5us
+# Lock time      0       0       0       0       0       0       0       0
+# Rows sent      0       0       0       0       0       0       0       0
+# Rows examine   0       0       0       0       0       0       0       0
+# Rows affecte   0       0       0       0       0       0       0       0
+# Bytes sent     0      11      11      11      11      11       0      11
+# Query size     0      40      40      40      40      40       0      40
+# String:
+# Databases    isucondition
+# Hosts        localhost
+# Users        isucon
+# Query_time distribution
+#   1us  ################################################################
+#  10us
+# 100us
+#   1ms
+#  10ms
+# 100ms
+#    1s
+#  10s+
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */\G
+
+# Query 65: 0.10 QPS, 0x concurrency, ID 0xEDBC971AEC392917AA353644DE4C4CB4 at byte 936147
+# This item is included in the report because it matches --limit.
+# Scores: V/M = 0.00
+# Time range: 2021-08-21 11:09:10 to 11:09:30
 # Attribute    pct   total     min     max     avg     95%  stddev  median
 # ============ === ======= ======= ======= ======= ======= ======= =======
 # Count          0       2
