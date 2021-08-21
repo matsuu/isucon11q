@@ -13,6 +13,7 @@ import (
 	"os"
 	"os/exec"
 	"sort"
+	"sync"
 	"strconv"
 	"strings"
 	"time"
@@ -1155,9 +1156,11 @@ func getTrend(c echo.Context) error {
 
 // POST /api/condition/:jia_isu_uuid
 // ISUからのコンディションを受け取る
+var postIsuStmt *sqlx.Stmt
+var postIsuOnce sync.Once
 func postIsuCondition(c echo.Context) error {
 	// TODO: 一定割合リクエストを落としてしのぐようにしたが、本来は全量さばけるようにすべき
-	dropProbability := 0.9
+	dropProbability := 0.6
 	if rand.Float64() <= dropProbability {
 		c.Logger().Warnf("drop post isu condition request")
 		return c.NoContent(http.StatusAccepted)
@@ -1186,25 +1189,20 @@ func postIsuCondition(c echo.Context) error {
 		return c.String(http.StatusNotFound, "not found: isu")
 	}
 
-	var b strings.Builder
-	b.WriteString("INSERT INTO `isu_condition` (`jia_isu_uuid`, `timestamp`, `is_sitting`, `condition`, `message`) VALUES ")
+	cond := req[len(req)-1]
+	timestamp := time.Unix(cond.Timestamp, 0)
 
-	var params []interface{}
-	for i, cond := range req {
-		timestamp := time.Unix(cond.Timestamp, 0)
-
-		if !isValidConditionFormat(cond.Condition) {
-			return c.String(http.StatusBadRequest, "bad request body")
-		}
-
-		if i > 0 {
-			b.WriteByte(',')
-		}
-		b.WriteString("(?, ?, ?, ?, ?)")
-		params = append(params, jiaIsuUUID, timestamp, cond.IsSitting, cond.Condition, cond.Message)
-
+	if !isValidConditionFormat(cond.Condition) {
+		return c.String(http.StatusBadRequest, "bad request body")
 	}
-	_, err = db.Exec(b.String(), params...)
+
+	postIsuOnce.Do(func() {
+		postIsuStmt, err = db.Preparex("INSERT INTO `isu_condition` (`jia_isu_uuid`, `timestamp`, `is_sitting`, `condition`, `message`) VALUES (?,?,?,?,?)")
+		if err != nil {
+			panic(err)
+		}
+	})
+	_, err = postIsuStmt.Exec(jiaIsuUUID, timestamp, cond.IsSitting, cond.Condition, cond.Message)
 	if err != nil {
 		c.Logger().Errorf("db error: %v", err)
 		return c.NoContent(http.StatusInternalServerError)
