@@ -35,7 +35,7 @@ const (
 	frontendContentsPath        = "../public"
 	jiaJWTSigningKeyPath        = "../ec256-public.pem"
 	defaultIconFilePath         = "../NoImage.jpg"
-	defaultJIAServiceURL        = "http://localhost:5000"
+	defaultJIAServiceURL        = "http://192.168.0.11:5000"
 	mysqlErrNumDuplicateEntry   = 1062
 	conditionLevelInfo          = "info"
 	conditionLevelWarning       = "warning"
