@@ -60,3 +60,4 @@ ubuntu:!::
 isucon:!::
 isucon-admin:!::
 mysql:!::
+varnish:!::

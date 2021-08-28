@@ -14,7 +14,7 @@ vcl 4.0;
 
 # Default backend definition. Set this to point to your content server.
 backend default {
-    .host = "127.0.0.1";
+    .host = "192.168.0.13";
     .port = "3000";
 }
 
@@ -29,8 +29,8 @@ sub vcl_recv {
 }
 
 sub vcl_backend_response {
-    set beresp.ttl = 0.8s;
-    set beresp.grace = 0.2s;
+    set beresp.ttl = 0.9s;
+    set beresp.grace = 0.1s;
     #set beresp.do_gzip = true;
     # Happens after we have read the response headers from the backend.
     #

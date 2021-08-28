@@ -8,6 +8,10 @@ sudo rsync -av --delete /etc/mysql/ 192.168.0.12:/etc/mysql/
 sudo ssh 192.168.0.12 rm -f /var/lib/mysql/mysql-slow.log
 sudo ssh 192.168.0.12 mysqladmin flush-slow-log
 # app
+(
+  cd ~/webapp/go
+  go build
+)
 sudo systemctl restart jiaapi-mock.service
 sudo systemctl restart isucondition.go.service
 

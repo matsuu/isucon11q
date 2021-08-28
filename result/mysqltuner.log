@@ -6,40 +6,30 @@
 [OK] Logged in using credentials from Debian maintenance account.
 [!!] failed to execute: SHOW REPLICA STATUS\G
 [!!] FAIL Execute SQL / return code: 256
-[OK] Currently running supported MySQL version 10.3.31-MariaDB-0ubuntu0.20.04.1
+[OK] Currently running supported MySQL version 10.3.31-MariaDB-0ubuntu0.20.04.1-log
 [OK] Operating on 64-bit architecture
  
 -------- Log file Recommendations ------------------------------------------------------------------
 [OK] Log file /var/log/mysql/error.log exists
-[--] Log file: /var/log/mysql/error.log(293K)
+[--] Log file: /var/log/mysql/error.log(259K)
 [OK] Log file /var/log/mysql/error.log is not empty
 [OK] Log file /var/log/mysql/error.log is smaller than 32 Mb
 [OK] Log file /var/log/mysql/error.log is readable.
-[!!] /var/log/mysql/error.log contains 1579 warning(s).
-[!!] /var/log/mysql/error.log contains 1579 error(s).
-[--] 9 start(s) detected in /var/log/mysql/error.log
-[--] 1) 2021-08-21 18:18:14 0 [Note] /usr/sbin/mysqld: ready for connections.
-[--] 2) 2021-08-21 17:21:00 0 [Note] /usr/sbin/mysqld: ready for connections.
-[--] 3) 2021-08-21 17:18:30 0 [Note] /usr/sbin/mysqld: ready for connections.
-[--] 4) 2021-08-21 17:14:59 0 [Note] /usr/sbin/mysqld: ready for connections.
-[--] 5) 2021-08-21 17:08:18 0 [Note] /usr/sbin/mysqld: ready for connections.
-[--] 6) 2021-08-21 14:40:23 0 [Note] /usr/sbin/mysqld: ready for connections.
-[--] 7) 2021-08-21 10:06:37 0 [Note] /usr/sbin/mysqld: ready for connections.
-[--] 8) 2021-08-20 18:54:27 0 [Note] /usr/sbin/mysqld: ready for connections.
-[--] 9) 2021-08-20 18:54:21 0 [Note] /usr/sbin/mysqld: ready for connections.
-[--] 8 shutdown(s) detected in /var/log/mysql/error.log
-[--] 1) 2021-08-21 18:17:51 0 [Note] /usr/sbin/mysqld: Shutdown complete
-[--] 2) 2021-08-21 17:21:00 0 [Note] /usr/sbin/mysqld: Shutdown complete
-[--] 3) 2021-08-21 17:18:30 0 [Note] /usr/sbin/mysqld: Shutdown complete
-[--] 4) 2021-08-21 17:14:35 0 [Note] /usr/sbin/mysqld: Shutdown complete
-[--] 5) 2021-08-21 17:08:18 0 [Note] /usr/sbin/mysqld: Shutdown complete
-[--] 6) 2021-08-21 14:40:22 0 [Note] /usr/sbin/mysqld: Shutdown complete
-[--] 7) 2021-08-20 19:00:40 0 [Note] /usr/sbin/mysqld: Shutdown complete
-[--] 8) 2021-08-20 18:54:27 0 [Note] /usr/sbin/mysqld: Shutdown complete
+[!!] /var/log/mysql/error.log contains 1461 warning(s).
+[!!] /var/log/mysql/error.log contains 1458 error(s).
+[--] 4 start(s) detected in /var/log/mysql/error.log
+[--] 1) 2021-08-28 10:53:11 0 [Note] /usr/sbin/mysqld: ready for connections.
+[--] 2) 2021-08-28 10:46:07 0 [Note] /usr/sbin/mysqld: ready for connections.
+[--] 3) 2021-08-28  9:25:26 0 [Note] /usr/sbin/mysqld: ready for connections.
+[--] 4) 2021-08-28  8:47:12 0 [Note] /usr/sbin/mysqld: ready for connections.
+[--] 3 shutdown(s) detected in /var/log/mysql/error.log
+[--] 1) 2021-08-28 10:53:11 0 [Note] /usr/sbin/mysqld: Shutdown complete
+[--] 2) 2021-08-28 10:46:07 0 [Note] /usr/sbin/mysqld: Shutdown complete
+[--] 3) 2021-08-28  9:25:26 0 [Note] /usr/sbin/mysqld: Shutdown complete
  
 -------- Storage Engine Statistics -----------------------------------------------------------------
 [--] Status: +Aria +CSV +InnoDB +MEMORY +MRG_MyISAM +MyISAM +PERFORMANCE_SCHEMA +SEQUENCE 
-[--] Data in InnoDB tables: 3.1M (Tables: 4)
+[--] Data in InnoDB tables: 403.8M (Tables: 4)
 [OK] Total fragmented tables: 0
  
 -------- Analysis Performance Metrics --------------------------------------------------------------
@@ -58,33 +48,33 @@
 [--] Skipped due to --cvefile option undefined
  
 -------- Performance Metrics -----------------------------------------------------------------------
-[--] Up for: 21m 12s (4M q [3K qps], 256 conn, TX: 6G, RX: 383M)
+[--] Up for: 28m 37s (2M q [1K qps], 874 conn, TX: 2G, RX: 1G)
 [--] Reads / Writes: 97% / 3%
 [--] Binary logging is disabled
 [--] Physical Memory     : 3.6G
-[--] Max MySQL memory    : 3.2G
+[--] Max MySQL memory    : 6.2G
 [--] Other process memory: 0B
-[--] Total buffers: 432.0M global + 18.9M per thread (151 max threads)
+[--] Total buffers: 688.0M global + 18.9M per thread (301 max threads)
 [--] P_S Max memory usage: 0B
 [--] Galera GCache Max memory usage: 0B
-[OK] Maximum reached memory usage: 1.0G (28.36% of installed RAM)
-[!!] Maximum possible memory usage: 3.2G (88.29% of installed RAM)
-[OK] Overall possible memory usage with other process is compatible with memory available
-[OK] Slow queries: 0% (0/4M)
-[OK] Highest usage of available connections: 21% (33/151)
-[OK] Aborted connections: 0.00%  (0/256)
+[!!] Maximum reached memory usage: 4.0G (109.38% of installed RAM)
+[!!] Maximum possible memory usage: 6.2G (171.34% of installed RAM)
+[!!] Overall possible memory usage with other process exceeded memory
+[!!] Slow queries: 100% (2M/2M)
+[OK] Highest usage of available connections: 59% (179/301)
+[OK] Aborted connections: 0.23%  (2/874)
 [!!] name resolution is active : a reverse name resolution is made for each new connection and can reduce performance
 [!!] Query cache may be disabled by default due to mutex contention.
-[OK] Query cache efficiency: 39.0% (2M cached / 5M selects)
+[OK] Query cache efficiency: 39.8% (1M cached / 3M selects)
 [OK] Query cache prunes per day: 0
-[OK] Sorts requiring temporary tables: 0% (0 temp sorts / 601 sorts)
+[OK] Sorts requiring temporary tables: 0% (0 temp sorts / 34K sorts)
 [OK] No joins without indexes
-[OK] Temporary tables created on disk: 10% (6 on disk / 60 total)
-[OK] Thread cache hit rate: 86% (34 created / 256 connections)
-[OK] Table cache hit rate: 99% (1M hits / 1M requests)
+[OK] Temporary tables created on disk: 23% (47 on disk / 199 total)
+[OK] Thread cache hit rate: 79% (180 created / 874 connections)
+[OK] Table cache hit rate: 99% (759K hits / 759K requests)
 [OK] table_definition_cache(400) is upper than number of tables(165)
-[OK] Open file limit used: 0% (59/32K)
-[OK] Table locks acquired immediately: 100% (143 immediate / 143 locks)
+[OK] Open file limit used: 0% (60/32K)
+[OK] Table locks acquired immediately: 100% (128 immediate / 128 locks)
  
 -------- Performance schema ------------------------------------------------------------------------
 [--] Performance schema is disabled.
@@ -94,30 +84,30 @@
 -------- ThreadPool Metrics ------------------------------------------------------------------------
 [--] ThreadPool stat is enabled.
 [--] Thread Pool Size: 2 thread(s).
-[--] Using default value is good enough for your version (10.3.31-MariaDB-0ubuntu0.20.04.1)
+[--] Using default value is good enough for your version (10.3.31-MariaDB-0ubuntu0.20.04.1-log)
  
 -------- MyISAM Metrics ----------------------------------------------------------------------------
 [!!] Key buffer used: 18.2% (24M used / 134M cache)
 [OK] Key buffer size / total MyISAM indexes: 128.0M/124.0K
-[!!] Read Key buffer hit rate: 90.0% (20 cached / 2 reads)
+[!!] Read Key buffer hit rate: 80.0% (10 cached / 2 reads)
  
 -------- InnoDB Metrics ----------------------------------------------------------------------------
 [--] InnoDB is enabled.
 [--] InnoDB Thread Concurrency: 0
 [OK] InnoDB File per table is activated
-[OK] InnoDB buffer pool / data size: 128.0M/3.1M
-[!!] Ratio InnoDB log file size / InnoDB Buffer pool size (75 %): 48.0M * 2/128.0M should be equal to 25%
+[!!] InnoDB buffer pool / data size: 384.0M/403.8M
+[OK] Ratio InnoDB log file size / InnoDB Buffer pool size: 48.0M * 2/384.0M should be equal to 25%
 [OK] InnoDB buffer pool instances: 1
-[--] Number of InnoDB Buffer Pool Chunk : 1 for 1 Buffer Pool Instance(s)
+[--] Number of InnoDB Buffer Pool Chunk : 3 for 1 Buffer Pool Instance(s)
 [OK] Innodb_buffer_pool_size aligned with Innodb_buffer_pool_chunk_size & Innodb_buffer_pool_instances
-[OK] InnoDB Read buffer efficiency: 100.00% (56264639 hits/ 56265230 total)
-[OK] InnoDB Write log efficiency: 98.65% (68582 hits/ 69519 total)
-[OK] InnoDB log waits: 0.00% (0 waits / 937 writes)
+[OK] InnoDB Read buffer efficiency: 100.00% (224998307 hits/ 225000744 total)
+[OK] InnoDB Write log efficiency: 99.95% (3788224 hits/ 3790025 total)
+[OK] InnoDB log waits: 0.00% (0 waits / 1801 writes)
  
 -------- Aria Metrics ------------------------------------------------------------------------------
 [--] Aria Storage Engine is enabled.
 [OK] Aria pagecache size / total Aria indexes: 128.0M/0B
-[OK] Aria pagecache hit rate: 98.1% (308 cached / 6 reads)
+[OK] Aria pagecache hit rate: 98.2% (2K cached / 47 reads)
  
 -------- TokuDB Metrics ----------------------------------------------------------------------------
 [--] TokuDB is disabled.
@@ -147,13 +137,15 @@ General recommendations:
     RENAME USER 'isucon'@'%' TO 'isucon'@LimitedIPRangeOrLocalhost;
     MySQL was started within the last 24 hours - recommendations may be inaccurate
     Reduce your overall MySQL memory footprint for system stability
+    Dedicate this server to your database for highest performance.
     Configure your accounts with ip or subnets only, then update your configuration with skip-name-resolve=1
     Performance schema should be activated for better diagnostics
     Consider installing Sys schema from https://github.com/mysql/mysql-sys for MySQL
     Consider installing Sys schema from https://github.com/FromDual/mariadb-sys for MariaDB
-    Before changing innodb_log_file_size and/or innodb_log_files_in_group read this: https://bit.ly/2TcGgtU
 Variables to adjust:
+  *** MySQL's maximum memory usage is dangerously high ***
+  *** Add RAM before increasing MySQL buffer variables ***
     query_cache_size (=0)
     query_cache_type (=0)
     performance_schema = ON enable PFS
-    innodb_log_file_size should be (=16M) if possible, so InnoDB total log files size equals to 25% of buffer pool size.
+    innodb_buffer_pool_size (>= 403.8M) if possible.

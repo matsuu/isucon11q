@@ -30,9 +30,10 @@ lc-messages-dir         = /usr/share/mysql
 bind-address            = 0.0.0.0
 
 slow_query_log = 0
-#slow_query_log_file = mysql-slow.log
-#long_query_time = 0
+slow_query_log_file = mysql-slow.log
+long_query_time = 0
 
+innodb_buffer_pool_size = 512M
 innodb_doublewrite = 0
 innodb_flush_log_at_trx_commit = 0
 innodb_flush_log_at_timeout = 3
@@ -52,7 +53,7 @@ innodb_io_capacity_max = 3000
 # This replaces the startup script and checks MyISAM tables if needed
 # the first time they are touched
 #myisam_recover_options = BACKUP
-#max_connections        = 100
+max_connections        = 301
 #table_cache            = 64
 #thread_concurrency     = 10
 
